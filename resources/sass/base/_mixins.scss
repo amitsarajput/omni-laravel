@@ -1,0 +1,36 @@
+/*
+@package omnitheme
+
+*/
+
+@mixin transition($attr, $time, $easing:null){
+  -webkit-transition: $attr $time $easing;
+  -moz-transition:    $attr $time $easing;
+  -o-transition:      $attr $time $easing;
+  transition:         $attr $time $easing;
+}
+
+@mixin transform($val){
+  -webkit-transform: $val;
+  -moz-transform:    $val;
+  -o-transform:      $val;
+  transform:         $val;
+}
+
+@mixin bgimage($size:cover, $position:center center, $repeat:no-repeat){
+  background-size:$size;
+  background-position:$position;
+  background-repeat:$repeat;
+}
+
+@mixin rowMachine($numPerRow, $margin) {
+  width: ((100% - (($numPerRow - 1) * $margin)) / $numPerRow);
+  &:nth-child(n) {
+    margin-bottom: 0;
+    margin-right: $margin;
+  }
+  &:nth-of-type(#{$numPerRow}n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
