@@ -2,7 +2,7 @@
 <header id="header">
     <div class="inner-header "><!-- search-opened -->
         <div class="logo">
-            <a href="{{route('home')}}"><img src="images/omni-logo.png" alt="Omni"></a>
+            <a href="{{route('home')}}"><img src="../images/omni-logo.png" alt="Omni"></a>
         </div>
         <div class="right-menu-wrapper">
             <div id="top-search">

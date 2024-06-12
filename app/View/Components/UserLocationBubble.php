@@ -20,9 +20,9 @@ class UserLocationBubble extends Component
 
     public function __construct(public bool $bubbleclosed)
     {   
-
-       //dd(session('omni_data'));
+       //session()->forget(['omni_data','locale']);
        $omnidata=session('omni_data');
+       //dd(session('omni_data'));
         //Set avialable locations in sessions
         $available_locations=$omnidata['available_locations'];
         //Set from globals

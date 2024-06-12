@@ -17,19 +17,26 @@ class SetSessionData
     public function handle(Request $request, Closure $next): Response
     {
         //session()->forget('omni_data');
-        if(!session()->has('omni_data') || session('omni_data.available_locations')==null){
+        
+        if(!session()->has('omni_data') || empty(session('omni_data.available_locations')) || empty(session('omni_data.available_locales')) ){
             $omnidata=[
                 'available_locations'=>[],
+                'available_locales'=>[],
                 'preffered_location'=>'',
                 'user_location'=>'',
                 'default_location'=>'EU',
+                'default_locale'=>'en_EU',
                 'region'=>'eu',
                 'country'=>'eu',
                 'brand'=>'radar',
                 'bubble_closed'=>0,
             ];
-            $omnidata['available_locations']=Country::all()->pluck('code','name')->toArray();
+            $all_countries=Country::all();
+            $omnidata['available_locations']=$all_countries->pluck('code','name')->toArray();
+            $omnidata['available_locales']=$all_countries->pluck('locale_code','code')->toArray();
             session(['omni_data' => $omnidata]);//Set Session
+            session(['locale' => $omnidata['default_locale']]);//Set default locale
+            //dd(session('omni_data'));
         }
         return $next($request);
     }

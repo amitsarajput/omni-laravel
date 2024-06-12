@@ -49,8 +49,17 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+
 Route::post('/location/update',[FormsController::class, 'location_form'])->name('location.update');
 Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])->name('location.bubblestate.update');
+
+
+Route::get('language/{locale}', function (string $locale) {
+    app()->setLocale($locale);
+    session()->put('locale', $locale);
+    return redirect()->back();
+});
+
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';

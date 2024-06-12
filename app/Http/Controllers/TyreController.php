@@ -49,15 +49,16 @@ class TyreController extends Controller
         $region_str= ($region!==null) ? $region : $omni_data['region'];
         $country_str= ($country!==null) ? $country : $omni_data['country'];
         $brand_str= ($brand!==null) ? $brand : $omni_data['brand'];
-        
+        //dd($brand_str,$country_str);
         //Set session data//
         $omni_data['region']=$region_str;
         $omni_data['country']=$country_str;
         $omni_data['preffered_location']=strtoupper($country_str);
         $omni_data['brand']=$brand_str;
         session(['omni_data'=>$omni_data]);
-        
-        //Find tyres//
+        //set view
+        $brand_country=strtolower($omni_data['brand'].'-'.$omni_data['country']);
+        //Find tyres
         $region=Region::where('slug', $region_str)->first();
         $country=Country::where('slug', $country_str)->first();
         if (empty($country)){
@@ -73,7 +74,7 @@ class TyreController extends Controller
         }
         $tyres=Tyre::with('country','brand','search_tag','icons','tyre_categories')->where(['country_id'=>$country->id,'brand_id'=>$brand->id])->get();
         
-        return view('welcome',compact('tyres','search_tags'));
+        return view('tyre-grid',compact('tyres','search_tags','brand_country'));
     }
     
 

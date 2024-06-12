@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('region_id');
             $table->string('name');
             $table->string('code');
+            $table->string('locale_code', length: 100);
             $table->string('slug')->unique();
             $table->timestamps();
         });

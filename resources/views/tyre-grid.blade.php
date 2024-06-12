@@ -11,7 +11,7 @@
                 <div class="swiper-wrapper" >
                     <!-- Slides -->
                     <a href="#" class="swiper-slide bg-image" style="background-image:url(images/slides/radar-eu-banner-renegade-at-sport.webp)"></a>
-                    <a href="# class="swiper-slide bg-image" style="background-image:url(images/slides/radar-eu-carbon-neutral-banner.webp)"></a>
+                    <a href="#" class="swiper-slide bg-image" style="background-image:url(images/slides/radar-eu-carbon-neutral-banner.webp)"></a>
                     <div class="swiper-slide bg-image" style="background-image:url(images/slides/RadarEU_Performance-Collection.webp)"></div>
                     <div class="swiper-slide bg-image" style="background-image:url(images/slides/RadarEU_BCRF-Banner_1920x950.webp)"></div>
                 </div>
@@ -27,11 +27,11 @@
 			<div class="container">
 				<div class="grid">
 					<div class="col-6">
-					    <p>Radar Tires is the flagship brand of Omni United and offers a unique value proposition in its segment. In the passenger and light truck segment the brand offers a vast and varied range of tires that are made for all seasons, applications and different types of vehicles that cater to different requirements and interests of drivers.</p>
-					    <p>Radar Tires are designed in Singapore by our in-house design team and utilize the latest equipment, materials and manufacturing processes. This makes our fitments universal, so drivers can choose the right set of tires for their unique driving styles and requirements, knowing that these choices are backed by world-class engineering and manufacturing capabilities.</p>
+					    <p>{{ __("Radar Tires is the flagship brand of Omni United and offers a unique value proposition in its segment. In the passenger and light truck segment the brand offers a vast and varied range of tires that are made for all seasons, applications and different types of vehicles that cater to different requirements and interests of drivers.") }}</p>
+					    <p>{{ __("Radar Tires are designed in Singapore by our in-house design team and utilize the latest equipment, materials and manufacturing processes. This makes our fitments universal, so drivers can choose the right set of tires for their unique driving styles and requirements, knowing that these choices are backed by world-class engineering and manufacturing capabilities.") }}</p>
 					</div>
 					<div class="col-6">
-					    <p>Being one of the most reliable brands in the market, Radar Tires are manufactured in compliance with the highest regulatory certifications and utilize PAH-free oils in their compounds to comply with stringent European standards. In addition to this, the brand has always been committed to being socially responsible and has been manufactured carbon neutral since 2013. Radar Tires has also supported the Breast Cancer Research Foundation (BCRF) since 2011 and to date has donated close to $1.4 million, funding close to 28,000 hours of critical life-saving research.</p>
+					    <p>{{ __("Being one of the most reliable brands in the market, Radar Tires are manufactured in compliance with the highest regulatory certifications and utilize PAH-free oils in their compounds to comply with stringent European standards. In addition to this, the brand has always been committed to being socially responsible and has been manufactured carbon neutral since 2013. Radar Tires has also supported the Breast Cancer Research Foundation (BCRF) since 2011 and to date has donated close to $1.4 million, funding close to 28,000 hours of critical life-saving research.")}}</p>
 					</div>
 				</div>
 			</div>
