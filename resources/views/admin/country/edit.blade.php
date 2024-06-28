@@ -51,6 +51,10 @@
                 {{ Form::text('code', $country->code, ['class'=>'form-control','placeholder'=>'Enter CODE'] ) }}
               </div>
               <div class="form-group">
+                <label for="exampleInputPassword1">Locale Code</label>
+                {{ Form::text('locale_code', $country->locale_code, ['class'=>'form-control','placeholder'=>'Enter Locale CODE'] ) }}
+              </div>
+              <div class="form-group">
                 <label for="exampleInputPassword1">Slug</label>
                 {{ Form::text('slug', $country->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
               </div>

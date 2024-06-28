@@ -47,7 +47,9 @@ class BrandController extends Controller
         $request->validate([
             'country' => ['required', 'integer'],
             'name' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255', 'unique:'.Brand::class]
+            'slug' => ['required', 'string', 'max:255', 'unique:'.Brand::class],
+            'search_tags' => ['required','array'],
+            'search_tags.*' => ['string', 'max:255'],
         ]);
 
         $brand = Brand::create([
@@ -55,6 +57,12 @@ class BrandController extends Controller
             'name' =>  $request->name,
             'slug' => strtolower($request->slug),
         ]);
+        $b_search_tags=[];
+        foreach ($request->search_tags as $key => $value) {
+            $b_search_tags[$value]=['kram'=>$key];
+        }
+        //dd($b_search_tags);
+        $brand->search_tags()->attach($b_search_tags);
         return redirect()->back();
     }
 

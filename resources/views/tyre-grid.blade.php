@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="{{asset('css/swiper/swiper-bundle.css')}}" />
     <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
     @endpush
+    <!-- Implement Slider From Brand Database -->
     <!-- Slider main container -->
     <section class="slider">
         <div class="swiper">
@@ -23,6 +24,8 @@
         </div>
     </section>
     <section id="content">
+        
+        <!-- Implement This Text From Brand Database -->
         <div class="section bg-gray">
 			<div class="container">
 				<div class="grid">

@@ -10,7 +10,7 @@
 
       <div class="card">
         <div class="card-header">
-          <h5 class="card-title">Region</h5>
+          <h5 class="card-title">Countries</h5>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -47,9 +47,10 @@
               <table id="datatable" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>Region</th>
                     <th>Name</th>
+                    <th>Region</th>
                     <th>Code</th>
+                    <th>Locale Code</th>
                     <th>Slug</th>
                     <th>Actions</th>
                   </tr>
@@ -57,9 +58,10 @@
                 <tbody>
                   @foreach ($country as $row)
                     <tr>
-                      <td>{{ $row->region->name }}</td>
                       <td>{{ ucfirst($row->name) }}</td>
+                      <td>{{ $row->region->name }}</td>
                       <td>{{ $row->code }}</td>
+                      <td>{{ $row->locale_code }}</td>
                       <td>{{ $row->slug }}</td>
                       <td>
                         <div class="btn-group">

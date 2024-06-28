@@ -13,7 +13,7 @@ class Country extends Model
 {
     use HasFactory;
 
-    protected $fillable=['region_id','name','code','slug'];
+    protected $fillable=['region_id','name','code','locale_code','slug'];
     
     public function region():BelongsTo
     {
