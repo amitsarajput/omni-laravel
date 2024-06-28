@@ -32,10 +32,15 @@ require __DIR__.'/staticpages.php';
 
 Route::get('/', [TyreController::class, 'tyre_grid'])->name('home');
 
-Route::get('/{brand:slug}-{country:slug}', [TyreController::class, 'tyre_grid'])
-    ->where(['brand'=>'[a-z\-]+','country'=>'[a-z\-]+'])->name('tyre.grid');
-Route::get('/{brand:slug}-{country:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])
-    ->where(['brand'=>'[a-z\-]+','country'=>'[a-z\-]+'])->name('tyre.single');
+// Route::get('/{brand:slug}-{country:slug}', [TyreController::class, 'tyre_grid'])
+//     ->where(['brand'=>'[a-z\-]+','country'=>'[a-z\-]+'])->name('tyre.grid');
+// Route::get('/{brand:slug}-{country:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])
+//     ->where(['brand'=>'[a-z\-]+','country'=>'[a-z\-]+'])->name('tyre.single');
+
+Route::get('/{country:slug}', [TyreController::class, 'tyre_grid'])
+    ->where(['country'=>'[a-z]{2}'])->name('tyre.grid');
+Route::get('/{country:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])
+    ->where(['country'=>'[a-z]{2}'])->name('tyre.single');
 
 
 

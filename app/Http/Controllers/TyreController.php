@@ -44,6 +44,7 @@ class TyreController extends Controller
 
     public function tyre_grid($brand=null, $country=null, $region=null )
     {
+        print_r('here');
         $omni_data=session('omni_data');
         //Set variables//
         $region_str= ($region!==null) ? $region : $omni_data['region'];
