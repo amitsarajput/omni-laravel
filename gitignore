@@ -1,8 +1,4 @@
 /.phpunit.cache
-/laravel-core/.env
-/laravel-core/app/Providers/AppServiceProvider.php
-/laravel-core/bootstrap/app.php
-/laravel-core/vite.config.js
 npm-debug.log
 yarn-error.log
 /.fleet

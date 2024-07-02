@@ -52,6 +52,6 @@ $app->singleton(
 |
 */
 /*Change in public path*/
-$app->usePublicPath(base_path('../../omlr'));
+$app->usePublicPath(base_path('../../staging'));
 
 return $app;

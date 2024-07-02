@@ -13,7 +13,7 @@ class AppServiceProvider extends ServiceProvider
     {
         //Public folder change
         $this->app->bind('path.public', function() {
-            return base_path('../../omlr');
+            return base_path('../../staging');
         });
     }
 
