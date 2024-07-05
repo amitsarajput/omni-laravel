@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\Country;
 use App\Models\Icon;
 use App\Models\SearchTag;
 use Illuminate\Http\Request;
@@ -30,6 +31,9 @@ class SearchTagController extends Controller
     public function create()
     {
         //
+        $country=Country::all()->pluck('name','id')->map(function (string $item, string $key) {
+            return ucfirst($item);
+        });
 
         $brand=Brand::all()->pluck('name','id')->map(function (string $item, string $key) {
             return ucfirst($item);
@@ -38,7 +42,7 @@ class SearchTagController extends Controller
             return strtoupper($item);
         });
         //dd($brand);
-        return view('admin.searchtag.create', compact(['brand','icon']));
+        return view('admin.searchtag.create', compact(['brand','icon','country']));
     }
 
     /**
@@ -48,6 +52,7 @@ class SearchTagController extends Controller
     {
         //
         $request->validate([
+            'country' => ['required','array'],
             'brand' => ['required', 'array' ],
             'icon' => ['required', 'integer' ],
             'name' => ['required', 'string', 'max:255'],
@@ -60,7 +65,18 @@ class SearchTagController extends Controller
             'slug' => strtolower($request->slug),
         ]);
         //$searchta=SearchTag::find($searchtag);
-        $searchtag->brands()->attach($request->brand);
+        $t_brand=[];
+        foreach ($request->brand as $key => $value) { 
+            $t_brand[$value]=['kram'=>$key];
+        }
+        $searchtag->brands()->attach($t_brand);
+        
+        $b_countries=[];
+        foreach ($request->country as $key => $value) {
+            $b_countries[$value]=['kram'=>$key];
+        }
+        $searchtag->countries()->attach($b_countries);
+
         return redirect()->back();
     }
 
@@ -77,7 +93,9 @@ class SearchTagController extends Controller
      */
     public function edit(SearchTag $searchtag)
     {   
-        
+        $country=Country::all()->pluck('name','id')->map(function (string $item, string $key) {
+            return ucfirst($item);
+        });
 
         $brand=Brand::all()->pluck('name','id')->map(function (string $item, string $key) {
             return ucfirst($item);
@@ -85,7 +103,11 @@ class SearchTagController extends Controller
         $icon=Icon::all()->pluck('name','id')->map(function (string $item, string $key) {
             return strtoupper($item);
         });
-        return view('admin.searchtag.edit', compact('brand','icon','searchtag'));
+
+        $icon=Icon::all()->pluck('name','id')->map(function (string $item, string $key) {
+            return strtoupper($item);
+        });
+        return view('admin.searchtag.edit', compact('brand','icon','searchtag','country'));
     }
 
     /**
@@ -95,6 +117,7 @@ class SearchTagController extends Controller
     {
         //
         $request->validate([
+            'country' => ['required', 'array' ],
             'brand' => ['required', 'array' ],
             'icon' => ['required', 'integer' ],
             'name' => ['required', 'string', 'max:255'],
@@ -107,7 +130,18 @@ class SearchTagController extends Controller
             'slug' => strtolower($request->slug),
         ]);
         //$searchta=SearchTag::find($searchtag);
-        $searchtag->brands()->sync($request->brand);
+        $t_brand=[];
+        foreach ($request->brand as $key => $value) { 
+            $t_brand[$value]=['kram'=>$key];
+        }
+        $searchtag->brands()->sync($t_brand);
+        
+        $b_countries=[];
+        foreach ($request->country as $key => $value) {
+            $b_countries[$value]=['kram'=>$key];
+        }
+        $searchtag->countries()->sync($b_countries);
+        
         return redirect()->back();
     }
 

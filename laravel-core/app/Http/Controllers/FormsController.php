@@ -24,10 +24,12 @@ class FormsController extends Controller
             $omni_data=session('omni_data');
             //dd($omni_data);
             $new_loc=$request->location;
-            $to_url='radar';
+            //dd($new_loc,$omni_data['available_locations']);
+            //$to_url='radar';
+            $to_url=$omni_data['default_location'];
             if (in_array($new_loc, $omni_data['available_locations'])) { //If avialable
-                $to_url.='-';
-                $to_url.=$new_loc;
+                //$to_url.='-';
+                $to_url=$new_loc;
                 
                 //Set Session Data
                 $omni_data['preffered_location']=$new_loc;
@@ -35,9 +37,6 @@ class FormsController extends Controller
                 //Set language
                 $locale=$omni_data['available_locales'][$new_loc];
             }else{ // Not available
-                $to_url.='-';
-                $to_url.=$omni_data['default_location'];
-                
                 //Set language
                 $locale=$omni_data['default_locale'];
             }

@@ -10,7 +10,7 @@
 
       <div class="card">
         <div class="card-header">
-          <h5 class="card-title">Region</h5>
+          <h5 class="card-title">Brand Extra Details</h5>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -43,30 +43,25 @@
           
           <div class="row">
             <div class="col-md-12">
-              <a href="{{route('admin.brand.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Create</a>  
+              <a href="{{route('admin.brandextradetail.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Create</a>  
               <table id="datatable" class="table table-bordered table-striped">
                 <thead>
                   <tr>
-                    <th>Name</th>
+                    <th>Brand</th>
                     <th>Country</th>
-                    <th>Slug</th>
-                    <th>Search Tags</th>
+                    <th>Text</th>
+                    <th>Slider</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($brand as $row)
+                  @foreach ($brandextras as $row)
                     <tr>
-                      <td>{{ ucfirst($row->name) }}</td>
-                      <td>@foreach ($row->countries as $country)
-                          <span class="badge badge-success">{{ strtoupper($country->name) }}</span>  
-                        @endforeach</td>
-                      <td>{{ $row->slug }}</td>
-                      <td>
-                        @foreach ($row->search_tags as $search_tag)
-                          <span class="badge badge-success">{{ $search_tag->name }}</span>  
-                        @endforeach
-                      </td>
+                      <td>{{ ucfirst($row->brand->name) }}</td>
+                      <td>{{ ucfirst($row->country->name) }}</td>
+                      <td>{{ $row->text }}</td>
+                      <td>{{ $row->slider }}</td>
+                      
                       <td>
                         <div class="btn-group">
                           <button type="button" class="btn btn-warning">Action</button>
@@ -74,8 +69,8 @@
                             <span class="sr-only">Toggle Dropdown</span>
                           </button>
                           <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" href="{{ route('admin.brand.edit', $row->id) }}">Edit</a>
-                            <form action="{{ route('admin.brand.destroy', $row->id) }}" method="post">
+                            <a class="dropdown-item" href="{{ route('admin.brandextradetail.edit', $row->id) }}">Edit</a>
+                            <form action="{{ route('admin.brandextradetail.destroy', $row->id) }}" method="post">
                               @csrf
                               @method('DELETE')
                               <a href="#" class="dropdown-item" title="Delete" data-toggle="tooltip" onclick="this.closest('form').submit();return false;">
@@ -90,10 +85,10 @@
                 </tbody>
                 <tfoot>
                   <tr>
-                    <th>Region</th>
-                    <th>Name</th>
-                    <th>Slug</th>
-                    <th>Search Tags</th>
+                    <th>Brand</th>
+                    <th>Country</th>
+                    <th>Text</th>
+                    <th>Slider</th>
                     <th>Actions</th>
                   </tr>
                 </tfoot>

@@ -28,20 +28,8 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-require __DIR__.'/staticpages.php';
 
-Route::get('/', [TyreController::class, 'tyre_grid'])->name('home');
-
-// Route::get('/{brand:slug}-{country:slug}', [TyreController::class, 'tyre_grid'])
-//     ->where(['brand'=>'[a-z\-]+','country'=>'[a-z\-]+'])->name('tyre.grid');
-// Route::get('/{brand:slug}-{country:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])
-//     ->where(['brand'=>'[a-z\-]+','country'=>'[a-z\-]+'])->name('tyre.single');
-
-Route::get('/{country:slug}', [TyreController::class, 'tyre_grid'])
-    ->where(['country'=>'[a-z]{2}'])->name('tyre.grid');
-Route::get('/{country:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])
-    ->where(['country'=>'[a-z]{2}'])->name('tyre.single');
-
+//Route::get('/testng/{country:id}',[TyreController::class, 'testing'])->where(['country'=>'[0-9]+'])->name('testing');
 
 
 Route::get('/dashboard', function () {
@@ -59,12 +47,34 @@ Route::post('/location/update',[FormsController::class, 'location_form'])->name(
 Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])->name('location.bubblestate.update');
 
 
-Route::get('language/{locale}', function (string $locale) {
-    app()->setLocale($locale);
-    session()->put('locale', $locale);
-    return redirect()->back();
-});
-
+// Route::get('language/{locale}', function (string $locale) {
+//     app()->setLocale($locale);
+//     session()->put('locale', $locale);
+//     return redirect()->back();
+// });
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
+
+
+require __DIR__.'/staticpages.php';
+
+
+//Normal Routes
+Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');//
+
+Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');//[TyreController::class, 'tyre_grid']
+
+Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]','tyre'=>'[a-zA-Z\-]{3,}'])->name('tyre.single');//[TyreController::class, 'tyre_single']
+
+
+//Locale routes
+Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2}'])->group(function () {
+    Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');//
+
+    Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');//[TyreController::class, 'tyre_grid']
+    Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z\-]{3,}'])->name('tyre.single');//[TyreController::class, 'tyre_single']
+    
+});
+
+

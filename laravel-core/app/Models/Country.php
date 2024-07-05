@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Country extends Model
 {
@@ -21,13 +22,23 @@ class Country extends Model
     }
     
 
-    public function brands():HasMany
+    public function brands():BelongsToMany
     {
-        return $this->hasMany(Brand::class);
+        return $this->belongsToMany(Brand::class, 'brand_country', 'country_id', 'brand_id')->withPivot('kram')->orderByPivot('kram', 'asc');
+    }
+
+    public function search_tags()
+    {
+        return $this->belongsToMany(SearchTag::class, 'country_search_tag', 'country_id', 'search_tag_id')->withPivot('kram')->orderByPivot('kram', 'asc');
     }
 
     public function tyres(): HasMany
     {
         return $this->hasMany(Tyre::class);
+    }
+    
+    public function brandextradetails(): HasMany
+    {
+        return $this->hasMany(BrandExtraDetail::class);
     }
 }

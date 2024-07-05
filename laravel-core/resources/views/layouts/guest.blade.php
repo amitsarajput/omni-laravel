@@ -21,7 +21,7 @@
         @stack('head-scripts')
     </head>
     <body class="">
-        <x-languageswitcher />
+        
         <div class="body-overlay"></div>
             
         <!-- Document Wrapper

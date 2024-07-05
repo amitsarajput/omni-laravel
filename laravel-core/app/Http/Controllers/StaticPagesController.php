@@ -8,14 +8,23 @@ use Illuminate\Support\Facades\View;
 class StaticPagesController extends Controller
 {
     private $data=[];
-    public function index(Request $request){
+    public function index(Request $request,  ?string $country=null){
+        print_r('StaticPagesController');
         //$request->fullUrl(); $request->path(); $request->root();
-        $this->data=[];
-        //dd($request->path());
-        if ($request->path()==='who-we-are') {
-            $this->data['page']=$request->path();
+        if($country!==null){
+            $segments=explode('/',$request->path());
+            array_shift($segments);
+            $request_path=implode('/',$segments);
+        }else{
+            $request_path=$request->path();
         }
-        if ($request->path() === 'radar-us/limited-warranty') {
+        
+        //dd($country,$request_path);
+        $this->data=[];
+        if ($request_path==='who-we-are') {
+            $this->data['page']=$request_path;
+        }
+        if ($request_path === 'radar-us/limited-warranty') {
             $this->data['page'] = 'warranty-radarus';
         }
         return view('pages/' . $this->data['page'], ['data'=>$this->data]);

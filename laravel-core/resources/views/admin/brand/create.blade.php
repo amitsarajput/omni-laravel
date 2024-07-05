@@ -38,10 +38,6 @@
                             </ul>
                         </div>
                     @endif
-                <div class="form-group">
-                    <label>Country</label>
-                    {{ Form::select('country', $country, null, ['class'=>'form-control','placeholder' => 'Pick a country...']) }}
-                </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 {{ Form::text('name', '', ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
@@ -54,6 +50,12 @@
                 <label for="exampleInputPassword1">Search Tags</label>
                 <div class="select2-purple sortable-option"  data-options="{{$search_tags_all}}" data-selected-options="">
                   {{ Form::select('search_tags[]', $search_tags_all, '', ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Country</label>
+                <div class="select2-purple sortable-option" data-options="{{$country}}" data-selected-options="">
+                  {{ Form::select('country[]', $country, null, ['multiple' => true, 'class'=>'select2 form-control', 'data-dropdown-css-class'=>'select2-purple']) }}
                 </div>
               </div>
             </div>

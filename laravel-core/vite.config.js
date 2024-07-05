@@ -3,7 +3,7 @@ import laravel from 'laravel-vite-plugin';
 
 export default defineConfig({
     build: {
-        outDir: '../../omlr/build',
+        outDir: '../../staging/build',
     },
     plugins: [
         laravel({
@@ -12,7 +12,7 @@ export default defineConfig({
                 'resources/sass/style.scss',
                 'resources/js/app.js',
             ],
-            publicDirectory: "../../omlr",
+            publicDirectory: "../../staging",
             refresh: true,
         }),
     ],

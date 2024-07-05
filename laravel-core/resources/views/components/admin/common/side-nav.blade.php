@@ -37,7 +37,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
             <li class="nav-item">
-            <a href="{{ route('admin.region.index') }}" class="nav-link {{request()->routeIs('admin.region.index')?'active':''}}">
+            <a href="{{ route('admin.region.index') }}" class="nav-link {{request()->routeIs('admin.region.*')?'active':''}}">
               <i class="fas fa-circle nav-icon text-warning"></i>
               <p>
                 Region
@@ -46,7 +46,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="{{ route('admin.country.index') }}" class="nav-link {{request()->routeIs('admin.country.index')?'active':''}}">
+            <a href="{{ route('admin.country.index') }}" class="nav-link {{request()->routeIs('admin.country.*')?'active':''}}">
               <i class="nav-icon fas fa-chart-pie text-warning"></i>
               <p>
                 Country
@@ -55,16 +55,36 @@
           </li>
           
           <li class="nav-item">
-            <a href="{{ route('admin.brand.index') }}" class="nav-link {{request()->routeIs('admin.brand.index')?'active':''}}">
+            <a href="{{ route('admin.brand.index') }}" class="nav-link {{request()->routeIs(['admin.brand.*','admin.brandextradetail.*'])?'active':''}}">
               <i class="nav-icon fas fa-th text-warning"></i>
               <p>
                 Brand
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+            
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('admin.brand.index') }}" class="nav-link {{request()->routeIs('admin.brand.index')?'active':''}}">
+                    <i class="nav-icon far fa-circle text-warning"></i>
+                    <p>
+                      Brands
+                    </p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('admin.brandextradetail.index') }}" class="nav-link {{request()->routeIs('admin.brandextradetail.*')?'active':''}}">
+                    <i class="nav-icon far fa-circle text-warning"></i>
+                    <p>
+                      Brand Extra Details
+                    </p>
+                  </a>
+                </li>
+              </ul>
           </li>
           
           <li class="nav-item">
-            <a href="{{ route('admin.searchtag.index') }}" class="nav-link {{request()->routeIs('admin.searchtag.index')?'active':''}}">
+            <a href="{{ route('admin.searchtag.index') }}" class="nav-link {{request()->routeIs('admin.searchtag.*')?'active':''}}">
               <i class="nav-icon fas fa-ellipsis-h text-warning"></i>
               <p>
                 Search Tag
@@ -73,7 +93,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="{{ route('admin.icon.index') }}" class="nav-link {{request()->routeIs('admin.icon.index')?'active':''}}">
+            <a href="{{ route('admin.icon.index') }}" class="nav-link {{request()->routeIs('admin.icon.*')?'active':''}}">
               <i class="nav-icon fas fa-star text-warning"></i>
               <p>
                 Icon
@@ -103,7 +123,7 @@
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="{{ route('admin.tyrecategory.index') }}" class="nav-link {{request()->routeIs('admin.tyrecategory.index')?'active':''}}">
+                  <a href="{{ route('admin.tyrecategory.index') }}" class="nav-link {{request()->routeIs('admin.tyrecategory.*')?'active':''}}">
                     <i class="nav-icon far fa-circle text-warning"></i>
                     <p>
                       Tyre Category

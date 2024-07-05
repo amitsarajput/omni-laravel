@@ -39,14 +39,11 @@
                         </div>
                     @endif
                     
-                <div class="form-group">
-                    <label>Brand</label>
-                    {{ Form::select('brand[]', $brand, $searchtag->brands, ['multiple' => true, 'class'=>'form-control','placeholder' => 'Pick a brand...']) }}
-                </div>
-                <div class="form-group">
-                    <label>Icon</label>
-                    {{ Form::select('icon', $icon, $searchtag->icon_id, ['class'=>'form-control','placeholder' => 'Pick a icon...']) }}
-                </div>
+                
+              <div class="form-group">
+                  <label>Icon</label>
+                  {{ Form::select('icon', $icon, $searchtag->icon_id, ['class'=>'form-control','placeholder' => 'Pick a icon...']) }}
+              </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 {{ Form::text('name', $searchtag->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
@@ -54,6 +51,18 @@
               <div class="form-group">
                 <label for="exampleInputPassword1">Slug</label>
                 {{ Form::text('slug', $searchtag->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+              </div>
+              <div class="form-group">
+                  <label>Brand</label>
+                  <div class="select2-purple sortable-option" data-options="{{$brand}}" data-selected-options="{{$searchtag->brands->pluck('id')}}">
+                    {{ Form::select('brand[]', $brand, $searchtag->brands, ['multiple' => true, 'class'=>'select2 form-control', 'data-dropdown-css-class'=>'select2-purple']) }}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label>Country</label>
+                <div class="select2-purple sortable-option" data-options="{{$country}}" data-selected-options="{{$searchtag->countries->pluck('id')}}">
+                  {{ Form::select('country[]', $country, $searchtag->countries, ['multiple' => true, 'class'=>'select2 form-control', 'data-dropdown-css-class'=>'select2-purple']) }}
+                </div>
               </div>
             </div>
             <!-- /.card-body -->

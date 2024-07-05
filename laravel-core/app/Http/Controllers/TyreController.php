@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brand;
+use App\Models\BrandExtraDetail;
 use App\Models\Country;
 use App\Models\Icon;
 use App\Models\Region;
@@ -11,9 +12,9 @@ use App\Models\Tyre;
 use App\Models\TyreCategory;
 use Illuminate\Database\Query\Builder;
 use Illuminate\Http\Request;
+
+
 use Illuminate\Support\Carbon;
-
-
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -24,7 +25,7 @@ class TyreController extends Controller
     
     public function __construct()
     {
-        $this->middleware('auth')->except(['tyre_grid','tyre_single']);
+        $this->middleware('auth')->except(['tyre_grid','tyre_single','testing']);
     }
     /**
      * Display a listing of the resource.
@@ -41,16 +42,28 @@ class TyreController extends Controller
         $fileStore=$file->storeAs($path, $fileName);
         return $fileName;
     }
-
-    public function tyre_grid($brand=null, $country=null, $region=null )
-    {
-        //print_r('here');
+    public function testing($country){
+        //dd($country);
         $omni_data=session('omni_data');
+        $br = $omni_data['brand'];
+        $brand = Brand::with('countries')->where('slug', $br)->first();
+        $country=$brand->countries()->firstWhere('country_id',$country);
+        dd($country->pivot->kram);
+    }
+    public function tyre_grid(?string $country=null, $brand=null, $region=null )
+    {
+        print_r('tyre_grid');
+        $omni_data=session('omni_data');
+        // check country
+        if (!in_array(strtoupper($country),$omni_data['available_locations'])) {
+            $country=null;
+        }
         //Set variables//
         $region_str= ($region!==null) ? $region : $omni_data['region'];
         $country_str= ($country!==null) ? $country : $omni_data['country'];
         $brand_str= ($brand!==null) ? $brand : $omni_data['brand'];
-        //dd($brand_str,$country_str);
+        
+        
         //Set session data//
         $omni_data['region']=$region_str;
         $omni_data['country']=$country_str;
@@ -61,21 +74,22 @@ class TyreController extends Controller
         $brand_country=strtolower($omni_data['brand'].'-'.$omni_data['country']);
         //Find tyres
         $region=Region::where('slug', $region_str)->first();
-        $country=Country::where('slug', $country_str)->first();
-        if (empty($country)){
-            abort(404);
-        }
-        $brand=Brand::with('search_tags')->where(['slug'=> $brand_str.'-'.$country_str, 'country_id'=>$country->id])->first();
-        if (empty($brand)){
-            abort(404);
-        }
-        $search_tags=$brand->search_tags;
-        if (empty($search_tags)){
-            abort(404);
-        }
-        $tyres=Tyre::with('country','brand','search_tag','icons','tyre_categories')->where(['country_id'=>$country->id,'brand_id'=>$brand->id])->get();
+        $country=Country::with('brands')->where('slug', $country_str)->first();
+        $brand=$country->brands()->firstWhere('slug', $brand_str);
+        $search_tags = SearchTag::getTagsByCountryAndBrand($country->id, $brand->id);
+        //dd($country);
+        //if (empty($search_tags)){
+            //print_r('0 search_tags');
+            //abort(404);
+        //}
         
-        return view('tyre-grid',compact('tyres','search_tags','brand_country'));
+        $tyres=Tyre::with('country','brand','search_tag','icons','tyre_categories')->where(['country_id'=>$country->id,'brand_id'=>$brand->id])->get();
+
+        //get brand details based on country and brand
+        $branddetails=BrandExtraDetail::getBEDByCountryAndBrand($country->id, $brand->id);
+        $branddetailstext=explode('****',json_decode($branddetails->text));
+        //dd($branddetails);
+        return view('tyre-grid',compact('tyres','search_tags','brand_country','branddetailstext'));
     }
     
 
@@ -84,6 +98,7 @@ class TyreController extends Controller
      */
     public function tyre_single($brand=null,$country=null, Tyre $tyre)
     {
+        print_r('tyre_single');
         return view('tyre-single',compact('tyre'));
     }
     
@@ -103,7 +118,7 @@ class TyreController extends Controller
         });
         $brand=Brand::all()->pluck('name','id')->map(function (string $item, string $key) {
             return strtoupper($item);
-        });;
+        });
         $searchtag=SearchTag::all()->pluck('name','id');
         $tyrecategory=TyreCategory::all()->pluck('name','id');
         $icon=Icon::all()->pluck('name','id');

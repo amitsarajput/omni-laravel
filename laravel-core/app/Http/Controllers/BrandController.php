@@ -45,7 +45,7 @@ class BrandController extends Controller
     {
         //
         $request->validate([
-            'country' => ['required', 'integer'],
+            'country' => ['required','array'],
             'name' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255', 'unique:'.Brand::class],
             'search_tags' => ['required','array'],
@@ -53,10 +53,16 @@ class BrandController extends Controller
         ]);
 
         $brand = Brand::create([
-            'country_id' => $request->country,
             'name' =>  $request->name,
             'slug' => strtolower($request->slug),
         ]);
+        
+        $b_countries=[];
+        foreach ($request->country as $key => $value) {
+            $b_countries[$value]=['kram'=>$key];
+        }
+        $brand->countries()->attach($b_countries);
+        
         $b_search_tags=[];
         foreach ($request->search_tags as $key => $value) {
             $b_search_tags[$value]=['kram'=>$key];
@@ -94,7 +100,7 @@ class BrandController extends Controller
     {
         //
         $request->validate([
-            'country' => ['required', 'integer'],
+            'country' => ['required','array'],
             'name' => ['required', 'string', 'max:255'],
             'slug' => ['required', 'string', 'max:255'],
             'search_tags' => ['required','array'],
@@ -102,15 +108,20 @@ class BrandController extends Controller
         ]);
 
         $brand->update([
-            'country_id' => $request->country,
             'name' => $request->name,
             'slug' => strtolower($request->slug),
         ]);
+        
+        $b_countries=[];
+        foreach ($request->country as $key => $value) {
+            $b_countries[$value]=['kram'=>$key];
+        }
+        $brand->countries()->sync($b_countries);
+
         $b_search_tags=[];
         foreach ($request->search_tags as $key => $value) {
             $b_search_tags[$value]=['kram'=>$key];
         }
-        //dd($b_search_tags);
         $brand->search_tags()->sync($b_search_tags);
         return redirect()->back();
     }
@@ -121,6 +132,7 @@ class BrandController extends Controller
     public function destroy(Brand $brand)
     {
         if($brand->id){
+            $brand->countries()->detach();
             $brand->search_tags()->detach();
             $brand->delete();
 

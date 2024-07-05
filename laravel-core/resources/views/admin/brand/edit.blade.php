@@ -39,10 +39,6 @@
                             </ul>
                         </div>
                     @endif
-                <div class="form-group">
-                    <label>Country</label>
-                    {{ Form::select('country', $country, $brand->country_id, ['class'=>'form-control','placeholder' => 'Pick a country...']) }}
-                </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 {{ Form::text('name', $brand->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
@@ -57,6 +53,13 @@
                   {{ Form::select('search_tags[]', $search_tags_all, $brand->search_tags, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
                 </div>
               </div>
+              <div class="form-group">
+                <label>Country</label>
+                <div class="select2-purple sortable-option" data-options="{{$country}}" data-selected-options="{{$brand->countries->pluck('id')}}">
+                  {{ Form::select('country[]', $country, $brand->countries, ['multiple' => true, 'class'=>'select2 form-control', 'data-dropdown-css-class'=>'select2-purple']) }}
+                </div>
+              </div>
+              
             </div>
             <!-- /.card-body -->
 

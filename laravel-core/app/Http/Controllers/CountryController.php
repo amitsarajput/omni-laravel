@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use \App\Http\Middleware\SetSessionData;
+use App\Models\Brand;
 use App\Models\Country;
 use App\Models\Region;
+use App\Models\SearchTag;
 use Illuminate\Http\Request;
-use \App\Http\Middleware\SetSessionData
 
 class CountryController extends Controller
 {
@@ -30,7 +32,9 @@ class CountryController extends Controller
     {
         //
         $region=Region::all()->pluck('name','id');
-        return view('admin.country.create', compact('region'));
+        $brand=Brand::all()->pluck('name','id');
+        $search_tags_all=SearchTag::all()->pluck('name','id');
+        return view('admin.country.create', compact('region','brand','search_tags_all'));
     }
 
     /**
@@ -44,7 +48,10 @@ class CountryController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'code' => ['required', 'string', 'max:255'],
             'locale_code' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255', 'unique:'.Country::class]
+            'slug' => ['required', 'string', 'max:255', 'unique:'.Country::class],
+            'brand' => ['required', 'array' ],
+            'search_tags' => ['required','array'],
+            'search_tags.*' => ['string', 'max:255'],
         ]);
 
         $region = Country::create([
@@ -52,8 +59,19 @@ class CountryController extends Controller
             'name' => strtolower($request->name),
             'code' => strtoupper($request->code),
             'locale_code' => $request->locale_code,
-            'slug' => strtolower($request->slug),
+            'slug' => strtolower($request->slug)
         ]);
+        $t_brand=[];
+        foreach ($request->brand as $key => $value) { 
+            $t_brand[$value]=['kram'=>$key];
+        }
+        $country->brands()->attach($t_brand);
+        
+        $b_search_tags=[];
+        foreach ($request->search_tags as $key => $value) {
+            $b_search_tags[$value]=['kram'=>$key];
+        }
+        $country->search_tags()->attach($b_search_tags);
         return redirect()->back();
     }
 
@@ -71,7 +89,9 @@ class CountryController extends Controller
     public function edit(Country $country)
     {   
         $region=Region::all()->pluck('name','id');
-        return view('admin.country.edit', compact('country','region'));
+        $brand=Brand::all()->pluck('name','id');
+        $search_tags_all=SearchTag::all()->pluck('name','id');
+        return view('admin.country.edit', compact('country','region','brand','search_tags_all'));
     }
 
     /**
@@ -85,7 +105,10 @@ class CountryController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'code' => ['required', 'string', 'max:255'],
             'locale_code' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255']
+            'slug' => ['required', 'string', 'max:255'],
+            'brand' => ['required', 'array' ],
+            'search_tags' => ['required','array'],
+            'search_tags.*' => ['string', 'max:255'],
         ]);
 
         $country->update([
@@ -95,6 +118,17 @@ class CountryController extends Controller
             'locale_code' => $request->locale_code,
             'slug' => strtolower($request->slug),
         ]);
+        $t_brand=[];
+        foreach ($request->brand as $key => $value) { 
+            $t_brand[$value]=['kram'=>$key];
+        }
+        $country->brands()->sync($t_brand);
+
+        $b_search_tags=[];
+        foreach ($request->search_tags as $key => $value) {
+            $b_search_tags[$value]=['kram'=>$key];
+        }
+        $country->search_tags()->sync($b_search_tags);
         return redirect()->back();
     }
 
@@ -108,9 +142,9 @@ class CountryController extends Controller
             $omnidata=session('omni_data');
             // update session data
             //1. delete country from session data
-            unset(($omnidata['available_locations'][$country->name]);
+            unset($omnidata['available_locations'][$country->name]);
             //2. delete from available locale as well
-            unset(($omnidata['available_locales'][$country->code]);
+            unset($omnidata['available_locales'][$country->code]);
             //3. if it is current locale . set default locale.
             if(session()->has('locale') && session('locale')==$country->locale_code){
                 session(['locale'=>$omnidata['default_locale']]);

@@ -8,15 +8,9 @@ use App\Http\Controllers\RegionController;
 use App\Http\Controllers\SearchTagController;
 use App\Http\Controllers\TyreCategoryController;
 use App\Http\Controllers\TyreController;
+use App\Http\Controllers\BrandExtraDetailController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
-
-
-
-
-
-
 
 
 /*
@@ -42,6 +36,7 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::match(['GET','POST','PUT'], 'tyre-reorder/', [TyreController::class,'tyrereorder'])->name('tyre.reorder');
     Route::resource('tyre', TyreController::class);
     Route::resource('tyrecategory', TyreCategoryController::class);
+    Route::resource('brandextradetail', BrandExtraDetailController::class);
     // Route::name('country.')->group(function () {
     //     Route::get('/country', [CountryController::class, 'index'])->name('all');
     //     Route::patch('/country', [CountryController::class, 'update'])->name('update');

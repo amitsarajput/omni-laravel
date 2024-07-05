@@ -27,7 +27,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          {!! Form::open(['route'=>['admin.country.update',$country->id ], 'method' => 'put']) !!}
+          {!! Form::open(['route'=>[ 'admin.country.update',$country->id ], 'method' => 'put']) !!}
             <div class="card-body">
                     @if ($errors->any())
                         <div class="alert alert-danger">
@@ -57,6 +57,18 @@
               <div class="form-group">
                 <label for="exampleInputPassword1">Slug</label>
                 {{ Form::text('slug', $country->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+              </div>
+              <div class="form-group">
+                  <label>Brand</label>
+                  <div class="select2-purple sortable-option" data-options="{{$brand}}" data-selected-options="{{$country->brands->pluck('id')}}">
+                    {{ Form::select('brand[]', $brand, $country->brands, ['multiple' => true, 'class'=>'select2 form-control', 'data-dropdown-css-class'=>'select2-purple']) }}
+                  </div>
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Search Tags</label>
+                <div class="select2-purple sortable-option"  data-options="{{$search_tags_all}}" data-selected-options="{{$country->search_tags->pluck('id')}}">
+                  {{ Form::select('search_tags[]', $search_tags_all, $country->search_tags, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
+                </div>
               </div>
             </div>
             <!-- /.card-body -->

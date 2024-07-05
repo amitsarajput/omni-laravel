@@ -16,6 +16,7 @@ class SetSessionData
      */
     public function handle(Request $request, Closure $next): Response
     {
+        //print_r('From SetSessionData middleware.');
         //session()->forget('omni_data');
         
         if(!session()->has('omni_data') || empty(session('omni_data.available_locations')) || empty(session('omni_data.available_locales')) ){
@@ -25,7 +26,7 @@ class SetSessionData
                 'preffered_location'=>'',
                 'user_location'=>'',
                 'default_location'=>'EU',
-                'default_locale'=>'en_EU',
+                'default_locale'=>'eu',
                 'region'=>'eu',
                 'country'=>'eu',
                 'brand'=>'radar',
