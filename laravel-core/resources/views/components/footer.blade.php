@@ -1,5 +1,25 @@
  <!-- Footer -->
  <footer id="footer">
+    <div class="container">
+        <div class="grid">
+            <div class="col-6">
+                <img src="{{asset('images/logos/radar-tyres-light-red.svg')}}" alt="">
+            </div>
+            <div class="col-6">
+                <div class="footer-socials">
+                    <div class="title">FOLLOW US</div>
+                    <div class="icons">
+                        <a target="_blank" href="https://www.youtube.com/@omni-united"><i class="icon-youtube-play"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/company/omni-united/"><i class="icon-linkedin"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/omni_united/?hl=en"><i class="fa fa-instagram"></i></a>
+                        <a target="_blank" href="https://www.facebook.com/omniunited/"><i class="icon-facebook"></i></a>
+                        <a target="_blank" href="https://twitter.com/Omni_United"><i class="icon-twitter-x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
         <div class="container">
             <div class="footer-cols">
                 <div class="footer-col">

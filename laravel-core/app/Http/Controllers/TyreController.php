@@ -52,7 +52,7 @@ class TyreController extends Controller
     }
     public function tyre_grid(?string $country=null, $brand=null, $region=null )
     {
-        print_r('tyre_grid');
+        //print_r('tyre_grid');
         $omni_data=session('omni_data');
         // check country
         if (!in_array(strtoupper($country),$omni_data['available_locations'])) {
