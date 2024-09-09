@@ -23,6 +23,7 @@
 	/*margin:$section-spacing 0;*/
 	padding: $section-spacing 0;
 	background-color: #f7f7f7;
+	&.no-padding{padding: 0;}
 	&.top-padding{padding: $section-spacing 0 0; }
 	&.bg-white{
 		background-color: $white;
@@ -538,6 +539,71 @@
 			}
 		}
 	}
+}
+#tabs{
+	&.navs-with-text{
+		.tabs-navigation{
+			display: flex;
+			justify-content: flex-start;
+			flex-direction: row;
+			flex-wrap: wrap;
+			border-top: 3px solid #da2224;
+  			padding-top: 20px; 
+			margin: 1em 1.4em;
+			.tabs-navigation--title{
+				width: 130px;
+				padding-left:1rem;
+			}
+			.ui-tabs-nav{ 
+				flex: 1 1 auto;
+			}
+		}
+	}
+}
+/*Tyre Season Navigations*/
+.t-season-nav{
+	display: flex;
+	justify-content: flex-start;
+	flex-direction: row;
+	flex-wrap: wrap;
+	border-top: 3px solid #da2224;
+	padding-top: 20px;
+	.t-season-nav--title{
+		width: 130px;
+		padding-left:1rem;
+	}
+	.t-season--tabs-nav{ 
+		flex: 1 1 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-flow: row wrap;
+		list-style: none;
+		margin: 0;
+		.t-season--tabs-tab{
+			margin-right:10px;
+			&:last-child{margin-right:0}
+			&.t-season--tabs-tab-active{
+				a{color: $red;}
+			}
+			a{
+				font-family: $heading-font;
+				font-weight: 400;
+				font-size: 22px;
+				line-height: 30px;
+				letter-spacing: 2px;
+				color: $dark-100;
+				padding: 0 10px;
+				box-shadow: none;
+				text-transform: uppercase;
+				i{
+					font-size: 38px;
+  					vertical-align: middle;	
+				}
+				&.active{}
+			}
+		}
+	} 
 }
 
 
@@ -1203,6 +1269,9 @@ ol.breadcrumb {
 		  }
 	}
 }
+
+
+/*Boxes Styles*/
 
 
 

@@ -80,6 +80,8 @@ ul{
     letter-spacing: 2px;
     margin-top:math.div($section-spacing, $i);
     margin-bottom:math.div($section-spacing , 2*$i);
+	&.no-top-margin{ margin-top: 0;}
+	&.no-bottom-margin{ margin-bottom: 0;}
 	&.black{color:$black;}
 	&.body-font{font-family: $body-font;}
 	@each $weight in $font-weight{

@@ -24,9 +24,37 @@
         </div>
     </section>
     <section id="content">
-        
+        <div class="section no-padding">
+            <div class="grid grid-bleed align-center">
+                <div class="col-6">
+                    <img src="{{asset('images/tyre-grid/premium-col.jpg')}}" alt="Premium Collection">
+                </div>
+                <div class="col-6">
+                    <div class="ml-7 mr-7">
+                        <h5>PREMIUM COLLECTION</h5>
+                        <h2 class="dark-100 mt-0">WORLDWIDE PROVEN SAFETY
+                        AND PERFORMANCE</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="grid grid-bleed align-center">
+                <div class="col-6">
+                    <div class="ml-9 mr-9">
+                        <h5>WHY RADAR</h5>
+                        <h2 class="dark-100 mt-0">THE SAME HIGH
+                        PERFORMANCE, SAFETY AND
+                        DURABILITY, BUT WITHOUT
+                        THE HEFTY PRICE TAG</h2>
+                        <a  class="knopf red heading-font sharp ls-1" href="#">READ MORE</a>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <img src="{{asset('images/tyre-grid/wet-braking.jpg')}}" alt="Wet Braking">
+                </div>
+            </div>
+        </div>
         <!-- Implement This Text From Brand Database -->
-        <div class="section bg-gray">
+        <!-- <div class="section bg-gray">
 			<div class="container">
 				<div class="grid">
 					<div class="col-12">
@@ -34,23 +62,35 @@
                         <p>{{ __($text) }}</p>
                         @endforeach
                     </div>
-					<!-- <div class="col-6">
-					    <p>{{ __("Being one of the most reliable brands in the market, Radar Tires are manufactured in compliance with the highest regulatory certifications and utilize PAH-free oils in their compounds to comply with stringent European standards. In addition to this, the brand has always been committed to being socially responsible and has been manufactured carbon neutral since 2013. Radar Tires has also supported the Breast Cancer Research Foundation (BCRF) since 2011 and to date has donated close to $1.4 million, funding close to 28,000 hours of critical life-saving research.")}}</p>
-					</div> -->
 				</div>
 			</div>
-        </div>
+        </div> -->
         
-        <div class="container "><h2 class="center uppercase black">Search By</h2></div>
+        <div class="container "><h2 class="center uppercase black mb-2">TYRES</h2></div>
         <div class="container ">
-            <div id="tabs">
-                <ul>
-                    @foreach ($search_tags as $search_tag)
-                        <li><a href="#tabs-{{ $search_tag->slug }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
-                    @endforeach
-                </ul>
+            <div id="tabs" class="navs-with-text">
+                <div class="tabs-navigation">
+                    <div class="tabs-navigation--title">
+                        <h6 class="uppercase">vehicle type</h6>
+                    </div>
+                    <ul >
+                        @foreach ($search_tags as $search_tag)
+                            <li><a href="#tabs-{{ $search_tag->slug }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
+                        @endforeach
+                    </ul>
+                </div>
                 @foreach ($search_tags as $search_tag)
                     <div id="tabs-{{ $search_tag->slug }}">
+                        <div class="t-season-nav">
+                            <div class="t-season-nav--title">
+                                <h6 class="uppercase">Season</h6>
+                            </div>
+                            <ul class="t-season--tabs-nav">
+                                <li class="t-season--tabs-tab"><a href="#"><i class="omniicon-car-3"></i> Summer</a></li>
+                                <li class="t-season--tabs-tab t-season--tabs-tab-active"><a href="#"><i class="omniicon-car-3"></i> All Season</a></li>
+                                <li class="t-season--tabs-tab"><a href="#"><i class="omniicon-car-3"></i> Winter</a></li>
+                            </ul>
+                        </div>
                         @php
                             $filtered = $tyres->where('search_tag_id', $search_tag->id);
                         @endphp

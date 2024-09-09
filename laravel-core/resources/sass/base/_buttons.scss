@@ -3,9 +3,9 @@ html {
        Color
        ========================================================================== */
   
-    --knopf-hue: 218;
-    --knopf-saturation: 77%;
-    --knopf-luminosity: 37%;
+    --knopf-hue: 357;
+    --knopf-saturation: 87%;
+    --knopf-luminosity: 92%;
   
     /* ==========================================================================
        Sizes
@@ -395,6 +395,10 @@ html {
 
   .knopf{
     letter-spacing: 3px;
+
+    @for $i from 0 through 10 {
+      &.ls-#{$i}{letter-spacing: #{$i}px;}
+    }
     // Color BG Color
     &.red{
       background-color: $red;
