@@ -28,12 +28,12 @@
             <div class="footer-col">
                 <!-- <div class="title">ABOUT US</div> -->
                 <a href="#" class="radar_link" >TYRES</a>
-                <a href="#">WHY RADAR</a>
+                <a  href="{{ route('pages.why-radar')}}">WHY RADAR</a>
                 <a href="#">DEALER LOCATOR</a>
             </div>
             <div class="footer-col">
                 <!-- <div class="title">BRANDS</div> -->
-                <a href="#">ABOUT US</a>
+                <a href="{{ route('pages.about-us')}}">ABOUT US</a>
                 <a href="#">RESPONSIBILITY</a>
                     <a href="#">WARRANTY</a>
 
@@ -41,7 +41,7 @@
             </div>
             <div class="footer-col">
                 <a href="#">OMNI UNITED</a>
-                <a href="#">CONTACT</a>
+                <a href="{{ route('pages.contact')}}">CONTACT</a>
             </div>
             
         </div>

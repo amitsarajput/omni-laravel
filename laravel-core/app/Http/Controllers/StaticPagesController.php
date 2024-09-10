@@ -21,12 +21,22 @@ class StaticPagesController extends Controller
         
         //dd($country,$request_path);
         $this->data=[];
-        if ($request_path==='who-we-are') {
+        if ($request_path==='about-us') {
+            $this->data['page']=$request_path;
+        }
+        if ($request_path==='why-radar') {
+            $this->data['page']=$request_path;
+        }
+        if ($request_path==='contact') {
             $this->data['page']=$request_path;
         }
         if ($request_path === 'radar-us/limited-warranty') {
             $this->data['page'] = 'warranty-radarus';
         }
-        return view('pages/' . $this->data['page'], ['data'=>$this->data]);
+        if (View::exists('pages/'.$this->data['page'])) {
+            return view('pages/' . $this->data['page'], ['data'=>$this->data]);
+        }else {
+            abort(404);
+        }
     }
 }

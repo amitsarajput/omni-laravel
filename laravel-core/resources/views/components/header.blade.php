@@ -7,9 +7,9 @@
         <div class="right-menu-wrapper">
             <ul class="menu">
                 <li class="menu-item"><a href="{{route('home')}}">Tyres</a></li>
-                <li class="menu-item"><a href="{{route('home')}}">Why Radar</a></li>
+                <li class="menu-item"><a href="{{ route('pages.why-radar')}}">Why Radar</a></li>
                 <li class="menu-item"><a href="{{route('home')}}">Dealer Locator</a></li>
-                <li class="menu-item"><a href="{{route('home')}}">Contact</a></li>
+                <li class="menu-item"><a href="{{ route('pages.contact')}}">Contact</a></li>
             </ul>
             <div id="top-search">
                 <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>

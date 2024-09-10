@@ -9,11 +9,17 @@
 	height: $page-title-height;
 	margin-bottom: $section-spacing;
 	color: #fff;
+	&.page-title--left{justify-content: flex-start;}
+	@for $i from 1 through 10 {
+		&.el-height-#{$i}0{
+			height: #{$i}0vh;
+		}
+	}
 	@include bgimage(); 
 	.page-title-wrapper{
 		padding: 0;
 		margin: 0;
-		h2{color:inherit; font-weight: 500;margin: 0;padding: 0; text-align: center;}
+		h2{color:inherit; font-weight: 600;margin: 0;padding: 0;}
 		p{color: inherit;font-size: 1.3rem; font-weight: 400;text-align: center;margin: 0;padding: 0;}
 	}
 }

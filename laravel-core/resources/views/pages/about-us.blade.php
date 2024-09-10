@@ -1,28 +1,75 @@
 <x-guest-layout>
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/about-banner.webp') }}" />
+    <x-page-title image-url="{{ asset('images/about-banner.webp') }}" container="true" page-title="About us" class="page-title--left uppercase" />
     
     <!-- Content
     ============================================= -->
     <section id="content">
 
         <div class="container clearfix">
-
-            <div class="heading-block center">
-                <h2>Who we Are </h2>
-            </div>
-
             <div class="grid">
                 <div class="col-lg-12">
-                    <p>Omni United is one of the most dynamic and fastest growing tyre companies in the world. Founded in Singapore in 2003 by G.S. Sareen, Omni is a tyre designer, manufacturer and distributor that has deep rooted values of giving back to society.</p>
+                    <p>Radar Tyres – premium quality meets affordability. Discover our wide range of high-performance, quality tyres designed to ensure safety and reliability. Radar Tyres combines the highest quality standards with an excellent price-performance ratio. Radar Tyres is the right choice for the consumer who values performance, safety and sustainability.</p>
 
                     <p>We offer a wide range of consumer and commercial products with unparalleled logistics solutions and a multi-lingual customer service. We have a global footprint and our products are sold in over 80 countries. Our portfolio of brands include our in-house brands such as Radar Tyres, Patriot Tyres, American Tourer and Tecnica as well as other licenced and private brands.</p>
                 </div>
             </div>
+
+            <div class="grid">
+                <div class="col-lg-12">
+
+                    <div class="heading-block dark">
+                        <h4 class="dark">Who we Are </h4>
+                    </div>
+                    <p>Radar Tyres is part of Omni United, one of the most dynamic and design-driven tyre companies in the world. Founded in Singapore in 2003 by G.S. Sareen, we are a tyre designer, manufacturer and distributor that has deep rooted values of being sustainable and giving back to society. </p>
+
+                    <p>We offer a wide range of consumer and commercial products with unparalleled logistics solutions and multi-lingual customer service. We have a global footprint, and
+                    our products are sold in over 50 countries.</p>
+                </div>
+            </div>
+        </div>
+        <div class="container clearfix  mt-2 mb-2">
+            <div class="grid bg-dark-10 align-center">
+                <div class="col-8">
+                    <div class="pl-2 pr-3">
+                        <p class=" left">More information on Omni United is available by emailing info@omni-united.com and online at www.omni-united.com. To read the latest press releases, please visit our Media Centre.</p>
+                        <a href="#" class="knopf red sharp heading-font ls-1">VISIT MEDIA CENTRE</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="pl-3 pr-1 pt-1 pb-1 bl-2 bc-dark-60">
+                        <h5 class="dark-100 mt-0">MEDIA CONTACT</h5>
+                        <p class="left mb-0">Manav Suri
+                            <br>Marketing Manager
+                            <br>E: manavsuri@omni-united.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="grid grid-bleed align-center">
+                    <div class="col-6">
+                        <img src="{{asset('images/gssareen.jpg')}}" alt="About us">
+                    </div>
+                    <div class="col-6">
+                        <div class="ml-2 mr-2">
+                            <h5 class="dark-100 mt-0">PARTNERING FOR SUCCESS</h5>
+                            <p>I am thrilled to share our approach, passion and vision that drive Radar
+                            Tyres. We believe in creating a brand that stands for quality and innovation
+                            while making premium products accessible to everyone.</p><p>
+                            Our mission is to offer premium, high-quality tyres that are affordable for
+                            all, bridging the gap between superior performance and costeffectiveness.
+                            </p><p>Warm regards,</p>
+                            <p>G S Sareen
+                               <br> President & CEO
+                               <br> Omni United (S) Pte Ltd</p>
+                        </div>
+                    </div>
+                </div>
         </div>
 
-        <div class="container">
+        <!-- <div class="container">
             
             <div class="grid clearfix">
                 <div class="col-lg-12">
@@ -35,12 +82,9 @@
                     <BreezeNumberStat number="~120" title="Design<br>Patents" />
                 </div>
             </div>          
-        </div>
+        </div> -->
 
-        <div class="container">
-
-            
-
+        <!-- <div class="container">
             <div class="grid clearfix">
                 <div class="col-lg-12">
                     <div class="heading-block">
@@ -63,12 +107,9 @@
                     <BreezeNumberStat number="~9" title="Global<br>certifications" />
                 </div>
             </div>
-        </div>
+        </div> -->
 
-        <div class="container">
-
-            
-
+        <!-- <div class="container">
             <div class="grid clearfix">
                 <div class="col-lg-12">
                     <div class="heading-block">
@@ -84,12 +125,9 @@
 
 
             </div>
-        </div>
+        </div> -->
 
-        <div class="container">
-
-            
-
+        <!-- <div class="container">
             <div class="grid clearfix">
                 <div class="col-lg-12">
                     <div class="heading-block">
@@ -103,7 +141,7 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
     </section><!-- #content end -->
 </x-guest-layout>

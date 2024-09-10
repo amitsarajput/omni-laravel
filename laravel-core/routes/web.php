@@ -55,10 +55,7 @@ Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])-
 
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
-
-
 require __DIR__.'/staticpages.php';
-
 
 //Normal Routes
 Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');//
@@ -76,5 +73,10 @@ Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2}'])->group(funct
     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z\-]{3,}'])->name('tyre.single');//[TyreController::class, 'tyre_single']
     
 });
+
+
+
+
+
 
 
