@@ -2,15 +2,18 @@
 
 use App\Http\Controllers\AjaxHandlerController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\BrandExtraDetailController;
 use App\Http\Controllers\CountryController;
 use App\Http\Controllers\IconController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\SearchTagController;
+use App\Http\Controllers\SeasonController;
 use App\Http\Controllers\TyreCategoryController;
 use App\Http\Controllers\TyreController;
-use App\Http\Controllers\BrandExtraDetailController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
+
 
 
 /*
@@ -37,6 +40,8 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('tyre', TyreController::class);
     Route::resource('tyrecategory', TyreCategoryController::class);
     Route::resource('brandextradetail', BrandExtraDetailController::class);
+    Route::resource('season', SeasonController::class);
+
     // Route::name('country.')->group(function () {
     //     Route::get('/country', [CountryController::class, 'index'])->name('all');
     //     Route::patch('/country', [CountryController::class, 'update'])->name('update');

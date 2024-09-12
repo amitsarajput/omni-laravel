@@ -10,13 +10,15 @@
             
             <div class="meta">{{ implode(" | ", $tyre->tyre_categories->pluck('name')->toArray()) }}</div>
             <div class="image">
-                <a href="{{url($tyre->brand->slug.'/'.$tyre->slug)}}">
+                <a href="{{url($tyre->slug)}}">
                     <img 
                         data-src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
                         src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
                         alt="{{ $tyre->name }}" class="lozad"  data-loaded="true" >
                 </a>
             </div>
+            <!-- Read more button -->
+            <a class="tyre--readmore" href="{{url($tyre->brand->slug.'/'.$tyre->slug)}}">READ MORE  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
         </div>
     @endforeach
 </div>

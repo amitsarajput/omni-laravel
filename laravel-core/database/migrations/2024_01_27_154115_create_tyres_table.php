@@ -14,9 +14,10 @@ return new class extends Migration
         Schema::create('tyres', function (Blueprint $table) {
             $table->id();
             $table->tinyInteger('published')->default(0);
-            $table->foreignId('country_id');
-            $table->foreignId('brand_id');
-            $table->foreignId('search_tag_id');
+            $table->foreignId('country_id')->index();
+            $table->foreignId('brand_id')->index();
+            $table->foreignId('search_tag_id')->index();
+            $table->foreignId('season_id')->default(null)->index();
             $table->string('name');
             $table->string('preview_name');
             $table->string('slug')->unique();

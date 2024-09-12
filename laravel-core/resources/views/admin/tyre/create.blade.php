@@ -40,18 +40,22 @@
                     @endif
                 <div class="row">
 
-                  <div class="form-group col-4">
+                  <div class="form-group col-3">
                       <label>Country</label>
 
                       {{ Form::select('country', $country, '', ['class'=>'form-control','placeholder' => 'Select Country...']) }}
                   </div>
-                  <div class="form-group  col-4">
+                  <div class="form-group  col-3">
                       <label>Brand</label>
                       {{ Form::select('brand', $brand, '', ['class'=>'form-control','placeholder' => 'Select Brand...']) }}
                   </div>
-                  <div class="form-group col-4">
+                  <div class="form-group col-3">
                       <label>Search tag</label>
                       {{ Form::select('searchtag', $searchtag, '', ['class'=>'form-control','placeholder' => 'Select Search Tag...']) }}
+                  </div>
+                  <div class="form-group col-3">
+                      <label>Season</label>
+                      {{ Form::select('season', $season, '', ['class'=>'form-control','placeholder' => 'Select Search Tag...']) }}
                   </div>
 
                 </div>

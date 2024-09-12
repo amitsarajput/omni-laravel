@@ -8,12 +8,13 @@ use App\Models\Country;
 use App\Models\Icon;
 use App\Models\Region;
 use App\Models\SearchTag;
+use App\Models\Season;
 use App\Models\Tyre;
 use App\Models\TyreCategory;
 use Illuminate\Database\Query\Builder;
+
+
 use Illuminate\Http\Request;
-
-
 use Illuminate\Support\Carbon;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
@@ -77,19 +78,21 @@ class TyreController extends Controller
         $country=Country::with('brands')->where('slug', $country_str)->first();
         $brand=$country->brands()->firstWhere('slug', $brand_str);
         $search_tags = SearchTag::getTagsByCountryAndBrand($country->id, $brand->id);
+        // Get seasons
+        $seasons=Season::all();//->pluck('name','id')
         //dd($country);
         //if (empty($search_tags)){
             //print_r('0 search_tags');
             //abort(404);
         //}
         
-        $tyres=Tyre::with('country','brand','search_tag','icons','tyre_categories')->where(['country_id'=>$country->id,'brand_id'=>$brand->id])->get();
+        $tyres=Tyre::with('country','brand','search_tag','icons','tyre_categories','season')->where(['country_id'=>$country->id,'brand_id'=>$brand->id])->get();
 
         //get brand details based on country and brand
         $branddetails=BrandExtraDetail::getBEDByCountryAndBrand($country->id, $brand->id);
         $branddetailstext=explode('****',json_decode($branddetails->text));
         //dd($branddetails);
-        return view('tyre-grid',compact('tyres','search_tags','brand_country','branddetailstext'));
+        return view('tyre-grid',compact('tyres','search_tags','brand_country','branddetailstext','seasons'));
     }
     
 
@@ -122,8 +125,9 @@ class TyreController extends Controller
         $searchtag=SearchTag::all()->pluck('name','id');
         $tyrecategory=TyreCategory::all()->pluck('name','id');
         $icon=Icon::all()->pluck('name','id');
+        $season=Season::all()->pluck('name','id');
 
-        return view('admin.tyre.create',compact('country','brand','searchtag','icon','tyrecategory'));
+        return view('admin.tyre.create',compact('country','brand','searchtag','icon','tyrecategory','season'));
     }
 
     /**
@@ -136,6 +140,7 @@ class TyreController extends Controller
             'country' => ['required', 'integer'],
             'brand' => ['required', 'integer'],
             'searchtag' => ['required', 'integer'],
+            'season' => ['required', 'integer'],
             'icon' => ['required', 'array'],
             'name' => ['required', 'string', 'max:255'],
             'previewname' => ['required', 'string', 'max:255'],
@@ -152,6 +157,7 @@ class TyreController extends Controller
             'country_id' => $request->country,
             'brand_id' => $request->brand,
             'search_tag_id' => $request->searchtag,
+            'season_id' => $request->season,
             'name' => $request->name,
             'preview_name' => htmlspecialchars($request->previewname),
             'slug' => strtolower($request->slug),
@@ -205,8 +211,9 @@ class TyreController extends Controller
         $searchtag=SearchTag::all()->pluck('name','id');
         $tyrecategory=TyreCategory::all()->pluck('name','id');
         $icon=Icon::all()->pluck('name','id');
+        $season=Season::all()->pluck('name','id');
 
-        return view('admin.tyre.edit',compact('tyre','country','brand','searchtag','icon','tyrecategory'));
+        return view('admin.tyre.edit',compact('tyre','country','brand','searchtag','icon','tyrecategory','season'));
     }
 
     /**
@@ -219,6 +226,7 @@ class TyreController extends Controller
             'country' => ['required', 'integer'],
             'brand' => ['required', 'integer'],
             'searchtag' => ['required', 'integer'],
+            'season' => ['required', 'integer'],
             'icon' => ['required', 'array'],
             'name' => ['required', 'string', 'max:255'],
             'previewname' => ['required', 'string', 'max:255'],
@@ -235,6 +243,7 @@ class TyreController extends Controller
             'country_id' => $request->country,
             'brand_id' => $request->brand,
             'search_tag_id' => $request->searchtag,
+            'season_id' => $request->season,
             'name' => $request->name,
             'preview_name' => htmlspecialchars($request->previewname),
             'slug' => strtolower($request->slug),

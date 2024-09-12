@@ -100,9 +100,6 @@ class SearchTagController extends Controller
         $brand=Brand::all()->pluck('name','id')->map(function (string $item, string $key) {
             return ucfirst($item);
         });
-        $icon=Icon::all()->pluck('name','id')->map(function (string $item, string $key) {
-            return strtoupper($item);
-        });
 
         $icon=Icon::all()->pluck('name','id')->map(function (string $item, string $key) {
             return strtoupper($item);

@@ -81,43 +81,68 @@
                 </div>
                 @foreach ($search_tags as $search_tag)
                     <div id="tabs-{{ $search_tag->slug }}">
-                        <div class="t-season-nav">
-                            <div class="t-season-nav--title">
-                                <h6 class="uppercase">Season</h6>
-                            </div>
-                            <ul class="t-season--tabs-nav">
-                                <li class="t-season--tabs-tab"><a href="#"><i class="omniicon-car-3"></i> Summer</a></li>
-                                <li class="t-season--tabs-tab t-season--tabs-tab-active"><a href="#"><i class="omniicon-car-3"></i> All Season</a></li>
-                                <li class="t-season--tabs-tab"><a href="#"><i class="omniicon-car-3"></i> Winter</a></li>
-                            </ul>
-                        </div>
                         @php
                             $filtered = $tyres->where('search_tag_id', $search_tag->id);
                         @endphp
-                        <x-tyre-grid :tyres='$filtered' />
+                        
+                        @foreach ($seasons as $oneseason)
+                            <div id="{{$search_tag->slug.'-'.$oneseason->slug}}">
+                                <x-season-navs :seasons="$seasons" :parentel="$search_tag->slug" :active="$oneseason"/>
+                                @php
+                                    $season_tyres = $filtered->where('season_id', $oneseason->id);
+                                @endphp
+                                <x-tyre-grid :tyres='$season_tyres' />
+                            </div>
+                        @endforeach
                     </div>
                 @endforeach
                 
             </div>
         </div>
+
+        <!-- Dealer locator widget -->
+        <div class="section bg-white">
+            <div class="container">
+                <h2 class="uppercase center dark-100 mb-2">DEALER LOCATOR</h2>
+                
+                <div class="grid align-center">
+                    <div class="col-12">
+                        <img src="{{asset('images/tyre-grid/map-section.jpg')}}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Responsibility -->
         <div class="section  bg-gray">
             <div class="container">
-                <div class="center">
-                    <h2 class="uppercase center">Responsibility</h2>
-                </div>
                 <div class="grid">
-                    <div class="col-lg-6"> 
-                        <x-image-box 
-                            title="Social Responsibility" 
-                            image="https://www.omni-united.com/assets/img/products/social-responsibility.webp" 
-                            url="https://www.omni-united.com/social-responsibility" />
+                    <div class="col-12">
+                        <div class="center">
+                            <h2 class="uppercase center dark-100 mb-2">OUR COMMITMENT TO THE ENVIRONMENT AND COMMUNITY</h2>
+                        </div>
                     </div>
-                    <div class="col-lg-6">
-                        <x-image-box 
-                            title="Environmental Responsibility" 
-                            image="https://www.omni-united.com/assets/img/products/environmental-responsibility.webp" 
-                            url="https://www.omni-united.com/environmental-responsibility" />
-
+                </div>
+                
+                <div class="grid align-center">
+                    <div class="col-6 col-bleed">
+                        <img src="{{asset('images/tyre-grid/social-responsibility.jpg')}}" alt="Social Responsibility">
+                    </div>
+                    <div class="col-6">
+                        <div class="ml-2">
+                            <h5 class="dark-100 mt-0 uppercase">SOCIAL RESPONSIBILITY</h5>
+                            <p>We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid align-center">
+                    <div class="col-6">
+                        <div class="mr-2">
+                            <h5 class="dark-100 mt-0 uppercase">ENVIRONMENT</h5>
+                            <p>We continually strive to minimize our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.</p>
+                        </div>
+                    </div>
+                    <div class="col-6 col-bleed">
+                        <img src="{{asset('images/tyre-grid/environmental-responsibility.jpg')}}" alt="Environmental Responsibility">
                     </div>
                 </div>
             </div>

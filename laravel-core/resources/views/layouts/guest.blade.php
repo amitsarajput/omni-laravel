@@ -11,7 +11,7 @@
 
         <!-- Scripts -->
         @vite(['resources/sass/style.scss', 'resources/js/app.js'])
-
+        
         <!-- <link rel="stylesheet" href="css/style.css"> -->
         <link rel="stylesheet" href="{{ asset('css/reflex.css')}}">
         <!-- Latest compiled and minified CSS -->
@@ -34,6 +34,7 @@
             />
             <x-header />
             <x-sidepanel />
+            <x-floating-button />
             {{ $slot }}
             <x-footer />
         </div><!-- #wrap
@@ -47,6 +48,9 @@
         <!-- Latest compiled and minified JavaScript -->
         <script src="{{ asset('js/select2.min.js')}}"></script>
         <script src="{{ asset('js/main.js')}}"></script>
+        <!-- Scroll To Jquery -->
+        <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2.0.0/jquery.scrollTo.min.js"></script>
+        
         <script>
             $(function () {
                 function formatText (icon) {
@@ -56,6 +60,16 @@
                     minimumResultsForSearch: Infinity,
                     templateSelection: formatText,
                     templateResult: formatText
+                });
+            });
+            $(document).ready(function() {
+                // Bind to the click of all links with a #hash in the href
+                $('a[scroll-to^="#"]').click(function(e) {
+                    // Prevent the jump and the #hash from appearing on the address bar
+                    e.preventDefault();
+                    // Scroll the window, stop any previous animation, stop on user manual scroll
+                    // Check https://github.com/flesler/jquery.scrollTo for more customizability
+                    $(window).stop(true).scrollTo(this.hash, {duration:1000, interrupt:true});
                 });
             });
         </script>

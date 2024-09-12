@@ -6,6 +6,7 @@ use App\Models\Brand;
 use App\Models\Country;
 use App\Models\Icon;
 use App\Models\SearchTag;
+use App\Models\Season;
 use App\Models\TyreCategory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -22,6 +23,7 @@ class Tyre extends Model
         'country_id',
         'brand_id',
         'search_tag_id',
+        'season_id',
         'icon',
         'name',
         'preview_name',
@@ -54,6 +56,11 @@ class Tyre extends Model
     public function tyre_categories(): BelongsToMany
     {
         return $this->belongsToMany(TyreCategory::class,'tyre_tyre_category','tyre_id','tyre_category_id')->withPivot('kram')->orderByPivot('kram', 'asc');
+    }
+
+    public function season(): BelongsTo
+    {
+        return $this->belongsTo(Season::class);
     }
 
 }
