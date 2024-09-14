@@ -9,7 +9,7 @@ class StaticPagesController extends Controller
 {
     private $data=[];
     public function index(Request $request,  ?string $country=null){
-        print_r('StaticPagesController');
+        //print_r('StaticPagesController');
         //$request->fullUrl(); $request->path(); $request->root();
         if($country!==null){
             $segments=explode('/',$request->path());
@@ -25,6 +25,9 @@ class StaticPagesController extends Controller
             $this->data['page']=$request_path;
         }
         if ($request_path==='why-radar') {
+            $this->data['page']=$request_path;
+        }
+        if ($request_path==='dealer-locator') {
             $this->data['page']=$request_path;
         }
         if ($request_path==='contact') {

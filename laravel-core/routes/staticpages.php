@@ -32,6 +32,9 @@ use Illuminate\Support\Facades\Route;
 Route::name('pages.')->group(function(){
 	Route::get('/about-us', [StaticPagesController::class,'index'])->name('about-us');
 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
+	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
+	//Contact Page
+	Route::get('/contact', [StaticPagesController::class, 'index'])->name('contact');
 		//About Pages
 		Route::name('about.')->group(function(){
 			
@@ -73,8 +76,6 @@ Route::name('pages.')->group(function(){
 			Route::get('/media-coverage', [MediaController::class, 'coverage'])->name('mediacoverage');
 			Route::get('/press-releases', [MediaController::class, 'press'])->name('pressreleases');
 		});
-		//Contact Page
-		Route::get('/contact', [StaticPagesController::class, 'index'])->name('contact');
 
 });
 
@@ -82,6 +83,9 @@ Route::name('pages.')->group(function(){
 Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2}'])->name('pages.')->group(function(){
 	Route::get('/about-us', [StaticPagesController::class,'index'])->name('about-us');
 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
+	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
+	//Contact Page
+	Route::get('/contact', [StaticPagesController::class, 'index'])->name('contact');
 	//About Pages
 	Route::name('about.')->group(function(){
 
@@ -124,7 +128,4 @@ Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2}'])->name('pages
 		Route::get('/media-coverage', [MediaController::class, 'coverage'])->name('mediacoverage');
 		Route::get('/press-releases', [MediaController::class, 'press'])->name('pressreleases');
 	});
-	//Contact Page
-	Route::get('/contact', [StaticPagesController::class, 'index'])->name('contact');
-
 });

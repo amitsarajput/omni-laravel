@@ -29,7 +29,7 @@
                 <!-- <div class="title">ABOUT US</div> -->
                 <a href="#" class="radar_link" >TYRES</a>
                 <a  href="{{ route('pages.why-radar')}}">WHY RADAR</a>
-                <a href="#">DEALER LOCATOR</a>
+                <a href="{{route('pages.dealer-locator')}}">DEALER LOCATOR</a>
             </div>
             <div class="footer-col">
                 <!-- <div class="title">BRANDS</div> -->
@@ -40,7 +40,7 @@
                 <!--<a href="https://www.omni-united.com/dealer-login">Dealer Corner</a>-->
             </div>
             <div class="footer-col">
-                <a href="#">OMNI UNITED</a>
+                <a href="https://www.omni-united.com/">OMNI UNITED</a>
                 <a href="{{ route('pages.contact')}}">CONTACT</a>
             </div>
             

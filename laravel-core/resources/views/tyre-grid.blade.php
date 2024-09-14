@@ -107,7 +107,7 @@
                 
                 <div class="grid align-center">
                     <div class="col-12">
-                        <img src="{{asset('images/tyre-grid/map-section.jpg')}}" alt="">
+						<x-dealer-locator-widget />
                     </div>
                 </div>
             </div>

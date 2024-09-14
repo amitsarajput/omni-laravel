@@ -1,7 +1,9 @@
 <x-guest-layout>
-	<!-- Page Title
-	============================================= -->
-	
+
+    <!-- Page Title
+    ============================================= -->
+    <x-page-title image-url="{{ asset('images/why-radar-banner.jpg') }}" container="true" page-title="Radar Tyres<br>provides worldwide<br>proven safety and<br>performance" class="page-title--left el-height-60 uppercase" />
+    
 
 	<!-- Content
 	============================================= -->
@@ -9,84 +11,23 @@
 
 		<div class="content-wrap">
 		
-			<div class="section bg-white">
+			<div class="section bg-white pt-0">
 
 				<div class="fillter-bar ptlg">
 					<div class="container clearfix">
-						<div class="heading-block  center custom-heading-block">
-							<h2>UK/EUROPE - Dealer Locator</h2>
+						<div class="heading-block center mb-2">
+							<h2 class="dark">Dealer Locator</h2>
 						</div>
-						
-						<div class="heading-block center subheading">
-							<h3 class="dark">find a dealer near you</h3>
-						</div>
-
-						<div class="main-search-bar">
-							<div class="container clearfix">
-								<form id="mapsearchform" action="#" onsubmit="formsubmission(event, this)">
-									<div class="form-row row">
-										<div class="col-lg-7">
-											<div class="inputs">
-												<div class="form-group">
-													<label>Enter Zipcode or Location</label>
-													<input id="autocomplete" type="text" name="postal" placeholder="enter zip code here" class="sm-form-control">
-												</div>
-
-												<div class="form-group">
-													<label>choose search radius</label>
-													<select name="selectcity" id="selectcity" onchange="" class="form-control">
-														<option value="5">5 mile radius</option>
-														<option value="10" selected="selected">10 mile radius</option>
-														<option value="25">25 mile radius</option>
-														<option value="50">50 mile radius</option>
-														<option value="100">100 mile radius</option>
-													</select>
-												</div>
-											</div>
-										</div>
-										<div class="col-lg-5">
-											<div class="buttons">
-												<div class="formbutton">
-													<input type="submit" id="submitbutt" class="knopf red sharp uppercase hover-black-80" value="search" />
-												</div>
-												<div class="formbutton text">
-													<label class=" ortext">or</label>
-												</div>
-												<div class="formbutton">
-													<button  type="button" class="knopf red sharp uppercase hover-black-80"  onclick="geolocate();">use my location</button>
-												</div>
-											</div>
-										</div>
-									</div>
-								</form>
-							</div>
-						</div>
-
-
-						<div class="fillter-location">
-							<div class="container clearfix">
-								<div class="row clearfix">
-									<div class="col-lg-12">
-										<div id="map" style="min-width: 100%; min-height: 450px;">
-											
-										</div>
-									</div>
-									
-									<div id="side_bar" class="col-lg-12"></div>
-								</div>
-							</div>
-						</div>
+						<x-dealer-locator-widget />
 					</div>
-				</div>
-				
+				</div>				
 			</div>
 
 			<div class="section">
 				<div class="container clearfix">
 					<div class="heading-block center">
 						<h3 class="dark">Buy Radar Tyres Online</h3>
-					</div>
-					
+					</div>					
 					<div class="mx-auto" style="max-width: 880px;">
 						<div class="retailers clearfix">
 							<div class="retailer">
@@ -158,4 +99,28 @@
 		</div><!-- content-wrap end -->
 
 	</section><!-- content end-->
+
+    @push('scripts')  
+    <!-- Swiper JS -->
+    <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
+    <script src="{{asset('js/jquery-ui.js')}}"></script>
+    
+    <script type="text/javascript">
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: {
+                delay: 5000,
+            },
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    </script>
+    @endpush
+	
 </x-guest-layout>

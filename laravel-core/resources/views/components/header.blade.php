@@ -8,7 +8,7 @@
             <ul class="menu">
                 <li class="menu-item"><a href="{{route('home')}}">Tyres</a></li>
                 <li class="menu-item"><a href="{{ route('pages.why-radar')}}">Why Radar</a></li>
-                <li class="menu-item"><a href="{{route('home')}}">Dealer Locator</a></li>
+                <li class="menu-item"><a href="{{route('pages.dealer-locator')}}">Dealer Locator</a></li>
                 <li class="menu-item"><a href="{{ route('pages.contact')}}">Contact</a></li>
             </ul>
             <div id="top-search">
