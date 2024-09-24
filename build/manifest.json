@@ -204,24 +204,20 @@
     "src": "resources/fonts/lined-icons.woff"
   },
   "resources/fonts/omni-icon-font.eot": {
-    "file": "assets/omni-icon-font-LcnOatSd.eot",
+    "file": "assets/omni-icon-font-X5XUvVve.eot",
     "src": "resources/fonts/omni-icon-font.eot"
   },
   "resources/fonts/omni-icon-font.svg": {
-    "file": "assets/omni-icon-font-AO1eGuog.svg",
+    "file": "assets/omni-icon-font-S2cHSUOf.svg",
     "src": "resources/fonts/omni-icon-font.svg"
   },
   "resources/fonts/omni-icon-font.ttf": {
-    "file": "assets/omni-icon-font-uYR6m3tF.ttf",
+    "file": "assets/omni-icon-font-rjlcJLA1.ttf",
     "src": "resources/fonts/omni-icon-font.ttf"
   },
   "resources/fonts/omni-icon-font.woff": {
-    "file": "assets/omni-icon-font-lDrFdzdH.woff",
+    "file": "assets/omni-icon-font-8odsaXk1.woff",
     "src": "resources/fonts/omni-icon-font.woff"
-  },
-  "resources/fonts/omni-icon-font.woff2": {
-    "file": "assets/omni-icon-font-6DReLsaB.woff2",
-    "src": "resources/fonts/omni-icon-font.woff2"
   },
   "resources/images/icons/close.png": {
     "file": "assets/close-ZOhNwSzM.png",
@@ -233,7 +229,7 @@
     "src": "resources/js/app.js"
   },
   "resources/sass/style.scss": {
-    "file": "assets/style-7YI8L8mQ.css",
+    "file": "assets/style-QJK5jxuh.css",
     "isEntry": true,
     "src": "resources/sass/style.scss"
   }

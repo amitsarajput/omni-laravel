@@ -4,25 +4,12 @@
     <link rel="stylesheet" href="{{asset('css/swiper/swiper-bundle.css')}}" />
     <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
     @endpush
-    <!-- Implement Slider From Brand Database -->
-    <!-- Slider main container -->
-    <section class="slider">
-        <div class="swiper">
-                <!-- Additional required wrapper -->
-                <div class="swiper-wrapper" >
-                    <!-- Slides -->
-                    <a href="#" class="swiper-slide bg-image" style="background-image:url(images/slides/radar-eu-banner-renegade-at-sport.webp)"></a>
-                    <a href="#" class="swiper-slide bg-image" style="background-image:url(images/slides/radar-eu-carbon-neutral-banner.webp)"></a>
-                    <div class="swiper-slide bg-image" style="background-image:url(images/slides/RadarEU_Performance-Collection.webp)"></div>
-                    <div class="swiper-slide bg-image" style="background-image:url(images/slides/RadarEU_BCRF-Banner_1920x950.webp)"></div>
-                </div>
-                <!-- If we need pagination -->
-                <div class="swiper-pagination"></div>
-                <a href="#" data-scrollto="#content" data-offset="70" class="light one-page-arrow">
-                    <i class="icon-angle-down infinite animate__animated animate__fadeInDown animate__infinite"></i>
-                </a>
-        </div>
-    </section>
+    <!-- Implement Slider From Brand Database --><!-- Page Title
+    ============================================= -->
+    <x-page-title image-url="{{ asset('images/tyre-grid-banner.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TYRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TYRES" button-Link='#' class="page-title--left el-height-60 uppercase mb-0" />
+    
+    
+    <!-- Content -->
     <section id="content">
         <div class="section no-padding">
             <div class="grid grid-bleed align-center">
@@ -65,43 +52,45 @@
 				</div>
 			</div>
         </div> -->
-        
-        <div class="container "><h2 class="center uppercase black mb-2">TYRES</h2></div>
-        <div class="container ">
-            <div id="tabs" class="navs-with-text">
-                <div class="tabs-navigation">
-                    <div class="tabs-navigation--title">
-                        <h6 class="uppercase">vehicle type</h6>
+        <!-- Tyres widget -->
+        <div class="section bg-white no-padding" id="tyres">
+            <div class="container "><h2 class="center uppercase black mb-2">TYRES</h2></div>
+            <div class="container ">
+                <div id="tabs" class="navs-with-text">
+                    <div class="tabs-navigation">
+                        <div class="tabs-navigation--title">
+                            <h6 class="uppercase">vehicle type</h6>
+                        </div>
+                        <ul >
+                            @foreach ($search_tags as $search_tag)
+                                <li><a href="#tabs-{{ $search_tag->slug }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
+                            @endforeach
+                        </ul>
                     </div>
-                    <ul >
-                        @foreach ($search_tags as $search_tag)
-                            <li><a href="#tabs-{{ $search_tag->slug }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
-                        @endforeach
-                    </ul>
+                    @foreach ($search_tags as $search_tag)
+                        <div id="tabs-{{ $search_tag->slug }}">
+                            @php
+                                $filtered = $tyres->where('search_tag_id', $search_tag->id);
+                            @endphp
+                            
+                            @foreach ($seasons as $oneseason)
+                                <div id="{{$search_tag->slug.'-'.$oneseason->slug}}">
+                                    <x-season-navs :seasons="$seasons" :parentel="$search_tag->slug" :active="$oneseason"/>
+                                    @php
+                                        $season_tyres = $filtered->where('season_id', $oneseason->id);
+                                    @endphp
+                                    <x-tyre-grid :tyres='$season_tyres' />
+                                </div>
+                            @endforeach
+                        </div>
+                    @endforeach
+                    
                 </div>
-                @foreach ($search_tags as $search_tag)
-                    <div id="tabs-{{ $search_tag->slug }}">
-                        @php
-                            $filtered = $tyres->where('search_tag_id', $search_tag->id);
-                        @endphp
-                        
-                        @foreach ($seasons as $oneseason)
-                            <div id="{{$search_tag->slug.'-'.$oneseason->slug}}">
-                                <x-season-navs :seasons="$seasons" :parentel="$search_tag->slug" :active="$oneseason"/>
-                                @php
-                                    $season_tyres = $filtered->where('season_id', $oneseason->id);
-                                @endphp
-                                <x-tyre-grid :tyres='$season_tyres' />
-                            </div>
-                        @endforeach
-                    </div>
-                @endforeach
-                
             </div>
         </div>
 
         <!-- Dealer locator widget -->
-        <div class="section bg-white">
+        <div class="section bg-white pt-0" id="dealer-locator">
             <div class="container">
                 <h2 class="uppercase center dark-100 mb-2">DEALER LOCATOR</h2>
                 
@@ -113,7 +102,7 @@
             </div>
         </div>
         <!-- Responsibility -->
-        <div class="section  bg-gray">
+        <div class="section  bg-gray" id="responsiblity">
             <div class="container">
                 <div class="grid">
                     <div class="col-12">
@@ -131,6 +120,7 @@
                         <div class="ml-2">
                             <h5 class="dark-100 mt-0 uppercase">SOCIAL RESPONSIBILITY</h5>
                             <p>We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
+                            <a class="knopf red heading-font sharp ls-1" href="https://www.omni-united.com/social-responsibility">READ MORE</a>
                         </div>
                     </div>
                 </div>
@@ -139,6 +129,7 @@
                         <div class="mr-2">
                             <h5 class="dark-100 mt-0 uppercase">ENVIRONMENT</h5>
                             <p>We continually strive to minimize our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.</p>
+                            <a class="knopf red heading-font sharp ls-1" href="https://www.omni-united.com/environmental-responsibility">READ MORE</a>
                         </div>
                     </div>
                     <div class="col-6 col-bleed">

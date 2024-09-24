@@ -3,7 +3,7 @@
     <link rel="stylesheet" href="{{asset('css/swiper/swiper-bundle.css')}}" />
     <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
 @endpush
-<div class="dealer-map dealer-map--location-left">
+<div {{ $attributes->merge(['class' => 'dealer-map']) }}>
     <form id="dealer-map--search"  class="dealer-map--search" action="#" onsubmit="formsubmission(event, this)">
         <div class="inputs">
             <div class="form-group">
@@ -35,7 +35,7 @@
         </div>
     </form>
     <div id="map" class="dealer-map--map"></div>
-    <div id="side_bar" class="dealer-map--location">Please Search with the address or pin code of the area.</div>
+    <div id="side_bar" class="dealer-map--location"></div>
 </div>
 @push('scripts')  
     <!-- Swiper JS -->

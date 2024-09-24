@@ -11,11 +11,11 @@
                     <div class="footer-socials">
                         <div class="title">FOLLOW US:</div>
                         <div class="icons">
-                            <a target="_blank" href="https://www.youtube.com/@omni-united"><i class="icon-youtube-play"></i></a>
-                            <a target="_blank" href="https://www.linkedin.com/company/omni-united/"><i class="icon-linkedin"></i></a>
-                            <a target="_blank" href="https://www.instagram.com/omni_united/?hl=en"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" href="https://www.facebook.com/omniunited/"><i class="icon-facebook"></i></a>
-                            <a target="_blank" href="https://twitter.com/Omni_United"><i class="icon-twitter-x"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/@omni-united"><i class="omniicon-youtube-play"></i></a>
+                            <a target="_blank" href="https://www.linkedin.com/company/omni-united/"><i class="omniicon-linkedin"></i></a>
+                            <a target="_blank" href="https://www.instagram.com/omni_united/?hl=en"><i class="omniicon-instagram"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/omniunited/"><i class="omniicon-facebook"></i></a>
+                            <a target="_blank" href="https://twitter.com/Omni_United"><i class="omniicon-x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -27,14 +27,35 @@
         <div class="footer-cols footer-cols-3">
             <div class="footer-col">
                 <!-- <div class="title">ABOUT US</div> -->
-                <a href="#" class="radar_link" >TYRES</a>
+                <a class="radar_link" 
+                                @if( request()->routeIs('home') )
+                                    href="#tyres" 
+                                    scroll-to="#tyres" 
+                                @else
+                                    href="{{ route('home').'#tyres'}}"
+                                @endif
+                                >TYRES</a>
                 <a  href="{{ route('pages.why-radar')}}">WHY RADAR</a>
-                <a href="{{route('pages.dealer-locator')}}">DEALER LOCATOR</a>
+                <a  
+                    @if( request()->routeIs('home') )
+                        href="#dealer-locator" 
+                        scroll-to="#dealer-locator" 
+                    @else
+                        href="{{route('home').'#dealer-locator'}}"
+                    @endif
+                    >DEALER LOCATOR</a>
             </div>
             <div class="footer-col">
                 <!-- <div class="title">BRANDS</div> -->
                 <a href="{{ route('pages.about-us')}}">ABOUT US</a>
-                <a href="#">RESPONSIBILITY</a>
+                <a  
+                    @if( request()->routeIs('home') )
+                        href="#responsiblity" 
+                        scroll-to="#responsiblity" 
+                    @else
+                        href="{{route('home').'#responsiblity'}}"
+                    @endif
+                    >RESPONSIBILITY</a>
                     <a href="#">WARRANTY</a>
 
                 <!--<a href="https://www.omni-united.com/dealer-login">Dealer Corner</a>-->
