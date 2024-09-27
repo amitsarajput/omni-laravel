@@ -30,7 +30,7 @@
             @php
                 $bubble_closed=session('omni_data.bubble_closed');
             @endphp
-            <x-user-location-bubble :bubbleclosed="$bubble_closed" class="{{ request()->routeIs(['tyre.grid','home']) ? 'shown' : '' }}" 
+            <x-user-location-bubble :bubbleclosed="$bubble_closed" class="shown" 
             />
             <x-header />
             <x-sidepanel />

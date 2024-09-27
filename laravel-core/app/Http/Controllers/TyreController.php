@@ -101,7 +101,7 @@ class TyreController extends Controller
      */
     public function tyre_single($brand=null,$country=null, Tyre $tyre)
     {
-        print_r('tyre_single');
+        //print_r('tyre_single');
         return view('tyre-single',compact('tyre'));
     }
     

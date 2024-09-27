@@ -58,20 +58,16 @@ require __DIR__.'/admin.php';
 require __DIR__.'/staticpages.php';
 
 //Normal Routes
-Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');//
-
-Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');//[TyreController::class, 'tyre_grid']
-
-Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]','tyre'=>'[a-zA-Z\-]{3,}'])->name('tyre.single');//[TyreController::class, 'tyre_single']
+Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
+Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
+Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
 
 
 //Locale routes
-Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2}'])->group(function () {
-    Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');//
-
-    Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');//[TyreController::class, 'tyre_grid']
-    Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z\-]{3,}'])->name('tyre.single');//[TyreController::class, 'tyre_single']
-    
+Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2,3}'])->group(function () {
+    Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
+    Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
+    Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
 });
 
 

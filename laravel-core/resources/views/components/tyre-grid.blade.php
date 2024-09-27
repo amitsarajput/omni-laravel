@@ -3,14 +3,14 @@
     @foreach ($tyres as $tyre)
         <div class="tyre">
             <h3 class="title">
-                <a href="{{url($tyre->brand->slug.'/'.$tyre->slug)}}">
+                <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
                     {!! htmlspecialchars_decode($tyre->preview_name) !!}
                 </a>
             </h3>
             
             <div class="meta">{{ implode(" | ", $tyre->tyre_categories->pluck('name')->toArray()) }}</div>
             <div class="image">
-                <a href="{{url($tyre->slug)}}">
+                <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
                     <img 
                         data-src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
                         src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
@@ -18,7 +18,7 @@
                 </a>
             </div>
             <!-- Read more button -->
-            <a class="tyre--readmore" href="{{url($tyre->brand->slug.'/'.$tyre->slug)}}">READ MORE  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
+            <a class="tyre--readmore" href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">READ MORE  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
         </div>
     @endforeach
 </div>

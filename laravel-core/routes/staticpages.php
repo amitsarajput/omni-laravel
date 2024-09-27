@@ -80,7 +80,7 @@ Route::name('pages.')->group(function(){
 });
 
 
-Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2}'])->name('pages.')->group(function(){
+Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2,3}'])->name('pages.')->group(function(){
 	Route::get('/about-us', [StaticPagesController::class,'index'])->name('about-us');
 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
 	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
