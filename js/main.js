@@ -149,6 +149,7 @@ jQuery(window).on('scroll', function(){
         locationBubblee:$('.location-bubble'),
         locSelectEl:$('.location-bubble select'),
         locTextEl:$('.location-bubble .col-text'),
+        smlocationEl:$('.small-location-picker'),
         locText:'You are currently viewing the Radar **region** website. To view the products in your location, select the desired region from the drop-down list.',
         //Top Header Selectors
 
@@ -165,15 +166,16 @@ jQuery(window).on('scroll', function(){
             }
             return regHeight;
         },  
-        open_bubble : function(el=null){
+        open_bubble : function(el=null,sm_el=null){
             if (el.length) {
                 var regionHeight=L_B.get_bubble_height(el);
                 el.show();
                 el.animate({height:regionHeight, opacity:1,overflow: 'visible'}, 300);
                 el.addClass('shown');
+                sm_el.removeClass('shown');
             }
         },
-        close_bubble : function(el=null){
+        close_bubble : function(el=null,sm_el=null){
             if (el.length) {
                 el.addClass('location-bubble--closed');
                 var regionHeight=L_B.get_bubble_height(el);
@@ -184,7 +186,12 @@ jQuery(window).on('scroll', function(){
                         //$('.location-bubble--form').submit();
                         $(this).closest('form').submit();
                     });
+                    sm_el.addClass('shown');
+                    sm_el.find($('select')).on('change', function(){
+                        $(this).closest('form').submit();
+                    });
                 });
+                
                 
                 //sessionStorage.setItem("regionTopEl", 'false');
             }
@@ -193,7 +200,7 @@ jQuery(window).on('scroll', function(){
          close_event:function(){
             $('.location-bubble--close').on('click', function(e){
                 e.preventDefault();
-                L_B.close_bubble($('.location-bubble'));
+                L_B.close_bubble($('.location-bubble'), $('.small-location-picker'));
                 var bubble=$(this).data('bubble');
                 var url=$(this).data('url');
                 //console.log(bubble,url);
@@ -210,7 +217,7 @@ jQuery(window).on('scroll', function(){
                             //$('#create_new').html('Please wait');
                         },
                         success: function(response){
-                            alert(response.success);
+                            //alert(response.success);
                         },
                         error: function (xhr, status, error) {
                             console.error(xhr.responseText);
@@ -225,6 +232,9 @@ jQuery(window).on('scroll', function(){
             });
             $('.location-bubble.location-bubble--closed select').on('change', function(){
                 //$('.location-bubble--form').submit();
+                $(this).closest('form').submit();
+            });            
+            $('.small-location-picker.shown select').on('change', function(){
                 $(this).closest('form').submit();
             });
         },
