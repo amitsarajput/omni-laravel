@@ -94,7 +94,30 @@
                   <label for="exampleInputPassword1">Description</label>
                   {{ Form::textarea('description', '', ['class'=>'form-control','placeholder'=>'Enter Description'] ) }}
                 </div>
-              </div>
+              </div><div class="row">
+                  <div class="form-group col-4">
+                    <label for="exampleInputPassword1">Catalog Image</label>
+                    {{ Form::file('catalogue_image', ['class'=>'form-control','placeholder'=>'Enter Description'] ) }}
+                  </div>
+                  <div class="form-group col-8">
+                    <div class="images_preview no-sort">
+                      
+                    </div>
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="form-group col-4">
+                    <label for="exampleInputPassword1">Product Images</label>
+                    {{ Form::file('product_images[]', ['multiple' => true, 'class'=>'form-control','placeholder'=>'Enter Description'] ) }}
+                  </div>
+                  <div class="form-group col-8">
+                    <div class="images_preview sortable" data-metadata='{"action":"reorder-product-images","table":"tyres","column":"product_images" }'  data-url="{{ route('admin.ajax.request',['table'=>'tyres']) }}" >
+                      
+                    </div>
+                    <a href="#" class="btn btn-sm btn-primary save-order-button">Save Order</a>
+                  </div>
+                </div>
             </div>
             <!-- /.card-body -->
 

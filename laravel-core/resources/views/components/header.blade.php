@@ -28,23 +28,18 @@
             <div id="top-search">
                 <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
                 <form action="search" method="post">
-                    <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                    <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." />
                 </form>
             </div><!-- #top-search end -->
             <!-- <div class="search-opener">
                 <i class="fas fa-search"></i>
             </div> -->
             <ul class="menu">
-                <li class="menu-item"><div class="location-picker">
-                    <select class="selectpicker" name='location' > 
-                        <option data-icon="omniicon-location-pin" value="eu" >EUROPE</option>
-                        <option data-icon="omniicon-location-pin" value="as" >ASIA</option>
-                        <option data-icon="omniicon-location-pin" value="mea" >MIDDLE EAST AND AFRICA</option>
-                        <option data-icon="omniicon-location-pin" value="us" >USA</option>
-                        <option data-icon="omniicon-location-pin" value="ca" >CANADA</option>
-                        <option data-icon="omniicon-location-pin" value="row" >REST OF THE WORLD</option>
-                    </select>
-                </div>
+                <li class="menu-item">
+                    @php
+                        $bubble_closed=session('omni_data.bubble_closed');
+                    @endphp
+                    <x-small-location-picker  :bubbleclosed="$bubble_closed" />
                 </li>
                 <li class="menu-item primary-color"><a href="https://www.omni-united.com/omni-sync">For Dealers</a></li>
             </ul>

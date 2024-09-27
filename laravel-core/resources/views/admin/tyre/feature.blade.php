@@ -75,33 +75,61 @@
             
                 
               <div class="row sortable features">
-                @foreach($features as $feature)
-                  <div class="form-group feature col-4">
-                    <div class="tright">
-                      <button type="button" class="btn btn-tool" data-feature-widget="add">
-                        <i class="fas fa-plus"></i>
-                      </button>
-                      <button type="button" class="btn btn-tool" data-feature-widget="remove">
-                        <i class="fas fa-minus"></i>
-                      </button>
+                @if(!empty($features))
+                  @foreach($features as $feature)
+                    <div class="form-group feature col-4">
+                      <div class="tright">
+                        <button type="button" class="btn btn-tool" data-feature-widget="add">
+                          <i class="fas fa-plus"></i>
+                        </button>
+                        <button type="button" class="btn btn-tool" data-feature-widget="remove">
+                          <i class="fas fa-minus"></i>
+                        </button>
+                      </div>
+                      <label for="exampleInputEmail1">Name</label>
+                      {{ Form::text('title[]', $feature['title'], ['class'=>'form-control','placeholder'=>'Title'] ) }}
+                      <label for="exampleInputEmail1">Description</label>
+                      {{ Form::textarea('description[]', $feature['description'], ['class'=>'form-control','placeholder'=>'Description','rows'=>3] ) }}
+                      <div class="row">
+                        <div class="col-8">
+                          <label for="exampleInputPassword1">Image</label>
+                          {{ Form::file('image[]', ['class'=>'form-control','placeholder'=>'Enter Description'] ) }}
+                        </div>
+                        <div class="col-3">
+                          <div class="images_preview">
+                              <img class="image" src=" {{asset('storage/features/'.$feature['image'])}}  " alt="">
+                            </div>
+                        </div>
+                      </div>
                     </div>
-                    <label for="exampleInputEmail1">Name</label>
-                    {{ Form::text('title[]', $feature['title'], ['class'=>'form-control','placeholder'=>'Title'] ) }}
-                    <label for="exampleInputEmail1">Description</label>
-                    {{ Form::textarea('description[]', $feature['description'], ['class'=>'form-control','placeholder'=>'Description','rows'=>3] ) }}
-                    <div class="row">
-                      <div class="col-8">
-                        <label for="exampleInputPassword1">Image</label>
-                        {{ Form::file('image[]', ['class'=>'form-control','placeholder'=>'Enter Description'] ) }}
-                      </div>
-                      <div class="col-3">
-                        <div class="images_preview">
-                            <img class="image" src=" {{asset('storage/features/'.$feature['image'])}}  " alt="">
-                          </div>
-                      </div>
+                  @endforeach
+                @else
+                <div class="form-group feature col-4">
+                  <div class="tright">
+                    <button type="button" class="btn btn-tool" data-feature-widget="add">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                    <button type="button" class="btn btn-tool" data-feature-widget="remove">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                  </div>
+                  <label for="exampleInputEmail1">Name</label>
+                  {{ Form::text('title[]', '', ['class'=>'form-control','placeholder'=>'Title'] ) }}
+                  <label for="exampleInputEmail1">Description</label>
+                  {{ Form::textarea('description[]', '', ['class'=>'form-control','placeholder'=>'Description','rows'=>3] ) }}
+                  <div class="row">
+                    <div class="col-8">
+                      <label for="exampleInputPassword1">Image</label>
+                      {{ Form::file('image[]', ['class'=>'form-control','placeholder'=>'Enter Description'] ) }}
+                    </div>
+                    <div class="col-3">
+                      <div class="images_preview">
+                          <img class="image" src=" {{asset('storage/features/noimage.webp')}}  " alt="">
+                        </div>
                     </div>
                   </div>
-                @endforeach
+                </div>
+                @endif
               </div>
                 
                 

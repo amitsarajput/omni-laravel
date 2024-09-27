@@ -45,9 +45,11 @@
 			<div class="container">
 				<div class="grid">
 					<div class="col-12">
-                        @foreach( $branddetailstext as $text)
-                        <p>{{ __($text) }}</p>
-                        @endforeach
+                        @if($branddetailstext)
+                            @foreach( $branddetailstext as $text)
+                            <p>{{ __($text) }}</p>
+                            @endforeach
+                        @endif
                     </div>
 				</div>
 			</div>
@@ -75,11 +77,13 @@
                             
                             @foreach ($seasons as $oneseason)
                                 <div id="{{$search_tag->slug.'-'.$oneseason->slug}}">
-                                    <x-season-navs :seasons="$seasons" :parentel="$search_tag->slug" :active="$oneseason"/>
                                     @php
                                         $season_tyres = $filtered->where('season_id', $oneseason->id);
                                     @endphp
-                                    <x-tyre-grid :tyres='$season_tyres' />
+                                    @if(count($season_tyres))
+                                        <x-season-navs :seasons="$seasons" :parentel="$search_tag->slug" :active="$oneseason"/>
+                                        <x-tyre-grid :tyres='$season_tyres' />
+                                    @endif
                                 </div>
                             @endforeach
                         </div>

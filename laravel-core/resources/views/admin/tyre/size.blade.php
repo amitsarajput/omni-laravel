@@ -63,10 +63,10 @@
                   </div>
                   
                   @php
-                    $tyre_sizes=json_decode($tyre->sizes, true);
-                    $sizes=$tyre_sizes['sizes'];
-                    $extra_cols=$tyre_sizes['extra_cols'];
-                    $legends=$tyre_sizes['legends'];
+                      $tyre_sizes=json_decode($tyre->sizes, true);
+                      $sizes=$tyre_sizes['sizes']??null;
+                      $extra_cols=$tyre_sizes['extra_cols']??[];
+                      $legends=$tyre_sizes['legends']??'';
                   @endphp
 
                 </div>

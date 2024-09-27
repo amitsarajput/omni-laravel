@@ -86,11 +86,11 @@ class TyreController extends Controller
             //abort(404);
         //}
         
-        $tyres=Tyre::with('country','brand','search_tag','icons','tyre_categories','season')->where(['country_id'=>$country->id,'brand_id'=>$brand->id])->get();
+        $tyres=Tyre::with('country','brand','search_tag','icons','tyre_categories','season')->where(['country_id'=>$country->id,'brand_id'=>$brand->id])->orderBy('order', 'asc')->get();
 
         //get brand details based on country and brand
         $branddetails=BrandExtraDetail::getBEDByCountryAndBrand($country->id, $brand->id);
-        $branddetailstext=explode('****',json_decode($branddetails->text));
+        $branddetailstext=$branddetails?explode('****',json_decode($branddetails->text)):'';
         //dd($branddetails);
         return view('tyre-grid',compact('tyres','search_tags','brand_country','branddetailstext','seasons'));
     }
@@ -107,7 +107,7 @@ class TyreController extends Controller
     
     public function index()
     {
-        $tyre=Tyre::with('country','brand','search_tag')->get();
+        $tyre=Tyre::with('country','brand','search_tag')->orderBy('created_at', 'desc')->get();
         return view('admin.tyre.index',compact('tyre'));
     }
 
@@ -148,9 +148,9 @@ class TyreController extends Controller
             'externallink' => ['string', 'max:255'],
             'description' => ['required', 'string', 'max:1000'],
             'slug' => ['required', 'string', 'max:255', 'unique:'.Tyre::class],
-            'catalogue_image' => ['file','mimes:webp,jpg,png','max:6024'],
-            'product_images' => ['array'],
-            'product_images.*' => ['file','mimes:webp,jpg,png','max:6024'],
+            'catalogue_image' => ['file','mimes:webp,jpg,png','max:6024','nullable'],
+            'product_images' => ['array','nullable'],
+            'product_images.*' => ['file','mimes:webp,jpg,png','max:6024','nullable'],
         ]);
 
         $tyre = Tyre::create([
@@ -164,13 +164,13 @@ class TyreController extends Controller
             'external_link' => $request->externallink,
             'description' => htmlspecialchars($request->description),
         ]);
-        
+
         if ($request->hasFile('catalogue_image')&& $request->file('catalogue_image')->isValid()) {
             $file=$this->handlefile($request->catalogue_image, $this->catlog_path);
             $tyre->catalogue_image=$file;
             $tyre->save();
         }
-        if ($request->hasFile('product_images')&& $request->file('product_images')->isValid()) {
+        if ($request->hasFile('product_images')&& $request->file('product_images')) {
             $files=[];
             foreach($request->product_images as $key=>$value){
                 $file=$this->handlefile($value, $this->other_path);
@@ -179,8 +179,19 @@ class TyreController extends Controller
             $tyre->product_images=json_encode($files);
             $tyre->save();
         }
-        $tyre->icons()->attach($request->icon);
-        $tyre->tyre_categories()->attach($request->tyrecategory);
+        
+        $t_icon=[];
+        foreach ($request->icon as $key => $value) { 
+            $t_icon[$value]=['kram'=>$key];
+        }
+        $tyre->icons()->sync($t_icon);
+        
+        $t_cat=[];
+        foreach ($request->tyrecategory as $key => $value) {
+            $t_cat[$value]=['kram'=>$key];
+        }
+        $tyre->tyre_categories()->sync($t_cat);
+
         return redirect()->back();
     }
 
@@ -255,7 +266,7 @@ class TyreController extends Controller
             $tyre->catalogue_image=$file;
             $tyre->save();
         }
-        if ($request->hasFile('product_images')&& $request->file('product_images')->isValid()) {
+        if ($request->hasFile('product_images')&& $request->file('product_images')) {
             $files=[];
             foreach($request->product_images as $key=>$value){
                 $file=$this->handlefile($value, $this->other_path);
@@ -301,10 +312,13 @@ class TyreController extends Controller
                 'extra_cols.*'=>['string'],
                 'legends'=>['string']
             ]);
-            $tyre_array=json_decode($tyre->sizes,true);
-            $tyre_sizes=$tyre_array['sizes'];
-            $tyre_extra_cols=$tyre_array['extra_cols'];
-            $tyre_legends=$tyre_array['legends'];
+            
+                $tyre_array=json_decode($tyre->sizes,true)??['sizes'=>'','extra_cols'=>'','legends'=>''];
+                $tyre_sizes=$tyre_array['sizes'];
+                $tyre_extra_cols=$tyre_array['extra_cols'];
+                $tyre_legends=$tyre_array['legends'];
+                
+            
             
             $extra_cols_object=[
                 "s_w"=>"S.W.",
@@ -314,6 +328,7 @@ class TyreController extends Controller
 	            "eulabel"=>"EU Label",
             ];
             $request_extra_cols=[];
+            $request->extra_cols=$request->extra_cols??[];
             foreach ($request->extra_cols as $key => $value) {
                 if (array_key_exists($value, $extra_cols_object)) {
                     $request_extra_cols[$value]=$extra_cols_object[$value];
@@ -322,6 +337,7 @@ class TyreController extends Controller
             if($request_extra_cols!==$tyre_extra_cols){
                 $tyre_array['extra_cols']=$request_extra_cols;
             }
+            
             if(htmlspecialchars($request->legends)!==$tyre_legends){
                 $tyre_array['legends']=htmlspecialchars($request->legends);
             }

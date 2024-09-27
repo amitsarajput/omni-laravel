@@ -17,7 +17,7 @@ class SetSessionData
     public function handle(Request $request, Closure $next): Response
     {
         //print_r('From SetSessionData middleware.');
-        //session()->forget('omni_data');
+        //session()->forget(['omni_data','locale']);
         
         if(!session()->has('omni_data') || empty(session('omni_data.available_locations')) || empty(session('omni_data.available_locales')) ){
             $omnidata=[

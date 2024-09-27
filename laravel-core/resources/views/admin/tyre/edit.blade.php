@@ -104,7 +104,9 @@
                   </div>
                   <div class="form-group col-8">
                     <div class="images_preview no-sort">
-                      <img src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" class="image" alt="">
+                      @if($tyre->catalogue_image)
+                        <img src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" class="image" alt="">
+                      @endif
                     </div>
                   </div>
                 </div>
@@ -116,9 +118,11 @@
                   </div>
                   <div class="form-group col-8">
                     <div class="images_preview sortable" data-metadata='{"action":"reorder-product-images","table":"tyres","column":"product_images", "id":{{ $tyre->id }} }'  data-url="{{ route('admin.ajax.request',['table'=>'tyres']) }}" >
-                      @foreach (json_decode($tyre->product_images) as $product_image)
-                        <img id="{{ $product_image }}" src="{{asset('storage/tire_images/other/'.$product_image)}}" class="image" alt="" >
-                      @endforeach
+                      @if($tyre->product_images)
+                        @foreach (json_decode($tyre->product_images) as $product_image)
+                          <img id="{{ $product_image }}" src="{{asset('storage/tire_images/other/'.$product_image)}}" class="image" alt="" >
+                        @endforeach
+                      @endif
                     </div>
                     <a href="#" class="btn btn-sm btn-primary save-order-button">Save Order</a>
                   </div>

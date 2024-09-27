@@ -126,6 +126,20 @@ header{
 					i{font-size: 20px;}
 				}
 			}
+			.small-location-picker{
+				.select2-container{
+					width: 0;
+					opacity: 0;
+					display: none;
+				}
+				&.shown{
+					.select2-container{
+						width: 195px !important;
+						opacity: 1;
+						display: block;
+					}
+				}
+			}
 		}
 	}
 	.side-panel-trigger{ margin-right: 0;}
