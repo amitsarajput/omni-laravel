@@ -88,6 +88,10 @@
                     <label for="exampleInputPassword1">Exernal Link (if any)</label>
                     {{ Form::text('externallink ', $tyre->external_link, ['class'=>'form-control','placeholder'=>'External Link '] ) }}
                   </div>
+                  <div class="form-group col-12">
+                  <label for="premium_tyre">Premium Tyre</label>
+                    {{ Form::checkbox('premium_tyre', 1, $tyre->premium_tyre, ['id'=>'premium_tyre']) }}
+                  </div>
                 </div>
                 
                 <div class="row">

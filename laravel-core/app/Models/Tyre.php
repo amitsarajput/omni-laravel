@@ -31,6 +31,7 @@ class Tyre extends Model
         'slug',
         'external_link',
         'description',
+        'premium_tyre',
     ];
 
     public function search_tag(): BelongsTo

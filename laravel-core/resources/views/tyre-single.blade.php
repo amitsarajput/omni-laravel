@@ -1,14 +1,14 @@
 <x-guest-layout>
     @push('styles') 
-    <link rel="stylesheet" href="{{url('css/swiper/swiper-bundle.css')}}" />
-    <link rel="stylesheet" href="{{url('css/jquery-ui.css')}}">
+        <link rel="stylesheet" href="{{url('css/swiper/swiper-bundle.css')}}" />
+        <link rel="stylesheet" href="{{url('css/jquery-ui.css')}}">
     @endpush
 
     <section id="content">
         <!-- Bredcrumbs -->
         <div class="container">
-            <div class="grid">
-            <div class="col-lg-12">
+        <div class="grid">
+        <div class="col-lg-12">
                 <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
                 <li class="breadcrumb-item"><i class="icon-angle-right"></i>
@@ -23,14 +23,21 @@
                 </li>
                 <li class="breadcrumb-item"><i class="icon-angle-right"></i>{!! htmlspecialchars_decode($tyre->preview_name) !!}</li>
                 </ol>
-            </div>
-            </div>
+        </div>
+        </div>
         </div>
         <!-- Product Details -->
         <div class="container">
-            <div class="grid align-center">
+            <div class="grid align-start">
+                <!-- Premium tyre badge -->
+                 @if($tyre->premium_tyre)
+                <div class="col-lg-12 col-bleed-y">
+                    <div class="premium-tyre--badge">PREMIUM COLLECTION</div>
+                </div>
+                @endif
+                <!-- Tyre Details -->
                 <div class="col-lg-6">
-                    <h2 class="uppercase">{!! htmlspecialchars_decode($tyre->preview_name) !!}</h2>
+                    <h2 class="uppercase mt-0">{!! htmlspecialchars_decode($tyre->preview_name) !!}</h2>
                     <h5 class="black">{{ implode(" | ", json_decode($tyre->tyre_categories->pluck('name'))) }}</h5>
                     <div class="tyre--description">
                         <p>{!! htmlspecialchars_decode($tyre->description) !!}</p>
@@ -44,6 +51,7 @@
                         @endforeach
                     </div>
                 </div>
+                <!-- Tyre Images -->
                 <div class="col-lg-6">
                     @php
                         $product_images=json_decode($tyre->product_images);

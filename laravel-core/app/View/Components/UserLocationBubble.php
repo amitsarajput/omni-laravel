@@ -28,11 +28,10 @@ class UserLocationBubble extends Component
         //Set from globals
         $default_location=$omnidata['default_location']; 
         $user_location=$omnidata['user_location']; 
-        $preffered_location=$omnidata['preffered_location']; 
+        $preffered_location=$omnidata['preffered_location'];
         
         //Initial redirect 
-        if(empty($preffered_location)){ //No Preffered Location 
-            
+        if($preffered_location===''){ //No Preffered Location 
             //Bypassing user location check
             $preffered_location=$default_location; 
             //User location check (if else will not be checked.)
@@ -54,13 +53,11 @@ class UserLocationBubble extends Component
 
         //check preffered_location in avilable country
         if (!in_array($preffered_location,$available_locations)) {
-            $preffered_location=$default_location; 
+            $preffered_location=$default_location;
         }
         $omnidata['preffered_location']=$preffered_location;
 
-
         session(['omni_data' => $omnidata]);//Update Session Data
-        
         $this->omnidata = $omnidata;//Update Session Data
         //print_r($this->omnidata);
     }
@@ -70,6 +67,7 @@ class UserLocationBubble extends Component
      */
     public function render(): View|Closure|string
     {
+        
         return view('components.user-location-bubble', ['location'=>$this->omnidata['preffered_location'], 'all_locations'=>$this->omnidata['available_locations']]);
     }
 }

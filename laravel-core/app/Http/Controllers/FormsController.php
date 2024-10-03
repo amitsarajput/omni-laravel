@@ -44,7 +44,60 @@ class FormsController extends Controller
             session(['locale' => $locale]);
             session(['omni_data' => $omni_data]);
             $to_url=strtolower($to_url);
+            if (session()->has('omni_data')) { echo 'has location_form'; }else{echo 'not has location_form';}
             return redirect($to_url);
+    }
+
+    public function form_contact(Request $request) {
+        $validatedData =$request->validate([
+            'name' => ['string','required'],
+            'email' => ['email','required'],
+            'country' => ['string','required'],
+            'message' => ['string','required', 'max:500'],
+            'url_current' => ['string','required', 'url:http,https'],
+        ]);
+        if ($request->phone !== null) {
+            return back()->with('status','Email Not sent.');
+        }
+        $form_data=[
+            'name' =>  $request->name,
+            'email' => strtolower($request->email),
+            'country' => strtolower($request->country),
+            'message' => strtolower($request->message),
+            'url_current' => strtolower($request->url_current)
+        ];
+        $form = Forms::create([
+            'type' => 'form--contact',
+            'form_data' => json_encode($form_data)
+        ]);
+        return back()->with('status','Mail Sent.');
+
+    }
+
+    public function form_dealerlocator(Request $request) {
+        $validatedData =$request->validate([
+            'name' => ['string','required'],
+            'email' => ['email','required'],
+            'location' => ['string','required'],
+            'message' => ['string','required', 'max:500'],
+            'url_current' => ['string','required', 'url:http,https'],
+        ]);
+        if ($request->phone !== null) {
+            return back()->with('status','Email Not sent.');
+        }
+        $form_data=[
+            'name' =>  $request->name,
+            'email' => strtolower($request->email),
+            'location' => strtolower($request->location),
+            'message' => strtolower($request->message),
+            'url_current' => strtolower($request->url_current)
+        ];
+        $form = Forms::create([
+            'type' => 'form--dealerlocator',
+            'form_data' => json_encode($form_data)
+        ]);
+        return back()->with('status','Mail Sent.');
+
     }
     /**
      * Display a listing of the resource.

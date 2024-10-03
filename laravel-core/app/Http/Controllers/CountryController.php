@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use \App\Http\Middleware\SetSessionData;
+//use \App\Http\Middleware\SetSessionData;
 use App\Models\Brand;
 use App\Models\Country;
 use App\Models\Region;

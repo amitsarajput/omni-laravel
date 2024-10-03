@@ -1,7 +1,7 @@
 @props(['tyres'])
 <div {{ $attributes->merge(['class' => 'tyres-showcase']) }}>
     @foreach ($tyres as $tyre)
-        <div class="tyre">
+        <div class="tyre {{ $tyre->premium_tyre?'premium_tyre':'' }}">
             <h3 class="title">
                 <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
                     {!! htmlspecialchars_decode($tyre->preview_name) !!}
@@ -9,6 +9,9 @@
             </h3>
             
             <div class="meta">{{ implode(" | ", $tyre->tyre_categories->pluck('name')->toArray()) }}</div>
+            @if($tyre->premium_tyre)
+                <div class="premium-tyre--badge">PREMIUM COLLECTION</div>
+            @endif
             <div class="image">
                 <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
                     <img 

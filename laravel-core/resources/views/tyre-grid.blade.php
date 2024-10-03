@@ -103,6 +103,10 @@
 						<x-dealer-locator-widget />
                     </div>
                 </div>
+                
+                <div id="dealerform" >
+                    <x-dealer-locator-form />
+                </div>
             </div>
         </div>
         <!-- Responsibility -->

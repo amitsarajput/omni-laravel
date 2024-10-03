@@ -18,8 +18,13 @@ class SetSessionData
     {
         //print_r('From SetSessionData middleware.');
         //session()->forget(['omni_data','locale']);
-        
-        if(!session()->has('omni_data') || empty(session('omni_data.available_locations')) || empty(session('omni_data.available_locales')) ){
+        //session('amit','kumar');
+        //dd(session('omni_data'));
+        //dd(session()->all());
+        //if (!session()->has('omni_data')) { echo 'has SetSessionData'; }else{echo 'not has SetSessionData';}
+        if(!session()->has('omni_data')|| empty(session('omni_data'))|| empty(session('omni_data.available_locations')) || empty(session('omni_data.available_locales')) ){ //
+            //This function is runing on every request session is getting away after every request life cycle. Need to fix it.--fixed by putting start session midleware before the setsessiondata middleware in kernel.php file.
+            //print_r('here');
             $omnidata=[
                 'available_locations'=>[],
                 'available_locales'=>[],

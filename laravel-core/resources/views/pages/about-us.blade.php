@@ -47,7 +47,7 @@
                 </div>
             </div>
         </div>
-        <div class="container">
+        <div class="container mb-2">
             <div class="grid grid-bleed align-center">
                     <div class="col-6">
                         <img src="{{asset('images/gssareen.jpg')}}" alt="About us">
@@ -118,9 +118,9 @@
                     <p>We have multiple distribution centres that provide speed and efficiency to our customers enabling our order to shipment to be under 20 days. In the USA we have our own distribution network in California and Texas, through which we serve independent retailers and provide domestic fill-ins up to 4 times a day. This enables us to reach our customers faster.</p>
                 </div>
                 <div class="col-lg-6">
-                    <!-- <div class="large-number">
+                    <div class="large-number">
                         <span class="large-num-cl-sz">~15</span> <span class="large-normal">distribution<br>centres in <span style="color:#da2224;">5</span> countries</span>
-                    </div> -->
+                    </div>
                 </div>
 
 

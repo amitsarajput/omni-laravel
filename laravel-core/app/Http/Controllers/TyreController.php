@@ -56,6 +56,7 @@ class TyreController extends Controller
         //print_r('tyre_grid');
         $omni_data=session('omni_data');
         // check country
+
         if (!in_array(strtoupper($country),$omni_data['available_locations'])) {
             $country=null;
         }
@@ -152,18 +153,23 @@ class TyreController extends Controller
             'product_images' => ['array','nullable'],
             'product_images.*' => ['file','mimes:webp,jpg,png','max:6024','nullable'],
         ]);
+        $createtyrearray =[
+                'country_id' => $request->country,
+                'brand_id' => $request->brand,
+                'search_tag_id' => $request->searchtag,
+                'season_id' => $request->season,
+                'name' => $request->name,
+                'preview_name' => htmlspecialchars($request->previewname),
+                'slug' => strtolower($request->slug),
+                'external_link' => $request->externallink,
+                'description' => htmlspecialchars($request->description),
+                'premium_tyre'=>null,
+        ];
+        if ($request->premium_tyre) { $createtyrearray['premium_tyre']=1;}
 
-        $tyre = Tyre::create([
-            'country_id' => $request->country,
-            'brand_id' => $request->brand,
-            'search_tag_id' => $request->searchtag,
-            'season_id' => $request->season,
-            'name' => $request->name,
-            'preview_name' => htmlspecialchars($request->previewname),
-            'slug' => strtolower($request->slug),
-            'external_link' => $request->externallink,
-            'description' => htmlspecialchars($request->description),
-        ]);
+        $tyre = Tyre::create($createtyrearray);
+        // Premium tyre update
+        
 
         if ($request->hasFile('catalogue_image')&& $request->file('catalogue_image')->isValid()) {
             $file=$this->handlefile($request->catalogue_image, $this->catlog_path);
@@ -232,7 +238,7 @@ class TyreController extends Controller
      */
     public function update(Request $request, Tyre $tyre)
     {
-        //dd($request->icon);
+        //dd($request);
         $request->validate([
             'country' => ['required', 'integer'],
             'brand' => ['required', 'integer'],
@@ -249,8 +255,7 @@ class TyreController extends Controller
             'product_images' => ['array'],
             'product_images.*' => ['file','mimes:webp,jpg,png','max:6024'],
         ]);
-        
-        $tyre->update([
+        $tyreupdataarray=[
             'country_id' => $request->country,
             'brand_id' => $request->brand,
             'search_tag_id' => $request->searchtag,
@@ -260,7 +265,13 @@ class TyreController extends Controller
             'slug' => strtolower($request->slug),
             'external_link' => $request->externallink,
             'description' => htmlspecialchars($request->description),
-        ]);
+            'premium_tyre'=>null
+        ];
+        if ($request->premium_tyre) { $tyreupdataarray['premium_tyre']=1; }
+        $tyre->update($tyreupdataarray);
+        // Premium tyre update
+        
+
         if ($request->hasFile('catalogue_image')&& $request->file('catalogue_image')->isValid()) {
             $file=$this->handlefile($request->catalogue_image, $this->catlog_path);
             $tyre->catalogue_image=$file;

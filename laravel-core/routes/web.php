@@ -56,6 +56,7 @@ Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])-
 require __DIR__.'/auth.php';
 require __DIR__.'/admin.php';
 require __DIR__.'/staticpages.php';
+require __DIR__.'/form_routes.php';
 
 //Normal Routes
 Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');

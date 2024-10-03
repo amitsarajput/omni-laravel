@@ -25,7 +25,16 @@ if (map_wrapper.length) {
     var dealer_map__search=document.getElementsByClassName('dealer-map--search');
     var dealer_map__map=document.getElementsByClassName('dealer-map--map');
     var dealer_map__location=document.getElementsByClassName('dealer-map--location');
+    var dealer_map__dealerform=document.getElementById("dealerform");
 }
+
+function show__dealerform(element) {
+    element.classList.remove("hide");
+}
+function hide__dealerform(element) {
+    element.classList.add("hide");
+}
+hide__dealerform(document.getElementById("dealerform"));
 
 function initMap() {
     var myOptions = {
@@ -33,7 +42,6 @@ function initMap() {
         center: new google.maps.LatLng("53.2443649","-2.4459033"),
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
-
     map = new google.maps.Map(document.getElementById("map"), myOptions);
     google.maps.event.addListener(map, 'click', function() {
         infoWindow.close();
@@ -177,26 +185,31 @@ function myclick(i) {
     google.maps.event.trigger(gmarkers[i],"click");
 }
 
+
 //rebuilds the sidebar to match the markers currently displayed
 function makeSidebar(markers=null) {
     var sidebar=document.getElementById("side_bar");
     var html = "";
     if(markers===null){ markers=gmarkers}
-    for (var i=0; i<markers.length; i++) {
-        if (markers[i].getVisible()) {
-        var distance=markers[i].mydistance;
-            distance=getdistancestring(distance);
-        var tel=markers[i].myphone.replace(/\D/g, '');
-        var address=markers[i].myaddress+", "+markers[i].mycity+", "+markers[i].mystate+" "+markers[i].mypostal+" "+markers[i].mycountry;
-        var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
-        html += "<div class='main-add'>";
-        html += "<h4 class='color' >"+markers[i].myname+"</h4>";
-        html +="<div class='info-row-withicon phone'><i class='fa fa-fw fa-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>";
-        html +="<div class='info-row-withicon address'><i class='fa fa-fw fa-map-marker'></i> "+address+"</div>";
-        html +="<div class='info-row-withicon direction-row'><a class='direction-link' href='"+direction+"' target='_blank'>Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
-        //html +="<div class='info-row-withicon link-onmap-row'><a href=javascript:myclick(" + i + ")>Show on Map</a></div>";
-        html +="</div>";
-        }
+    if (!markers.length) {
+        show__dealerform(document.getElementById("dealerform"));
+    } else {
+        for (var i=0; i<markers.length; i++) {
+            if (markers[i].getVisible()) {
+            var distance=markers[i].mydistance;
+                distance=getdistancestring(distance);
+            var tel=markers[i].myphone.replace(/\D/g, '');
+            var address=markers[i].myaddress+", "+markers[i].mycity+", "+markers[i].mystate+" "+markers[i].mypostal+" "+markers[i].mycountry;
+            var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
+            html += "<div class='main-add'>";
+            html += "<h4 class='color' >"+markers[i].myname+"</h4>";
+            html +="<div class='info-row-withicon phone'><i class='fa fa-fw fa-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>";
+            html +="<div class='info-row-withicon address'><i class='fa fa-fw fa-map-marker'></i> "+address+"</div>";
+            html +="<div class='info-row-withicon direction-row'><a class='direction-link' href='"+direction+"' target='_blank'>Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
+            //html +="<div class='info-row-withicon link-onmap-row'><a href=javascript:myclick(" + i + ")>Show on Map</a></div>";
+            html +="</div>";
+            }
+        }        
     }
     html!=="" ? sidebar.innerHTML = html : sidebar.innerHTML='Sorry we don\'t have a retailer listed in this area, you can either try buying online or fill out the form below and we will get back to you with a retailer near to you.';
 }
