@@ -36,10 +36,26 @@ p{
 .text-sm{
 	font-size:$sm-font-size;
 }
+.text-md{
+	font-size:$md-font-size;
+}
+.text-lead{
+	font-size:$lead-font-size;
+}
+.text-lg{
+	font-size:$lg-font-size;
+}
 
 ul{
 	li{
 		
+	}
+	&.no-bullets{
+		list-style: none;
+		padding-left: 0;
+	}
+	&.li-icons{
+		li .s-icon{margin-right: 5px;}
 	}
 }
 

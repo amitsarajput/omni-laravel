@@ -33,8 +33,8 @@ class StaticPagesController extends Controller
         if ($request_path==='contact') {
             $this->data['page']=$request_path;
         }
-        if ($request_path === 'radar-us/limited-warranty') {
-            $this->data['page'] = 'warranty-radarus';
+        if ($request_path === 'radar/warranty') {
+            $this->data['page'] = 'warranty-radar-eu';
         }
         if (View::exists('pages/'.$this->data['page'])) {
             return view('pages/' . $this->data['page'], ['data'=>$this->data]);
