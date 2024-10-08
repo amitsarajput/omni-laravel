@@ -35,7 +35,7 @@ Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2,3}'])->name('pag
 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
 	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
 	//Contact Page
-	Route::get('/contact', [StaticPagesController::class, 'index'])->name('contact');
+	Route::get('/contact-us', [StaticPagesController::class, 'index'])->name('contact');
 	Route::get('/radar/warranty', [StaticPagesController::class,'index'])->name('warranty-eu');
 	//About Pages
 	Route::name('about.')->group(function(){
@@ -85,7 +85,7 @@ Route::name('pages.')->group(function(){
 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
 	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
 	//Contact Page
-	Route::get('/contact', [StaticPagesController::class, 'index'])->name('contact');
+	Route::get('/contact-us', [StaticPagesController::class, 'index'])->name('contact');
 	Route::get('/radar/warranty', [StaticPagesController::class,'index'])->name('warranty-eu');
 		//About Pages
 		Route::name('about.')->group(function(){

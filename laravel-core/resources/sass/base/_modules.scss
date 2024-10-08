@@ -579,6 +579,9 @@
 	flex-wrap: wrap;
 	border-top: 3px solid #da2224;
 	padding-top: 20px;
+	&.hide{
+		display: none;
+	}
 	.t-season-nav--title{
 		width: 130px;
 		padding-left:1rem;

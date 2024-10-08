@@ -16,12 +16,7 @@ class SetSessionData
      */
     public function handle(Request $request, Closure $next): Response
     {
-        //print_r('From SetSessionData middleware.');
         //session()->forget(['omni_data','locale']);
-        //session('amit','kumar');
-        //dd(session('omni_data'));
-        //dd(session()->all());
-        //if (!session()->has('omni_data')) { echo 'has SetSessionData'; }else{echo 'not has SetSessionData';}
         if(!session()->has('omni_data')|| empty(session('omni_data'))|| empty(session('omni_data.available_locations')) || empty(session('omni_data.available_locales')) ){ //
             //This function is runing on every request session is getting away after every request life cycle. Need to fix it.--fixed by putting start session midleware before the setsessiondata middleware in kernel.php file.
             //print_r('here');
@@ -36,14 +31,16 @@ class SetSessionData
                 'country'=>'eu',
                 'brand'=>'radar',
                 'bubble_closed'=>0,
+                'dealerform_open'=>0,
             ];
             $all_countries=Country::all();
             $omnidata['available_locations']=$all_countries->pluck('code','name')->toArray();
             $omnidata['available_locales']=$all_countries->pluck('locale_code','code')->toArray();
             session(['omni_data' => $omnidata]);//Set Session
             session(['locale' => $omnidata['default_locale']]);//Set default locale
-            //dd(session('omni_data'));
+            
         }
+        //dd(session('omni_data'));
         return $next($request);
     }
 }

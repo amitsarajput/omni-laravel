@@ -62,7 +62,8 @@
             </div>
             <div class="footer-col">
                 <a href="https://www.omni-united.com/">OMNI UNITED</a>
-                <a href="{{ route('pages.contact')}}">CONTACT</a>
+                <a href="https://www.omni-united.com/omni-sync">DISTRIBUTOR LOGIN</a>
+                <a href="{{ route('pages.contact')}}">CONTACT US</a>
             </div>
             
         </div>

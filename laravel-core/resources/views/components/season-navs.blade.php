@@ -1,5 +1,5 @@
-@props(['seasons','parentel','active'])
-<div class="t-season-nav">
+@props(['seasons','parentel','active','show'])
+<div class="t-season-nav {{$show ?'':'hide'}}">
     <div class="t-season-nav--title">
         <h6 class="uppercase">Season</h6>
     </div>

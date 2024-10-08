@@ -7,6 +7,7 @@ var citycords={
     'texas':{lat:31.4570713,lng:-99.2896222},
     'utah':{lat:39.5078714,lng:-111.7033542},
   };
+  
 var side_bar_html = ""; 
 
 var gmarkers = [];
@@ -34,7 +35,51 @@ function show__dealerform(element) {
 function hide__dealerform(element) {
     element.classList.add("hide");
 }
-hide__dealerform(document.getElementById("dealerform"));
+
+
+function get_dealerform_status() {
+    var myResponse;
+    myResponse=$.ajax({
+        type : 'GET',
+        url : "session/omnidata.dealerform_open/get",
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            return data;
+          }
+      }).responseText;
+      return myResponse;
+}
+
+function set_dealerform_status(data) {
+    var myResponse;
+    myResponse=$.ajax({
+        type : 'POST',
+        url : "session/omnidata.dealerform_open/set",
+        data:{
+            'formdata':data
+        },
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        },
+        dataType: 'json',
+        async: false,
+        success: function(data) {
+            return data;
+          }
+      }).responseText;
+      return myResponse;
+}
+//set_dealerform_status();
+if (get_dealerform_status()==1) {
+    console.log('Show inside condition', get_dealerform_status());
+    show__dealerform(document.getElementById("dealerform")); 
+} else {
+    console.log('Hide inside condition', get_dealerform_status());
+    hide__dealerform(document.getElementById("dealerform")); 
+}
+//var st=get_dealerform_status('locale')
+//console.log(st);
 
 function initMap() {
     var myOptions = {
@@ -188,12 +233,18 @@ function myclick(i) {
 
 //rebuilds the sidebar to match the markers currently displayed
 function makeSidebar(markers=null) {
+
     var sidebar=document.getElementById("side_bar");
     var html = "";
     if(markers===null){ markers=gmarkers}
     if (!markers.length) {
+        console.log('Show makeSidebar');
+        set_dealerform_status(1);
         show__dealerform(document.getElementById("dealerform"));
     } else {
+        console.log('Hide makeSidebar');
+        set_dealerform_status(0);
+        hide__dealerform(document.getElementById("dealerform"));
         for (var i=0; i<markers.length; i++) {
             if (markers[i].getVisible()) {
             var distance=markers[i].mydistance;
@@ -211,7 +262,7 @@ function makeSidebar(markers=null) {
             }
         }        
     }
-    html!=="" ? sidebar.innerHTML = html : sidebar.innerHTML='Sorry we don\'t have a retailer listed in this area, you can either try buying online or fill out the form below and we will get back to you with a retailer near to you.';
+    html!=="" ? sidebar.innerHTML = html : sidebar.innerHTML='';
 }
 
 //Search results working

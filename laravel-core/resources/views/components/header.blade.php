@@ -23,7 +23,7 @@
                                             href="{{route('home').'#dealer-locator'}}"
                                         @endif
                                         >Dealer Locator</a></li>
-                <li class="menu-item"><a href="{{ route('pages.contact')}}">Contact</a></li>
+                <li class="menu-item"><a href="{{ route('pages.contact')}}">Contact us</a></li>
             </ul>
             <div id="top-search">
                 <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>

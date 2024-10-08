@@ -19,8 +19,8 @@
                 <div class="col-6">
                     <div class="ml-7 mr-7">
                         <h5>PREMIUM COLLECTION</h5>
-                        <h2 class="dark-100 mt-0">WORLDWIDE PROVEN SAFETY
-                        AND PERFORMANCE</h2>
+                        <h2 class="dark-100 mt-0">ACCESSIBLE PREMIUM<br>PERFORMANCE</h2>
+                        <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5>
                     </div>
                 </div>
             </div>
@@ -73,6 +73,11 @@
                         <div id="tabs-{{ $search_tag->slug }}">
                             @php
                                 $filtered = $tyres->where('search_tag_id', $search_tag->id);
+                                $collect=collect($filtered);
+                                $total_season=$collect->pluck('season_id')->unique();
+                                $show_season_menu=true;
+                                if(count($total_season)<=1){$show_season_menu=false;}
+                                //print_r($total_season);
                             @endphp
                             
                             @foreach ($seasons as $oneseason)
@@ -81,7 +86,7 @@
                                         $season_tyres = $filtered->where('season_id', $oneseason->id);
                                     @endphp
                                     @if(count($season_tyres))
-                                        <x-season-navs :seasons="$seasons" :parentel="$search_tag->slug" :active="$oneseason"/>
+                                        <x-season-navs :seasons="$seasons" :parentel="$search_tag->slug" :active="$oneseason" :show="$show_season_menu"/>
                                         <x-tyre-grid :tyres='$season_tyres' />
                                     @endif
                                 </div>
@@ -107,6 +112,7 @@
                 <div id="dealerform" >
                     <x-dealer-locator-form />
                 </div>
+                
             </div>
         </div>
         <!-- Responsibility -->

@@ -18,19 +18,16 @@ class FormsController extends Controller
     }
 
     public function location_form(Request $request){
+        
             $this->validate($request, [
                 'location' => 'required'
             ]);
             $omni_data=session('omni_data');
-            //dd($omni_data);
             $new_loc=$request->location;
-            //dd($new_loc,$omni_data['available_locations']);
-            //$to_url='radar';
             $to_url=$omni_data['default_location'];
             if (in_array($new_loc, $omni_data['available_locations'])) { //If avialable
                 //$to_url.='-';
                 $to_url=$new_loc;
-                
                 //Set Session Data
                 $omni_data['preffered_location']=$new_loc;
                 $omni_data['country']=$new_loc;
@@ -40,12 +37,33 @@ class FormsController extends Controller
                 //Set language
                 $locale=$omni_data['default_locale'];
             }
-            //Set language
+            //Set language session and omni session data
             session(['locale' => $locale]);
             session(['omni_data' => $omni_data]);
             $to_url=strtolower($to_url);
-            if (session()->has('omni_data')) { echo 'has location_form'; }else{echo 'not has location_form';}
+            // check omni redirect
+            $this->omni_redirect($to_url);
             return redirect($to_url);
+    }
+
+    public function omni_redirect($to_url){
+        switch ($to_url) {
+            case "us":
+                $url='https://www.omni-united.com/radar-us';
+                break;
+            case "ca":
+                $url='https://www.omni-united.com/radar-ca';
+                break;
+            case "mea":
+                $url='https://www.omni-united.com/radar';
+                break;
+            case "as":
+                $url='https://www.omni-united.com/radar';
+                break;
+            default:
+                return false;
+          }
+          return redirect()->to($url)->send();
     }
 
     public function form_contact(Request $request) {

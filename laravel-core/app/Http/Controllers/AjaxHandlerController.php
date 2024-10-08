@@ -8,10 +8,11 @@ use Illuminate\Support\Facades\DB;
 
 class AjaxHandlerController extends Controller
 {
+    protected $key_scope=['omnidata.dealerform_open'];
     
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth')->except(['get_session_data','set_session_data']);
     }
     public function handle_request(Request $request, string $table){
         //dd($request);
@@ -28,7 +29,22 @@ class AjaxHandlerController extends Controller
             $record = DB::table($metadata['table'])->where('id', $metadata['id'])->update([$metadata['column'] => json_encode($request->formdata)]);
             return response(['success' => 'Updated']);
         }
+    }
 
-
+    function get_session_data($key){
+        $result=false;
+        if ( in_array($key,$this->key_scope) ) {
+            $result = session($key);
+        }
+        return $result;
+    }
+    function set_session_data(Request $request,$key){
+        $result=false;
+        $value=$request->formdata;
+        if ( in_array($key,$this->key_scope) ) {
+            session([$key => $value]);
+            $result =session($key);
+        }
+        return $result;
     }
 }

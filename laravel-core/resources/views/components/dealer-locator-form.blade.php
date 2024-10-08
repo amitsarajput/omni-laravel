@@ -15,7 +15,7 @@
             @endif
             <div class="grid">
                 <p class="col-12">
-                    If you still can’t find a dealer near you or if you may need any additional information from us on sizes, specifications or anything else, please get in touch with us via the below form and we will get back to you as soon as we can. 
+                    If you can’t find a dealer near you or if you may need any additional information from us on sizes, specifications or anything else, please get in touch with us via the below form and we will get back to you as soon as we can. 
                 </p>
             </div>
             <div class="grid">
