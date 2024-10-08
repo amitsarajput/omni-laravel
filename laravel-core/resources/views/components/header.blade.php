@@ -41,7 +41,7 @@
                     @endphp
                     <x-small-location-picker  :bubbleclosed="$bubble_closed" />
                 </li>
-                <li class="menu-item primary-color"><a href="https://www.omni-united.com/omni-sync">For Dealers</a></li>
+                <!-- <li class="menu-item primary-color"><a href="https://www.omni-united.com/omni-sync">For Dealers</a></li> -->
             </ul>
             
             <!-- <div class="side-panel-trigger">
