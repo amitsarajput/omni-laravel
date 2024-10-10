@@ -65,7 +65,11 @@
                         </div>
                         <ul >
                             @foreach ($search_tags as $search_tag)
-                                <li><a href="#tabs-{{ $search_tag->slug }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
+                                @if($search_tag->external_link)
+                                    <li><a href="{{ $search_tag->external_link }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
+                                @else
+                                    <li><a href="#tabs-{{ $search_tag->slug }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
+                                @endif
                             @endforeach
                         </ul>
                     </div>
@@ -160,7 +164,16 @@
     
     <script type="text/javascript">
         $( function() {
-            $( "#tabs" ).tabs();
+            //$( "#tabs" ).tabs();
+            $( "#tabs" ).tabs({
+                collapsible: true,
+                active : false,
+                beforeActivate: function (event, ui) {
+                    if( $(ui.newTab).find('a').attr('href').indexOf('#') != 0 ){ //check if it is hash link
+                        window.open($(ui.newTab).find('a').attr('href'), '_self');
+                    }
+                    }
+                });
         } );
         const swiper = new Swiper('.swiper', {
             loop: true,

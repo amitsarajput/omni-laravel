@@ -31,6 +31,8 @@ class FormsController extends Controller
                 //Set Session Data
                 $omni_data['preffered_location']=$new_loc;
                 $omni_data['country']=$new_loc;
+                // Set bubble closed to 1
+                $omni_data['bubble_closed']=1;
                 //Set language
                 $locale=$omni_data['available_locales'][$new_loc];
             }else{ // Not available

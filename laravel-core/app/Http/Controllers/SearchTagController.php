@@ -19,9 +19,8 @@ class SearchTagController extends Controller
      * Display a listing of the resource.
      */
     public function index()
-    {   
-        $searchtag=SearchTag::with('brands')->get();
-        
+    {
+        $searchtag=SearchTag::with('brands')->get();        
         return view('admin.searchtag.index', compact('searchtag'));
     }
 
@@ -49,8 +48,7 @@ class SearchTagController extends Controller
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
-    {
-        //
+    {        
         $request->validate([
             'country' => ['required','array'],
             'brand' => ['required', 'array' ],
@@ -63,6 +61,7 @@ class SearchTagController extends Controller
             'name' => strtoupper($request->name),
             'icon_id' => $request->icon,
             'slug' => strtolower($request->slug),
+            'external_link' => strtolower($request->external_link),
         ]);
         //$searchta=SearchTag::find($searchtag);
         $t_brand=[];
@@ -118,13 +117,14 @@ class SearchTagController extends Controller
             'brand' => ['required', 'array' ],
             'icon' => ['required', 'integer' ],
             'name' => ['required', 'string', 'max:255'],
-            'slug' => ['required', 'string', 'max:255']
+            'slug' => ['required', 'string', 'max:255'],
         ]);
 
         $searchtag ->update([
             'name' => $request->name,
             'icon' => $request->icon,
             'slug' => strtolower($request->slug),
+            'external_link' => strtolower($request->external_link),
         ]);
         //$searchta=SearchTag::find($searchtag);
         $t_brand=[];

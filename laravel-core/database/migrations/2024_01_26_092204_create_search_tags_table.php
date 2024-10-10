@@ -14,8 +14,9 @@ return new class extends Migration
         Schema::create('search_tags', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('icon');
+            $table->string('icon_id');
             $table->string('slug')->unique();
+            $table->string('external_link')->nullable();
             $table->timestamps();
         });
     }

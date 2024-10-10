@@ -29,7 +29,7 @@ class UserLocationBubble extends Component
         $default_location=$omnidata['default_location']; 
         $user_location=$omnidata['user_location']; 
         $preffered_location=$omnidata['preffered_location'];
-        
+                
         //Initial redirect 
         if($preffered_location===''){ //No Preffered Location 
             //Bypassing user location check

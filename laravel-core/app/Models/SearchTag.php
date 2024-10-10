@@ -15,7 +15,7 @@ class SearchTag extends Model
 {
     use HasFactory;
 
-    protected $fillable=['name','icon_id','slug'];
+    protected $fillable=['name','icon_id','slug','external_link'];
 
     public function countries()
     {

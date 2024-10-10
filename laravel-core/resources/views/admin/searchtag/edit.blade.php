@@ -39,18 +39,24 @@
                         </div>
                     @endif
                     
-                
-              <div class="form-group">
-                  <label>Icon</label>
-                  {{ Form::select('icon', $icon, $searchtag->icon_id, ['class'=>'form-control','placeholder' => 'Pick a icon...']) }}
-              </div>
+              
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
                 {{ Form::text('name', $searchtag->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
+              </div>  
+              <div class="row">
+                <div class="form-group col-md-6">
+                    <label>Icon</label>
+                    {{ Form::select('icon', $icon, $searchtag->icon_id, ['class'=>'form-control','placeholder' => 'Pick a icon...']) }}
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="exampleInputPassword1">Slug</label>
+                  {{ Form::text('slug', $searchtag->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+                </div>
               </div>
               <div class="form-group">
-                <label for="exampleInputPassword1">Slug</label>
-                {{ Form::text('slug', $searchtag->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+                <label for="exampleInputPassword1">External Link</label>
+                {{ Form::text('external_link', $searchtag->external_link, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
               </div>
               <div class="form-group">
                   <label>Brand</label>
