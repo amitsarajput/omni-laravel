@@ -1657,3 +1657,39 @@ table{
 		color: #333 ;
     }
 }
+
+
+/*Cookie Consent*/
+.js-cookie-consent{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	bottom: 10px;
+	left: 10px;
+	width: 350px;
+	padding: 8px;
+	background-color: $red;
+	font-family: $body-font;
+	.cookie-consent__message{
+		font-size: $sm-font-size; 
+		color: $white;
+		margin-right: 5px;
+		margin-bottom: 0;
+		a{color: $white;}
+	}
+	.cookie-consent__agree{
+		border: none;
+		background: none;
+		color: $white;
+		width: auto;
+		height: auto;
+		margin: 0;
+		padding: 0;
+		cursor: pointer;
+		.s-icon{
+			width: 50px;
+			height: 50px;
+		}
+	}
+}

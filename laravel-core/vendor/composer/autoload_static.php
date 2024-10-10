@@ -98,10 +98,12 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
             'Symfony\\Component\\CssSelector\\' => 30,
             'Symfony\\Component\\Console\\' => 26,
             'Stevebauman\\Location\\' => 21,
+            'Spatie\\LaravelPackageTools\\' => 27,
             'Spatie\\LaravelIgnition\\' => 23,
             'Spatie\\Ignition\\' => 16,
             'Spatie\\Html\\' => 12,
             'Spatie\\FlareClient\\' => 19,
+            'Spatie\\CookieConsent\\' => 21,
             'Spatie\\Backtrace\\' => 17,
         ),
         'R' => 
@@ -358,6 +360,10 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         array (
             0 => __DIR__ . '/..' . '/stevebauman/location/src',
         ),
+        'Spatie\\LaravelPackageTools\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-package-tools/src',
+        ),
         'Spatie\\LaravelIgnition\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/laravel-ignition/src',
@@ -373,6 +379,10 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'Spatie\\FlareClient\\' => 
         array (
             0 => __DIR__ . '/..' . '/spatie/flare-client-php/src',
+        ),
+        'Spatie\\CookieConsent\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/spatie/laravel-cookie-consent/src',
         ),
         'Spatie\\Backtrace\\' => 
         array (
@@ -640,6 +650,7 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'App\\Http\\Controllers\\ClimateNewsController' => __DIR__ . '/../..' . '/app/Http/Controllers/ClimateNewsController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CountryController' => __DIR__ . '/../..' . '/app/Http/Controllers/CountryController.php',
+        'App\\Http\\Controllers\\DealerController' => __DIR__ . '/../..' . '/app/Http/Controllers/DealerController.php',
         'App\\Http\\Controllers\\FormsController' => __DIR__ . '/../..' . '/app/Http/Controllers/FormsController.php',
         'App\\Http\\Controllers\\GolfTournamentController' => __DIR__ . '/../..' . '/app/Http/Controllers/GolfTournamentController.php',
         'App\\Http\\Controllers\\IconController' => __DIR__ . '/../..' . '/app/Http/Controllers/IconController.php',
@@ -666,11 +677,10 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\Auth\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/Auth/LoginRequest.php',
         'App\\Http\\Requests\\ProfileUpdateRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProfileUpdateRequest.php',
-        'App\\Listeners\\UpdateSessionOnCountryCreate' => __DIR__ . '/../..' . '/app/Listeners/UpdateSessionOnCountryCreate.php',
-        'App\\Listeners\\UpdateSessionOnCountryDelete' => __DIR__ . '/../..' . '/app/Listeners/UpdateSessionOnCountryDelete.php',
         'App\\Models\\Brand' => __DIR__ . '/../..' . '/app/Models/Brand.php',
         'App\\Models\\BrandExtraDetail' => __DIR__ . '/../..' . '/app/Models/BrandExtraDetail.php',
         'App\\Models\\Country' => __DIR__ . '/../..' . '/app/Models/Country.php',
+        'App\\Models\\Dealer' => __DIR__ . '/../..' . '/app/Models/Dealer.php',
         'App\\Models\\Forms' => __DIR__ . '/../..' . '/app/Models/Forms.php',
         'App\\Models\\Icon' => __DIR__ . '/../..' . '/app/Models/Icon.php',
         'App\\Models\\Region' => __DIR__ . '/../..' . '/app/Models/Region.php',
@@ -686,12 +696,16 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
         'App\\View\\Components\\Admin\\Form\\Input' => __DIR__ . '/../..' . '/app/View/Components/Admin/Form/Input.php',
         'App\\View\\Components\\AppLayout' => __DIR__ . '/../..' . '/app/View/Components/AppLayout.php',
+        'App\\View\\Components\\ContactAddress' => __DIR__ . '/../..' . '/app/View/Components/ContactAddress.php',
+        'App\\View\\Components\\ContactusForm' => __DIR__ . '/../..' . '/app/View/Components/ContactusForm.php',
+        'App\\View\\Components\\DealerLocatorForm' => __DIR__ . '/../..' . '/app/View/Components/DealerLocatorForm.php',
         'App\\View\\Components\\GuestLayout' => __DIR__ . '/../..' . '/app/View/Components/GuestLayout.php',
         'App\\View\\Components\\ImageBox' => __DIR__ . '/../..' . '/app/View/Components/ImageBox.php',
         'App\\View\\Components\\SeasonNavs' => __DIR__ . '/../..' . '/app/View/Components/SeasonNavs.php',
         'App\\View\\Components\\SizeAllTable' => __DIR__ . '/../..' . '/app/View/Components/SizeAllTable.php',
         'App\\View\\Components\\SizeTable' => __DIR__ . '/../..' . '/app/View/Components/SizeTable.php',
         'App\\View\\Components\\SizeTabs' => __DIR__ . '/../..' . '/app/View/Components/SizeTabs.php',
+        'App\\View\\Components\\SmallLocationPicker' => __DIR__ . '/../..' . '/app/View/Components/SmallLocationPicker.php',
         'App\\View\\Components\\TyreFbSlider' => __DIR__ . '/../..' . '/app/View/Components/TyreFbSlider.php',
         'App\\View\\Components\\TyreGrid' => __DIR__ . '/../..' . '/app/View/Components/TyreGrid.php',
         'App\\View\\Components\\TyreImageSlider' => __DIR__ . '/../..' . '/app/View/Components/TyreImageSlider.php',
@@ -6174,6 +6188,8 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'Spatie\\Backtrace\\CodeSnippet' => __DIR__ . '/..' . '/spatie/backtrace/src/CodeSnippet.php',
         'Spatie\\Backtrace\\File' => __DIR__ . '/..' . '/spatie/backtrace/src/File.php',
         'Spatie\\Backtrace\\Frame' => __DIR__ . '/..' . '/spatie/backtrace/src/Frame.php',
+        'Spatie\\CookieConsent\\CookieConsentMiddleware' => __DIR__ . '/..' . '/spatie/laravel-cookie-consent/src/CookieConsentMiddleware.php',
+        'Spatie\\CookieConsent\\CookieConsentServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-cookie-consent/src/CookieConsentServiceProvider.php',
         'Spatie\\FlareClient\\Api' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Api.php',
         'Spatie\\FlareClient\\Concerns\\HasContext' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Concerns/HasContext.php',
         'Spatie\\FlareClient\\Concerns\\UsesTime' => __DIR__ . '/..' . '/spatie/flare-client-php/src/Concerns/UsesTime.php',
@@ -6364,6 +6380,10 @@ class ComposerStaticInit06135a36131bf073f39b3aa122d07a4c
         'Spatie\\LaravelIgnition\\Support\\StringComparator' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Support/StringComparator.php',
         'Spatie\\LaravelIgnition\\Views\\BladeSourceMapCompiler' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/BladeSourceMapCompiler.php',
         'Spatie\\LaravelIgnition\\Views\\ViewExceptionMapper' => __DIR__ . '/..' . '/spatie/laravel-ignition/src/Views/ViewExceptionMapper.php',
+        'Spatie\\LaravelPackageTools\\Commands\\InstallCommand' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Commands/InstallCommand.php',
+        'Spatie\\LaravelPackageTools\\Exceptions\\InvalidPackage' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Exceptions/InvalidPackage.php',
+        'Spatie\\LaravelPackageTools\\Package' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/Package.php',
+        'Spatie\\LaravelPackageTools\\PackageServiceProvider' => __DIR__ . '/..' . '/spatie/laravel-package-tools/src/PackageServiceProvider.php',
         'Stevebauman\\Location\\Commands\\Update' => __DIR__ . '/..' . '/stevebauman/location/src/Commands/Update.php',
         'Stevebauman\\Location\\Drivers\\Cloudflare' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/Cloudflare.php',
         'Stevebauman\\Location\\Drivers\\Driver' => __DIR__ . '/..' . '/stevebauman/location/src/Drivers/Driver.php',

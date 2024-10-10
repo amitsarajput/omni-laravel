@@ -14,6 +14,7 @@
         "laravel/tinker": "^2.8",
         "laravelcollective/html": "^6.4",
         "phpoffice/phpspreadsheet": "^2.0",
+        "spatie/laravel-cookie-consent": "^3.2",
         "spatie/laravel-html": "^3.5",
         "stevebauman/location": "^7.1"
     },
