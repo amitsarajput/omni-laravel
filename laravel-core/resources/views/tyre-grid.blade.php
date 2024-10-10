@@ -167,7 +167,6 @@
             //$( "#tabs" ).tabs();
             $( "#tabs" ).tabs({
                 collapsible: true,
-                active : false,
                 beforeActivate: function (event, ui) {
                     if( $(ui.newTab).find('a').attr('href').indexOf('#') != 0 ){ //check if it is hash link
                         window.open($(ui.newTab).find('a').attr('href'), '_blank');
