@@ -33,6 +33,9 @@ p{
 	&:first-child{margin-top: 0;}
 }
 [class^="col-"] p:first-child{margin-top: 0;}
+.bg-image,.bgimage{
+	@include bgimage()
+}
 .text-sm{
 	font-size:$sm-font-size;
 }
@@ -72,22 +75,75 @@ ul{
 }
 // Spacing 
 @for $i from 0 through 10 {
-	// Margins
-	.ma-#{$i}{margin:#{0+$i}rem;}
-	.mt-#{$i}{margin-top:#{0+$i}rem;}
-	.mr-#{$i}{margin-right:#{0+$i}rem;}
-	.mb-#{$i}{margin-bottom:#{0+$i}rem;}
-	.ml-#{$i}{margin-left:#{0+$i}rem;}
-	.mx-#{$i}{margin-left:#{0+$i}rem;margin-right:#{0+$i}rem;}
-	.my-#{$i}{margin-top:#{0+$i}rem;margin-bottom:#{0+$i}rem;}
+	@include mobile { 
+		// Margins
+		.sm-ma-#{$i}{margin:#{0+$i}rem;}
+		.sm-mt-#{$i}{margin-top:#{0+$i}rem;}
+		.sm-mr-#{$i}{margin-right:#{0+$i}rem;}
+		.sm-mb-#{$i}{margin-bottom:#{0+$i}rem;}
+		.sm-ml-#{$i}{margin-left:#{0+$i}rem;}
+		.sm-mx-#{$i}{margin-left:#{0+$i}rem;margin-right:#{0+$i}rem;}
+		.sm-my-#{$i}{margin-top:#{0+$i}rem;margin-bottom:#{0+$i}rem;}
+	}
+	@include tablet{ 		
+		// Margins
+		.md-ma-#{$i}{margin:#{0+$i}rem;}
+		.md-mt-#{$i}{margin-top:#{0+$i}rem;}
+		.md-mr-#{$i}{margin-right:#{0+$i}rem;}
+		.md-mb-#{$i}{margin-bottom:#{0+$i}rem;}
+		.md-ml-#{$i}{margin-left:#{0+$i}rem;}
+		.md-mx-#{$i}{margin-left:#{0+$i}rem;margin-right:#{0+$i}rem;}
+		.md-my-#{$i}{margin-top:#{0+$i}rem;margin-bottom:#{0+$i}rem;}
+	}
+	@include desktop { 		
+		// Margins
+		.lg-ma-#{$i}{margin:#{0+$i}rem;}
+		.lg-mt-#{$i}{margin-top:#{0+$i}rem;}
+		.lg-mr-#{$i}{margin-right:#{0+$i}rem;}
+		.lg-mb-#{$i}{margin-bottom:#{0+$i}rem;}
+		.lg-ml-#{$i}{margin-left:#{0+$i}rem;}
+		.lg-mx-#{$i}{margin-left:#{0+$i}rem;margin-right:#{0+$i}rem;}
+		.lg-my-#{$i}{margin-top:#{0+$i}rem;margin-bottom:#{0+$i}rem;}
+	}
+	@include from($widescreen) { 		
+		// Margins
+		.ma-#{$i}{margin:#{0+$i}rem;}
+		.mt-#{$i}{margin-top:#{0+$i}rem;}
+		.mr-#{$i}{margin-right:#{0+$i}rem;}
+		.mb-#{$i}{margin-bottom:#{0+$i}rem;}
+		.ml-#{$i}{margin-left:#{0+$i}rem;}
+		.mx-#{$i}{margin-left:#{0+$i}rem;margin-right:#{0+$i}rem;}
+		.my-#{$i}{margin-top:#{0+$i}rem;margin-bottom:#{0+$i}rem;}
+	}
 	// Paddings
-	.pa-#{$i}{padding:#{0+$i}rem;}
-	.pt-#{$i}{padding-top:#{0+$i}rem;}
-	.pr-#{$i}{padding-right:#{0+$i}rem;}
-	.pb-#{$i}{padding-bottom:#{0+$i}rem;}
-	.pl-#{$i}{padding-left:#{0+$i}rem;}
-	.px-#{$i}{padding-left:#{0+$i}rem;padding-right:#{0+$i}rem;}
-	.py-#{$i}{padding-top:#{0+$i}rem;padding-bottom:#{0+$i}rem;}
+	@include mobile {
+		.pa-#{$i}{padding:#{0+$i}rem;}
+		.pt-#{$i}{padding-top:#{0+$i}rem;}
+		.pr-#{$i}{padding-right:#{0+$i}rem;}
+		.pb-#{$i}{padding-bottom:#{0+$i}rem;}
+		.pl-#{$i}{padding-left:#{0+$i}rem;}
+		.px-#{$i}{padding-left:#{0+$i}rem;padding-right:#{0+$i}rem;}
+		.py-#{$i}{padding-top:#{0+$i}rem;padding-bottom:#{0+$i}rem;}
+
+	}
+	@include tablet { 
+		.md-pa-#{$i}{padding:#{0+$i}rem;}
+		.md-pt-#{$i}{padding-top:#{0+$i}rem;}
+		.md-pr-#{$i}{padding-right:#{0+$i}rem;}
+		.md-pb-#{$i}{padding-bottom:#{0+$i}rem;}
+		.md-pl-#{$i}{padding-left:#{0+$i}rem;}
+		.md-px-#{$i}{padding-left:#{0+$i}rem;padding-right:#{0+$i}rem;}
+		.md-py-#{$i}{padding-top:#{0+$i}rem;padding-bottom:#{0+$i}rem;}
+	}
+	@include from($desktop) { 
+		.pa-#{$i}{padding:#{0+$i}rem;}
+		.pt-#{$i}{padding-top:#{0+$i}rem;}
+		.pr-#{$i}{padding-right:#{0+$i}rem;}
+		.pb-#{$i}{padding-bottom:#{0+$i}rem;}
+		.pl-#{$i}{padding-left:#{0+$i}rem;}
+		.px-#{$i}{padding-left:#{0+$i}rem;padding-right:#{0+$i}rem;}
+		.py-#{$i}{padding-top:#{0+$i}rem;padding-bottom:#{0+$i}rem;}
+	}
 	// Borders
 	.ba-#{$i}{border:#{0+$i}px solid;}
 	.bl-#{$i}{border-left:#{0+$i}px solid;}
@@ -110,6 +166,10 @@ ul{
     letter-spacing: 1px;
     margin-top:math.div($section-spacing, $i);
     margin-bottom:math.div($section-spacing , 2*$i);
+	@include until($widescreen){
+		font-size: math.div($body-font-size * 5, $i);
+		line-height: math.div($body-font-size * 6, $i);
+	}
 	&.no-top-margin{ margin-top: 0;}
 	&.no-bottom-margin{ margin-bottom: 0;}
 	&.black{color:$black;}
@@ -139,7 +199,12 @@ ul{
 	.el-height-#{$i}0{
 		height: #{$i}0vh;
 	}
+	.el-height-#{$i}0rem{
+			height: #{$i}0rem;
+	}
 }
+
+
 .body-overlay{
 	opacity: 0;
 	position: fixed;

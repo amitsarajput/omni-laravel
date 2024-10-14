@@ -26,15 +26,14 @@ class FormsController extends Controller
             $new_loc=$request->location;
             $to_url=$omni_data['default_location'];
             if (in_array($new_loc, $omni_data['available_locations'])) { //If avialable
-                //$to_url.='-';
                 $to_url=$new_loc;
                 //Set Session Data
-                $omni_data['preffered_location']=$new_loc;
-                $omni_data['country']=$new_loc;
+                //$omni_data['preffered_location']=$new_loc;
+                //$omni_data['country']=$new_loc;
                 // Set bubble closed to 1
                 $omni_data['bubble_closed']=1;
                 //Set language
-                $locale=$omni_data['available_locales'][$new_loc];
+                $locale=$omni_data['default_locale'];//$omni_data['available_locales'][$new_loc];
             }else{ // Not available
                 //Set language
                 $locale=$omni_data['default_locale'];

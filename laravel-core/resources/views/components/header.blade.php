@@ -25,6 +25,12 @@
                                         >Dealer Locator</a></li>
                 <li class="menu-item"><a href="{{ route('pages.contact')}}">Contact us</a></li>
             </ul>
+            @php
+                $bubble_closed=session('omni_data.bubble_closed');
+            @endphp
+            <div class="location-picker--small">
+                <x-small-location-picker  :bubbleclosed="$bubble_closed" />
+            </div>
             <div id="top-search">
                 <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
                 <form action="search" method="post">
@@ -34,19 +40,11 @@
             <!-- <div class="search-opener">
                 <i class="fas fa-search"></i>
             </div> -->
-            <ul class="menu">
-                <li class="menu-item">
-                    @php
-                        $bubble_closed=session('omni_data.bubble_closed');
-                    @endphp
-                    <x-small-location-picker  :bubbleclosed="$bubble_closed" />
-                </li>
-                <!-- <li class="menu-item primary-color"><a href="https://www.omni-united.com/omni-sync">For Dealers</a></li> -->
-            </ul>
             
-            <!-- <div class="side-panel-trigger">
+            
+            <div class="collapsed-menu-trigger">
                 <i class="fas fa-bars"></i>
-            </div> -->
+            </div>
         </div>
     </div>
 </header>

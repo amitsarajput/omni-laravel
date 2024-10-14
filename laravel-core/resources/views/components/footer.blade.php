@@ -3,11 +3,11 @@
     <div class="footer-logo-socials">
         <div class="container">
             <div class="grid">
-                <div class="col-6">
+                <div class="col-sm-6">
                     <div class="footer--logo">
                     <img src="{{asset('images/logos/radar-tyres-light-red.svg')}}" alt=""></div>
                 </div>
-                <div class="col-6">
+                <div class="col-sm-6">
                     <div class="footer-socials">
                         <div class="title">FOLLOW US:</div>
                         <div class="icons">

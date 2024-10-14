@@ -63,6 +63,7 @@ body.top-search-open {
 		.logo,.side-panel-trigger,a i.icon-search3, .menu{
 			opacity:0;
 		}
+		.location-picker--small{display: none;}
 		#top-search{
 			form input{pointer-events: auto;}
 			a i.icon-line-cross, form {

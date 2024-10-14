@@ -13,30 +13,30 @@
     <section id="content">
         <div class="section no-padding">
             <div class="grid grid-bleed align-center">
-                <div class="col-6">
+                <div class="col-md-6 col-sm-12 bgimage">
                     <img src="{{asset('images/tyre-grid/premium-col.jpg')}}" alt="Premium Collection">
                 </div>
-                <div class="col-6">
-                    <div class="ml-7 mr-7">
+                <div class="col-md-6 col-sm-12">
+                    <div class="mx-7 sm-ma-2 md-ma-2">
                         <h5>PREMIUM COLLECTION</h5>
-                        <h2 class="dark-100 mt-0">ACCESSIBLE PREMIUM<br>PERFORMANCE</h2>
+                        <h2 class="dark-100  no-top-margin">ACCESSIBLE PREMIUM<br>PERFORMANCE</h2>
                         <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5>
                     </div>
                 </div>
             </div>
             <div class="grid grid-bleed align-center">
-                <div class="col-6">
-                    <div class="ml-9 mr-9">
+                <div class="col-md-6 col-sm-12 order-md-2">
+                    <img src="{{asset('images/tyre-grid/wet-braking.jpg')}}" alt="Wet Braking">
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <div class="mx-7 sm-ma-2 md-ma-2 lg-ma-2">
                         <h5>WHY RADAR</h5>
-                        <h2 class="dark-100 mt-0">THE SAME HIGH
+                        <h2 class="dark-100 no-top-margin">THE SAME HIGH
                         PERFORMANCE, SAFETY AND
                         DURABILITY, BUT WITHOUT
                         THE HEFTY PRICE TAG</h2>
                         <a  class="knopf red heading-font sharp ls-1" href="#">READ MORE</a>
                     </div>
-                </div>
-                <div class="col-6">
-                    <img src="{{asset('images/tyre-grid/wet-braking.jpg')}}" alt="Wet Braking">
                 </div>
             </div>
         </div>
@@ -131,11 +131,11 @@
                 </div>
                 
                 <div class="grid align-center">
-                    <div class="col-6 col-bleed">
+                    <div class="col-md-6 col-sm-12 col-bleed">
                         <img src="{{asset('images/tyre-grid/social-responsibility.jpg')}}" alt="Social Responsibility">
                     </div>
-                    <div class="col-6">
-                        <div class="ml-2">
+                    <div class="col-md-6 col-sm-12">
+                        <div class="ml-2 sm-ma-0">
                             <h5 class="dark-100 mt-0 uppercase">SOCIAL RESPONSIBILITY</h5>
                             <p>We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
                             <a class="knopf red heading-font sharp ls-1" href="https://www.omni-united.com/social-responsibility">READ MORE</a>
@@ -143,15 +143,15 @@
                     </div>
                 </div>
                 <div class="grid align-center">
-                    <div class="col-6">
-                        <div class="mr-2">
+                    <div class="col-md-6 col-sm-12 col-bleed order-md-2">
+                        <img src="{{asset('images/tyre-grid/environmental-responsibility.jpg')}}" alt="Environmental Responsibility">
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="mr-2 sm-ma-0">
                             <h5 class="dark-100 mt-0 uppercase">ENVIRONMENT</h5>
                             <p>We continually strive to minimize our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.</p>
                             <a class="knopf red heading-font sharp ls-1" href="https://www.omni-united.com/environmental-responsibility">READ MORE</a>
                         </div>
-                    </div>
-                    <div class="col-6 col-bleed">
-                        <img src="{{asset('images/tyre-grid/environmental-responsibility.jpg')}}" alt="Environmental Responsibility">
                     </div>
                 </div>
             </div>

@@ -272,6 +272,28 @@ jQuery(window).on('scroll', function(){
             }
         
     };
+    var top_collapsed_menu=function(){
+        var STRS={
+            HEADER:"#header",
+            MENU_TRIGGER:"#header .collapsed-menu-trigger",
+            MENU:"#header .menu",
+            CLASS_TO_TOGGLE:"show-collapsed-menu",
+        };
+        var c_menu_trigger =$(STRS.MENU_TRIGGER);
+        var c_menu =$(STRS.MENU);
+
+            if (c_menu_trigger.length > 0) {
+                c_menu_trigger.on('click',function(){
+                    if(c_menu.hasClass(STRS.CLASS_TO_TOGGLE)){
+                        c_menu.removeClass(STRS.CLASS_TO_TOGGLE);
+                    }else{
+                        c_menu.addClass(STRS.CLASS_TO_TOGGLE);
+                    }
+                    
+                });
+            }
+        
+    };
     //Nav tree
     var navTree= function(){
         var navTreeEl = jQuery('.nav-tree');
@@ -313,6 +335,7 @@ jQuery(window).on('scroll', function(){
     OMNI.locationBubble=L_B;
     OMNI.locationBubble.init();
     euLabel();
+    top_collapsed_menu()
     navTree()
 
 })(jQuery);
