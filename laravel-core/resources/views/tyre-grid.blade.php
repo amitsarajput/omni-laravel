@@ -14,27 +14,27 @@
         <div class="section no-padding">
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12 bgimage">
-                    <img src="{{asset('images/tyre-grid/premium-col.jpg')}}" alt="Premium Collection">
+                    <img src="{{asset('images/tyre-grid/premium-col.webp')}}" alt="Premium Collection">
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="mx-7 sm-ma-2 md-ma-2">
-                        <h5>PREMIUM COLLECTION</h5>
-                        <h2 class="dark-100  no-top-margin">ACCESSIBLE PREMIUM<br>PERFORMANCE</h2>
-                        <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5>
+                        <h5>WHY RADAR</h5>
+                        <h2 class="dark-100  no-top-margin">THE SAME HIGH PERFORMANCE, SAFETY AND DURABILITY, BUT WITHOUT THE HEFTY PRICE TAG</h2>
+                        <a  class="knopf red heading-font sharp ls-1" href="#">READ MORE</a>
+                        <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12 order-md-2">
-                    <img src="{{asset('images/tyre-grid/wet-braking.jpg')}}" alt="Wet Braking">
+                    <img src="{{asset('images/tyre-grid/wet-braking.webp')}}" alt="Wet Braking">
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="mx-7 sm-ma-2 md-ma-2 lg-ma-2">
-                        <h5>WHY RADAR</h5>
-                        <h2 class="dark-100 no-top-margin">THE SAME HIGH
-                        PERFORMANCE, SAFETY AND
-                        DURABILITY, BUT WITHOUT
-                        THE HEFTY PRICE TAG</h2>
+                        <h5>MESSAGE FROM CEO</h5>
+                        <h2 class="dark-100 no-top-margin">
+                            OUR MISSION IS TO OFFER PREMIUM HIGH QUALITY-TYRES THAT ARE AFFORDABLE FOR ALL
+                        </h2>
                         <a  class="knopf red heading-font sharp ls-1" href="#">READ MORE</a>
                     </div>
                 </div>

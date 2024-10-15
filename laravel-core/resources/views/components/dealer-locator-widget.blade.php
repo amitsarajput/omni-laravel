@@ -14,11 +14,11 @@
             <div class="form-group">
                 <label>choose search radius</label>
                 <select name="selectcity" id="selectcity" onchange="" class="form-control">
-                    <option value="5">5 mile radius</option>
-                    <option value="10" selected="selected">10 mile radius</option>
-                    <option value="25">25 mile radius</option>
-                    <option value="50">50 mile radius</option>
-                    <option value="100">100 mile radius</option>
+                        <option value="5">5 kilometre radius</option>
+                        <option value="10">10 kilometre radius</option>
+                        <option value="25" selected="selected">25 kilometre radius</option>
+                        <option value="50">50 kilometre radius</option>
+                        <option value="100">100 kilometre radius</option>
                 </select>
             </div>
         </div>
@@ -40,7 +40,7 @@
 @push('scripts')  
     <!-- Swiper JS -->
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
-    <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"></script>
+    <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_k3c0Ba2Zhk6T8d_MZULA-0EMl-6o84&libraries=places,geometry&callback=initMap"></script>
     <script src="{{asset('js/jquery-gmap.js')}}"></script>
     <script type="text/javascript">
         $( function() {
