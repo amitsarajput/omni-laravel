@@ -36,6 +36,15 @@ class StaticPagesController extends Controller
         if ($request_path === 'radar/warranty') {
             $this->data['page'] = 'warranty-radar-eu';
         }
+        if ($request_path === 'premium-collection') {
+            $this->data['page'] = $request_path;
+        }
+        if ($request_path === 'ceo-message') {
+            $this->data['page'] = $request_path;
+        }
+        if ($request_path === 'rigorous-testing') {
+            $this->data['page'] = $request_path;
+        }
         if (View::exists('pages/'.$this->data['page'])) {
             return view('pages/' . $this->data['page'], ['data'=>$this->data]);
         }else {

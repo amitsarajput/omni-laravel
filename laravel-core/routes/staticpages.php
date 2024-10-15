@@ -37,6 +37,10 @@ Route::prefix('{country:slug?}')->where(['country'=>'[a-zA-Z]{2,3}'])->name('pag
 	//Contact Page
 	Route::get('/contact-us', [StaticPagesController::class, 'index'])->name('contact');
 	Route::get('/radar/warranty', [StaticPagesController::class,'index'])->name('warranty-eu');
+	Route::get('/premium-collection', [StaticPagesController::class,'index'])->name('premium-collection');
+	Route::get('/ceo-message', [StaticPagesController::class,'index'])->name('ceo-message');
+	Route::get('/rigorous-testing', [StaticPagesController::class,'index'])->name('testing');
+	
 	//About Pages
 	Route::name('about.')->group(function(){
 		Route::get('/who-we-are', [StaticPagesController::class,'index'])->name('who-we-are');//
@@ -84,9 +88,11 @@ Route::name('pages.')->group(function(){
 	Route::get('/about-us', [StaticPagesController::class,'index'])->name('about-us');
 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
 	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
-	//Contact Page
 	Route::get('/contact-us', [StaticPagesController::class, 'index'])->name('contact');
 	Route::get('/radar/warranty', [StaticPagesController::class,'index'])->name('warranty-eu');
+	Route::get('/premium-collection', [StaticPagesController::class,'index'])->name('premium-collection');
+	Route::get('/ceo-message', [StaticPagesController::class,'index'])->name('ceo-message');
+	Route::get('/rigorous-testing', [StaticPagesController::class,'index'])->name('rigorous-testing');
 		//About Pages
 		Route::name('about.')->group(function(){
 			

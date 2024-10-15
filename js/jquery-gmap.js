@@ -72,10 +72,10 @@ function set_dealerform_status(data) {
 }
 //set_dealerform_status();
 if (get_dealerform_status()==1) {
-    console.log('Show inside condition', get_dealerform_status());
+    //console.log('Show inside condition', get_dealerform_status());
     show__dealerform(document.getElementById("dealerform")); 
 } else {
-    console.log('Hide inside condition', get_dealerform_status());
+    //console.log('Hide inside condition', get_dealerform_status());
     hide__dealerform(document.getElementById("dealerform")); 
 }
 //var st=get_dealerform_status('locale')

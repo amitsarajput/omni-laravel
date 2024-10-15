@@ -4,38 +4,44 @@
     <link rel="stylesheet" href="{{asset('css/swiper/swiper-bundle.css')}}" />
     <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
     @endpush
-    <!-- Implement Slider From Brand Database --><!-- Page Title
+    <!-- Implement Slider From Brand Database -->
+    <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/tyre-grid-banner.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TYRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TYRES" button-Link='#' class="page-title--left el-height-60 uppercase mb-0" />
+    <x-page-title image-url="{{ asset('images/tyre-grid-banner.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TYRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TYRES" button-Link="{{ route('pages.about-us') }}" class="page-title--left el-height-60 uppercase mb-0" />
     
     
     <!-- Content -->
     <section id="content">
         <div class="section no-padding">
             <div class="grid grid-bleed align-center">
-                <div class="col-md-6 col-sm-12 bgimage">
-                    <img src="{{asset('images/tyre-grid/premium-col.webp')}}" alt="Premium Collection">
+                <div class="col-md-6 col-sm-12">
+                    <a href="{{ route('pages.premium-collection') }}">
+                        <img src="{{asset('images/tyre-grid/premium-col.webp')}}" alt="Premium Collection">
+                    </a>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <div class="mx-7 sm-ma-2 md-ma-2">
+                    <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h5>WHY RADAR</h5>
                         <h2 class="dark-100  no-top-margin">THE SAME HIGH PERFORMANCE, SAFETY AND DURABILITY, BUT WITHOUT THE HEFTY PRICE TAG</h2>
-                        <a  class="knopf red heading-font sharp ls-1" href="#">READ MORE</a>
+                        <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.why-radar') }}">READ MORE</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12 order-md-2">
-                    <img src="{{asset('images/tyre-grid/wet-braking.webp')}}" alt="Wet Braking">
+                    <a href="{{ route('pages.testing') }}">
+                        <img src="{{asset('images/tyre-grid/wet-braking.webp')}}" alt="Testing">
+                    </a>
+                    
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <div class="mx-7 sm-ma-2 md-ma-2 lg-ma-2">
+                    <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h5>MESSAGE FROM CEO</h5>
                         <h2 class="dark-100 no-top-margin">
                             OUR MISSION IS TO OFFER PREMIUM HIGH QUALITY-TYRES THAT ARE AFFORDABLE FOR ALL
                         </h2>
-                        <a  class="knopf red heading-font sharp ls-1" href="#">READ MORE</a>
+                        <a  class="knopf red heading-font sharp ls-1" href="{{route('pages.ceo-message')}}">READ MORE</a>
                     </div>
                 </div>
             </div>
@@ -135,7 +141,7 @@
                         <img src="{{asset('images/tyre-grid/social-responsibility.jpg')}}" alt="Social Responsibility">
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <div class="ml-2 sm-ma-0">
+                        <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
                             <h5 class="dark-100 mt-0 uppercase">SOCIAL RESPONSIBILITY</h5>
                             <p>We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
                             <a class="knopf red heading-font sharp ls-1" href="https://www.omni-united.com/social-responsibility">READ MORE</a>
@@ -147,7 +153,7 @@
                         <img src="{{asset('images/tyre-grid/environmental-responsibility.jpg')}}" alt="Environmental Responsibility">
                     </div>
                     <div class="col-md-6 col-sm-12">
-                        <div class="mr-2 sm-ma-0">
+                        <div class="ma-xxs-0 ma-xs-0 ma-sm-0 mr-md-2">
                             <h5 class="dark-100 mt-0 uppercase">ENVIRONMENT</h5>
                             <p>We continually strive to minimize our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.</p>
                             <a class="knopf red heading-font sharp ls-1" href="https://www.omni-united.com/environmental-responsibility">READ MORE</a>
