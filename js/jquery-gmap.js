@@ -153,7 +153,7 @@ function downloadUrl() {
         });
         }
     };
-    xhttp.open("GET", "staging/js/stores-uk.js", true);
+    xhttp.open("GET", "/js/stores-uk.js", true);
     xhttp.send();
 }
 
