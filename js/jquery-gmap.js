@@ -238,11 +238,11 @@ function makeSidebar(markers=null) {
     var html = "";
     if(markers===null){ markers=gmarkers}
     if (!markers.length) {
-        console.log('Show makeSidebar');
+        //console.log('Show makeSidebar');
         set_dealerform_status(1);
         show__dealerform(document.getElementById("dealerform"));
     } else {
-        console.log('Hide makeSidebar');
+        //console.log('Hide makeSidebar');
         set_dealerform_status(0);
         hide__dealerform(document.getElementById("dealerform"));
         for (var i=0; i<markers.length; i++) {
