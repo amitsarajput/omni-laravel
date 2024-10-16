@@ -32,7 +32,7 @@
                 <!-- Premium tyre badge -->
                  @if($tyre->premium_tyre)
                 <div class="col-lg-12 col-bleed-y">
-                    <div class="premium-tyre--badge">PREMIUM COLLECTION</div>
+                    <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">PREMIUM COLLECTION</a>
                 </div>
                 @endif
                 <!-- Tyre Details -->
@@ -64,7 +64,7 @@
         <div class="section top-padding bg-grey">
             <div class="container">
                 <div class="grid">
-                    <div class="col-lg-12"> <h2 class="uppercase dark-80 center">features</h2></div>
+                    <div class="col-lg-12"> <h2 class="uppercase dark-80 center mt-0">features</h2></div>
                     <div class="col-md-12 col-bleed-y center">
                         @php
                             $features=json_decode($tyre->features_benifits )

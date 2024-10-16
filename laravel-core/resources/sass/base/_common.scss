@@ -56,6 +56,10 @@ ul{
 	li{
 		
 	}
+	&.bullet-inside{
+		list-style-position: inside;
+		padding-left: 0;
+	}
 	&.no-bullets{
 		list-style: none;
 		padding-left: 0;
@@ -88,12 +92,13 @@ ul{
     margin-top:math.div($section-spacing, $i);
     margin-bottom:math.div($section-spacing , 2*$i);
 	@include until($widescreen){
-		font-size: math.div($body-font-size * 5, $i);
-		line-height: math.div($body-font-size * 6, $i);
+		font-size: math.div($body-font-size * 4, $i);
+		line-height: math.div($body-font-size * 5, $i);
 	}
 	&.no-top-margin{ margin-top: 0;}
 	&.no-bottom-margin{ margin-bottom: 0;}
 	&.black{color:$black;}
+	&.white{color:$white;}
 	&.body-font{font-family: $body-font;}
 	@each $weight in $font-weight{
 		&.t#{$weight}{

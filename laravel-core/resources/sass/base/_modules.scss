@@ -1,6 +1,6 @@
 .hidden{display: none;}
 /*Page Title Module*/ 
-#page-title{ 
+#page-title{
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -9,6 +9,9 @@
 	height: $page-title-height;
 	margin-bottom: $section-spacing;
 	color: #fff;
+	@include mobile{
+		height: $page-title-height--sm!important;
+	}
 	&.page-title--left{justify-content: flex-start;} 
 	.page-title-wrapper{
 		padding: 0;
@@ -21,6 +24,11 @@
 			height: #{$i}0vh;
 		}
 	}
+	br{
+		display: inline;
+		@include mobile{display: none;}
+	}
+	
 	@include bgimage();
 	@include el-spacing();
 }
@@ -725,7 +733,7 @@
 	}
 	&.premium_tyre{
 		.image{margin-top: 40px;}
-		.premium-tyre--badge{margin-top: 15px;}
+		.premium-tyre--badge{margin-top: 15px;color: #fff;}
 		
 	}
 }
@@ -736,7 +744,7 @@
 	justify-content: center;
 	align-items: center;
 	background: #da2224;
-	color: white;
+	color: #ffffff;
 	padding: 0 15px;
 	line-height: 1;
 	font-family: $heading-font;
@@ -1509,6 +1517,7 @@ ol.breadcrumb {
 		flex-direction: row;
 		flex-basis: 33%;
 		margin-bottom: 20px;
+		@include mobile{ flex-basis: 50%; flex-direction: column;}
 		i{
 			font-size: 46px;
  			 color: $dark-80;
@@ -1531,6 +1540,15 @@ ol.breadcrumb {
 
 /*Product FB Slider*/
 .tyre--fb-slider{
+	.swiper-wrapper{
+		
+		.tyre--fb-slider--slide{
+			height: auto;
+			display: flex;
+			flex-direction: column;
+			img{ margin-top:auto }
+		}
+	}
 	.swiper-button-next:after,.swiper-button-prev:after{
 		display: none;
 	}
@@ -1539,23 +1557,32 @@ ol.breadcrumb {
 		line-height: 40px;
 		color: $dark-80;
 		top: 50px;
+		@include touch{top: 20px;}
 	}
 	.swiper-button-next{
 		right: 15%;
+		@include touch{ right: -5px; }
 	}
 	.swiper-button-prev{
 		left: 15%;
+		@include touch{ left: -5px; }
 	}
 	.swiper-pagination-bullet-active{
 		background: $white;
 	}
 	p{line-height: 1.35;}
+	br{
+		@include touch{
+			display: none;
+		}
+	}
 }
 
 /*Tyre Sizes nav tabs*/
 .tyre-sizes{
 	#tabs{
 		width: 100%;
+		margin: 0;
 		&.ui-widget{
 			font-family: $body-font;
 		}
@@ -1600,6 +1627,9 @@ ol.breadcrumb {
 		.ui-widget{
 
 		}
+		.table-responsive-sm{
+			overflow-y: scroll;
+		}
 	}
 }
 
@@ -1621,7 +1651,10 @@ table{
 			border-bottom: 1px solid $dark-10;
 			display: flex;
 			justify-content: space-between;
-			td,th{min-width:200px;}
+			td,th{
+				min-width:200px;
+				@include touch{min-width:100px;}
+			}
 			.key{ 
 				font-size: 26px;
 				font-weight: 600;

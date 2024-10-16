@@ -9,7 +9,6 @@
     ============================================= -->
     <x-page-title image-url="{{ asset('images/tyre-grid-banner.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br>TO ACCESS PREMIUM TYRES AT<br>AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TYRES" button-Link="{{ route('pages.about-us') }}" class="page-title--left el-height-60 uppercase mb-0" />
     
-    
     <!-- Content -->
     <section id="content">
         <div class="section no-padding">
@@ -29,11 +28,14 @@
                 </div>
             </div>
             <div class="grid grid-bleed align-center">
-                <div class="col-md-6 col-sm-12 order-md-2">
-                    <a href="{{ route('pages.testing') }}">
-                        <img src="{{asset('images/tyre-grid/wet-braking.webp')}}" alt="Testing">
-                    </a>
-                    
+                <div class="col-md-6 col-sm-12 order-md-2 bg-image" style="background-image:url({{asset('images/tyre-grid/wet-braking.webp')}})">
+                    <div class="mx-xxs-2 mx-xs-2 mx-sm-2 mx-md-2 mx-lg-7 py-7">
+                        <h5>MESSAGE FROM CEO</h5>
+                        <h2 class="white no-top-margin">
+                            OUR MISSION IS TO OFFER PREMIUM HIGH QUALITY-TYRES THAT ARE AFFORDABLE FOR ALL
+                        </h2>
+                        <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.testing') }}">READ MORE</a>
+                    </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">

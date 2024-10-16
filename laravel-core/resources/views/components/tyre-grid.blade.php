@@ -10,7 +10,7 @@
             
             <div class="meta">{{ implode(" | ", $tyre->tyre_categories->pluck('name')->toArray()) }}</div>
             @if($tyre->premium_tyre)
-                <div class="premium-tyre--badge">PREMIUM COLLECTION</div>
+                <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">PREMIUM COLLECTION</a>
             @endif
             <div class="image">
                 <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
