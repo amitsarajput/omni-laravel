@@ -110,10 +110,10 @@ header{
 			left: 0;
 			right: 0;
 			background-color: $dark-90;
+			z-index: 10;
 			.menu-item{opacity: 0;}
 			&.show-collapsed-menu{
 				height: 200px;
-				z-index: 10;
 				.menu-item{opacity: 1;}
 			}
 

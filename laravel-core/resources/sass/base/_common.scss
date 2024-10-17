@@ -4,11 +4,6 @@ a{text-decoration:none;color: $red;}
 *{
     box-sizing: border-box;
 }
-/*h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
-	font-family : $heading-font;
-	font-weight: 500;
-	color:$red;
-}*/
 
 img {
     vertical-align: middle;
@@ -75,6 +70,7 @@ ul{
 		font-weight: #{$weight};
 	}
 }
+
 @for $i from 1 through 10 {
 	.dark-#{$i}0{
 		color: darken(#ffffff, math.percentage(0.1*$i));

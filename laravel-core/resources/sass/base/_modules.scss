@@ -12,11 +12,32 @@
 	@include mobile{
 		height: $page-title-height--sm!important;
 	}
-	&.page-title--left{justify-content: flex-start;} 
+	.container .grid, {
+		justify-content: center; 		
+	}
+	&.page-title--left{
+		justify-content: flex-start;
+		.container .grid{
+			justify-content: flex-start;
+			.page-title-wrapper{text-align: left;}
+		}
+	} 
+	&.page-title--right{
+		justify-content: flex-end;
+		.container .grid{
+			justify-content: flex-end;
+			.page-title-wrapper{text-align: right;}
+		}
+	} 
 	.page-title-wrapper{
 		padding: 0;
 		margin: 0;
-		h2{color:inherit;margin: 0;padding: 0;}
+		text-align: center;
+		h2{
+			color:inherit;margin: 0;padding: 0;
+			.red{color: $red;}
+			.black{color: $black;}
+		}
 		p{color: inherit;font-size: 1.3rem; font-weight: 400;text-align: center;margin: 0;padding: 0;}
 	}
 	@for $i from 1 through 10 {

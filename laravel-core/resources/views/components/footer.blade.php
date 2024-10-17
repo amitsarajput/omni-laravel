@@ -11,11 +11,11 @@
                     <div class="footer-socials">
                         <div class="title">FOLLOW US:</div>
                         <div class="icons">
-                            <a target="_blank" href="https://www.youtube.com/@omni-united"><i class="omniicon-youtube-play"></i></a>
-                            <a target="_blank" href="https://www.linkedin.com/company/omni-united/"><i class="omniicon-linkedin"></i></a>
-                            <a target="_blank" href="https://www.instagram.com/omni_united/?hl=en"><i class="omniicon-instagram"></i></a>
-                            <a target="_blank" href="https://www.facebook.com/omniunited/"><i class="omniicon-facebook"></i></a>
-                            <a target="_blank" href="https://twitter.com/Omni_United"><i class="omniicon-x"></i></a>
+                            <a target="_blank" href="https://www.youtube.com/@Radartires"><i class="omniicon-youtube-play"></i></a>
+                            <!-- <a target="_blank" href="https://www.linkedin.com/company/omni-united/"><i class="omniicon-linkedin"></i></a> -->
+                            <a target="_blank" href="https://www.instagram.com/radartires/"><i class="omniicon-instagram"></i></a>
+                            <a target="_blank" href="https://www.facebook.com/radartiresofficial/"><i class="omniicon-facebook"></i></a>
+                            <a target="_blank" href="https://x.com/RadarTires"><i class="omniicon-x"></i></a>
                         </div>
                     </div>
                 </div>
