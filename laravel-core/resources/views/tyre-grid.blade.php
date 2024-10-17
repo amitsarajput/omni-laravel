@@ -29,16 +29,16 @@
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12 order-md-2 bg-image" style="background-image:url({{asset('images/tyre-grid/wet-braking.webp')}})">
-                    <div class="mx-xxs-2 mx-xs-2 mx-sm-2 mx-md-2 mx-lg-7 py-7">
-                        <h5>MESSAGE FROM CEO</h5>
+                    <div class="mx-xxs-2 mx-lg-7 py-xxs-5 py-lg-4 py-7">
+                        <h5>TESTING</h5>
                         <h2 class="white no-top-margin">
-                            OUR MISSION IS TO OFFER PREMIUM HIGH QUALITY-TYRES THAT ARE AFFORDABLE FOR ALL
+                            EXTENSIVELY TESTED AGAINST PREMIUM BRANDS AT LEADING FACILITIES LIKE UTAC, ATP, APPLUS+, IDIADA AND SMITHERS
                         </h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.testing') }}">READ MORE</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
-                    <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
+                    <div class="ma-xxs-2 mx-lg-7">
                         <h5>MESSAGE FROM CEO</h5>
                         <h2 class="dark-100 no-top-margin">
                             OUR MISSION IS TO OFFER PREMIUM HIGH QUALITY-TYRES THAT ARE AFFORDABLE FOR ALL
