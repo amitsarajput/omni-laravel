@@ -7,8 +7,8 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
-use Illuminate\Queue\SerializesModels;
 use Illuminate\Mail\Mailables\Address;
+use Illuminate\Queue\SerializesModels;
 
 class GenricMail extends Mailable
 {
@@ -25,11 +25,10 @@ class GenricMail extends Mailable
     /**
      * Get the message envelope.
      */
-    public function envelope(): Envelope
+    public function envelope(): Envelope 
     {
         return new Envelope(
-            from: new Address('info@omni-united.com', 'Radar Tyres Enquiry'),
-            subject: $this->mailData['CustomSubject']??'RadarTyres inquery from'.$this->mailData['name'],
+            subject: $this->mailData['customSubject']??'RadarTyres inquery from'.$this->mailData['name'],
         );
     }
 
