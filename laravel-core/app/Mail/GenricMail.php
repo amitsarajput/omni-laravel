@@ -28,7 +28,7 @@ class GenricMail extends Mailable
     public function envelope(): Envelope 
     {
         return new Envelope(
-            subject: $this->mailData['customSubject']??'RadarTyres inquery from'.$this->mailData['name'],
+            subject: $this->mailData['customSubject']??'RadarTyres inquery from '.$this->mailData['name'],
         );
     }
 
