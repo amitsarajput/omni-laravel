@@ -70,6 +70,8 @@ return [
         'sendmail' => [
             'transport' => 'sendmail',
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs -i'),
+            'port'=>587,
+            'protocol'=>'mail',
         ],
 
         'log' => [
