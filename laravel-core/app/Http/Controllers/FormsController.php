@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Forms;
 use Illuminate\Http\Request;
+use Mail;
+use App\Mail\GenricMail;
 
 class FormsController extends Controller
 {
@@ -28,8 +30,8 @@ class FormsController extends Controller
             if (in_array($new_loc, $omni_data['available_locations'])) { //If avialable
                 $to_url=$new_loc;
                 //Set Session Data
-                //$omni_data['preffered_location']=$new_loc;
-                //$omni_data['country']=$new_loc;
+                //$omni_data['preffered_location']=$new_loc; uncomment to set session data
+                //$omni_data['country']=$new_loc; uncomment to set session data
                 // Set bubble closed to 1
                 $omni_data['bubble_closed']=1;
                 //Set language
@@ -89,6 +91,10 @@ class FormsController extends Controller
             'type' => 'form--contact',
             'form_data' => json_encode($form_data)
         ]);
+
+        $to='amit@loapmudracreative.com';
+        Mail::to($to)->send(new GenricMail($form_data));
+
         return back()->with('status','Mail Sent.');
 
     }

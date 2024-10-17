@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AjaxHandlerController;
 use App\Http\Controllers\FormsController;
+use App\Http\Controllers\MailController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StaticPagesController;
 use App\Http\Controllers\TyreController;
@@ -11,6 +12,7 @@ use App\Models\Region;
 use App\Models\SearchTag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -31,6 +33,8 @@ use Illuminate\Support\Facades\Route;
 
 //Route::get('/testng/{country:id}',[TyreController::class, 'testing'])->where(['country'=>'[0-9]+'])->name('testing');
 
+
+Route::get('/mail',[MailController::class, 'genric_mail']);
 
 Route::get('/dashboard', function () {
     return view('admin.index');
