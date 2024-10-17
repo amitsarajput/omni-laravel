@@ -94,9 +94,15 @@ class FormsController extends Controller
 
         $to='amitsarajput@gmail.com';
         
-        Mail::to($to)->send(new GenricMail($form_data));
+        try{
+            $mail=Mail::to($to)->send(new GenricMail($form_data));
+            dd($mail);
+        }
+        catch(\Exception $e){
+            dd($e);
+        }
 
-        return back()->with('status','Mail Sent.');
+        //return back()->with('status','Mail Sent.');
 
     }
 
