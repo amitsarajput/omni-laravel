@@ -92,7 +92,8 @@ class FormsController extends Controller
             'form_data' => json_encode($form_data)
         ]);
 
-        $to='amit@loapmudracreative.com';
+        $to='amit@lopamudracreative.com';
+        
         Mail::to($to)->send(new GenricMail($form_data));
 
         return back()->with('status','Mail Sent.');

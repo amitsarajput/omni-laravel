@@ -3,7 +3,7 @@
         {{ $key .':'.$value}} <br>
         @if($key=='url_current')
             <br><br><br>
-            This message is sent from {{ $value }}
+            This message was sent from {{ $value }}
         @endif
     @endforeach
 </div>
