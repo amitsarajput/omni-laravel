@@ -79,6 +79,9 @@ return [
         'sendmail' => [
             'transport' => 'sendmail',
             'path' => env('MAIL_SENDMAIL_PATH', '/usr/sbin/sendmail -bs'),
+            'mailtype' => 'html',
+            'charset' => 'iso-8859-1',
+            'wordwrap' => TRUE,
         ],
 
         'log' => [
