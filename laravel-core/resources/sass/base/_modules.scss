@@ -1566,8 +1566,12 @@ ol.breadcrumb {
 		.tyre--fb-slider--slide{
 			height: auto;
 			display: flex;
+			justify-content: center;
+			align-items: center;
 			flex-direction: column;
-			img{ margin-top:auto }
+			img{ 
+				margin-top:auto 
+			}
 		}
 	}
 	.swiper-button-next:after,.swiper-button-prev:after{
