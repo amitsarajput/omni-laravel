@@ -43,19 +43,20 @@ return [
             'username' => env('MAIL_USERNAME'),
             'password' => env('MAIL_PASSWORD'),
             'timeout' => null,
-            'local_domain' => env('MAIL_EHLO_DOMAIN'),
-            'auth_mode'  => null,
-            'protocol'  => 'mail',
-            'verify_peer'       => false,
-            // region Disable SSL Verify
-            'stream' => [
-                'ssl' => [
-                    'allow_self_signed' => true,
-                    'verify_peer' => false,
-                    'verify_peer_name' => false,
-                ],
-            ],
-            // endregion
+
+            // 'local_domain' => env('MAIL_EHLO_DOMAIN'),
+            // 'auth_mode'  => null,
+            // 'protocol'  => 'mail',
+            // 'verify_peer'       => false,
+            // // region Disable SSL Verify
+            // 'stream' => [
+            //     'ssl' => [
+            //         'allow_self_signed' => true,
+            //         'verify_peer' => false,
+            //         'verify_peer_name' => false,
+            //     ],
+            // ],
+            // // endregion
         ],
 
         'ses' => [
