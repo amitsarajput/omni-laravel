@@ -45,6 +45,7 @@ return [
             'timeout' => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
             'auth_mode'  => null,
+            'protocol'  => 'mail',
             'verify_peer'       => false,
             // region Disable SSL Verify
             // 'stream' => [
