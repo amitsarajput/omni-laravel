@@ -13,8 +13,8 @@ class MailController extends Controller
             "name"=>"Amit",
             'vala'=>'kumar'
         ];
-        Mail::to('amit@loapmudracreative.com')->send(new GenricMail($mailData));
-        dd('mail sent.');
+        $mailres=Mail::to('manavsuri@omni-united.com')->send(new GenricMail($mailData));
+        dd($mailres);
         
     }
 }

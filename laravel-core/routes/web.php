@@ -34,7 +34,7 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/testng/{country:id}',[TyreController::class, 'testing'])->where(['country'=>'[0-9]+'])->name('testing');
 
 
-// Route::get('/mail',[MailController::class, 'genric_mail']);
+Route::get('/mail',[MailController::class, 'genric_mail']);
 
 Route::get('/dashboard', function () {
     return view('admin.index');
