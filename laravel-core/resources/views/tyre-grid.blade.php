@@ -21,7 +21,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h5>WHY RADAR</h5>
-                        <h2 class="dark-100  no-top-margin">THE SAME HIGH PERFORMANCE, SAFETY AND DURABILITY, BUT WITHOUT THE HEFTY PRICE TAG</h2>
+                        <h2 class="dark-100  no-top-margin">HIGH PERFORMANCE AND SAFETY, BUT WITHOUT THE HEFTY PRICE TAG</h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.why-radar') }}">READ MORE</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
@@ -29,10 +29,10 @@
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12 order-md-2 bg-image" style="background-image:url({{asset('images/tyre-grid/wet-braking.webp')}})">
-                    <div class="mx-xxs-2 mx-lg-7 py-xxs-5 py-lg-4 py-7">
+                    <div class="mx-xxs-2 mx-lg-7 py-xxs-5 py-sm-7 py-lg-9 py-7">
                         <h5>TESTING</h5>
                         <h2 class="white no-top-margin">
-                            EXTENSIVELY TESTED AGAINST PREMIUM BRANDS AT LEADING FACILITIES LIKE UTAC, ATP, APPLUS+, IDIADA AND SMITHERS
+                            EXTENSIVELY TESTED AGAINST PREMIUM BRANDS
                         </h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.testing') }}">READ MORE</a>
                     </div>
