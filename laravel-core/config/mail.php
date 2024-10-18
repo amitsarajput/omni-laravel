@@ -48,13 +48,13 @@ return [
             'protocol'  => 'mail',
             'verify_peer'       => false,
             // region Disable SSL Verify
-            // 'stream' => [
-            //     'ssl' => [
-            //         'allow_self_signed' => true,
-            //         'verify_peer' => false,
-            //         'verify_peer_name' => false,
-            //     ],
-            // ],
+            'stream' => [
+                'ssl' => [
+                    'allow_self_signed' => true,
+                    'verify_peer' => false,
+                    'verify_peer_name' => false,
+                ],
+            ],
             // endregion
         ],
 
