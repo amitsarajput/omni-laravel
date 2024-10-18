@@ -46,6 +46,12 @@ return [
             'auth_mode'  => null,
             'local_domain' => env('MAIL_EHLO_DOMAIN'),
             'verify_peer'       => false,
+            'stream'     => [
+                'ssl' => [
+                    'allow_self_signed' => true,
+                    'verify_peer_name'  => false,
+                ],
+            ],
         ],
 
         'ses' => [
