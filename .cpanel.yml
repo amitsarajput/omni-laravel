@@ -1,0 +1,5 @@
+---
+deployment:
+ tasks:
+ - export DEPLOYPATH=/home/identity2000/Parked-Domains/radartyres.com/
+ - /bin/cp /home/identity2000/Parked-Domains/radartyres.com/staging/index.php $DEPLOYPATH
