@@ -22,7 +22,7 @@ class StaticPagesController extends Controller
         
     }
     public function index(Request $request,  ?string $country=null){
-        print_r('StaticPagesController');
+        //print_r('StaticPagesController');
         //$request->fullUrl(); $request->path(); $request->root();
 
         $request_path=$this->get_request_path($request, $country);
