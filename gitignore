@@ -7,5 +7,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
+/storage
 index.php
 sym.php
