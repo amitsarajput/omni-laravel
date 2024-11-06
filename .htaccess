@@ -1,7 +1,5 @@
 AddHandler application/x-httpd-alt-php82___lsphp .php 
-<IfModule mod_php82.c>
-    php_value php_extension zip
-</IfModule>
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
