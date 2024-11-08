@@ -6,7 +6,7 @@ return [
     'link' => '<a href=":url">Click here</a> for  for more information.',
 
     'essentials' => 'Agree',
-    'all' => 'Accept all',
+    'all' => 'Agree',
     'customize' => 'Manage my preferences',
     'manage' => 'Manage cookies',
     'details' => [
