@@ -18,11 +18,11 @@ class CookiesServiceProvider extends ServiceProvider
             ->csrf();
 
         // Register all Analytics cookies at once using one single shorthand method:
-        // Cookies::analytics()
-        //    ->google(
-            //    id:          env('GOOGLE_ANALYTICS_ID'),
-            //    anonymizeIp: env('GOOGLE_ANALYTICS_ANONYMIZE_IP'),
-        //    );
+        Cookies::analytics()
+           ->google(
+               id:          env('GOOGLE_ANALYTICS_ID'),
+               anonymizeIp: env('GOOGLE_ANALYTICS_ANONYMIZE_IP'),
+           );
         Cookies::analytics();
 
         // Register custom cookies under the pre-existing "optional" category:

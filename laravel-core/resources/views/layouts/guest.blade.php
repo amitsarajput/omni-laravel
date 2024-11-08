@@ -82,6 +82,8 @@
         </script>
         @stack('scripts')
         @cookieconsentview
-        {{-- @cookieconsentbutton(action: 'reset', label: 'Manage cookies', attributes: ['id' => 'reset-button', 'class' => 'btn']) --}}
+        @cookieconsentbutton(action: 'reset', label: 'Manage cookies', attributes: ['id' => 'reset-button', 'class' => 'btn'])
+
+
     </body>
 </html>
