@@ -23,7 +23,7 @@ class CookiesServiceProvider extends ServiceProvider
                id:          env('GOOGLE_ANALYTICS_ID'),
                anonymizeIp: env('GOOGLE_ANALYTICS_ANONYMIZE_IP'),
            );
-        Cookies::analytics();
+        //Cookies::analytics();
 
         // Register custom cookies under the pre-existing "optional" category:
         // Cookies::optional()

@@ -11,7 +11,7 @@
                     </p>
                 </div>
                 <div class="cookies__actions">
-                    @cookieconsentbutton(action: 'accept.essentials', label: __('cookieConsent::cookies.essentials'), attributes: ['class' => 'cookiesBtn cookiesBtn--essentials'])
+                    @cookieconsentbutton(action: 'accept.all', label: __('cookieConsent::cookies.essentials'), attributes: ['class' => 'cookiesBtn cookiesBtn--accept'])
                     {{--@cookieconsentbutton(action: 'accept.all', label: __('cookieConsent::cookies.all'), attributes: ['class' => 'cookiesBtn cookiesBtn--accept'])--}}
                 </div>
             </div>
@@ -33,7 +33,7 @@
                                 <input type="hidden" name="categories[]" value="{{ $category->key() }}" />
                                 <input type="checkbox" name="categories[]" value="{{ $category->key() }}" id="cookies-policy-check-{{ $category->key() }}" checked="checked" disabled="disabled" />
                             @else
-                                <input type="checkbox" name="categories[]" value="{{ $category->key() }}" id="cookies-policy-check-{{ $category->key() }}" />
+                                <input type="checkbox" name="categories[]" value="{{ $category->key() }}" id="cookies-policy-check-{{ $category->key() }}" checked="checked" />
                             @endif
                             <span class="cookies__box">
                                 <strong class="cookies__label">{{ $category->title }}</strong>

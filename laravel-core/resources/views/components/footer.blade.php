@@ -83,6 +83,8 @@
 
                     <div class="col-auto tright">
                         <a href="{{route('pages.privacy-policy')}}">Privacy Policy</a>
+                        <div class="seperator">•</div>
+                        @cookieconsentbutton(action: 'reset', label: 'Manage cookies', attributes: ['id' => 'reset-button', 'class' => ''])
                         <!--
                         <ul class="copyrights-menu">
                             <li><a href="https://www.omni-united.com/#">Disclaimer</a>  |  </li>

@@ -115,6 +115,23 @@
 		border-top:1px solid #ccc;
 		a{color:$white;}
 	}
+	
+	.seperator{display: inline;margin: 0 5px;}
+
+	form.cookiebtn{
+		display: inline;
+		.cookiebtn__link{
+			padding: 0;
+			font-family: "Lato", sans-serif;
+			font-size: inherit;
+			line-height: inherit;
+			background-color: transparent;
+			letter-spacing: 0;
+			box-shadow: none;
+			text-shadow: none;
+			font-weight: 300;
+		}
+	}
 
 }
 .container {
