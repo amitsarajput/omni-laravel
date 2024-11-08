@@ -32,8 +32,7 @@
                             @if ($category->key() === 'essentials')
                                 <input type="hidden" name="categories[]" value="{{ $category->key() }}" />
                                 <input type="checkbox" name="categories[]" value="{{ $category->key() }}" id="cookies-policy-check-{{ $category->key() }}" checked="checked" disabled="disabled" />
-                            @else
-                                <input type="hidden" name="categories[]" value="{{ $category->key() }}" />
+                            @else                            
                                 <input type="checkbox" name="categories[]" value="{{ $category->key() }}" id="cookies-policy-check-{{ $category->key() }}" checked="checked" />
                             @endif
                             <span class="cookies__box">
