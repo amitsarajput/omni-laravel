@@ -27,7 +27,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          {!! Form::open(['route'=>[ 'admin.country.update',$country->id ], 'method' => 'put']) !!}
+          {!! Form::open(['route'=>[ 'admin.countri.update',$countri->id ], 'method' => 'put']) !!}
             <div class="card-body">
                     @if ($errors->any())
                         <div class="alert alert-danger">
@@ -40,34 +40,34 @@
                     @endif
                 <div class="form-group">
                     <label>Region</label>
-                    {{ Form::select('region', $region, $country->region->id, ['class'=>'form-control','placeholder' => 'Pick a region...']) }}
+                    {{ Form::select('region', $region, $countri->region->id, ['class'=>'form-control','placeholder' => 'Pick a region...']) }}
                 </div>
               <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
-                {{ Form::text('name', $country->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
+                {{ Form::text('name', $countri->name, ['class'=>'form-control','placeholder'=>'Enter Name'] ) }}
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Code</label>
-                {{ Form::text('code', $country->code, ['class'=>'form-control','placeholder'=>'Enter CODE'] ) }}
+                {{ Form::text('code', $countri->code, ['class'=>'form-control','placeholder'=>'Enter CODE'] ) }}
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Locale Code</label>
-                {{ Form::text('locale_code', $country->locale_code, ['class'=>'form-control','placeholder'=>'Enter Locale CODE'] ) }}
+                {{ Form::text('locale_code', $countri->locale_code, ['class'=>'form-control','placeholder'=>'Enter Locale CODE'] ) }}
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Slug</label>
-                {{ Form::text('slug', $country->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+                {{ Form::text('slug', $countri->slug, ['class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
               </div>
               <div class="form-group">
                   <label>Brand</label>
-                  <div class="select2-purple sortable-option" data-options="{{$brand}}" data-selected-options="{{$country->brands->pluck('id')}}">
-                    {{ Form::select('brand[]', $brand, $country->brands, ['multiple' => true, 'class'=>'select2 form-control', 'data-dropdown-css-class'=>'select2-purple']) }}
+                  <div class="select2-purple sortable-option" data-options="{{$brand}}" data-selected-options="{{$countri->brands->pluck('id')}}">
+                    {{ Form::select('brand[]', $brand, $countri->brands, ['multiple' => true, 'class'=>'select2 form-control', 'data-dropdown-css-class'=>'select2-purple']) }}
                   </div>
               </div>
               <div class="form-group">
                 <label for="exampleInputPassword1">Search Tags</label>
-                <div class="select2-purple sortable-option"  data-options="{{$search_tags_all}}" data-selected-options="{{$country->search_tags->pluck('id')}}">
-                  {{ Form::select('search_tags[]', $search_tags_all, $country->search_tags, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
+                <div class="select2-purple sortable-option"  data-options="{{$search_tags_all}}" data-selected-options="{{$countri->search_tags->pluck('id')}}">
+                  {{ Form::select('search_tags[]', $search_tags_all, $countri->search_tags, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
                 </div>
               </div>
             </div>
@@ -76,7 +76,7 @@
             <div class="card-footer">
                 
                 {{ Form::submit('Submit',['class'=>"btn btn-primary"]); }}
-                <a href="{{ route('admin.country.index') }}" class="btn btn-warning">Cancel</a>
+                <a href="{{ route('admin.countri.index') }}" class="btn btn-warning">Cancel</a>
               
             </div>
             {!! Form::close() !!}

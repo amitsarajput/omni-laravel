@@ -1670,6 +1670,10 @@ table{
 		thead{
 			color: $dark-100;
 			text-transform: uppercase;
+		}		
+		tbody{
+			display: flex;
+			flex-flow: column wrap;
 		}
 		tr{ 
 			border-bottom: 1px solid $dark-10;

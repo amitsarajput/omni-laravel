@@ -46,7 +46,7 @@
           </li>
           
           <li class="nav-item">
-            <a href="{{ route('admin.country.index') }}" class="nav-link {{request()->routeIs('admin.country.*')?'active':''}}">
+            <a href="{{ route('admin.countri.index') }}" class="nav-link {{request()->routeIs('admin.countri.*')?'active':''}}">
               <i class="nav-icon fas fa-chart-pie text-warning"></i>
               <p>
                 Country

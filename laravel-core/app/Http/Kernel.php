@@ -23,6 +23,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
         \Illuminate\Session\Middleware\StartSession::class,
         \App\Http\Middleware\SetSessionData::class,
+        \App\Http\Middleware\SetDefaultLocaleForUrls::class,
         \App\Http\Middleware\Localization::class, // <--- Lacalize
         
     ];

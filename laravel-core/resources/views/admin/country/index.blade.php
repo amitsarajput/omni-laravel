@@ -43,7 +43,7 @@
           
           <div class="row">
             <div class="col-md-12">
-              <a href="{{route('admin.country.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Create</a>  
+              <a href="{{route('admin.countri.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Create</a>  
               <table id="datatable" class="table table-bordered table-striped">
                 <thead>
                   <tr>
@@ -56,7 +56,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach ($country as $row)
+                  @foreach ($countri as $row)
                     <tr>
                       <td>{{ ucfirst($row->name) }}</td>
                       <td>{{ $row->region->name }}</td>
@@ -70,8 +70,8 @@
                             <span class="sr-only">Toggle Dropdown</span>
                           </button>
                           <div class="dropdown-menu" role="menu">
-                            <a class="dropdown-item" href="{{ route('admin.country.edit', $row->id) }}">Edit</a>
-                            <form action="{{ route('admin.country.destroy', $row->id) }}" method="post">
+                            <a class="dropdown-item" href="{{ route('admin.countri.edit', $row->id) }}">Edit</a> 
+                            <form action="{{ route('admin.countri.destroy', $row->id) }}" method="post">
                               @csrf
                               @method('DELETE')
                               <a href="#" class="dropdown-item" title="Delete" data-toggle="tooltip" onclick="this.closest('form').submit();return false;">

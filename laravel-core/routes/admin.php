@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(function () {
     Route::resource('region', RegionController::class);
-    Route::resource('country', CountryController::class);
+    Route::resource('countri', CountryController::class);
     Route::resource('brand', BrandController::class);
     Route::resource('searchtag', SearchTagController::class);
     Route::resource('icon', IconController::class);
@@ -42,11 +42,6 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('tyrecategory', TyreCategoryController::class);
     Route::resource('brandextradetail', BrandExtraDetailController::class);
     Route::resource('season', SeasonController::class);
-
-    // Route::name('country.')->group(function () {
-    //     Route::get('/country', [CountryController::class, 'index'])->name('all');
-    //     Route::patch('/country', [CountryController::class, 'update'])->name('update');
-    //     Route::delete('/country', [CountryController::class, 'destroy'])->name('destroy');
-    // });
+    // Ajax request
     Route::post('/ajax-request/{table}',[AjaxHandlerController::class, 'handle_request'])->name('ajax.request');
 });

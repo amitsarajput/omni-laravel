@@ -40,6 +40,7 @@ class SetSessionData
             $all_countries=Country::all();
             $omnidata['available_locations']=$all_countries->pluck('code','name')->toArray();
             $omnidata['available_locales']=$all_countries->pluck('locale_code','code')->toArray();
+            $omnidata['slugs']=$all_countries->pluck('slug','code')->toArray();
             session(['omni_data' => $omnidata]);//Set Session
             session(['locale' => $omnidata['default_locale']]);//Set default locale
             
