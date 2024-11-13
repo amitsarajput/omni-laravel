@@ -27,7 +27,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          {!! Form::open(['route'=>'admin.tyre.store']) !!}
+          {!! Form::open(['route'=>'admin.tyre.store','files' => true]) !!}
             <div class="card-body">
                     @if ($errors->any())
                         <div class="alert alert-danger">

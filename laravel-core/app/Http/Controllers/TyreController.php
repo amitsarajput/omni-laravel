@@ -153,7 +153,7 @@ class TyreController extends Controller
             'externallink' => ['string', 'max:255'],
             'description' => ['required', 'string', 'max:1000'],
             'slug' => ['required', 'string', 'max:255', 'unique:'.Tyre::class],
-            'catalogue_image' => ['file','mimes:webp,jpg,png','max:6024','nullable'],
+            'catalogue_image' => ['file','mimes:webp,jpg,png','max:6024'],
             'product_images' => ['array','nullable'],
             'product_images.*' => ['file','mimes:webp,jpg,png','max:6024','nullable'],
         ]);
