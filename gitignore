@@ -7,10 +7,6 @@ yarn-error.log
 /.fleet
 /.idea
 /.vscode
-/.htaccess
-.htaccess
 workspace.code-workspace
 index.php
 sym.php
-info.php
-.user.ini
