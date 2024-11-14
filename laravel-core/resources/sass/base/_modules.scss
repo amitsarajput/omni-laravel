@@ -1511,7 +1511,15 @@ ol.breadcrumb {
 
 
 /**********Single Tyre Page*************/
-
+// Title
+.tyre--title{
+	sup{
+		font-family: 'Lato',sans-serif;
+		font-size: 16px !important;
+		top: .5em;
+		vertical-align: top;
+	}
+}
 /*Product Description*/
 .tyre--description{
 	margin-top: 30px;

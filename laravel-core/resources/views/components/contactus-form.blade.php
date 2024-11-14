@@ -2,6 +2,7 @@
     {!! Form::open(['route'=>'form.contact','method'=>'post', 'id'=>'contact-form','class'=>'omniform']) !!}
         {{ Form::hidden('phone', '') }}
         {{ Form::hidden('url_current', url()->current()) }}
+        {{ Form::hidden('g-recaptcha-response', '',['id'=>'g-recaptcha-response']) }}
         <h4>SEND AN ENQUIRY</h4>
         @if ($errors->any())
             <div class="alert alert-danger  error horizontal" role="alert">
@@ -43,3 +44,11 @@
         @endif
     {!! Form::close() !!}
 </div>
+<script src="https://www.google.com/recaptcha/api.js?render={{ config('services.recaptcha.site') }}"></script>
+<script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('{{ config('services.recaptcha.site') }}', { action: 'submit' }).then(function(token) {
+            document.getElementById('g-recaptcha-response').value = token;
+        });
+    });
+</script>

@@ -189,6 +189,8 @@ return [
         Spatie\Html\HtmlServiceProvider::class,
         // IMPORTANT: add the following line AFTER "App\Providers\RouteServiceProvider::class,"
         App\Providers\CookiesServiceProvider::class,
+        //Recaptcha Service Provider
+        App\Providers\RecaptchaServiceProvider::class,
 
     ])->toArray(),
 

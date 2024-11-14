@@ -27,6 +27,8 @@ p{
 	&.left{text-align: left;}
 	&:first-child{margin-top: 0;}
 }
+
+
 [class^="col-"] p:first-child{margin-top: 0;}
 .bg-image,.bgimage{
 	@include bgimage()

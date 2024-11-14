@@ -37,7 +37,7 @@
                 @endif
                 <!-- Tyre Details -->
                 <div class="col-lg-6">
-                    <h2 class="uppercase mt-0">{!! htmlspecialchars_decode($tyre->preview_name) !!}</h2>
+                    <h2 class="tyre--title uppercase mt-0">{!! htmlspecialchars_decode($tyre->preview_name) !!}</h2>
                     <h5 class="black">{{ implode(" | ", json_decode($tyre->tyre_categories->pluck('name'))) }}</h5>
                     <div class="tyre--description">
                         <p>{!! htmlspecialchars_decode($tyre->description) !!}</p>

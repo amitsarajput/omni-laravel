@@ -69,13 +69,19 @@ class FormsController extends Controller
     }
 
     public function form_contact(Request $request) {
+        
         $validatedData =$request->validate([
+            'g-recaptcha-response' => 'required',
             'name' => ['string','required'],
             'email' => ['email','required'],
             'country' => ['string','required'],
             'message' => ['string','required', 'max:500'],
             'url_current' => ['string','required', 'url:http,https'],
         ]);
+        $recaptcha = app('recaptcha');
+        if (!$recaptcha->verify($request->input('g-recaptcha-response'))) {
+            return back()->withErrors(['captcha' => 'Captcha verification failed.']);
+        }
         if ($request->phone !== null) {
             return back()->with('status','Email Not sent.');
         }
@@ -109,12 +115,17 @@ class FormsController extends Controller
 
     public function form_dealerlocator(Request $request) {
         $validatedData =$request->validate([
+            'g-recaptcha-response' => 'required',
             'name' => ['string','required'],
             'email' => ['email','required'],
             'location' => ['string','required'],
             'message' => ['string','required', 'max:500'],
             'url_current' => ['string','required', 'url:http,https'],
         ]);
+        $recaptcha = app('recaptcha');
+        if (!$recaptcha->verify($request->input('g-recaptcha-response'))) {
+            return back()->withErrors(['captcha' => 'Captcha verification failed.']);
+        }
         if ($request->phone !== null) {
             return back()->with('status','Email Not sent.');
         }

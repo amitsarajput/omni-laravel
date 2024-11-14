@@ -43,6 +43,7 @@
     39 => 'App\\Providers\\RouteServiceProvider',
     40 => 'Spatie\\Html\\HtmlServiceProvider',
     41 => 'App\\Providers\\CookiesServiceProvider',
+    42 => 'App\\Providers\\RecaptchaServiceProvider',
   ),
   'eager' => 
   array (
@@ -72,6 +73,7 @@
     23 => 'App\\Providers\\RouteServiceProvider',
     24 => 'Spatie\\Html\\HtmlServiceProvider',
     25 => 'App\\Providers\\CookiesServiceProvider',
+    26 => 'App\\Providers\\RecaptchaServiceProvider',
   ),
   'deferred' => 
   array (
