@@ -549,7 +549,7 @@ class TyreController extends Controller
 
         $writer = new Xlsx($spreadsheet);
         $filename = $filename.'.xlsx';
-        $writer->save('./xlsx/'.$filename);
+        $writer->save('./storage/xlsx/'.$filename);
         return $filename;
 	}
 
