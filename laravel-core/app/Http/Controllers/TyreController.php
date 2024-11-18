@@ -16,6 +16,7 @@ use Illuminate\Database\Query\Builder;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
+use Illuminate\Support\Facades\App;
 use PhpOffice\PhpSpreadsheet\IOFactory;
 use PhpOffice\PhpSpreadsheet\Spreadsheet;
 use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
@@ -54,8 +55,8 @@ class TyreController extends Controller
     public function tyre_grid(?string $country=null, $brand=null, $region=null )
     {
         //session()->invalidate();
-        //print_r(session('locale'));
         $omni_data=session('omni_data');
+        //dd(session());
         // check country
 
         if (!in_array(strtoupper($country),$omni_data['available_locations'])) {

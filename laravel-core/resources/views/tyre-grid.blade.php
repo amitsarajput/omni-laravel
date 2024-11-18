@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
-                        <h5>WHY RADAR</h5>
+                        <h5>{{ __("WHY RADAR") }}</h5>
                         <h2 class="dark-100  no-top-margin">HIGH PERFORMANCE AND SAFETY, BUT WITHOUT THE HEFTY PRICE TAG</h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.why-radar') }}">READ MORE</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
