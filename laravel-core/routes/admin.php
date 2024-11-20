@@ -4,6 +4,7 @@ use App\Http\Controllers\AjaxHandlerController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\BrandExtraDetailController;
 use App\Http\Controllers\CountryController;
+use App\Http\Controllers\DealerController;
 use App\Http\Controllers\IconController;
 use App\Http\Controllers\RegionController;
 use App\Http\Controllers\SearchTagController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\TyreCategoryController;
 use App\Http\Controllers\TyreController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+
 
 
 
@@ -42,6 +44,9 @@ Route::middleware(['auth', 'verified'])->prefix('admin')->name('admin.')->group(
     Route::resource('tyrecategory', TyreCategoryController::class);
     Route::resource('brandextradetail', BrandExtraDetailController::class);
     Route::resource('season', SeasonController::class);
+    Route::resource('dealer', DealerController::class);
+    Route::match(['GET','POST','PUT'], 'dealer-bulk-export', [DealerController::class,'bulkexport'])->name('dealer.bulkexport');
+    Route::match(['GET','POST','PUT'], 'dealer-bulk-add', [DealerController::class,'bulkadd'])->name('dealer.bulkadd');
     // Ajax request
     Route::post('/ajax-request/{table}',[AjaxHandlerController::class, 'handle_request'])->name('ajax.request');
 });

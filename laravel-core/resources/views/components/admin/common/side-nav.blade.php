@@ -150,6 +150,15 @@
               </ul>
           </li>
           
+          <li class="nav-item">
+            <a href="{{ route('admin.dealer.index') }}" class="nav-link {{request()->routeIs('admin.dealer.*')?'active':''}}">
+              <i class="nav-icon fas fa-people-arrows text-warning"></i>
+              <p>
+                Dealer
+              </p>
+            </a>
+          </li>
+          
           
           <li class="nav-item">
           </li>

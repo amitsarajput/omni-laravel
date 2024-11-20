@@ -12,7 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('dealers', function (Blueprint $table) {
-            $table->id();
+            $table->id(); 
+            $table->string('name');
+            $table->string('countrycode');
+            $table->string('continent');
+            $table->json('postdata');
+            $table->tinyInteger('featured');
             $table->timestamps();
         });
     }
