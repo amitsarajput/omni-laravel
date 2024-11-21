@@ -140,7 +140,7 @@
                 
                 <div class="grid align-center">
                     <div class="col-md-6 col-sm-12 col-bleed">
-                        <img src="{{asset('images/tyre-grid/social-responsibility.jpg')}}" alt="Social Responsibility">
+                        <img src="{{asset('images/tyre-grid/social-responsibility.webp')}}" alt="Social Responsibility">
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
@@ -152,12 +152,12 @@
                 </div>
                 <div class="grid align-center">
                     <div class="col-md-6 col-sm-12 col-bleed order-md-2">
-                        <img src="{{asset('images/tyre-grid/environmental-responsibility.jpg')}}" alt="Environmental Responsibility">
+                        <img src="{{asset('images/tyre-grid/environmental-responsibility.webp')}}" alt="Environmental Responsibility">
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 mr-md-2">
                             <h5 class="dark-100 mt-0 uppercase">ENVIRONMENT</h5>
-                            <p>We continually strive to minimize our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.</p>
+                            <p>{{ __("We continually strive to minimize our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.") }}</p>
                             <a class="knopf red heading-font sharp ls-1" href="https://www.omni-united.com/environmental-responsibility">READ MORE</a>
                         </div>
                     </div>

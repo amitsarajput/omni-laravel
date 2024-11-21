@@ -33,9 +33,9 @@
 
                     Warm regards,<br><br>
 
-                    <img src="{{ asset('images/sig.jpg') }}" alt=""><br><br>
+                    <img src="{{ asset('images/sig.webp') }}" alt="" width="300"><br><br>
 
-                    G S Sareen<br>
+                    <b>G S Sareen</b><br>
                     President & CEO<br>
                     Omni United (S) Pte Ltd
 

@@ -1,9 +1,10 @@
-@push('styles') 
+@push('styles')  
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="{{asset('css/swiper/swiper-bundle.css')}}" />
     <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
 @endpush
 <div {{ $attributes->merge(['class' => 'dealer-map']) }}>
+      
     <form id="dealer-map--search"  class="dealer-map--search" action="#" onsubmit="formsubmission(event, this)">
         <div class="inputs">
             <div class="form-group">
@@ -40,12 +41,20 @@
 @push('scripts')  
     <!-- Swiper JS -->
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
-    <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script>
-    <script src="{{asset('js/jquery-gmap.js')}}"></script>
+    <!-- <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script> -->
+    <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_k3c0Ba2Zhk6T8d_MZULA-0EMl-6o84&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script>
+    
     <script type="text/javascript">
-        $( function() {
+        
+        var stores={!! $stores !!};
+            //stores=JSON.parse(stores);
+            console.log(stores);
+
+        $( function($) {
             //alert("ok");
+            
         } );
     </script>
+    <script src="{{asset('js/jquery-gmap.js')}}"></script>
 
 @endpush

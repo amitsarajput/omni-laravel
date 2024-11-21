@@ -15,7 +15,7 @@ class DealerController extends Controller
         $this->middleware('auth');
     }
     private $headerkeys=[
-        'sn','name','address','city','state','country','countrycode','continent','postal','phone','phone2','lat','lng','direciton','addresspreview','featured'
+        'sn','name','address','city','state','country','countrycode','continent','postal','phone','phone2','lat','lng','direciton','addresspreview','featured','email'
     ];
     /**
      * Display a listing of the resource.

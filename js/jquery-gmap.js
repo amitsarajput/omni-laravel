@@ -1,3 +1,6 @@
+//var stores='js';
+console.log(stores)
+
 var citycords={
     'arizona':{lat:34.3316884,lng:-112.1184496},
     'california':{lat:37.5772598,lng:-119.1115786},
@@ -94,7 +97,7 @@ function initMap() {
     infoWindow = new google.maps.InfoWindow();
     geocoder= new google.maps.Geocoder();
 
-    downloadUrl();
+    downloadUrl(stores);
 
     // Create the autocomplete object, restricting the search predictions to
     // geographical location types.
@@ -117,11 +120,49 @@ function loadDoc() {
 }
 
 // Read the data
-function downloadUrl() {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-        var stores=JSON.parse(this.responseText);
+// function downloadUrl() {
+//     var xhttp = new XMLHttpRequest();
+//     xhttp.onreadystatechange = function() {
+//         if (this.readyState == 4 && this.status == 200) {
+//         var stores=JSON.parse(this.responseText);
+//         //console.log(stores);
+//         stores.forEach(function(store) {
+//             // obtain the attribues of each marker
+//             var lat = parseFloat(store.lat);
+//             var lng = parseFloat(store.lng);
+//             var point = new google.maps.LatLng(lat,lng);
+//             var address = store.address;
+//             store.city=typeof(store.city)==='undefined'?'':store.city;
+//                 address =address+", "+store.city;
+//             store.state=typeof(store.state)==='undefined'?'':store.state;
+//                 address =address+", "+store.state;
+//             store.postal=typeof(store.postal)==='undefined'?'':store.postal;
+//                 address =address+" "+store.postal;
+//             store.country=typeof(store.country)==='undefined'?'':store.country;
+//                 address =address+" "+store.country;
+//             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
+//             var distance = store.distance;
+//                 distance=getdistancestring(distance);
+//             var phone = store.phone;
+//             var tel = phone.replace(/\D/g, '');
+//             var name = store.name;
+//             var html = "<h4 class='color ls-0 ' >"+name+"</h4>";
+//                 html +="<div class='info-row-withicon phone'><i class='fa fa-fw fa-phone'></i> <a href='tel:"+tel+"'>"+phone+"</a></div>";
+//                 html +="<div class='info-row-withicon address'><i class='fa fa-fw fa-map-marker'></i> "+address+"</div>";
+//                 html +="<div class='info-row-withicon direction-row'><a class='direction-link' href='"+direction+"' target='_blank'>Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
+//             var category = store.category;
+//             // create the marker
+//             var marker = createMarker(point,name,html,category,store);
+//         });
+//         }
+//     };
+//     xhttp.open("GET", "js/stores-uk.js", true);
+//     xhttp.send();
+// }
+
+// Read the data without xhttp request
+function downloadUrl(stores) {
+    //var stores=JSON.parse(stores);
         //console.log(stores);
         stores.forEach(function(store) {
             // obtain the attribues of each marker
@@ -130,13 +171,15 @@ function downloadUrl() {
             var point = new google.maps.LatLng(lat,lng);
             var address = store.address;
             store.city=typeof(store.city)==='undefined'?'':store.city;
-                address =address+", "+store.city;
+                //address =address+", "+store.city;
             store.state=typeof(store.state)==='undefined'?'':store.state;
-                address =address+", "+store.state;
+                //address =address+", "+store.state;
             store.postal=typeof(store.postal)==='undefined'?'':store.postal;
-                address =address+" "+store.postal;
+                //address =address+" "+store.postal;
             store.country=typeof(store.country)==='undefined'?'':store.country;
-                address =address+" "+store.country;
+                //address =address+" "+store.country;
+            store.addresspreview=typeof(store.addresspreview)==='undefined'?'':store.addresspreview;
+                address=store.addresspreview;
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var distance = store.distance;
                 distance=getdistancestring(distance);
@@ -151,10 +194,6 @@ function downloadUrl() {
             // create the marker
             var marker = createMarker(point,name,html,category,store);
         });
-        }
-    };
-    xhttp.open("GET", "js/stores-uk.js", true);
-    xhttp.send();
 }
 
 // A function to create the marker and set up the event window
@@ -181,11 +220,15 @@ function createMarker(latlng,name,html,category,store ) {
       mycategory: category,
       myname: name, 
       myphone: store.phone,
+      myphone2: store.phone2,
+      myemail: store.email,
       myaddress: store.address,
+      myaddresspreview: store.addresspreview,
       mypostal: store.postal,
       mycity: store.city,
       mystate: store.state,
       mycountry: store.country,
+      myfeatured: store.featured,
     });
     marker.setVisible(false); //true to show all markers initailly
 
@@ -250,13 +293,17 @@ function makeSidebar(markers=null) {
             var distance=markers[i].mydistance;
                 distance=getdistancestring(distance);
             var tel=markers[i].myphone.replace(/\D/g, '');
-            var address=markers[i].myaddress+", "+markers[i].mycity+", "+markers[i].mystate+" "+markers[i].mypostal+" "+markers[i].mycountry;
+            //var address=markers[i].myaddress+", "+markers[i].mycity+", "+markers[i].mystate+" "+markers[i].mypostal+" "+markers[i].mycountry;
+            var address=markers[i].myaddresspreview;
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
-            html += "<div class='main-add'>";
-            html += "<h4 class='color' >"+markers[i].myname+"</h4>";
+            var featuredclass=markers[i].myfeatured?'featured':'';
+            var redpartner=markers[i].myfeatured?"<div class='redpartner-unit'>Red partner</div>":"";
+            html += "<div class='main-add "+featuredclass+"'>";
+            html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
+            html += "<h5 class='color' >"+markers[i].myname+"</h5>";
             html +="<div class='info-row-withicon phone'><i class='fa fa-fw fa-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>";
             html +="<div class='info-row-withicon address'><i class='fa fa-fw fa-map-marker'></i> "+address+"</div>";
-            html +="<div class='info-row-withicon direction-row'><a class='direction-link' href='"+direction+"' target='_blank'>Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
+            html +="<div class='info-row-withicon direction-row'><i class='fa fa-fw fa-paper-plane'></i> <a class='direction-link' href='"+direction+"' target='_blank'>Directions</a></div>";
             //html +="<div class='info-row-withicon link-onmap-row'><a href=javascript:myclick(" + i + ")>Show on Map</a></div>";
             html +="</div>";
             }
