@@ -1,11 +1,12 @@
 <x-app-layout> 
-  
+  <a href="{{ route('admin.tyre.index') }}" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left "></i> Back</a> 
   <div class="row">
     
     <div class="col-md-12">
         <!-- general form elements -->
         <div class="card card-primary">
           <div class="card-header">
+            
             <h3 class="card-title">Search Tag</h3>
             <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse">

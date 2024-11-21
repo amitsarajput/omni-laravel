@@ -1,7 +1,7 @@
 @push('styles') 
 @endpush
     
-<div   {{ $attributes->merge(['class' => 'swiper']) }} >
+<div   {{ $attributes->merge(['class' => 'swiper']) }} > 
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper" >
         <!-- Slides -->

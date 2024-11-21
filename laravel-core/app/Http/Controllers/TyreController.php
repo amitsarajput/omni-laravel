@@ -299,7 +299,7 @@ class TyreController extends Controller
         }
         $t_icon=[];
         foreach ($request->icon as $key => $value) { 
-            $t_icon[$value]=['kram'=>$key];
+            $t_icon[$value]=['kram'=>$key+1];
         }
         $tyre->icons()->sync($t_icon);
         

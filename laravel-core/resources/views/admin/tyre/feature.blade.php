@@ -1,4 +1,5 @@
-<x-app-layout> 
+<x-app-layout>  
+  <a href="{{ route('admin.tyre.index') }}" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left "></i> Back</a>
   
   <div class="row">
     

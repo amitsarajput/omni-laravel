@@ -10,7 +10,7 @@
 
       <div class="card">
         <div class="card-header">
-          <h5 class="card-title">Tyres</h5>
+          <h5 class="card-title">Tyres</h5> 
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -42,6 +42,7 @@
           
           <div class="row">
             <div class="col-md-12">
+            <a href="{{route('dashboard')}}" class="btn btn-primary btn-sm"><i class="fa fa-arrow-left "></i> Back</a>  
             <a href="{{route('admin.tyre.create')}}" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i> Create</a>  
             <table id="datatable" class="table table-bordered table-striped">
                 <thead>
@@ -54,12 +55,22 @@
                     <th>Actions</th>
                   </tr>
                 </thead>
+                <tfoot>
+                  <tr>
+                    <th>Country</th>
+                    <th>Brand</th>
+                    <th>Name</th>
+                    <th>Slug</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </tfoot>
                 <tbody>
                   @foreach ($tyre as $row)
                     <tr>
                       <td>{{ $row->country->code }}</td>
                       <td>{{ $row->brand->name }}</td>
-                      <td>{{ $row->name }}</td>
+                      <td>{!! htmlspecialchars_decode($row->preview_name) !!}</td>
                       <td>{{ $row->slug }}</td>
                       <td>
                         <a href="#" class="publish-button btn btn-xs bg-{{$row->publish?'success':'danger'}}"
@@ -94,15 +105,6 @@
                     </tr>
                   @endforeach
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <th>Country</th>
-                    <th>Brand</th>
-                    <th>Name</th>
-                    <th>Slug</th>
-                    <th>Actions</th>
-                  </tr>
-                </tfoot>
               </table>
 
             </div>

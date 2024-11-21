@@ -52,7 +52,7 @@ class Tyre extends Model
 
     public function icons(): BelongsToMany
     {
-        return $this->belongsToMany(Icon::class,'icon_tyre','tyre_id','icon_id');
+        return $this->belongsToMany(Icon::class,'icon_tyre','tyre_id','icon_id')->withPivot('kram')->orderByPivot('kram', 'asc');
     }
 
     public function tyre_categories(): BelongsToMany
