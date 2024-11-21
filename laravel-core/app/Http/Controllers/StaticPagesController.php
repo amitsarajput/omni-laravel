@@ -50,7 +50,7 @@ class StaticPagesController extends Controller
         if ($request_path === 'ceo-message') {
             $this->data['page'] = $request_path;
         }
-        if ($request_path === 'rigorous-testing') {
+        if ($request_path === 'testing') {
             $this->data['page'] = $request_path;
         }
         if ($request_path === 'privacy-policy') {

@@ -39,7 +39,7 @@ Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->name('page
 	Route::get('/radar/warranty', [StaticPagesController::class,'index'])->name('warranty-eu');
 	Route::get('/premium-collection', [StaticPagesController::class,'index'])->name('premium-collection');
 	Route::get('/ceo-message', [StaticPagesController::class,'index'])->name('ceo-message');
-	Route::get('/rigorous-testing', [StaticPagesController::class,'index'])->name('testing');
+	Route::get('/testing', [StaticPagesController::class,'index'])->name('testing');
 	Route::get('/privacy-policy', [StaticPagesController::class,'index'])->name('privacy-policy');
 	
 	//About Pages

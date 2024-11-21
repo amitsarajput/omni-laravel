@@ -47,7 +47,7 @@
         
         var stores={!! $stores !!};
             //stores=JSON.parse(stores);
-            console.log(stores);
+            //console.log(stores);
 
         $( function($) {
             //alert("ok");
