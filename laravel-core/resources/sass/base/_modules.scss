@@ -1617,10 +1617,23 @@ ol.breadcrumb {
 	.swiper-button-prev{
 		left: 15%;
 		@include touch{ left: -5px; }
+	}	
+	.swiper-pagination-bullets{
+		.swiper-pagination-bullet{
+			width:15px;
+			height: 15px;
+			opacity: 0.6;
+			margin:0 30px 0 30px!important;
+			background: $white;
+			&:hover{
+				opacity: 0.8;
+			}
+			&.swiper-pagination-bullet-active{
+				opacity: 1;
+			}
+		}
 	}
-	.swiper-pagination-bullet-active{
-		background: $white;
-	}
+	
 	p{line-height: 1.35;}
 	br{
 		@include touch{

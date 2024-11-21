@@ -41,7 +41,7 @@ class StaticPagesController extends Controller
         if ($request_path==='contact-us') {
             $this->data['page']='contact';
         }
-        if ($request_path === 'radar/warranty') {
+        if ($request_path === 'warranty') {
             $this->data['page'] = 'warranty-radar-eu';
         }
         if ($request_path === 'premium-collection') {

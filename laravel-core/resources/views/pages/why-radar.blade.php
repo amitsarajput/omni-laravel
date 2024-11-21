@@ -28,7 +28,7 @@
                 </div>
                 <div class="col-md-6">
                     <h4 class="dark-100 uppercase">Radar Protect Program </h4>
-                    <p>We ensure peace of mind with the Radar Protect Program available through parcitipating Radar Elite Dealers(RED dealers). This includes a 30-day satisfaction promise and a limited road hazard warranty. Terms and conditions apply. Please see more (<a href="{{ route('pages.warranty-eu') }}{{ route('pages.warranty-eu') }}"></a>)</p>
+                    <p>We ensure peace of mind with the Radar Protect Program, which is available through participating Radar RED(Radar Elite Dealers) Partners. This may include a 30-day satisfaction promise and a limited road hazard warranty in select countries only. Terms and conditions apply. </p>
                 </div>
 
                 

@@ -56,7 +56,7 @@
                         href="{{route('home').'#responsiblity'}}"
                     @endif
                     >RESPONSIBILITY</a>
-                    <a href="{{ route('pages.warranty-eu') }}">WARRANTY</a>
+                    <a href="{{ route('pages.warranty') }}">WARRANTY</a>
 
                 <!--<a href="https://www.omni-united.com/dealer-login">Dealer Corner</a>-->
             </div>

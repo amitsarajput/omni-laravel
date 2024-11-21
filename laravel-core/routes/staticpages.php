@@ -36,7 +36,7 @@ Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->name('page
 	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
 	//Contact Page
 	Route::get('/contact-us', [StaticPagesController::class, 'index'])->name('contact');
-	Route::get('/radar/warranty', [StaticPagesController::class,'index'])->name('warranty-eu');
+	Route::get('/warranty', [StaticPagesController::class,'index'])->name('warranty');
 	Route::get('/premium-collection', [StaticPagesController::class,'index'])->name('premium-collection');
 	Route::get('/ceo-message', [StaticPagesController::class,'index'])->name('ceo-message');
 	Route::get('/testing', [StaticPagesController::class,'index'])->name('testing');
