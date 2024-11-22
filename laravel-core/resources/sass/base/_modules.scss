@@ -1587,6 +1587,7 @@ ol.breadcrumb {
 		left: calc(50% - 20px);
 		bottom: 2%;
 		transform: translateX(400%);
+		z-index: 2;
 	}
 	.swiper-button-next:after,.swiper-button-prev:after{
 		display: none;
