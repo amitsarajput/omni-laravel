@@ -51,14 +51,28 @@
                   <tr>
                     <th>Name</th>
                     <th>Class</th>
+                    <th>Tyres</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
+                <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Class</th>
+                    <th>Tyres</th>
+                    <th>Actions</th>
+                  </tr>
+                </tfoot>
                 <tbody>
                   @foreach ($icon as $row)
                     <tr>
                       <td>{{ ucfirst($row->name) }}</td>
                       <td>{{ $row->class }}</td>
+                      <td>
+                        @foreach($row->tyres as $tyre)
+                          <span class="badge badge-success">{{ $tyre->name.' '.$tyre->id }}</span>
+                        @endforeach
+                      </td>
                       <td>
                         <div class="btn-group">
                           <button type="button" class="btn btn-warning">Action</button>
@@ -80,13 +94,6 @@
                     </tr>
                   @endforeach
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <th>Name</th>
-                    <th>Slug</th>
-                    <th>Actions</th>
-                  </tr>
-                </tfoot>
               </table>
             </div>
             

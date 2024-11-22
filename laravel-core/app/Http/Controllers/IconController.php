@@ -13,7 +13,7 @@ class IconController extends Controller
     public function index()
     {
         //
-        $icon=Icon::all();
+        $icon=Icon::with('tyres')->get();
         return view('admin.icon.index' ,compact('icon'));
     }
 

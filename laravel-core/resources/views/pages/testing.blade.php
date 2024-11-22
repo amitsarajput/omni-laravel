@@ -8,7 +8,7 @@
     <section id="content" class="pb-5">
         <div class="container" >
             <div class="grid ">
-                <div class="col-md-12 col-bleed-y"><h2>    RADAR TYRES ARE RIGOROUSLY TESTED AGAINST ESTABLISHED PREMIUM BRANDS, OFFERING THE SAME PERFORMANCE BUT WITHOUT THE HEFTY PRICE TAG​</h2></div>
+                <div class="col-md-12 col-bleed-y"><h3 class="no-top-margin dark-100">    RADAR TYRES ARE RIGOROUSLY TESTED AGAINST ESTABLISHED PREMIUM BRANDS, OFFERING THE SAME PERFORMANCE BUT WITHOUT THE HEFTY PRICE TAG​</h2></div>
             </div>
             <div class="grid">
                 <div class="col-md-12">                    
