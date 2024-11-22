@@ -56,7 +56,7 @@
                     @php
                         $product_images=json_decode($tyre->product_images);
                     @endphp
-                    <x-tyre-image-slider class="tyre--image-slider" :slides="$product_images" />
+                    <x-tyre-image-slider class="tyre--image-slider {{ $tyre->country->code==='EU'?'carbon-n':''}} " :slides="$product_images" />
                 </div>
             </div>
         </div>

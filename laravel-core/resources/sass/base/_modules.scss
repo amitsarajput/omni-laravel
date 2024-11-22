@@ -1576,6 +1576,18 @@ ol.breadcrumb {
 
 /*Product Image Slider*/
 .tyre--image-slider{
+	&.carbon-n:after{
+		content: "";
+		width: 40px;
+		height: 40px;
+		background-image: url('https://www.omni-united.com/assets/img/carbon-neutral-icon.png');
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		left: calc(50% - 20px);
+		bottom: 2%;
+		transform: translateX(400%);
+	}
 	.swiper-button-next:after,.swiper-button-prev:after{
 		display: none;
 	}
