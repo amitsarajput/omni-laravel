@@ -1,5 +1,6 @@
 //var stores='js';
-console.log(stores)
+//console.log(stores);
+//console.log(redpartneruri);
 
 var citycords={
     'arizona':{lat:34.3316884,lng:-112.1184496},
@@ -85,9 +86,10 @@ if (get_dealerform_status()==1) {
 //console.log(st);
 
 function initMap() {
+    var locations={eu:{lat:53.2443649,lng:-2.4459033},apac:{lat:53.2443649,lng:-2.4459033}};
     var myOptions = {
         zoom: 6,
-        center: new google.maps.LatLng("53.2443649","-2.4459033"),
+        center: new google.maps.LatLng(locations['eu']),//"53.2443649","-2.4459033"
         mapTypeId: google.maps.MapTypeId.ROADMAP
     }
     map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -297,7 +299,7 @@ function makeSidebar(markers=null) {
             var address=markers[i].myaddresspreview;
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var featuredclass=markers[i].myfeatured?'featured':'';
-            var redpartner=markers[i].myfeatured?"<a class='redpartner-unit'>Red partner</a>":"";
+            var redpartner=markers[i].myfeatured?"<a class='redpartner-unit' href='"+redpartneruri+"'>Red partner</a>":"";
             html += "<div class='main-add "+featuredclass+"'>";
             html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
             html += "<h5 class='color' >"+markers[i].myname+"</h5>";

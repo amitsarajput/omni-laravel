@@ -165,7 +165,8 @@
             </div>
         </div>
     </section>
-    @push('scripts')  
+    @push('scripts')
+
     <!-- Swiper JS -->
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
