@@ -12,7 +12,7 @@
             @if($tyre->premium_tyre)
                 <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">PREMIUM COLLECTION</a>
             @endif
-            <div class="image">
+            <div class="image {{ $tyre->country->code==='EU'?'carbon-n':''}}">
                 <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
                     <img 
                         data-src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
