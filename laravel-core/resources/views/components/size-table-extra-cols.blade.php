@@ -20,6 +20,7 @@
                     alt="">
             </div>
         </td>
+    @elseif ($key==='s_w')
+        <td>{{ $row[$key] }}</td>
     @endif
-
 @endforeach
