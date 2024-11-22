@@ -42,7 +42,7 @@ class StaticPagesController extends Controller
             $this->data['page']='contact';
         }
         if ($request_path === 'warranty') {
-            $this->data['page'] = 'warranty-radar-eu';
+            $this->data['page'] = $country=='apac'?'warranty-radar-apac':'warranty-radar-eu';
         }
         if ($request_path === 'premium-collection') {
             $this->data['page'] = $request_path;
@@ -54,6 +54,9 @@ class StaticPagesController extends Controller
             $this->data['page'] = $request_path;
         }
         if ($request_path === 'privacy-policy') {
+            $this->data['page'] = $request_path;
+        }
+        if ($request_path === 'red-partner') {
             $this->data['page'] = $request_path;
         }
         if (View::exists('pages/'.$this->data['page'])) {

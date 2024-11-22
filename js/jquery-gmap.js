@@ -297,7 +297,7 @@ function makeSidebar(markers=null) {
             var address=markers[i].myaddresspreview;
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var featuredclass=markers[i].myfeatured?'featured':'';
-            var redpartner=markers[i].myfeatured?"<div class='redpartner-unit'>Red partner</div>":"";
+            var redpartner=markers[i].myfeatured?"<a class='redpartner-unit'>Red partner</a>":"";
             html += "<div class='main-add "+featuredclass+"'>";
             html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
             html += "<h5 class='color' >"+markers[i].myname+"</h5>";
