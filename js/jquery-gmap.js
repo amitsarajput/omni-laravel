@@ -189,9 +189,9 @@ function downloadUrl(stores) {
             var tel = phone.replace(/\D/g, '');
             var name = store.name;
             var html = "<h4 class='color ls-0 ' >"+name+"</h4>";
-                html +="<div class='info-row-withicon phone'><i class='fa fa-fw fa-phone'></i> <a href='tel:"+tel+"'>"+phone+"</a></div>";
-                html +="<div class='info-row-withicon address'><i class='fa fa-fw fa-map-marker'></i> "+address+"</div>";
-                html +="<div class='info-row-withicon direction-row'><a class='direction-link' href='"+direction+"' target='_blank'>Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
+                html +="<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+phone+"</a></div>";
+                html +="<div class='info-row-withicon address'><i class='omniicon-location-pin-2'></i> "+address+"</div>";
+                html +="<div class='info-row-withicon direction-row'><i class='omniicon-direction-arrow'></i> <a class='direction-link' href='"+direction+"' target='_blank'>Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
             var category = store.category;
             // create the marker
             var marker = createMarker(point,name,html,category,store);
@@ -303,9 +303,9 @@ function makeSidebar(markers=null) {
             html += "<div class='main-add "+featuredclass+"'>";
             html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
             html += "<h5 class='color' >"+markers[i].myname+"</h5>";
-            html +="<div class='info-row-withicon phone'><i class='fa fa-fw fa-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>";
-            html +="<div class='info-row-withicon address'><i class='fa fa-fw fa-map-marker'></i> "+address+"</div>";
-            html +="<div class='info-row-withicon direction-row'><i class='fa fa-fw fa-paper-plane'></i> <a class='direction-link' href='"+direction+"' target='_blank'>Directions</a></div>";
+            html +="<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+markers[i].myphone+"</a></div>";
+            html +="<div class='info-row-withicon address'><i class='omniicon-location-pin-2'></i> "+address+"</div>";
+            html +="<div class='info-row-withicon direction-row'><i class='omniicon-direction-arrow'></i> <a class='direction-link' href='"+direction+"' target='_blank'>Directions</a></div>";
             //html +="<div class='info-row-withicon link-onmap-row'><a href=javascript:myclick(" + i + ")>Show on Map</a></div>";
             html +="</div>";
             }
