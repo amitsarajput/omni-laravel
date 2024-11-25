@@ -29,7 +29,7 @@
             </div>
             <div class="grid">
                 <div class="col-md-12">
-                    <h4 class="dark-100 uppercase">With a Radar RED Partner, you’re not just buying tyres—you’re investing in superior quality, trusted expertise, and unmatched customer care.</h4>
+                    <p class="dark-100 t700">With a Radar RED Partner, you’re not just buying tyres—you’re investing in superior quality, trusted expertise, and unmatched customer care.</p>
                 </div>
             </div>
 
