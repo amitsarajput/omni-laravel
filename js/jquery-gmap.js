@@ -191,7 +191,7 @@ function downloadUrl(stores) {
             var html = "<h4 class='color ls-0 ' >"+name+"</h4>";
                 html +="<div class='info-row-withicon phone'><i class='omniicon-phone'></i> <a href='tel:"+tel+"'>"+phone+"</a></div>";
                 html +="<div class='info-row-withicon address'><i class='omniicon-location-pin-2'></i> "+address+"</div>";
-                html +="<div class='info-row-withicon direction-row'><i class='omniicon-direction-arrow'></i> <a class='direction-link' href='"+direction+"' target='_blank'>Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
+                html +="<div class='info-row-withicon direction-row'><a class='direction-link' href='"+direction+"' target='_blank'><i class='omniicon-direction-arrow'></i> Directions</a> <div class='direction-distance'>"+distance+"</div></div>";
             var category = store.category;
             // create the marker
             var marker = createMarker(point,name,html,category,store);
