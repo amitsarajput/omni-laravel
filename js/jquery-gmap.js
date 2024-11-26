@@ -182,7 +182,7 @@ function downloadUrl(stores) {
                 //address =address+" "+store.country;
             store.addresspreview=typeof(store.addresspreview)==='undefined'?'':store.addresspreview;
                 address=store.addresspreview;
-                address=address.replace(",,", ",");
+                address=address.replace(", ,", ",");
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var distance = store.distance;
                 distance=getdistancestring(distance);
