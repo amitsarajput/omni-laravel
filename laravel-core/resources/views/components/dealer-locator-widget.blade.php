@@ -43,6 +43,7 @@
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
     <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script>
     
+    
     <script type="text/javascript">
         
         var redpartneruri = "{!! route('pages.red-partner') !!}";
