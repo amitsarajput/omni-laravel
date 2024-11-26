@@ -20,7 +20,7 @@
                     <p>The Radar RED(Radar Elite Dealer) Partner, is a community of trusted Radar Tyres dealers dedicated to delivering premium quality products and exceptional customer service. Our RED Partners are carefully selected for their commitment to excellence, product availability, and product knowledge, ensuring you receive the best possible tyre solutions for your needs.​</p>
                     <p>When you buy from a Radar RED Partner, you can enjoy:</p>
                     <ul>
-                        <li>Elite Service: Benefit from personalized guidance and expert advice to find the perfect tyre for your vehicle.</li>
+                        <li>Elite Service: Benefit from personalised guidance and expert advice to find the perfect tyre for your vehicle.</li>
                         <li>Access to Premium Products: Get the latest and most innovative Radar Tyres, designed for performance and durability.</li>
                         <li>Exclusive Customer Benefits: In certain markets, RED Partners may offer additional perks such as an additional road hazard replacement warranty, 30-day satisfaction promise, and mileage warranties. </li>
                         <li>Dedicated After-Sales Support: Seamless assistance for warranties, replacements, and tyre care.</li>
