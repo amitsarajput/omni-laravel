@@ -182,7 +182,7 @@ function downloadUrl(stores) {
                 //address =address+" "+store.country;
             store.addresspreview=typeof(store.addresspreview)==='undefined'?'':store.addresspreview;
                 address=store.addresspreview;
-                address=address.replace(", ,", ",");
+                address=address.replace("/, ,/g", ",");
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var distance = store.distance;
                 distance=getdistancestring(distance);
@@ -297,7 +297,8 @@ function makeSidebar(markers=null) {
                 distance=getdistancestring(distance);
             var tel=markers[i].myphone.replace(/\D/g, '');
             //var address=markers[i].myaddress+", "+markers[i].mycity+", "+markers[i].mystate+" "+markers[i].mypostal+" "+markers[i].mycountry;
-            var address=markers[i].myaddresspreview;
+            var address=markers[i].myaddresspreview;            
+                address=address.replace("/, ,/g", ",");
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var featuredclass=markers[i].myfeatured?'featured':'';
             var redpartner=markers[i].myfeatured?"<a class='redpartner-unit' href='"+redpartneruri+"'>Red partner</a>":"";
