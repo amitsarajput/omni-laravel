@@ -1418,8 +1418,11 @@ ol.breadcrumb {
 	overflow-y: hidden;
 	overflow-y: auto;
 	&.dealer-map--location-fill{
-		border:1px solid $dark-20;
 		padding: 10px;
+		border:1px solid $dark-20;
+		-webkit-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.25);
+		-moz-box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.25);
+		box-shadow: inset 0px 0px 10px 0px rgba(0,0,0,0.25);
 	}
 	.main-add {
 		margin-right: 15px;
