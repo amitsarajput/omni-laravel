@@ -313,7 +313,13 @@ function makeSidebar(markers=null) {
             }
         }        
     }
-    html!=="" ? sidebar.innerHTML = html : sidebar.innerHTML='';
+    if (html!=="") {
+        sidebar.classList.add("dealer-map--location-fill");
+        sidebar.innerHTML = html
+    } else {
+        sidebar.classList.remove("dealer-map--location-fill");
+        sidebar.innerHTML=''
+    }
 }
 
 //Search results working

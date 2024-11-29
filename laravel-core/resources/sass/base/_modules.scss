@@ -1417,6 +1417,10 @@ ol.breadcrumb {
 	overflow-y: hidden;
 	overflow-y: hidden;
 	overflow-y: auto;
+	&.dealer-map--location-fill{
+		border:1px solid $dark-20;
+		padding: 10px;
+	}
 	.main-add {
 		margin-right: 15px;
 		margin-bottom: 15px;
