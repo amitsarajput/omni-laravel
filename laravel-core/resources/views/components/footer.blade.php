@@ -15,7 +15,7 @@
                             <!-- <a target="_blank" href="https://www.linkedin.com/company/omni-united/"><i class="omniicon-linkedin"></i></a> -->
                             <a target="_blank" href="https://www.instagram.com/radartires/"><i class="omniicon-instagram"></i></a>
                             <a target="_blank" href="https://www.facebook.com/radartiresofficial/"><i class="omniicon-facebook"></i></a>
-                            <a target="_blank" href="https://x.com/RadarTires"><i class="omniicon-x"></i></a>
+                            <a target="_blank" href="https://x.com/RadarTires"><i class="omniicon-x1"></i></a>
                         </div>
                     </div>
                 </div>
