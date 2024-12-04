@@ -16,7 +16,8 @@ class DealerLocatorWidget extends Component
     public function __construct()
     {
         $preffered_location=session('omni_data.preffered_location');
-        $this->AllStores=Dealer::where('continent', $preffered_location)->get()->map(function(Dealer $dealer) {
+        //$this->AllStores=Dealer::where('continent', $preffered_location)->get()->map(function(Dealer $dealer) {
+        $this->AllStores=Dealer::all()->map(function(Dealer $dealer) {
             return json_decode($dealer->postdata,true);
             //return $dealer->postdata;
         });
