@@ -10,14 +10,14 @@
         <div class="grid">
         <div class="col-lg-12">
                 <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ url('/') }}">Home</a></li>
+                <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                 <li class="breadcrumb-item"><i class="icon-angle-right"></i>
-                    <a href="{{ url($tyre->brand->slug) }}">
+                    <a href="{{ route('tyre.grid', $tyre->brand->slug) }}">
                         {{ ucfirst($tyre->brand->name) }}
                     </a>
                 </li>
                 <li class="breadcrumb-item uppercase"><i class="icon-angle-right"></i>
-                    <a href="{{url($tyre->brand->slug.'#tabs-'.$tyre->search_tag->slug)}}">
+                    <a href="{{route('tyre.grid', $tyre->brand->slug).'#tabs'}}">
                     {{ $tyre->search_tag->name }}
                     </a>
                 </li>

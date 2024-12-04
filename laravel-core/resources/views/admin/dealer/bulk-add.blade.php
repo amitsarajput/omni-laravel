@@ -47,7 +47,7 @@
                 <div class="row">
                   <div class="form-group col-12">
                       <label for="exampleInputPassword1">Download</label>
-                      <a href="{{ asset('storage/xlsx/'.$old_file) }}" download>Download Old File</a>
+                      <a href="{{ asset('/storage/xlsx/'.$old_file) }}" download>Download Old File</a>
                   </div>
                   <div class="form-group col-12">
                       <label for="exampleInputPassword1">Sizes</label>
