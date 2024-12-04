@@ -1431,6 +1431,7 @@ ol.breadcrumb {
 		@include mobile{width: 98%;}
 		@include from($tablet){width: 47%;}
 		@include from($desktop){width: 31%;}
+		@include from($widescreen){width: 23%;}
 		font-size: 14px;
 		line-height: 1.5;
 		h4{margin-top: 0;letter-spacing: 0;line-height: 1;}
