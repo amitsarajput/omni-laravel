@@ -1436,7 +1436,8 @@ ol.breadcrumb {
 		h4{margin-top: 0;letter-spacing: 0;line-height: 1;}
 		h5{
 			margin-top: 0;letter-spacing: 0;line-height: 1;text-transform: uppercase;
-
+			@include mobile{font-size: 130%;}
+			@include from($tablet){font-size: 21px;}
 		}
 		.main-add--row{ 
 			display: flex;flex-wrap: wrap;
