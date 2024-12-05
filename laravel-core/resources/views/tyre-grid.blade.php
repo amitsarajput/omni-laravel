@@ -158,7 +158,7 @@
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 mr-md-2">
                             <h5 class="dark-100 mt-0 uppercase">ENVIRONMENT</h5>
                             <p>{{ __("We continually strive to minimise our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.") }}</p>
-                            <a class="knopf red heading-font sharp ls-1" href="{{ route('pages.responsibility-environmental') }}">READ MORE</a>
+                            <a class="knopf red heading-font sharp ls-1" href="https://www.omni-united.com/environmental-responsibility">READ MORE</a>
                         </div>
                     </div>
                 </div>
