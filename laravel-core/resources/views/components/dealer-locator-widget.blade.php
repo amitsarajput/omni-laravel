@@ -41,7 +41,9 @@
 @push('scripts')  
     <!-- Swiper JS -->
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
-    <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script>
+    <!-- <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script> -->
+    
+    <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDw_k3c0Ba2Zhk6T8d_MZULA-0EMl-6o84&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script>
     
     
     <script type="text/javascript">

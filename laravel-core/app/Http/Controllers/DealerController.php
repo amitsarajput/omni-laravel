@@ -209,6 +209,9 @@ class DealerController extends Controller
      */
     public function destroy(Dealer $dealer)
     {
-        //
+        if($dealer->id){
+            $dealer->delete();
+            return redirect()->route('admin.dealer.index')->with('status','Dealer deleted');
+        }
     }
 }
