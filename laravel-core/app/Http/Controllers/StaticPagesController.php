@@ -59,6 +59,12 @@ class StaticPagesController extends Controller
         if ($request_path === 'red-partner') {
             $this->data['page'] = $request_path;
         }
+        if ($request_path === 'environmental-responsibility') {
+            $this->data['page'] = 'responsibility-environmental';
+        }
+        if ($request_path === 'social-responsibility') {
+            $this->data['page'] = 'responsibility-social';
+        }
         if (View::exists('pages/'.$this->data['page'])) {
             return view('pages/' . $this->data['page'], ['data'=>$this->data]);
         }else {

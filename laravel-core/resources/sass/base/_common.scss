@@ -27,6 +27,15 @@ p{
 	&.left{text-align: left;}
 	&:first-child{margin-top: 0;}
 }
+hr {
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	  border-top-width: 0px;
+	  border-top-style: none;
+	  border-top-color: currentcolor;
+	border-top: 1px solid $dark-10;
+  }
 
 
 [class^="col-"] p:first-child{margin-top: 0;}
@@ -111,6 +120,7 @@ ol{
 	&.no-bottom-margin{ margin-bottom: 0;}
 	&.black{color:$black;}
 	&.white{color:$white;}
+	&.pink{color:$pink;}
 	&.body-font{font-family: $body-font;}
 	@each $weight in $font-weight{
 		&.t#{$weight}{
@@ -141,6 +151,9 @@ ol{
 			height: #{$i}0rem;
 	}
 }
+
+// Text color
+.pink{color:$pink;}
 
 
 .body-overlay{
