@@ -90,9 +90,15 @@
     </section><!-- #content end -->
     @push('scripts')  
         <script src="{{asset('js/jquery.fitvids.js')}}"></script>
+        <script src="{{asset('js/jquery.waypoints.min.js')}}"></script>
+        <script src="{{asset('js/jquery.counterup.min.js')}}"></script>
         <script>
             $(document).ready(function(){
                 $('iframe[src*="youtube"]').parent().fitVids();
+                $('.counter').counterUp({
+                    delay: 10,
+                    time: 3000
+                });
             });
         </script>
 @endpush
