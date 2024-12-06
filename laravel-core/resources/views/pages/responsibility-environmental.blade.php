@@ -35,24 +35,24 @@
                 <div class="col-md-12 col-bleed-y">
                     <h4 class="no-top-margin dark-100 uppercase t600">2023</h4>
                     <p class="t600">VIEW OUR ANNUAL QUALIFYING EXPLANATORY STATEMENT(QES) <br>
-                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES_2023.pdf') }}">Download</a></p>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES_2023.pdf') }}" download >Download</a></p>
                     <p class="t600">VIEW OUR CARBON-NEUTRAL CERTIFICATES <br>
-                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Assurance_Statement_2023.pdf') }}">Download</a>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Assurance_Statement_2023.pdf') }}" download >Download</a>
                     </p>
                 </div>
                 <div class="col-md-12 col-bleed-y mt-3">
                     <h4 class="no-top-margin dark-100 uppercase t600">2022</h4>
                     <p class="t600">VIEW OUR ANNUAL QUALIFYING EXPLANATORY STATEMENT(QES) <br>
-                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES-2022.pdf') }}">Download</a></p>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES-2022.pdf') }}" download >Download</a></p>
                     <p class="t600">VIEW OUR CARBON NEUTRAL CERTIFICATES <br>
-                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Omni_GHG-2022.pdf') }}">Download</a></p>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Omni_GHG-2022.pdf') }}" download >Download</a></p>
                 </div>
                 <div class="col-md-12 col-bleed-y mt-3">
                     <h4 class="no-top-margin dark-100 uppercase t600">2021</h4>
                     <p class="t600">VIEW OUR ANNUAL QUALIFYING EXPLANATORY STATEMENT(QES) <br>
-                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES-2021.pdf') }}">Download</a></p>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES-2021.pdf') }}" download >Download</a></p>
                     <p class="t600">VIEW OUR CARBON NEUTRAL CERTIFICATES <br>
-                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Omni_GHG-2021.pdf') }}">Download</a></p>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Omni_GHG-2021.pdf') }}" download >Download</a></p>
                 </div>
             </div>
         </div>
