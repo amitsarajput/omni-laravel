@@ -1,43 +1,88 @@
 <x-guest-layout>
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/about-us--banner.webp') }}" container="true" page-title="<span class='red'>THEY SAY PREMIUM TYRES ARE EXPENSIVE.</span><br><span class='black'>WE SAY, NOT WHEN YOU ROLL WITH US.</span>" class="page-title--center el-height-70 uppercase" />
+    <x-page-title image-url="{{ asset('images/environment-responsibility--banner.webp') }}" container="true" page-title="" class="page-title--center el-height-70 uppercase mb-0" />
     
     <!-- Content
     ============================================= -->
     <section id="content" class="pb-4">
+        <div class="section mb-4">
+            <div class="container">
+                <div class="grid">
+                    <div class="col-md-12 col-bleed-y">
+                        <h2 class="no-top-margin green uppercase center">Environmental Responsibility</h2>
+                        <p class="text-lead center"><em> “ We cannot transform the world alone, but we want to demonstrate that if a company like ours can invest the time, effort and resources necessary to make a difference, then anyone can. ”</em></p>
+                        <p class="center dark-50">G.S.Sareen, President and CEO, Omni United</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container">
             <div class="grid">
                 <div class="col-md-12 col-bleed-y">
-                    <h3 class="no-top-margin dark-100">AT RADAR TYRES, WE BELIEVE THAT BOTH DEALERS AND CONSUMERS SHOULD HAVE THE RIGHT TO ACCESS TOP-QUALITY PREMIUM TYRES AT AFFORDABLE PRICES.</h3>
-                    <p>We are committed to providing exceptional value through lean operations, efficient manufacturing and streamlined supply chains. For consumers, Radar Tyres offers a high-quality, affordable alternative to expensive premium brands. For dealers, Radar Tyres offers a profitable business opportunity with fair margins, a comprehensive product range, reliable availability and outstanding customer support.</p>
+                    <h3 class="no-top-margin dark-100 uppercase">Giving Back to the Environment</h3>
+                    <p>We at Omni United always strive to deliver outstanding qualitative and innovative products to our consumers. Over the last decade we have grown and with that, so has the impact of our activities. It is our role to proactively engage and influence all functions along our value chain towards sustainable mobility. We are aware of the impact of our operations and our products on the environment and we aim to reduce their negative effect progressively in collaboration with our external partners.</p>
+                </div>
+                <div class="col-md-12 col-bleed-y mt-5">
+                    <h3 class="no-top-margin dark-100 uppercase">MANUFACTURED CARBON NEUTRAL</h3>
+                    <p>In 2012, we commissioned EY (Ernst & Young) to do an in-depth study on the impact of the production footprint of Radar, our flagship brand on the environment. EY examined and quantified the amount of greenhouse gases (primarily carbon dioxide) produced, from procuring raw materials to manufacturing, distribution, and energy used in the company’s offices and employees' travel. Based on the study recommendations, we undertook a number of changes to our business processes and actions geared to offset the carbon footprint, such as investing in projects ranging from reforestation to agroforestry. As a result, Radar Tyres became the first tyre brand to be manufactured carbon neutral by late 2013. From 2021, furthering our plan on Carbon neutrality, we became Carbon Neutral from cradle to grave for certain geographies and products while working with our overall Carbon management plan to remain Carbon Neutral till 2030 in line with requirements of PAS 2060. Ernst and Young has provided external limited assurance over this.</p>
                 </div>
             </div>
+        </div>
+        <div class="container mt-3">
             <div class="grid">
-                <div class="col-md-6">
-                    <h4 class="dark-100">PREMIUM QUALITY</h4>
-                    <p>We use top-tier materials, the latest technologies and rigorously test and quality-check every product to meet the highest standards.</p>
+                <div class="col-md-12 col-bleed-y">
+                    <h4 class="no-top-margin dark-100 uppercase t600">2023</h4>
+                    <p class="t600">VIEW OUR ANNUAL QUALIFYING EXPLANATORY STATEMENT(QES) <br>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES_2023.pdf') }}">Download</a></p>
+                    <p class="t600">VIEW OUR CARBON-NEUTRAL CERTIFICATES <br>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Assurance_Statement_2023.pdf') }}">Download</a>
+                    </p>
                 </div>
-                <div class="col-md-6">
-                    <h4 class="dark-100">AFFORDABILITY</h4>
-                    <p>We use sustainable and efficient manufacturing processes, streamlined supply chains, and don’t have the high legacy costs of larger companies, to keep our products both high in quality and affordable for all.</p>
+                <div class="col-md-12 col-bleed-y mt-3">
+                    <h4 class="no-top-margin dark-100 uppercase t600">2022</h4>
+                    <p class="t600">VIEW OUR ANNUAL QUALIFYING EXPLANATORY STATEMENT(QES) <br>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES-2022.pdf') }}">Download</a></p>
+                    <p class="t600">VIEW OUR CARBON NEUTRAL CERTIFICATES <br>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Omni_GHG-2022.pdf') }}">Download</a></p>
                 </div>
-                <div class="col-md-6">
-                    <h4 class="dark-100">INNOVATION</h4>
-                    <p>We are at the forefront of tyre technology, continuously innovating to bring our customers the latest advancements in performance, safety, and design.</p>
-                </div>
-                <div class="col-md-6">
-                    <h4 class="dark-100">CUSTOMER FIRST</h4>
-                    <p>Our customers’ satisfaction is our top priority. We strive to exceed the expectations at every touchpoint, from product design to customer service.</p>
+                <div class="col-md-12 col-bleed-y mt-3">
+                    <h4 class="no-top-margin dark-100 uppercase t600">2021</h4>
+                    <p class="t600">VIEW OUR ANNUAL QUALIFYING EXPLANATORY STATEMENT(QES) <br>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/QES-2021.pdf') }}">Download</a></p>
+                    <p class="t600">VIEW OUR CARBON NEUTRAL CERTIFICATES <br>
+                    <a href="{{ asset('storage/colletrals/carbon-neutral-certificate/Omni_GHG-2021.pdf') }}">Download</a></p>
                 </div>
             </div>
+        </div>
+        
+          
+        <div class="container">
+            <hr class="mt-5 mb-5">
+        </div> 
+
+        <div class="container">
             <div class="grid">
-                <div class="col-md-12">
-                    <p>Radar Tyres, the flagship brand of Omni United, is committed to providing premium, high-quality tyres that are accessible to everyone. Our mission is to bridge the gap between superior performance and affordability. We offer a diverse range of tyres designed and engineered for all seasons and different driving needs, serving passenger cars, SUVs, 4x4s, vans and commercial vehicles, including trucks and buses.</p>
-                    <p>As a part of the Omni United group, we have deep rooted values of social responsibility. Since 2011, Radar Tyres has been an active supporter of the Breast Cancer Research Foundation, and sustainability is central to our values. Our tyres have been manufactured carbon-neutral since 2013, reflecting our dedication to combating climate change and inspiring positive change.</p>
-                </div>  
+                <div class="col-md-10 offset-md-1">
+                    <h3 class="mt-0 mb-3 dark-100 uppercase center">Our Sustainability and Giving Back Philosophy</h3>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/51noIoC99xc?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div>
             </div>
         </div>
 
     </section><!-- #content end -->
+    @push('scripts')  
+        <script src="{{asset('js/jquery.fitvids.js')}}"></script>
+        <script>
+            $(document).ready(function(){
+                $('iframe[src*="youtube"]').parent().fitVids();
+            });
+        </script>
+@endpush
 </x-guest-layout>
+
+    
+   
+
+

@@ -121,6 +121,7 @@ ol{
 	&.black{color:$black;}
 	&.white{color:$white;}
 	&.pink{color:$pink;}
+	&.green{color:$green;}
 	&.body-font{font-family: $body-font;}
 	@each $weight in $font-weight{
 		&.t#{$weight}{
@@ -154,6 +155,7 @@ ol{
 
 // Text color
 .pink{color:$pink;}
+.green{color:$green;}
 
 
 .body-overlay{
