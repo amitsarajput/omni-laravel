@@ -1,7 +1,4 @@
-@push('styles')  
-    <!-- Link Swiper's CSS -->
-    <link rel="stylesheet" href="{{asset('css/swiper/swiper-bundle.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
+@push('styles')
 @endpush
 <div {{ $attributes->merge(['class' => 'dealer-map']) }}>
       
@@ -39,8 +36,6 @@
     <div id="side_bar" class="dealer-map--location"></div>
 </div>
 @push('scripts')  
-    <!-- Swiper JS -->
-    <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
     <script async="false"  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDWsBUoQKrmNZn2udNYblwL6OKN3yyGYMs&libraries=places,geometry&callback=initMap"&libraries=places,geometry&callback=initMap"></script>
     
     
@@ -54,7 +49,7 @@
         $( function($) {
             //alert("ok");
             
-        } );
+        });
     </script>
     <script src="{{asset('js/jquery-gmap.js')}}"></script>
 
