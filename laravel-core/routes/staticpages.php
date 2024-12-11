@@ -42,6 +42,8 @@ Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->name('page
 	Route::get('/testing', [StaticPagesController::class,'index'])->name('testing');
 	Route::get('/privacy-policy', [StaticPagesController::class,'index'])->name('privacy-policy');
 	Route::get('/red-partner', [StaticPagesController::class,'index'])->name('red-partner');
+	Route::get('/new-european-tyre-labeling', [StaticPagesController::class,'index'])->name('eu-labeling');
+	
 });
 
 //Routes without country.
