@@ -360,7 +360,7 @@ class TyreController extends Controller
                 $tyre_array['extra_cols']=$request_extra_cols;
             }
             
-            if(htmlspecialchars($request->legends)!==$tyre_legends){
+            if(htmlspecialchars($request->legends)!==$tyre_legends){                
                 $tyre_array['legends']=htmlspecialchars($request->legends);
             }
             if ($request->hasFile('sizes')&& $request->file('sizes')->isValid()) {

@@ -35,7 +35,7 @@
     </div>
     <div class="col-lg-12">
         <div class="tyre--legends">
-            {!! htmlspecialchars_decode($legend) !!}
+            {!! preg_replace_array('/:url[a-z_-]+/', [route('pages.eu-labeling')], htmlspecialchars_decode($legend)) !!}
         </div>
     </div>
 </div>
