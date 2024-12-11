@@ -19,7 +19,7 @@
 			<div class="container">
 				<div class="grid">
 					<div class="col-md-12">
-						<h3 class="dark-100 uppercase">The New EU Tyre Label</h3>
+						<h4 class="dark-100 uppercase">The New EU Tyre Label</h4>
 						<ul class="text-md pl-2">
 							<li>The new regulation covers C1(Car &amp; SUV), C2(Van &amp; Light Trucks) and C3(Bus &amp; Truck) tyres</li>
 							<li>A tyre type identification number has been added to the label</li>
@@ -35,7 +35,7 @@
 			<div class="container">
 				<div class="grid">
 					<div class="col-md-12">
-						<h3 class="dark-100 uppercase">How to read the New EU tyre label</h3>
+						<h4 class="dark-100 uppercase">How to read the New EU tyre label</h4>
 						<img src="{{asset('images/eulabel-reading-instruction.jpg')}}" alt="">
 					</div>
 				</div>
@@ -43,7 +43,7 @@
 			<div class="container">
 				<div class="grid">
 					<div class="col-md-12">
-						<h3 class="dark-100 uppercase">The tyre label features different fields and pictograms.</h3>
+						<h4 class="dark-100 uppercase">The tyre label features different fields and pictograms.</h4>
 						<ol class="text-md pl-2">
                             <li>Energy Label – This is the new label title.</li>
                             <li>QR Code – This links to the EPREL database. Consumers can scan this and get all the EU label information in a tabular form.</li>
@@ -65,7 +65,7 @@
 			<div class="container">
 				<div class="grid">
 					<div class="col-md-12">
-						<h3 class="dark-100 uppercase">This Regulation does not apply to:</h3>
+						<h4 class="dark-100 uppercase">This Regulation does not apply to:</h4>
 						<ul class="text-md pl-2">
 							<li>Tyres classified as POR or Professional Off‐road tyres.</li>
 							<li>Tyres designed to be fitted only on vehicles registered for the first time before 1 October 1990.</li>
