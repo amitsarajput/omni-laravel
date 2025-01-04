@@ -190,7 +190,7 @@
 
             var hash = window.location.hash;
             if (hash!='' && hash.substring(1,5)==='tabs') {
-                $(window).scrollTo($('#tabs'),300);
+                $(window).scrollTop($('#tabs').offset().top-80);
             }
         });
         const swiper = new Swiper('.swiper', {
