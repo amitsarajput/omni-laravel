@@ -173,16 +173,26 @@
     
     <script type="text/javascript">
         $( function() {
-            //$( "#tabs" ).tabs();
+            
             $( "#tabs" ).tabs({
                 collapsible: true,
                 beforeActivate: function (event, ui) {
                     if( $(ui.newTab).find('a').attr('href').indexOf('#') != 0 ){ //check if it is hash link
                         window.open($(ui.newTab).find('a').attr('href'), '_blank');
                     }
-                    }
-                });
-        } );
+                },
+                activate:function( event, ui ) {
+                    var current = $(window).scrollTop();
+                        window.location.hash = ui.newTab[0].firstChild.hash;
+                        $(window).scrollTop(current);
+                }
+            });            
+
+            var hash = window.location.hash;
+            if (hash!='' && hash.substring(1,5)==='tabs') {
+                $(window).scrollTo($('#tabs'),300);
+            }
+        });
         const swiper = new Swiper('.swiper', {
             loop: true,
             autoplay: {

@@ -17,7 +17,7 @@
                     </a>
                 </li>
                 <li class="breadcrumb-item uppercase"><i class="icon-angle-right"></i>
-                    <a href="{{route('tyre.grid', $tyre->brand->slug).'#tabs'}}">
+                    <a href="{{route('tyre.grid', $tyre->brand->slug).'#tabs-'.$tyre->search_tag->slug}}">
                     {{ $tyre->search_tag->name }}
                     </a>
                 </li>
