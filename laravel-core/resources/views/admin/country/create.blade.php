@@ -70,6 +70,10 @@
                   {{ Form::select('search_tags[]', $search_tags_all, null, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
                 </div>
               </div>
+              <div class="form-group">
+                <label for="Order">Order</label>
+                {{ Form::number('Order', 0, ['id'=>'Order','class'=>'form-control','placeholder'=>'Enter Slug'] ) }}
+              </div>
               
               <div class="form-group col-3">
                 <label for="published">Publish</label>

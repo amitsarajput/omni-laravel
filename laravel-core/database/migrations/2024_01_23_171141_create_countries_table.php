@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('locale_code', length: 100);
             $table->string('slug')->unique();
             $table->tinyInteger('published')->default(0);
+            $table->integer('order')->default(0);
             $table->timestamps();
         });
     }

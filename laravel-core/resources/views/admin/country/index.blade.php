@@ -52,9 +52,21 @@
                     <th>Code</th>
                     <th>Locale Code</th>
                     <th>Slug</th>
+                    <th>Order</th>
                     <th>Actions</th>
                   </tr>
                 </thead>
+                <tfoot>
+                  <tr>
+                    <th>Name</th>
+                    <th>Region</th>
+                    <th>Code</th>
+                    <th>Locale Code</th>
+                    <th>Slug</th>
+                    <th>Order</th>
+                    <th>Actions</th>
+                  </tr>
+                </tfoot>
                 <tbody>
                   @foreach ($countri as $row)
                     <tr>
@@ -63,6 +75,7 @@
                       <td>{{ $row->code }}</td>
                       <td>{{ $row->locale_code }}</td>
                       <td>{{ $row->slug }}</td>
+                      <td>{{ $row->order }}</td>
                       <td>
                         <div class="btn-group">
                           <button type="button" class="btn btn-warning">Action</button>
@@ -84,15 +97,6 @@
                     </tr>
                   @endforeach
                 </tbody>
-                <tfoot>
-                  <tr>
-                    <th>Region</th>
-                    <th>Name</th>
-                    <th>Code</th>
-                    <th>Slug</th>
-                    <th>Actions</th>
-                  </tr>
-                </tfoot>
               </table>
             
             </div>

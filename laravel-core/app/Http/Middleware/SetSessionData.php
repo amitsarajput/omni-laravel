@@ -37,7 +37,7 @@ class SetSessionData
                 'bubble_closed'=>0,
                 'dealerform_open'=>0,
             ];
-            $all_countries=Country::where('published',1)->get();
+            $all_countries=Country::where('published',1)->orderBy('order', 'asc')->get();
             $omnidata['available_locations']=$all_countries->pluck('code','name')->toArray();
             $omnidata['available_locales']=$all_countries->pluck('locale_code','code')->toArray();
             $omnidata['slugs']=$all_countries->pluck('slug','code')->toArray();

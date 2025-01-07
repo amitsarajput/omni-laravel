@@ -20,14 +20,14 @@ class CountryController extends Controller
      */
     public function index()
     {
-        //
-        $countri=Country::all();
+        $countri=Country::orderBy('order', 'asc')->get();
+        
         return view('admin.country.index')->with('countri',$countri);
     }
 
     /**
      * Show the form for creating a new resource.
-     */
+    **/
     public function create()
     {
         //
@@ -52,6 +52,7 @@ class CountryController extends Controller
             'brand' => ['required', 'array' ],
             'search_tags' => ['required','array'],
             'search_tags.*' => ['string', 'max:255'],
+            'order' => ['required'],
         ]);
         $createtyrearray =[
             'region_id' => $request->region,
@@ -59,7 +60,8 @@ class CountryController extends Controller
             'code' => strtoupper($request->code),
             'locale_code' => $request->locale_code,
             'slug' => strtolower($request->slug),
-            'published'=>0
+            'published'=>0,
+            'order' => $request->order,
         ];
         if ($request->published) { $createtyrearray['published']=1;}
         $countri = Country::create($createtyrearray);
@@ -111,6 +113,7 @@ class CountryController extends Controller
             'brand' => ['required', 'array' ],
             'search_tags' => ['required','array'],
             'search_tags.*' => ['string', 'max:255'],
+            'order' => ['required'],
         ]);
         $updataarray=[
             'region_id' => $request->region,
@@ -118,7 +121,8 @@ class CountryController extends Controller
             'code' => strtoupper($request->code),
             'locale_code' => $request->locale_code,
             'slug' => strtolower($request->slug),
-            'published'=>0
+            'published'=>0,
+            'order' => $request->order,
         ];
         if ($request->published) { $updataarray['published']=1;}
         $countri->update($updataarray);
