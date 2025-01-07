@@ -53,14 +53,16 @@ class CountryController extends Controller
             'search_tags' => ['required','array'],
             'search_tags.*' => ['string', 'max:255'],
         ]);
-
-        $countri = Country::create([
+        $createtyrearray =[
             'region_id' => $request->region,
             'name' => strtolower($request->name),
             'code' => strtoupper($request->code),
             'locale_code' => $request->locale_code,
-            'slug' => strtolower($request->slug)
-        ]);
+            'slug' => strtolower($request->slug),
+            'published'=>0
+        ];
+        if ($request->published) { $createtyrearray['published']=1;}
+        $countri = Country::create($createtyrearray);
         $t_brand=[];
         foreach ($request->brand as $key => $value) { 
             $t_brand[$value]=['kram'=>$key];
@@ -99,7 +101,7 @@ class CountryController extends Controller
      */
     public function update(Request $request, Country $countri)
     {
-        //
+        //dd($request);
         $request->validate([
             'region' => ['required', 'integer'],
             'name' => ['required', 'string', 'max:255'],
@@ -110,14 +112,16 @@ class CountryController extends Controller
             'search_tags' => ['required','array'],
             'search_tags.*' => ['string', 'max:255'],
         ]);
-
-        $countri->update([
+        $updataarray=[
             'region_id' => $request->region,
             'name' => strtolower($request->name),
             'code' => strtoupper($request->code),
             'locale_code' => $request->locale_code,
             'slug' => strtolower($request->slug),
-        ]);
+            'published'=>0
+        ];
+        if ($request->published) { $updataarray['published']=1;}
+        $countri->update($updataarray);
         $t_brand=[];
         foreach ($request->brand as $key => $value) { 
             $t_brand[$value]=['kram'=>$key];

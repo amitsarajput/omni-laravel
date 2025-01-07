@@ -17,7 +17,8 @@ class SetDefaultLocaleForUrls
     public function handle(Request $request, Closure $next): Response
     {
         //URL::defaults(['locale' => $request->user()->locale]);
-        URL::defaults(['country' => strtolower(session('omni_data.preffered_location')??session('omni_data.default_location'))]);
+        //dd(strtolower(session('omni_data.preffered_location') ?session('omni_data.preffered_location'): session('omni_data.default_location')));
+        URL::defaults(['country' => strtolower(session('omni_data.preffered_location') ?session('omni_data.preffered_location'): session('omni_data.default_location'))]);
         
         return $next($request);
     }

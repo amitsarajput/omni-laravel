@@ -27,7 +27,7 @@
           </div>
           <!-- /.card-header -->
           <!-- form start -->
-          {!! Form::open(['route'=>'admin.country.store']) !!}
+          {!! Form::open(['route'=>'admin.countri.store']) !!}
             <div class="card-body">
                     @if ($errors->any())
                         <div class="alert alert-danger">
@@ -70,13 +70,18 @@
                   {{ Form::select('search_tags[]', $search_tags_all, null, ['multiple'=>'true','class'=>'form-control select2', 'data-dropdown-css-class'=>'select2-purple'] ) }}
                 </div>
               </div>
+              
+              <div class="form-group col-3">
+                <label for="published">Publish</label>
+                {{ Form::checkbox('published', 1, '', ['id'=>'published']) }}
+              </div>
             </div>
             <!-- /.card-body -->
 
             <div class="card-footer">
                 
                 {{ Form::submit('Submit',['class'=>"btn btn-primary"]); }}
-                <a href="{{ route('admin.country.index') }}" class="btn btn-warning">Cancel</a>
+                <a href="{{ route('admin.countri.index') }}" class="btn btn-warning">Cancel</a>
               
             </div>
             {!! Form::close() !!}
