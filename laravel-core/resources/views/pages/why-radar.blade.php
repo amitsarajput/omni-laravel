@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/why-radar--banner.webp') }}" container="true" page-title="RADAR TYRES - THE RIGHT CHOICE" class=" el-height-60 uppercase" />
+    <x-page-title image-url="{{ asset('images/banner--why-radar.webp') }}" container="true" page-title="RADAR TYRES - THE RIGHT CHOICE" class=" el-height-60 uppercase" />
     
     <!-- Content
     ============================================= -->
