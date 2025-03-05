@@ -695,6 +695,7 @@
 		letter-spacing: 1px;
 		margin-top: 0;
 		font-size: 36px;
+		margin-bottom: 5px;
 		a{color: $primary !important;}
 		
 		sup{
@@ -713,7 +714,7 @@
 	}
 	.image{
 		position: relative;
-		margin-top: 90px;
+		margin-top: 75px;
 		border-bottom: 1px solid #aaa;
 		img{
 			width: 238px;
@@ -753,8 +754,8 @@
 		.arrow{width: 12px;}
 	}
 	&.premium_tyre{
-		.image{margin-top: 40px;}
-		.premium-tyre--badge{margin-top: 15px;color: #fff;}
+		.image{margin-top: 35px;}
+		.premium-tyre--badge{margin-top: 5px;color: #fff;}
 		
 	}
 }

@@ -39,6 +39,7 @@
                 <div class="col-lg-6">
                     <h2 class="tyre--title uppercase mt-0">{!! htmlspecialchars_decode($tyre->preview_name) !!}</h2>
                     <h5 class="black">{{ implode(" | ", json_decode($tyre->tyre_categories->pluck('name'))) }}</h5>
+                    <div id="testfreaks-badge"></div>
                     <div class="tyre--description">
                         <p>{!! htmlspecialchars_decode($tyre->description) !!}</p>
                     </div>
@@ -71,6 +72,16 @@
                         @endphp
                         <x-tyre-fb-slider class="tyre--fb-slider"  :slides="$features" />
                     </div>
+                </div>
+            </div>
+        </div>
+    
+        <!--Test Freaks Reviews-->
+        
+        <div class="section bg-white py-0">
+            <div class="container clearfix">
+                <div class="row" style="display:block;">
+                    <div id="testfreaks-reviews"></div>
                 </div>
             </div>
         </div>

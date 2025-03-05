@@ -170,6 +170,8 @@
     <!-- Swiper JS -->
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
+     <script src="https://js.testfreaks.com/onpage/omni-united.com-radar/head.js"></script>
+    <script src="{{asset('js/testfreaks.js')}}"></script>
     
     <script type="text/javascript">
         $( function() {
