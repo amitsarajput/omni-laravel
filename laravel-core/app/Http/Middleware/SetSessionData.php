@@ -37,7 +37,11 @@ class SetSessionData
                 'bubble_closed'=>0,
                 'dealerform_open'=>0,
             ];
-            $all_countries=Country::where('published',1)->orderBy('order', 'asc')->get();
+            try{
+                $all_countries=Country::where('published',1)->orderBy('order', 'asc')->get();
+            }catch(\Exception $e){
+                return response('Error on the server. Please check after refreshing the page.');
+            }
             $omnidata['available_locations']=$all_countries->pluck('code','name')->toArray();
             $omnidata['available_locales']=$all_countries->pluck('locale_code','code')->toArray();
             $omnidata['slugs']=$all_countries->pluck('slug','code')->toArray();
