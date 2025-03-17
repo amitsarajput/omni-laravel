@@ -72,6 +72,9 @@ class StaticPagesController extends Controller
                 abort(404);  
             }
         }
+        if ($request_path === 'real-people') {
+            $this->data['page'] = $request_path;
+        }
         if (View::exists('pages/'.$this->data['page'])) {
             return view('pages/' . $this->data['page'], ['data'=>$this->data]);
         }else {

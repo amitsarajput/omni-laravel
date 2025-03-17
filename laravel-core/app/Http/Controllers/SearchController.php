@@ -19,12 +19,15 @@ class SearchController extends Controller
         if (trim($query)==='') {
             return view('search', compact('tyres', 'query'));
         }
-        if ($query=='') {            
+        if ($query!=='') {            
             // Search in relevant columns
             $tyres = Tyre::where('name', 'like', "%$query%")
             ->orWhere('description', 'like', "%$query%")
             ->get();
 
+            return view('search', compact('tyres', 'query'));
+        }
+        else {
             return view('search', compact('tyres', 'query'));
         }
     }

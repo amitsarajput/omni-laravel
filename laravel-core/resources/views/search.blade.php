@@ -1,7 +1,7 @@
 <x-guest-layout>
     <section id="content">
         <div class="section bg-white no-padding">
-            <div class="container el-height-50">
+            <div class="container">
                 <h2 class="center">Search Results for "{{ $query }}"</h2>
 
                 @if($tyres->isEmpty())
