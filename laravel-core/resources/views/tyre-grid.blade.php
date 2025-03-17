@@ -146,6 +146,7 @@
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
                             <h5 class="dark-100 mt-0 uppercase">SOCIAL RESPONSIBILITY</h5>
                             <p>We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
+                            <a class="knopf red heading-font sharp ls-1" href="{{ route('pages.responsibility-social') }}">READ MORE</a>
                         </div>
                     </div>
                 </div>

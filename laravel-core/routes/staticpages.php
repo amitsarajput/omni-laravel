@@ -47,8 +47,8 @@ Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->name('page
 });
 
 //Routes without country. Removed
-// Route::name('pages.')->group(function(){
-// 	Route::get('/environmental-responsibility', [StaticPagesController::class,'index'])->name('responsibility-environment');
-// 	Route::get('/social-responsibility', [StaticPagesController::class,'index'])->name('responsibility-social');
-// });
+Route::name('pages.')->group(function(){
+	// Route::get('/environmental-responsibility', [StaticPagesController::class,'index'])->name('responsibility-environment');
+	Route::get('/social-responsibility', [StaticPagesController::class,'index'])->name('responsibility-social');
+});
 

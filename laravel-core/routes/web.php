@@ -12,6 +12,7 @@ use App\Models\Region;
 use App\Models\SearchTag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SearchController;
 
 
 
@@ -75,6 +76,7 @@ Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
 
 //Locale routes
 Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->group(function () {
+    Route::get('/search', [SearchController::class, 'index'])->name('search');
     Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
     Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
