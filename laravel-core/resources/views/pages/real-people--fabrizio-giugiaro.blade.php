@@ -23,7 +23,7 @@
                         <h3 class="dark-100  no-top-margin uppercase">{{ __("Design meets performance ") }}</h3>
                         <p>For over two years, GFG Style has collaborated with Radar Tyres to create innovative tyre designs across all categories—from high-performance sports tyres to rugged off-road models and eco-friendly solutions. “Great design is not just about appearance; it must bring value and technology together,” Giugiaro explains. “The best results come from blending creativity with technical precision.”</p>
                         <p>At Radar Tyres, this philosophy is embedded in every product. The design process is not just about style—it is about ensuring the tyre enhances both function and performance without driving up costs.</p>
-                        <a class="knopf red heading-font sharp ls-1" href="{{ route('pages.why-radar') }}">WATCH VIDEO</a>
+                        <a class="knopf red heading-font sharp ls-1" href="#">WATCH VIDEO</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>
