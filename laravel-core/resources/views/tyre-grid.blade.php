@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <div class="grid grid-bleed align-center">
+            <!-- <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
                     <a href="{{ route('pages.premium-collection') }}">
                         <img src="{{asset('images/tyre-grid/group-t.webp')}}" alt="">
@@ -60,7 +60,7 @@
                         <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.real-people') }}">READ MORE</a>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!-- Implement This Text From Brand Database -->
         <!-- <div class="section bg-gray">
@@ -183,9 +183,13 @@
     <!-- Swiper JS -->
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
-     <script src="https://js.testfreaks.com/onpage/omni-united.com-radar/head.js"></script>
-    <script src="{{asset('js/testfreaks.js')}}"></script>
+    @if(session('omni_data.country')=='apac')
+    <script async src="https://js.testfreaks.com/onpage/radartyres-apac/head.js"></script>
+    @elseif(session('omni_data.country')=='eu')
+    <script async src="https://js.testfreaks.com/onpage/radartyres-eu/head.js"></script>
+    @endif
     
+    <script src="{{asset('js/testfreaks.js')}}"></script>
     <script type="text/javascript">
         $( function() {
             
