@@ -23,14 +23,14 @@ class SearchController extends Controller
         if (trim($query)==='' || $country===null) {
             return view('search', compact('tyres', 'query'));
         }
-        if ($query!=='') {            
-            // Search in relevant columns
-            $tyres = Tyre::where('country_id', $c_id)
-            ->where('publish', 1)
-            ->where('name', 'like', "%$query%")
-            ->orWhere('description', 'like', "%$query%")
-            ->get();
-            return view('search', compact('tyres', 'query'));
+        if ($query!=='') { 
+            $tyres = Tyre::where(function ($q) use ($query) {
+                        $q->where('name', 'like', "%$query%")
+                          ->orWhere('description', 'like', "%$query%");
+                    })->where('publish', '1')->where('country_id', $c_id->id)
+                    
+                    ->get();
+                return view('search', compact('tyres', 'query'));
         }
         else {
             return view('search', compact('tyres', 'query'));
