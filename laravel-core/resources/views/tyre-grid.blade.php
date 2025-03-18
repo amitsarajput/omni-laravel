@@ -47,7 +47,7 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="grid grid-bleed align-center">
+            <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
                     <a href="{{ route('pages.premium-collection') }}">
                         <img src="{{asset('images/tyre-grid/group-t.webp')}}" alt="">
@@ -60,7 +60,7 @@
                         <a  class="knopf red heading-font sharp ls-1" href="{{ route('pages.real-people') }}">READ MORE</a>
                     </div>
                 </div>
-            </div> -->
+            </div>
         </div>
         <!-- Implement This Text From Brand Database -->
         <!-- <div class="section bg-gray">
