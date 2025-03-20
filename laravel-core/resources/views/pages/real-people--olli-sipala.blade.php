@@ -24,7 +24,7 @@
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-3">
                         <h3 class="dark-100  no-top-margin">{{ __("A CAREER BUILT ON EXPERTISE ") }}</h3>
                         <p>Olli’s journey in tyre innovation began at Nokian Tyres, where he spent nearly two decades honing his skills in product development and leading R&D teams. In 2022, he joined Radar Tyres, bringing a wealth of experience and a passion for pushing boundaries. “The tyre industry has evolved tremendously in the past 20 years,” Olli explains. “Performance demands, sustainability requirements, and legislative standards have all become more stringent, making innovation more critical than ever.”</p>
-                        <a class="knopf red heading-font sharp ls-1" href="#">WATCH VIDEO</a>
+                        <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/LVP-xecALQk" target="_blank">WATCH VIDEO</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>

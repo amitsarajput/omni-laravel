@@ -25,7 +25,7 @@
                         <h3 class="dark-100  no-top-margin uppercase">{{ __("A career forged on the track") }}</h3>
                         <p>Stéphane began his journey in 2000 as a test driver for Continental Tyres, focusing on Original Equipment (OE) tyres for BMW. Over the next three years, he honed his skills in precision testing, learning the nuances of chassis and tyre dynamics. In 2003, Stéphane took a bold leap into freelancing, collaborating with leading tyre brands such as Dunlop, Yokohama, Hankook, and Bridgestone.</p>
                         <p>A key highlight of Stéphane’s career has been his expertise on the legendary Nürburgring Nordschleife in Germany. For over a decade, he spent up to 15 weeks annually mastering the world’s most demanding racetrack, where he not only tested tyres but also trained future test drivers.</p>
-                        <a class="knopf red heading-font sharp ls-1" href="#">WATCH VIDEO</a>
+                        <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/WiIYifeGdIY" target="_blank">WATCH VIDEO</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>

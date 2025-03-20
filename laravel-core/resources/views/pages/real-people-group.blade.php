@@ -29,7 +29,7 @@
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("CUTTING-EDGE R&D") }}</h3>
                         <p>Olli Seppälä, Head of R&D, leads the charge in engineering tyres that combine state-of-the-art materials and advanced manufacturing techniques. His vision is to deliver premium quality through a global network—without the premium price. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.olli-seppala') }}">READ MORE</a></p>
-                        <a class="knopf red heading-font sharp ls-1" href="#">WATCH VIDEO</a>
+                        <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/LVP-xecALQk" target="_blank">WATCH VIDEO</a>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
                     <div class="ma-xxs-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("TESTING EXCELLENCE") }}</h3>
                         <p>Test driver Stephane Clepkens pushes every Radar tyre to the limit, rejecting anything that doesn’t outperform expectations. His mission? To ensure Radar Tyres rival and even surpass premium brands in real-world performance. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.stephane-clepkens') }}">READ MORE</a></p>
-                        <a class="knopf red heading-font sharp ls-1" href="#">WATCH VIDEO</a>
+                        <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/WiIYifeGdIY" target="_blank">WATCH VIDEO</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>
@@ -58,7 +58,7 @@
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("ICONIC DESIGN") }}</h3>
                         <p>Legendary automotive designers Giorgetto and Fabrizio Giugiaro (GFG Style) bring the same ethos of luxury car design to Radar Tyres. Their philosophy? High-end aesthetics and performance shouldn’t be reserved for a select few but should be accessible to every driver. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.fabrizio-giugiaro') }}">READ MORE</a></p>
-                        <a class="knopf red heading-font sharp ls-1" href="#">WATCH VIDEO</a>
+                        <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/oGc5hAfOeIA" target="_blank">WATCH VIDEO</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>
