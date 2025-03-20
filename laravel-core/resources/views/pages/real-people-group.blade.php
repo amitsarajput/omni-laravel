@@ -14,8 +14,8 @@
         <div class="container">
             <div class="grid">
                 <div class="col-md-12 col-bleed-y mb-4">
-                    <h3 class="no-top-margin dark-100">At Radar Tyres, we believe that premium performance isn’t just about technology—it’s about the people who push the limits of innovation, safety and design</h3>
-                    <p>Our commitment to making high-quality tyres accessible to all is driven by the expertise of world-class professionals who ensure every tyre meets the highest standards.</p>
+                    <h3 class="no-top-margin dark-100">At Radar Tyres, we believe that premium performance isn't just about technology—it’s about the passion and expertise of the people who push the limits of innovation, safety and design.</h3>
+                    <p>Our commitment to making premium, high-quality tyres accessible to all is driven by these world-class professionals who ensure every tyre meets the highest standards.</p>
                 </div>
             </div>
             
@@ -28,7 +28,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("CUTTING-EDGE R&D") }}</h3>
-                        <p>Olli Seppälä, Head of R&D, leads the charge in engineering tyres that combine state-of-the-art materials and advanced manufacturing techniques. His vision is to deliver premium quality through a global network—without the premium price. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.olli-seppala') }}">READ MORE</a></p>
+                        <p>Olli Seppälä, Head of R&D, leads the charge in engineering tyres that combine state-of-the-art materials and advanced manufacturing techniques. His vision is to deliver premium quality through a world-class global manufacturing network—without the premium price. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.olli-seppala') }}">READ MORE</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/LVP-xecALQk" target="_blank">WATCH VIDEO</a>
                     </div>
                 </div>
