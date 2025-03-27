@@ -57,7 +57,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("ICONIC DESIGN") }}</h3>
-                        <p>Legendary automotive designers Giorgetto and Fabrizio Giugiaro (GFG Style) bring the same ethos of luxury car design to Radar Tyres. Their philosophy? High-end aesthetics and performance shouldn’t be reserved for a select few but should be accessible to every driver. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.fabrizio-giugiaro') }}">READ MORE</a></p>
+                        <p>Fabrizio Giugiaro, the visionary designer behind some of the world’s most iconic automotive creations and the founder of GFG Style. Now, he brings his expertise to Radar Tyres, redefining what tyre design means in terms of aesthetics, performance, and accessibility. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.fabrizio-giugiaro') }}">READ MORE</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/oGc5hAfOeIA" target="_blank">WATCH VIDEO</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
