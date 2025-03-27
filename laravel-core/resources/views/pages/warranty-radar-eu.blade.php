@@ -33,8 +33,12 @@
 					<div class="col-md-12 col-bleed-y ">
 						<h3 class=" dark-100">WARRANTY INFORMATION</h3>
 						<ul class="text-md no-bullets li-icons">
-							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Quick_Reference_Guide_A5--radar-eu.pdf') }}"><x-icon-download-ico /> Buyers Warranty Guide</a> – Passenger and Light Truck replacement tyres purchased after 1<sup>st</sup>	 January, 2024</li>
-							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Limited_Warranty_Booklet--radar-eu.pdf') }}"><x-icon-download-ico /> Limited Warranty Booklet</a> - Passenger and Light Truck replacement tyres purchased after 1<sup>st</sup> January, 2024</li>
+						<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/EUROPE-Non-Baltic-region-Limited-Warranty-Booklet.pdf') }}"><x-icon-download-ico /> EUROPE (Non-Baltic region) Limited Warranty Booklet</a> – Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025</li>
+						<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/BALTIC-REGION-Limited-Warranty-Book.pdf') }}"><x-icon-download-ico /> BALTIC REGION  Limited Warranty Booklet</a> – Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025</li>
+
+
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Quick_Reference_Guide_A5--radar-eu.pdf') }}"><x-icon-download-ico /> Buyers Warranty Guide</a> – Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024</li>
+							<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Limited_Warranty_Booklet--radar-eu.pdf') }}"><x-icon-download-ico /> Limited Warranty Booklet</a> - Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024</li>
 							<li><a href="{{ asset('storage/colletrals/Claim_Form - CL01_RA-EU_Tyres--radar-eu.pdf') }}"><x-icon-download-ico /> Claim Form</a> - Passenger and Light Truck replacement tyres purchased after  1<sup>st</sup> January, 2024</li>
 						</ul>
 					</div>
