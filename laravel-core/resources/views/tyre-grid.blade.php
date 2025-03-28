@@ -164,7 +164,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid align-center">
+                <!-- <div class="grid align-center">
                     <div class="col-md-6 col-sm-12 col-bleed order-md-2">
                         <img src="{{asset('images/tyre-grid/environmental-responsibility.webp')}}" alt="Environmental Responsibility">
                     </div>
@@ -174,7 +174,7 @@
                             <p>{{ __("We continually strive to minimise our impact through sustainable practices. By late 2013, Radar Tyres became the first carbon-neutral tyre brand. We have extended this commitment to carbon neutrality from cradle to grave for certain products and geographies, aiming to remain carbon neutral until 2030, in line with requirements of PAS 2060.") }}</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>

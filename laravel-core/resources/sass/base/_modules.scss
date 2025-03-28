@@ -1667,6 +1667,7 @@ ol.breadcrumb {
 			opacity: 0.6;
 			margin:0 30px 0 30px!important;
 			background: $white;
+			@include touch{ margin:0 10px 0 10px!important; }
 			&:hover{
 				opacity: 0.8;
 			}
