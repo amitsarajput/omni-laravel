@@ -42,7 +42,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("TESTING EXCELLENCE") }}</h3>
-                        <p>Test driver Stephane Clepkens pushes every Radar tyre to the limit, rejecting anything that doesn’t outperform expectations. His mission? To ensure Radar Tyres rival and even surpass premium brands in real-world performance. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.stephane-clepkens') }}">READ MORE</a></p>
+                        <p>Test driver Stéphane Clepkens pushes every Radar tyre to the limit, rejecting anything that doesn’t outperform expectations. His mission? To ensure Radar Tyres rival and even surpass premium brands in real-world performance. <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.stephane-clepkens') }}">READ MORE</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/WiIYifeGdIY" target="_blank">WATCH VIDEO</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
