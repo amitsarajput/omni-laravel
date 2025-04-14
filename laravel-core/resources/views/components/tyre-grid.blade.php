@@ -3,7 +3,8 @@
     @foreach ($tyres as $tyre)
         <div class="tyre {{ $tyre->premium_tyre?'premium_tyre':'' }}">
             <h3 class="title">
-                <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
+                <!-- <a href="{{url($tyre->region->slug.'/'.$tyre->region->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}"> -->
+                <a href="{{safeRoute('tyre.single',['brand' => $tyre->brand->slug, 'tyre' => $tyre->slug])}}">
                     {!! htmlspecialchars_decode($tyre->preview_name) !!}
                 </a>
             </h3>

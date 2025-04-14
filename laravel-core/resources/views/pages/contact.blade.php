@@ -6,31 +6,31 @@
 			<div class="section bg-white">
 				<div class="container">
 					<div class="heading-block center">
-					<h2>Contact US</h2>
+					<h2>{{_("Contact US")}}</h2>
 					</div>
 				</div>
 				<div class="container">
 					<div class="grid">
 						<div class="col-md-8">
 							<p>
-								If you are interested in distributing Radar Tyres, looking for a dealer near you or have any other query you can contact us via the below form or you can write to us at <span style="white-space:nowrap;"><a class="blue" href="mailto:info@omni-united.com">info@omni-united.com</a></span> and we will get back to you as soon as we can.
+								{{__("If you are interested in distributing Radar Tyres, looking for a dealer near you or have any other query you can contact us via the below form or you can write to us at")}} <span style="white-space:nowrap;"><a class="blue" href="mailto:info@omni-united.com">info@omni-united.com</a></span> {{__("and we will get back to you as soon as we can.")}}
 							</p>
 							<x-ContactusForm class="mt-2" />
 						</div>
 						<div class="col-md-4">
 							@php 
 								$caddress=[ [
-									'title'=>"SINGAPORE (HQ)", 
+									'title'=>__("SINGAPORE (HQ)"), 
 									'address'=>"<b>Omni United (S) Pte Ltd</b><br>2 Central Boulevard, <br>#08-04A West Tower, <br>IOI Central Boulevard, <br>Singapore 018916" ,
 									'phone'=>"T: +65 6423 1431 <br>F: +65 6423 0938" ,
-									'workingHours'=>"Business Hrs: 0900 – 1800 (UTC+8)<br> Monday – Friday" 
+									'workingHours'=>__('Business Hrs:')." 0900 – 1800 (UTC+8)<br> ".__('Monday – Friday')
 									]
 									/*,[
 									'title'=>"UNITED STATES", 
 									'address'=>"<b>Omni United USA, Inc</b><br> 3750 S. Watson Rd.,<br> Suite 100,<br> Arlington, TX 76014" ,
 									'phone'=>" T: 800-725-1482 (Toll Free) " ,
-									'workingHours'=>"Business Hrs: 0900 – 1800 (UTC-5)<br>
-									Monday – Friday" 
+									'workingHours'=>__('Business Hrs:')." 0900 – 1800 (UTC+8)<br> ".__('Monday – Friday')
+									
 									]*/
 									 ];
 							@endphp

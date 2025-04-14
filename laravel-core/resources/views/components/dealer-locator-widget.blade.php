@@ -5,30 +5,30 @@
     <form id="dealer-map--search"  class="dealer-map--search" action="#" onsubmit="formsubmission(event, this)">
         <div class="inputs">
             <div class="form-group">
-                <label>Enter Zipcode or Location</label>
+                <label>{{__(strtoupper('Enter Zipcode or Location'))}}</label>
                 <input id="autocomplete" type="text" name="postal" placeholder="enter zip code here" class="sm-form-control">
             </div>
 
             <div class="form-group">
-                <label>choose search radius</label>
+                <label>{{__(strtoupper("choose search radius"))}}</label>
                 <select name="selectcity" id="selectcity" onchange="" class="form-control">
-                        <option value="5">5 kilometre radius</option>
-                        <option value="10">10 kilometre radius</option>
-                        <option value="25" selected="selected">25 kilometre radius</option>
-                        <option value="50">50 kilometre radius</option>
-                        <option value="100">100 kilometre radius</option>
+                        <option value="5">{{__("5 kilometre radius")}}</option>
+                        <option value="10">{{__("10 kilometre radius")}}</option>
+                        <option value="25" selected="selected">{{__("25 kilometre radius")}}</option>
+                        <option value="50">{{__("50 kilometre radius")}}</option>
+                        <option value="100">{{__("100 kilometre radius")}}</option>
                 </select>
             </div>
         </div>
         <div class="buttons">
             <div class="formbutton">
-                <input type="submit" id="submitbutt" class="knopf red sharp uppercase hover-black-80 ls-1" value="search" />
+                <input type="submit" id="submitbutt" class="knopf red sharp uppercase hover-black-80 ls-1" value="{{__('SEARCH')}}" />
             </div>
             <div class="formbutton text">
-                <label class=" ortext">or</label>
+                <label class=" ortext">{{__('OR')}}</label>
             </div>
             <div class="formbutton">
-                <button  type="button" class="knopf red sharp uppercase hover-black-80 ls-1"  onclick="geolocate();">use my location</button>
+                <button  type="button" class="knopf red sharp uppercase hover-black-80 ls-1"  onclick="geolocate();">{{__('USE MY LOCATION')}}</button>
             </div>
         </div>
     </form>

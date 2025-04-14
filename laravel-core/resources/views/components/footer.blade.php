@@ -32,38 +32,38 @@
                                     href="#tyres" 
                                     scroll-to="#tyres" 
                                 @else
-                                    href="{{ route('home').'#tyres'}}"
+                                    href="{{ safeRoute('home').'#tyres'}}"
                                 @endif
-                                >TYRES</a>
-                <a  href="{{ route('pages.why-radar')}}">WHY RADAR</a>
+                                >{{__('TYRES')}}</a>
+                <a  href="{{ safeRoute('pages.why-radar')}}">{{__('WHY RADAR')}}</a>
                 <a  
                     @if( request()->routeIs('home') )
                         href="#dealer-locator" 
                         scroll-to="#dealer-locator" 
                     @else
-                        href="{{route('home').'#dealer-locator'}}"
+                        href="{{safeRoute('home').'#dealer-locator'}}"
                     @endif
-                    >DEALER LOCATOR</a>
+                    >{{__('DEALER LOCATOR')}}</a>
             </div>
             <div class="footer-col">
                 <!-- <div class="title">BRANDS</div> -->
-                <a href="{{ route('pages.about-us')}}">ABOUT US</a>
+                <a href="{{ safeRoute('pages.about-us')}}">{{__('ABOUT US')}}</a>
                 <a  
                     @if( request()->routeIs('home') )
                         href="#responsiblity" 
                         scroll-to="#responsiblity" 
                     @else
-                        href="{{route('home').'#responsiblity'}}"
+                        href="{{safeRoute('home').'#responsiblity'}}"
                     @endif
-                    >RESPONSIBILITY</a>
-                    <a href="{{ route('pages.warranty') }}">WARRANTY</a>
+                    >{{__('RESPONSIBILITY')}}</a>
+                    <a href="{{ safeRoute('pages.warranty') }}">{{__('WARRANTY')}}</a>
 
                 <!--<a href="https://www.omni-united.com/dealer-login">Dealer Corner</a>-->
             </div>
             <div class="footer-col">
-                <a href="https://www.omni-united.com/">OMNI UNITED</a>
-                <a href="https://www.omni-united.com/omni-sync">OMNISYNC LOGIN</a>
-                <a href="{{ route('pages.contact')}}">CONTACT US</a>
+                <a href="https://www.omni-united.com/">{{__('OMNI UNITED')}}</a>
+                <a href="https://www.omni-united.com/omni-sync">{{__('OMNISYNC LOGIN')}}</a>
+                <a href="{{ safeRoute('pages.contact')}}">{{__('CONTACT US')}}</a>
             </div>
             
         </div>
@@ -82,7 +82,7 @@
                     </div>
 
                     <div class="col-auto tright">
-                        <a href="{{route('pages.privacy-policy')}}">Privacy Policy</a>
+                        <a href="{{safeRoute('pages.privacy-policy')}}">Privacy Policy</a>
                         <div class="seperator">•</div>
                         @cookieconsentbutton(action: 'reset', label: 'Manage cookies', attributes: ['id' => 'reset-button', 'class' => ''])
                         <!--

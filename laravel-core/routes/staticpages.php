@@ -29,8 +29,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-
-Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->name('pages.')->group(function(){
+Route::geo(function(){
 	Route::get('/about-us', [StaticPagesController::class,'index'])->name('about-us');
 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
 	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
@@ -49,18 +48,33 @@ Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->name('page
 	Route::get('/olli-seppala', [StaticPagesController::class,'index'])->name('olli-seppala');
 	Route::get('/stephane-clepkens', [StaticPagesController::class,'index'])->name('stephane-clepkens');
 	Route::get('/fabrizio-giugiaro', [StaticPagesController::class,'index'])->name('fabrizio-giugiaro');
+},'pages.');
+
+// Route::prefix('{region:slug}/{country:slug?}')->where(['region'=>'[a-zA-Z]{2,4}','country'=>'[a-zA-Z]{2}'])->name('pages.')->group(function(){
+// 	Route::get('/about-us', [StaticPagesController::class,'index'])->name('about-us');
+// 	Route::get('/why-radar', [StaticPagesController::class,'index'])->name('why-radar');
+// 	Route::get('/dealer-locator', [StaticPagesController::class,'index'])->name('dealer-locator');
+// 	//Contact Page
+// 	Route::get('/contact-us', [StaticPagesController::class, 'index'])->name('contact');
+// 	Route::get('/warranty', [StaticPagesController::class,'index'])->name('warranty');
+// 	Route::get('/premium-collection', [StaticPagesController::class,'index'])->name('premium-collection');
+// 	Route::get('/ceo-message', [StaticPagesController::class,'index'])->name('ceo-message');
+// 	Route::get('/testing', [StaticPagesController::class,'index'])->name('testing');
+// 	Route::get('/privacy-policy', [StaticPagesController::class,'index'])->name('privacy-policy');
+// 	Route::get('/red-partner', [StaticPagesController::class,'index'])->name('red-partner');
+// 	Route::get('/new-european-tyre-labeling', [StaticPagesController::class,'index'])->name('eu-labeling');
+
 	
-});
+// 	Route::get('/real-people-group', [StaticPagesController::class,'index'])->name('real-people');
+// 	Route::get('/olli-seppala', [StaticPagesController::class,'index'])->name('olli-seppala');
+// 	Route::get('/stephane-clepkens', [StaticPagesController::class,'index'])->name('stephane-clepkens');
+// 	Route::get('/fabrizio-giugiaro', [StaticPagesController::class,'index'])->name('fabrizio-giugiaro');
+	
+// });
 
 //Routes without country. Removed
 Route::name('pages.')->group(function(){
 	// Route::get('/environmental-responsibility', [StaticPagesController::class,'index'])->name('responsibility-environment');
 	Route::get('/social-responsibility', [StaticPagesController::class,'index'])->name('responsibility-social');
-
-	
-	Route::get('/real-people-group', [StaticPagesController::class,'index'])->name('real-people');
-	Route::get('/olli-seppala', [StaticPagesController::class,'index'])->name('olli-seppala');
-	Route::get('/stephane-clepkens', [StaticPagesController::class,'index'])->name('stephane-clepkens');
-	Route::get('/fabrizio-giugiaro', [StaticPagesController::class,'index'])->name('fabrizio-giugiaro');
 });
 

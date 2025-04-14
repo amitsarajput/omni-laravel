@@ -13,30 +13,20 @@
                     
                 <p>
                     <em>
-                    Dear friend,<br><br>
+                    {{__('Dear friend,')}}<br><br>
 
-                    I am thrilled to share our approach, passion and vision
-                    that drive Radar Tyres. We believe in creating a brand that
-                    stands for quality and innovation while making premium
-                    products accessible to everyone. <br><br>
+                    {{__('I am thrilled to share our approach, passion and vision that drive Radar Tyres. We believe in creating a brand that stands for quality and innovation while making premium products accessible to everyone.')}} <br><br>
 
-                    Our mission is to offer premium, high-quality tyres that
-                    are affordable for all, bridging the gap between superior
-                    performance and cost-effectiveness. We aim to be the game
-                    changer in the tyre industry. Our long-term goals include
-                    expanding our market coverage, continuously improving
-                    our products and maintaining the highest standards of
-                    sustainability and responsibility.<br><br>
+                    {{__('Our mission is to offer premium, high-quality tyres that are affordable for all, bridging the gap between superior performance and cost-effectiveness. We aim to be the game changer in the tyre industry. Our long-term goals include expanding our market coverage, continuously improving our products and maintaining the highest standards of sustainability and responsibility.')}}<br><br>
 
-                    We will continue to drive forward, breaking new
-                    ground and setting new standards in the tyre industry.<br><br>
+                    {{__('We will continue to drive forward, breaking new ground and setting new standards in the tyre industry.')}}<br><br>
 
-                    Warm regards,<br><br>
+                    {{__('Warm regards,')}}<br><br>
 
                     <img src="{{ asset('images/sig.webp') }}" alt="" width="300"><br><br>
 
                     <b>G S Sareen</b><br>
-                    President & CEO<br>
+                    {{__('President & CEO')}}<br>
                     Omni United (S) Pte Ltd
 
 

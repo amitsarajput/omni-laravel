@@ -1270,6 +1270,10 @@ ol.breadcrumb {
 		letter-spacing: 1px;
 		text-shadow: none;
 		word-spacing: -2px;
+		.select2-results__option--group{
+			.select2-results__group{padding: 0;}
+			.select2-results__options--nested{}
+		}
 	}
 }
 
@@ -1514,7 +1518,9 @@ ol.breadcrumb {
 	right: 0;
 	top: 50%;
 	transform: translateY(-50%);
+	line-height: 1.2;
 	z-index: 10;
+	@include touch{ width: 70px; }
 	a{
 		font-family: $heading-font;
 		letter-spacing: 1px;
@@ -1522,9 +1528,11 @@ ol.breadcrumb {
 		padding:15% 10%;
 		color: #fff;
 		text-align: center;
+		@include touch{ font-size: 10px;padding:12% 5%; }
 		&.red{background-color: $red;}
 		&.black{background-color: $dark-100;}
-		.s-icon{ display:block;width: 40px;margin: auto;}
+		.s-icon{ display:block;width: 40px;margin: auto;
+			@include touch{ width: 25px; }}
 	}
 }
 

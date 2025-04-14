@@ -9,6 +9,7 @@ use App\Http\Controllers\TyreController;
 use App\Models\Brand;
 use App\Models\Country;
 use App\Models\Region;
+use App\Models\Tyre;
 use App\Models\SearchTag;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -19,7 +20,7 @@ use App\Http\Controllers\SearchController;
 
 
 
-
+//dd(Route::hasMacro('geo'));
 
 /*
 |--------------------------------------------------------------------------
@@ -75,14 +76,28 @@ Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
 
 
 //Locale routes
-Route::prefix('{country:slug}')->where(['country'=>'[a-zA-Z]{2,4}'])->group(function () {
+// Route::prefix('{region:slug}')->where(['region'=>'[a-zA-Z]{2,4}'])->group(function () {
+//     Route::get('/search', [SearchController::class, 'index'])->name('search');
+//     Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
+//     Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
+//     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
+    
+// });
+
+
+// Route::prefix('{region:slug}/{country:slug?}')->where(['region'=>'[a-zA-Z]{2,4}','country'=>'[a-zA-Z]{2}'])->group(function(){
+//     Route::get('/search', [SearchController::class, 'index'])->name('search');
+//     Route::get('/', [TyreController::class, 'tyre_grid'])->name('home');
+//     Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
+//     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');    
+// });
+
+Route::geo(function () {
     Route::get('/search', [SearchController::class, 'index'])->name('search');
     Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
     Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
 });
-
-
 
 
 

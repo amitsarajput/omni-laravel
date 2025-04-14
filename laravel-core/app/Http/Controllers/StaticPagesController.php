@@ -19,15 +19,23 @@ class StaticPagesController extends Controller
             $request_path=$request->path();
         }
         return $request_path;
-        
     }
-    public function index(Request $request, $country=null){
+    public function index(Request $request, $region=null, ? string $country=null){
+        //$omnidata=session('omni_data');
+        //dd($omnidata);
+        //dd($region,$country);
         //print_r('StaticPagesController');
         //$request->fullUrl(); $request->path(); $request->root();
 
         $request_path=$this->get_request_path($request, $country);
+
+        if ($region!==null) {
+            $request_path=str_replace($region.'/','',$request_path);
+        }
+        if ($country!==null) {
+            $request_path=str_replace($country.'/','',$request_path);
+        }
         
-        //dd($country,$request_path);
         $this->data=[];
         if ($request_path==='about-us') {
             $this->data['page']=$request_path;

@@ -3,12 +3,13 @@ $classes = ( $bubbleclosed == 1 )
             ? 'location-bubble location-bubble--closed'
             : 'location-bubble';
 $location_locale=[
-	'EU'=>'European',
-	'APAC'=>'Asian',
-	'MEA'=>'Middle East and Africa',
-	'US'=>'American',
-	'CA'=>'Canadian',
-	'ROW'=>'Rest of the World'
+	'eu'=>'European',
+	'es'=>'Spanish',
+	'apac'=>'Asian',
+	'mea'=>'Middle East and Africa',
+	'us'=>'American',
+	'ca'=>'Canadian',
+	'row'=>'Rest of the World'
 	];
 @endphp
 
@@ -23,8 +24,8 @@ $location_locale=[
 				@foreach ($all_locations as $key=>$value)
 					<option data-icon="omniicon-location-pin" 
 							value="{{ $value }}" 
-							{{ ($value === $location ) ? 'selected="selected"' : '' }} 
-							> {{ strtoupper($key) }} </option>
+							{{ ($value === $location ) ? 'selected="selected"' : '' }}
+							> {{ __(strtoupper($key)) }} </option>
 				@endforeach
 			</select>
 		</div>

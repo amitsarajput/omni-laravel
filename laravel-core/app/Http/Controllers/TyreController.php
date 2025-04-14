@@ -23,6 +23,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 use Stevebauman\Location\Facades\Location;
 
 use App\Http\Controllers\XlsxController;
+use Illuminate\Support\Facades\Route;
 
 class TyreController extends Controller
 {
@@ -30,6 +31,8 @@ class TyreController extends Controller
     public function __construct()
     {
         $this->middleware('auth')->except(['tyre_grid','tyre_single','testing']);
+        //$action = Route::currentRouteAction();
+        //dd($action); // App\Http\Controllers\TyreController@tyre_single
     }
     /**
      * Display a listing of the resource.
@@ -54,14 +57,14 @@ class TyreController extends Controller
         $country=$brand->countries()->firstWhere('country_id',$country);
         dd($country->pivot->kram);
     }
-    public function tyre_grid(?string $country=null, $brand=null, $region=null )
+    public function tyre_grid($region=null, ?string $country=null, $brand=null )
     {
+        
+        //dd('region- '.$region, 'country- '.$country, 'brand- '.$brand);
         //session()->invalidate();
         $omni_data=session('omni_data');
-        //dd(session());
-        // check country
-
-        if (!in_array(strtoupper($country),$omni_data['available_locations'])) {
+        
+        if (!in_array($country,$omni_data['available_locations'])) {
             $country=null;
         }
         //Set variables//
@@ -73,44 +76,72 @@ class TyreController extends Controller
         //Set session data//
         $omni_data['region']=$region_str;
         $omni_data['country']=$country_str;
-        $omni_data['preffered_location']=strtoupper($country_str);
+        $omni_data['preffered_location']=$country_str??$region_str;
         $omni_data['brand']=$brand_str;
         session(['omni_data'=>$omni_data]);
-
+        //dd(session('omni_data'));
         //set view
         $brand_country=strtolower($omni_data['brand'].'-'.$omni_data['country']);
-
+        
         //Find tyres
-        $region=Region::where('slug', $region_str)->first();
-        $country=Country::with('brands')->where('slug', $country_str)->first();
-        $brand=$country->brands()->firstWhere('slug', $brand_str);
-        $search_tags = SearchTag::getTagsByCountryAndBrand($country->id, $brand->id);
+        $region=Region::with('search_tags')->where('slug', $region_str)->first();
+        //dd($region_str, $country_str, $brand_str);
+        $country=null;
+        if($country_str!==''){ 
+            $country=Country::with('brands')->where('slug', $country_str)->first();
+        }
+        $brand=Brand::firstWhere('slug', $brand_str);
+        //dd($region,$country_str,$brand);
+        //$search_tags = SearchTag::getTagsByCountryAndBrand($country->id, $brand->id);
+        $search_tags = $region->search_tags;
         // Get seasons
         $seasons=Season::all();//->pluck('name','id')
-        //dd($country);
+        //dd($brand);
         //if (empty($search_tags)){
             //print_r('0 search_tags');
             //abort(404);
-        //}
-        
-        $tyres=Tyre::with('country','brand','search_tag','icons','tyre_categories','season')->where(['country_id'=>$country->id,'brand_id'=>$brand->id, 'publish'=>1])->orderBy('order', 'asc')->get();
+            //}
+            
+            $tyres=Tyre::with('region','brand','search_tag','icons','tyre_categories','season')->where(['region_id'=>$region->id,'brand_id'=>$brand->id, 'publish'=>1])->orderBy('order', 'asc')->get();
+            //dd($tyres);
 
         //get brand details based on country and brand
-        $branddetails=BrandExtraDetail::getBEDByCountryAndBrand($country->id, $brand->id);
-        $branddetailstext=$branddetails?explode('****',json_decode($branddetails->text)):'';
+        //$branddetails=BrandExtraDetail::getBEDByCountryAndBrand($country->id, $brand->id);
+        //$branddetailstext=$branddetails?explode('****',json_decode($branddetails->text)):'';
         //dd($branddetails);
-        return view('tyre-grid',compact('tyres','search_tags','brand_country','branddetailstext','seasons'));
+        return view('tyre-grid',compact('tyres','search_tags','brand_country','seasons'));//,'branddetailstext'
     }
     
 
     /**
      * Display the specified resource.
      */
-    public function tyre_single($brand=null,$country=null, Tyre $tyre)
+    public function tyre_single($region=null, ?string $country=null, $brand=null, $tyre=null)
     {
-        //print_r('tyre_single');
-        //dd($tyre, $brand, $country);
+        
+        // Retrieve session data
+        $omni_data = session('omni_data');
+
+        // Retrieve all the slugs from url 
+        $regionSlug=extractRegionFromUrl();
+        $countrySlug=extractCountryFromUrl();
+        
+        //Adjust slugs if country is provided or not
+        if ($countrySlug===null) {
+            $brandSlug=$country ?? $omni_data['brand'];
+            $tyreSlug=$brand;
+        }else {
+            $brandSlug=$brand ?? $omni_data['brand'];
+            $tyreSlug=$tyre;
+        }
+        
+        // Retrieve tyre with slug.
+        if ($tyreSlug!==null) {
+            $tyre = Tyre::whereSlug($tyreSlug)->where('publish', 1)->first();
+        }
+        
         return view('tyre-single',compact('tyre'));
+        //dd($regionSlug, $countrySlug, $brandSlug, $tyre);
     }
     
     public function index()
@@ -124,6 +155,9 @@ class TyreController extends Controller
      */
     public function create()
     {
+        $region=Region::all()->pluck('name','id')->map(function (string $item, string $key) {
+            return strtoupper($item);
+        });
         $country=Country::all()->pluck('name','id')->map(function (string $item, string $key) {
             return strtoupper($item);
         });
@@ -135,7 +169,7 @@ class TyreController extends Controller
         $icon=Icon::all()->pluck('name','id');
         $season=Season::all()->pluck('name','id');
 
-        return view('admin.tyre.create',compact('country','brand','searchtag','icon','tyrecategory','season'));
+        return view('admin.tyre.create',compact('region','country','brand','searchtag','icon','tyrecategory','season'));
     }
 
     /**
@@ -145,6 +179,7 @@ class TyreController extends Controller
     {
         //dd($request);
         $request->validate([
+            'region' => ['required', 'integer'],
             'country' => ['required', 'integer'],
             'brand' => ['required', 'integer'],
             'searchtag' => ['required', 'integer'],
@@ -161,6 +196,7 @@ class TyreController extends Controller
             'product_images.*' => ['file','mimes:webp,jpg,png','max:6024','nullable'],
         ]);
         $createtyrearray =[
+                'region_id' => $request->region,
                 'country_id' => $request->country,
                 'brand_id' => $request->brand,
                 'search_tag_id' => $request->searchtag,
@@ -228,6 +264,9 @@ class TyreController extends Controller
      */
     public function edit(Tyre $tyre)
     {
+        $region=Region::all()->pluck('name','id')->map(function (string $item, string $key) {
+            return strtoupper($item);
+        });
         $country=Country::all()->pluck('name','id')->map(function (string $item, string $key) {
             return strtoupper($item);
         });
@@ -239,7 +278,7 @@ class TyreController extends Controller
         $icon=Icon::all()->pluck('name','id');
         $season=Season::all()->pluck('name','id');
 
-        return view('admin.tyre.edit',compact('tyre','country','brand','searchtag','icon','tyrecategory','season'));
+        return view('admin.tyre.edit',compact('tyre','region','country','brand','searchtag','icon','tyrecategory','season'));
     }
 
     /**
@@ -249,6 +288,7 @@ class TyreController extends Controller
     {
         //dd($request);
         $request->validate([
+            'region' => ['required', 'integer'],
             'country' => ['required', 'integer'],
             'brand' => ['required', 'integer'],
             'searchtag' => ['required', 'integer'],
@@ -265,6 +305,7 @@ class TyreController extends Controller
             'product_images.*' => ['file','mimes:webp,jpg,png','max:6024'],
         ]);
         $tyreupdataarray=[
+            'region_id' => $request->region,
             'country_id' => $request->country,
             'brand_id' => $request->brand,
             'search_tag_id' => $request->searchtag,

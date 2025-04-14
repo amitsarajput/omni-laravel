@@ -3,7 +3,7 @@
         {{ Form::hidden('phone', '') }}
         {{ Form::hidden('url_current', url()->current()) }}
         {{ Form::hidden('g-recaptcha-response', '',['id'=>'g-recaptcha-response']) }}
-        <h4>SEND AN ENQUIRY</h4>
+        <h4>{{__("SEND AN ENQUIRY")}}</h4>
         @if ($errors->any())
             <div class="alert alert-danger  error horizontal" role="alert">
                 <ul>
@@ -15,25 +15,25 @@
         @endif
         <div class='grid'>
             <div class="col-4">
-                {{ Form::text('name', '', ['class'=>'sm-form-control required','placeholder'=>'NAME*']) }}
+                {{ Form::text('name', '', ['class'=>'sm-form-control required','placeholder'=>__('NAME*')]) }}
             </div>
             <div class="col-4">
-                {{ Form::email('email', '', ['class'=>'sm-form-control required email','placeholder'=>'EMAIL*']) }}
+                {{ Form::email('email', '', ['class'=>'sm-form-control required email','placeholder'=>__('EMAIL*')]) }}
             </div>
 
             <div class="col-4">
-                {{ Form::text('country', '', ['class'=>'sm-form-control required','placeholder'=>'COUNTRY*']) }}
+                {{ Form::text('country', '', ['class'=>'sm-form-control required','placeholder'=>__('COUNTRY*')]) }}
             </div>
         </div>	
         <div class='grid'>
             <div class="col-12">
-                {{ Form::textarea('message', '', ['class'=>'sm-form-control required','placeholder'=>'MESSAGE']) }}
+                {{ Form::textarea('message', '', ['class'=>'sm-form-control required','placeholder'=>__('MESSAGE')]) }}
             </div>
         </div>
         <div class='grid'>
             <div class="col-12">
-            {{ Form::button('Send',['type'=>'submit','id'=>'submit','class'=>"knopf red sharp heading-font ls-1 p"]); }}
-            <span class="required-field"><i>*Required field</i></span>
+            {{ Form::button(__('Send'),['type'=>'submit','id'=>'submit','class'=>"knopf red sharp heading-font ls-1 p"]); }}
+            <span class="required-field"><i>{{__("*Required field")}}</i></span>
             </div>
         </div>  
         

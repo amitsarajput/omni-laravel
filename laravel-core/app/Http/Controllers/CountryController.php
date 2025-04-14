@@ -21,7 +21,6 @@ class CountryController extends Controller
     public function index()
     {
         $countri=Country::orderBy('order', 'asc')->get();
-        
         return view('admin.country.index')->with('countri',$countri);
     }
 
@@ -30,7 +29,6 @@ class CountryController extends Controller
     **/
     public function create()
     {
-        //
         $region=Region::all()->pluck('name','id');
         $brand=Brand::all()->pluck('name','id');
         $search_tags_all=SearchTag::all()->pluck('name','id');
@@ -57,8 +55,8 @@ class CountryController extends Controller
         $createtyrearray =[
             'region_id' => $request->region,
             'name' => strtolower($request->name),
-            'code' => strtoupper($request->code),
-            'locale_code' => $request->locale_code,
+            'code' => strtolower($request->code),
+            'locale_code' => strtolower($request->locale_code),
             'slug' => strtolower($request->slug),
             'published'=>0,
             'order' => $request->order,
@@ -118,8 +116,8 @@ class CountryController extends Controller
         $updataarray=[
             'region_id' => $request->region,
             'name' => strtolower($request->name),
-            'code' => strtoupper($request->code),
-            'locale_code' => $request->locale_code,
+            'code' => strtolower($request->code),
+            'locale_code' => strtolower($request->locale_code),
             'slug' => strtolower($request->slug),
             'published'=>0,
             'order' => $request->order,

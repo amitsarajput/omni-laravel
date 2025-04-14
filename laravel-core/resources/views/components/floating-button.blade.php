@@ -6,7 +6,7 @@
     @else
         href="{{ route('home').'#tyres'}}"
     @endif
-        class="black"><x-icon-tyre-line-2/>TYRES</a>
+        class="black"><x-icon-tyre-line-2/>{{__('TYRES')}}</a>
 <a 
     @if( request()->routeIs('home') )
         href="#dealer-locator" 
@@ -14,5 +14,5 @@
     @else
         href="{{ route('home').'#dealer-locator'}}"
     @endif
-    class="red"><x-icon-location-pin/>DEALER LOCATOR</a>
+    class="red"><x-icon-location-pin/>{{__('DEALER LOCATOR')}}</a>
 </div>

@@ -2,7 +2,7 @@
 <header id="header">
     <div class="inner-header "><!-- search-opened -->
         <div class="logo">
-            <a href="{{route('home')}}"><img src="{{asset('images/logos/radar-tyres-light-red.svg')}}" alt="Radar Tyres"></a>
+            <a href="{{safeRoute('home')}}"><img src="{{asset('images/logos/radar-tyres-light-red.svg')}}" alt="Radar Tyres"></a>
         </div>
         <div class="right-menu-wrapper">
             <ul class="menu">
@@ -11,19 +11,19 @@
                                     href="#tyres" 
                                     scroll-to="#tyres" 
                                 @else
-                                    href="{{ route('home').'#tyres'}}"
+                                    href="{{ safeRoute('home').'#tyres'}}"
                                 @endif
-                                >Tyres</a></li>
-                <li class="menu-item"><a href="{{ route('pages.why-radar')}}">Why Radar</a></li>
+                                >{{ __('Tyres') }}</a></li>
+                <li class="menu-item"><a href="{{ safeRoute('pages.why-radar')}}">{{ __('Why Radar') }}</a></li>
                 <li class="menu-item"><a 
                                         @if( request()->routeIs('home') )
                                             href="#dealer-locator" 
                                             scroll-to="#dealer-locator" 
                                         @else
-                                            href="{{route('home').'#dealer-locator'}}"
+                                            href="{{safeRoute('home').'#dealer-locator'}}"
                                         @endif
-                                        >Dealer Locator</a></li>
-                <li class="menu-item"><a href="{{ route('pages.contact')}}">Contact us</a></li>
+                                        >{{ __('Dealer Locator') }}</a></li>
+                <li class="menu-item"><a href="{{ safeRoute('pages.contact')}}">{{ __('Contact us') }}</a></li>
             </ul>
             @php
                 $bubble_closed=session('omni_data.bubble_closed');
@@ -33,7 +33,7 @@
             </div>
             <div id="top-search">
                 <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                <form action="{{route('search')}}" method="GET">
+                <form action="{{safeRoute('search')}}" method="GET">
                     <input type="text" name="query" class="form-control" value="" placeholder="Type &amp; Hit Enter.." />
                 </form>
             </div><!-- #top-search end -->
