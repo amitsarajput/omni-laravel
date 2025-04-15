@@ -2,7 +2,7 @@
     <table class="table tyre-sizes">
     <thead>
         <tr>
-            <th>SIZE</th>
+            <th>{{__('SIZE')}}</th>
             <th>L.I./S.r.</th>
             <th>L.R.</th>
             @if (!empty($extraCols))

@@ -8,7 +8,7 @@
         <label 
             for="eulabel-{{ $row['rim'] }}" 
             class="label-as-link eulabeldetails-toggle-button">
-            Show EU labels
+            {{__('Show EU labels')}}
         </label>
     </td>
     </tr>

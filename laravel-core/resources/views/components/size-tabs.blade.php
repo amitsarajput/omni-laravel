@@ -11,7 +11,7 @@
     <div class="col-lg-12">
         <div id="tabs">
             <ul>
-                <li><a href="#tabs-all">All</a></li>
+                <li><a href="#tabs-all">{{__('All')}}</a></li>
                 @foreach ($navs as $nav)
                     <li><a href="#tabs-{{ $nav }}">{{ $nav.'"' }}</a></li>
                 @endforeach
@@ -35,7 +35,7 @@
     </div>
     <div class="col-lg-12">
         <div class="tyre--legends">
-            {!! preg_replace_array('/:url[a-z_-]+/', [route('pages.eu-labeling')], htmlspecialchars_decode($legend)) !!}
+            {!! preg_replace_array('/:url[a-z_-]+/', [route('pages.eu-labeling')], __(htmlspecialchars_decode($legend))) !!}
         </div>
     </div>
 </div>

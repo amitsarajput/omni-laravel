@@ -65,19 +65,19 @@
         
         <!-- Tyres widget -->
         <div class="section bg-white no-padding" id="tyres">
-            <div class="container "><h2 class="center uppercase black mb-2">TYRES</h2></div>
+            <div class="container "><h2 class="center uppercase black mb-2">{{__('TYRES')}}</h2></div>
             <div class="container ">
                 <div id="tabs" class="navs-with-text">
                     <div class="tabs-navigation">
                         <div class="tabs-navigation--title">
-                            <h6 class="uppercase">vehicle type</h6>
+                            <h6 class="uppercase">{{__('VEHICLE TYPE')}}</h6>
                         </div>
                         <ul >
                             @foreach ($search_tags as $search_tag)
                                 @if($search_tag->external_link)
-                                    <li><a href="{{ $search_tag->external_link }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
+                                    <li><a href="{{ $search_tag->external_link }}"><i class="{{ $search_tag->icon->class }}"></i>{{ __($search_tag->name) }}</a></li>
                                 @else
-                                    <li><a href="#tabs-{{ $search_tag->slug }}"><i class="{{ $search_tag->icon->class }}"></i>{{ $search_tag->name }}</a></li>
+                                    <li><a href="#tabs-{{ $search_tag->slug }}"><i class="{{ $search_tag->icon->class }}"></i>{{ __($search_tag->name) }}</a></li>
                                 @endif
                             @endforeach
                         </ul>
@@ -134,7 +134,7 @@
                 <div class="grid">
                     <div class="col-12">
                         <div class="center">
-                            <h2 class="uppercase center dark-100 mb-2">OUR COMMITMENT TO THE ENVIRONMENT AND COMMUNITY</h2>
+                            <h2 class="uppercase center dark-100 mb-2">{{__('OUR COMMITMENT TO THE ENVIRONMENT AND COMMUNITY')}}</h2>
                         </div>
                     </div>
                 </div>
@@ -145,9 +145,9 @@
                     </div>
                     <div class="col-md-6 col-sm-12">
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
-                            <h5 class="dark-100 mt-0 uppercase">SOCIAL RESPONSIBILITY</h5>
-                            <p>We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.</p>
-                            <a class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.responsibility-social') }}">READ MORE</a>
+                            <h5 class="dark-100 mt-0 uppercase">{{__('SOCIAL RESPONSIBILITY')}}</h5>
+                            <p>{{__('We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.')}}</p>
+                            <a class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.responsibility-social') }}">{{__('READ MORE')}}</a>
                         </div>
                     </div>
                 </div>

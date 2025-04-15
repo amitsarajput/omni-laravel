@@ -9,10 +9,10 @@
                 </a>
             </h3>
             
-            <div class="meta">{{ implode(" | ", $tyre->tyre_categories->pluck('name')->toArray()) }}</div>
+            <div class="meta">{{ __(implode(" | ", $tyre->tyre_categories->pluck('name')->toArray())) }}</div>
             <div class="testfreaks-item" data-product-id="{{$tyre->slug}}"></div>
             @if($tyre->premium_tyre)
-                <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">PREMIUM COLLECTION</a>
+                <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">{{__('PREMIUM COLLECTION')}}</a>
             @endif
             <div class="image {{ $tyre->country->code==='EU'?'carbon-n':''}}">
                 <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
@@ -23,7 +23,7 @@
                 </a>
             </div>
             <!-- Read more button -->
-            <a class="tyre--readmore" href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">READ MORE  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
+            <a class="tyre--readmore" href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">{{__('READ MORE')}}  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
         </div>
     @endforeach
 </div>

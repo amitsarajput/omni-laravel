@@ -9,8 +9,8 @@
         <div class="container">
         <div class="grid">
         <div class="col-lg-12">
-                <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ safeRoute('home') }}">Home</a></li>
+                <ol class="breadcrumb uppercase">
+                <li class="breadcrumb-item"><a href="{{ safeRoute('home') }}">{{__('Home')}}</a></li>
                 <li class="breadcrumb-item"><i class="icon-angle-right"></i>
                     <a href="{{ safeRoute('tyre.grid', ['brand' =>$tyre->brand->slug]) }}">
                         {{ ucfirst($tyre->brand->name) }}
@@ -18,7 +18,7 @@
                 </li>
                 <li class="breadcrumb-item uppercase"><i class="icon-angle-right"></i>
                     <a href="{{safeRoute('tyre.grid', ['brand' =>$tyre->brand->slug]).'#tabs-'.$tyre->search_tag->slug}}">
-                    {{ $tyre->search_tag->name }}
+                    {{ __($tyre->search_tag->name) }}
                     </a>
                 </li>
                 <li class="breadcrumb-item"><i class="icon-angle-right"></i>{!! htmlspecialchars_decode($tyre->preview_name) !!}</li>
@@ -32,23 +32,23 @@
                 <!-- Premium tyre badge -->
                  @if($tyre->premium_tyre)
                 <div class="col-lg-12 col-bleed-y">
-                    <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">PREMIUM COLLECTION</a>
+                    <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">{{__('PREMIUM COLLECTION')}}</a>
                 </div>
                 @endif
                 <!-- Tyre Details -->
                 <div class="col-lg-6">
                     <h2 class="tyre--title uppercase mt-0">{!! htmlspecialchars_decode($tyre->preview_name) !!}</h2>
-                    <h5 class="black">{{ implode(" | ", json_decode($tyre->tyre_categories->pluck('name'))) }}</h5>
+                    <h5 class="black">{{ __(implode(" | ", json_decode($tyre->tyre_categories->pluck('name')))) }}</h5>
                     <div id="testfreaks-badge"></div>
                     <div class="tyre--description">
-                        <p>{!! htmlspecialchars_decode($tyre->description) !!}</p>
+                        <p>{!! __(htmlspecialchars_decode($tyre->description)) !!}</p>
                     </div>
                     @php
                         $tyre_icons=$tyre->icons;
                     @endphp
                     <div class="tyre--icons">
                         @foreach ($tyre_icons as $tyre_icon)
-                            <div class="tyre-icon"><i class="{{$tyre_icon->class}}"></i>{{$tyre_icon->name}}</div>
+                            <div class="tyre-icon"><i class="{{$tyre_icon->class}}"></i>{{__($tyre_icon->name)}}</div>
                         @endforeach
                     </div>
                 </div>
@@ -65,7 +65,7 @@
         <div class="section top-padding bg-grey">
             <div class="container">
                 <div class="grid">
-                    <div class="col-lg-12"> <h2 class="uppercase dark-80 center mt-0">features</h2></div>
+                    <div class="col-lg-12"> <h2 class="uppercase dark-80 center mt-0">{{__("FEATURES")}}</h2></div>
                     <div class="col-md-12 col-bleed-y center">
                         @php
                             $features=json_decode($tyre->features_benifits )
@@ -90,7 +90,7 @@
             <div class="container">
                 <div class="grid">
                     <div class="col-md-12">
-                        <h2 class="uppercase dark-80 center">sizes</h2>
+                        <h2 class="uppercase dark-80 center">{{__('SIZES')}}</h2>
                     </div>
                 </div>
                 <x-size-tabs :sizes="$tyre->sizes" />

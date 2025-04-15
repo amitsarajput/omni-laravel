@@ -71,6 +71,10 @@
     "EXTENSIVELY TESTED AGAINST PREMIUM BRANDS":"AMPLIAMENTE PROBADO FRENTE A MARCAS DE PRIMERA CALIDAD LEER MÁS",
     "REAL PEOPLE. REAL PERFORMANCE.":"PERSONAS REALES. RENDIMIENTO REAL.",
     "MEET THE EXPERTS DRIVING RADAR TYRES TO THE NEXT LEVEL":"CONOZCA A LOS EXPERTOS QUE LLEVAN LOS NEUMÁTICOS RADAR AL SIGUIENTE NIVEL LEER MÁS",
+    "OUR COMMITMENT TO THE ENVIRONMENT AND COMMUNITY":"NUESTRO COMPROMISO CON LA COMUNIDAD",
+    "SOCIAL RESPONSIBILITY":"RESPONSABILIDAD SOCIAL",
+    "We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.":"Siempre hemos creído en retribuir, y este es uno de los pilares sobre los que se ha construido Radar Tyres. Estas creencias nos llevaron a asociarnos con la Fundación para la Investigación del Cáncer de Mama (BCRF) en 2011, la organización líder y mejor calificada en investigación del cáncer de mama en EE. UU., hemos estado apoyando a BCRF en su misión de prevenir y curar el cáncer de mama impulsando la investigación más prometedora del mundo.",
+
 
     "_COMMENT": "RADAR AOBUT US",
     "<span class='red'>THEY SAY PREMIUM TYRES ARE EXPENSIVE.</span><br><span class='black'>WE SAY, NOT WHEN YOU ROLL WITH US.</span>": "<span class='red'>DICEN QUE LOS NEUMÁTICOS PREMIUM SON CAROS.</span><br><span class='black'>NOSOTROS DECIMOS QUE NO CUANDO RUEDAS CON NOSOTROS.</span>",
@@ -104,7 +108,7 @@
     "Comprehensive Range": "GAMA COMPLETA",
     "We offer a wide selection of tyres for different driving conditions, including summer, winter, all-season, high performance, and off-road fitments. Whether driving an everyday family car, sports car, an SUV, or tackling extreme off-road conditions, Radar has the right tyres for you.": "Ofrecemos una amplia selección de neumáticos para diversas condiciones de conducción, incluyendo verano, invierno, todas las estaciones, alto rendimiento y terrenos off-road. Ya sea que conduzcas un coche familiar, un deportivo, un SUV o enfrentes condiciones extremas fuera de la carretera, Radar tiene los neumáticos adecuados para ti.",
     "Radar Protect Programme": "PROGRAMA RADAR PROTECT",
-    "We ensure peace of mind with the Radar Protect Programme​, which is available through participating Radar RED(Radar Elite Dealers) Partners. This may include a 30-day satisfaction promise and a limited road hazard warranty in select countries only. Terms and conditions apply.": "Garantizamos tu tranquilidad con el Programa Radar Protect, disponible a través de los socios participantes de Radar RED (Radar Elite Dealers). Este programa puede incluir una promesa de satisfacción de 30 días y una garantía limitada contra peligros en la carretera en países seleccionados. Se aplican términos y condiciones.",
+    "We ensure peace of mind with the Radar Protect Programme​, which is available through participating Radar RED(Radar Elite Dealers) Partners. This may include a 30-day satisfaction promise and a limited road hazard warranty in select countries only. Terms and conditions apply.": "Garantizamos tu tranquilidad con el Programa Radar Protect, disponible a través de los socios participantes de Radar RED (Radar Elite Dealers). Este programa puede incluir una promesa de satisfacción de 30 días y una garantía limitada contra peligros en la carretera en países seleccionados. Se aplican términos y condiciones.",    
     "Social Responsibility": "RESPONSABILIDAD SOCIAL",
     "Giving back has always been in our DNA. Since 2011, we have supported the Breast Cancer Research Foundation (BCRF), raising awareness and funding critical life-saving research. When you choose Radar Tyres, you help contribute to this important cause.": "Retribuir siempre ha sido parte de nuestro ADN. Desde 2011, apoyamos a la Breast Cancer Research Foundation (BCRF), aumentando la conciencia y financiando investigaciones cruciales para salvar vidas. Al elegir Radar Tyres, también contribuyes a esta importante causa.",
 
@@ -299,6 +303,477 @@
     "Changes to This Privacy and Cookie Policy": "Cambios en esta política",
     "We may update this Privacy and Cookie Policy from time to time to reflect changes in legal requirements or our practices. We encourage you to review this policy regularly. Significant changes will be communicated on our website.": "Podemos modificar esta política. Se publicarán cambios significativos en el sitio.",
     "Contact Information": "",
-    "If you have any questions or concerns about this Privacy and Cookie Policy or how we process your personal data, please contact us at:": "Contacto Para cualquier duda sobre esta política o el tratamiento de sus datos:"
+    "If you have any questions or concerns about this Privacy and Cookie Policy or how we process your personal data, please contact us at:": "Contacto Para cualquier duda sobre esta política o el tratamiento de sus datos:",
+
+
+
+    
+
+    "_COMMENT": "Tyres Pages --- Grid",
+
+    "_COMMENT": "COMMONS",
+    "PREMIUM COLLECTION": "COLECCIÓN PREMIUM",
+    "Home": "Inicio",
+    "SIZES":"MEDIDAS",
+    "FEATURES":"CARACTERÍSTICAS",
+    "All":"Todo",
+    "L.I.":"Índice de Carga",
+    "S.R.":"Código de Velocidad",
+    "L.R.":"Capacidad de Carga",
+    "EVC":"Compatible con Vehículos Eléctricos",
+    "M+S":"Barro y Nieve",
+    "Show EU labels":"",
+    "Hide EU labels":"",
+    "EXTREME TERRAIN":"TERRENO EXTREMO",
+    "RUN-FLAT":"",
+    "CAR/CUV/SUV":"COCHE/CUV/SUV",
+    "CAR":"COCHE",
+    "EXTENDED MOBILITY":"MOVILIDAD EXTENDIDA",
+    "SPORT TOURING":"TURISMO DEPORTIVO",
+    "WINTER NORDIC":"INVIERNO NÓRDICO",
+    "STUDDED":"CON CLAVOS",
+    "URBAN":"URBANO",
+    "FREE ROLLING TYRE":"NEUMÁTICO DE RODADURA LIBRE",
+
+    "VEHICLE TYPE": "TIPO DE VEHÍCULO",
+    "CAR/CUV":"COCHE/CUV",
+    "CAR/SUV": "COCHE/SUV",
+    "SUV/4X4": "SUV/4X4",
+    "VAN/CARGO": "FURGONETA/CARGA",
+    "CLASSIC": "CLÁSICO",
+    "HIGH PERFORMANCE": "ALTO RENDIMIENTO",
+    "TOURING": "TURISMO",
+    "WINTER": "INVIERNO",
+    "ALPINE": "ALPINO",
+    "WINTER ALPINE": "INVIERNO ALPINO",
+    "WINTER NORDIC STUDDED": "INVIERNO NÓRDICO CON CLAVOS",
+    "ALL TERRAIN": "TODO TERRENO",
+    "RUGGED TERRAIN": "TERRENO ROBUSTO",
+    "MUD TERRAIN": "TERRENO BARROSO",
+    "VAN": "FURGONETA",
+    "TRAILER": "REMOLQUE",
+    "ALL WEATHER":"TODO CLIMA",
+    "POR":"Uso Profesional Off-Road",
+
+    "SEASON": "TEMPORADA",
+    "SUMMER": "VERANO",
+    "ALL SEASON": "TODO TIEMPO",
+    "WINTER": "INVIERNO",
+
+    "_COMMENT": "TYRE CATEGORY",
+    "ULTRA HIGH PERFORMANCE": "ULTRA ALTO RENDIMIENTO",
+
+    "_COMMENT": "ICONS",
+    "CAR/SUV": "COCHE/SUV",
+    "SUMMER": "VERANO",
+    "ULTRA HIGH PERFORMANCE": "ULTRA ALTO RENDIMIENTO",
+    "MUD AND SNOW": "BARRO Y NIEVE",
+    "EV COMPATIBLE": "COMPATIBLE CON VEHÍCULOS ELÉCTRICOS",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+
+
+    "_COMMENT": "Dimax® Sport",
+    "The Dimax Sport is a premium ultra high performance tyre engineered to deliver uncompromising safety, performance and control. Designed by Omni United in collaboration with renowned Italian design house GFG Style, led by legendary automotive designers Giorgetto and Fabrizio Giugiaro, the Dimax Sport features a unique, functional and stylish design representing a perfect synergy of design and engineering. This advanced and feature packed range is extensively tested against premium brands and offers drivers excellent wet grip, handling, low rolling resistance and a quiet ride. The Dimax Sport offers popular passenger car and SUV fitments and all sizes carry the EVC marking on the sidewall identifying the tyre as compatible with both Electric Vehicles(EV) and Plug-in hybrid vehicles.": "El Dimax Sport es un neumático ultra alto rendimiento de gama premium, diseñado para ofrecer seguridad, prestaciones y control sin concesiones. Creado por Omni United en colaboración con la reconocida casa de diseño italiana GFG Style, liderada por los legendarios diseñadores automotrices Giorgetto y Fabrizio Giugiaro, el Dimax Sport presenta un diseño único, funcional y elegante que representa una sinergia perfecta entre estilo e ingeniería. Esta gama avanzada y rica en prestaciones ha sido sometida a rigurosas pruebas comparativas frente a marcas premium, ofreciendo una excelente adherencia en mojado, maniobrabilidad, baja resistencia a la rodadura y una conducción silenciosa. El Dimax Sport está disponible en medidas populares para turismos y SUV, y todas sus dimensiones llevan el marcaje EVC en el flanco, que identifica el neumático como compatible con vehículos eléctricos (EV) y vehículos híbridos enchufables.",
+
+    "EXTENDED HANGER TREAD DESIGN": "DISEÑO EXTENDIDO DE LA BANDA DE RODADURA",
+    "Unique, ultra-modern and sporty design with a stiff outside shoulder provides <br class='hidden-xs'> ultimate handling and cornering properties, especially for the latest and most <br class='hidden-xs'> demanding passenger cars and SUVs.": "Diseño único y deportivo que ofrece un manejo y agarre excepcionales en las curvas.",
+
+    "ES PERFORMANCE COMPOUND (ESPC)": "COMPUESTO DE ALTO RENDIMIENTO (ESPC)",
+    "Advanced silica compound that provides the optimal combination of <br class='hidden-xs'> low rolling resistance and excellent dynamic handling properties as <br class='hidden-xs'> well as excellent wet grip.": "Compuesto avanzado de sílice que ofrece baja resistencia a la rodadura, manejo dinámico y excelente agarre en mojado.",
+
+    "AQUEDUCT GROOVES": "SURCOS AQUEDUCT",
+    "These are ultra-smooth and shiny channels which, in combination with optimised <br class='hidden-xs'> groove wall angles help in efficiently evacuating water from the tread, <br class='hidden-xs'> reducing the risk of aquaplaning and enhancing safety.": "Canales suaves y pulidos que evacúan el agua de manera eficiente, minimizando el riesgo de aquaplaning y mejorando la seguridad",
+
+    "STEALTH TECHNOLOGY": "TECNOLOGÍA STEALTH",
+    "Stealth shape design and optimised tread <br class='hidden-xs'> pitch sequencing ensure a silent and <br class='hidden-xs'> smooth ride.": "Garantiza una conducción silenciosa y suave.",
+
+    "CIRCLE OF TREADLIFE": "CÍRCULO DE VIDA DE LA BANDA DE RODADURA",
+    "A unique safety feature that indicates remaining tread depth. When the tyre is new, this indicator is <br class='hidden-xs'> a full circle with 8-millimetres of tread remaining. As the tyre wears down, the indicator begins to <br class='hidden-xs'> fade and totally disappears at a groove depth of 2 millimetres.": "Un innovador indicador de seguridad que muestra la profundidad restante de la banda de rodadura. Un círculo completo de 8 mm cuando es nuevo, que se desvanece gradualmente a medida que se desgasta la banda de rodadura, desapareciendo por completo a los 2 mm.",
+
+    "SMOOTH VELVET SIDEWALL": "FLANCO CON ASPECTO DE TERCIOPELO",
+    "High-contrast, laser-treated design with ultra-low <br class='hidden-xs'>protrusion improves the tyre’s air drag factor <br class='hidden-xs'>and is easy to clean.": "Diseño tratado con láser de alto contraste que mejora la aerodinámica y es fácil de limpiar.",
+
+    "_COMMENT": "Dimax® Sprint",
+    "The Dimax Sprint is a premium high performance tyre engineered to deliver all round safety, comfort and mileage. Designed by Omni United in collaboration with renowned Italian design house GFG Style, led by legendary automotive designers Giorgetto and Fabrizio Giugiaro, the Dimax Sprint features a unique, functional and stylish design representing a perfect synergy of design and engineering. This advanced and feature packed range is extensively tested against premium brands and provides drivers ultimate handling and grip in wet and dry conditions, low rolling resistance and a quiet ride. The Dimax Sprint offers popular passenger car and SUV fitments and all sizes carry the EVC marking on the sidewall identifying the tyre as compatible with both Electric Vehicles(EV) and Plug-in hybrid vehicles.": "El Dimax Sprint es un neumático de alto rendimiento de gama premium, diseñado para ofrecer seguridad, confort y durabilidad en todo momento. Desarrollado por Omni United en colaboración con la prestigiosa casa de diseño italiana GFG Style, liderada por los legendarios diseñadores automotrices Giorgetto y Fabrizio Giugiaro, el Dimax Sprint presenta un diseño único, funcional y elegante que representa una perfecta sinergia entre ingeniería y estilo. Esta gama avanzada, rica en prestaciones, ha sido sometida a rigurosas pruebas comparativas frente a marcas premium y proporciona al conductor un manejo y agarre excepcionales en condiciones tanto secas como mojadas, además de baja resistencia a la rodadura y una conducción silenciosa. El Dimax Sprint está disponible en medidas populares para turismos y SUV, y todas sus dimensiones llevan el marcaje EVC en el flanco, lo que identifica el neumático como compatible con vehículos eléctricos (EV) y vehículos híbridos enchufables.",
+
+    "TWIN HANGER TREAD DESIGN": "DISEÑO DE BANDA DE RODADURA DE DOBLE SUSPENSIÓN",
+    "Unique, ultra-modern and noise optimised design for <br class='hidden-xs'>passenger cars, offering great steering precision and <br class='hidden-xs'>excellent cornering properties.": "Diseño moderno y único que ofrece una precisión de dirección y agarre en curvas excepcionales.",
+
+    "RAIN MASTER PERFORMANCE COMPOUND (RMPC)": "COMPUESTO RAIN MASTER PERFORMANCE (RMPC)",
+    "Advanced silica compound that provides the ideal <br class='hidden-xs'>combination of ultimate wet performance and low <br class='hidden-xs'>rolling resistance.": "Fórmula avanzada de sílice que proporciona un excelente rendimiento en mojado y baja resistencia a la rodadura.",
+
+    "These are ultra-smooth and shiny channels which, in combination with optimised groove <br class='hidden-xs'>wall angles help in efficiently evacuating water from the tread, reducing the risk of <br class='hidden-xs'>aquaplaning and enhancing safety.": "Canales suaves y pulidos que evacúan el agua de manera eficiente, minimizando el riesgo de aquaplaning y mejorando la seguridad",
+
+    "A unique safety feature that indicates remaining tread depth. When the tyre is new, this indicator <br class='hidden-xs'>is a full circle with 8-millimetres of tread remaining. As the tyre wears down, the indicator <br class='hidden-xs'>begins to fade and totally disappears at a groove depth of 2 millimetres.": "Un innovador indicador de seguridad que muestra la profundidad restante de la banda de rodadura. Un círculo completo de 8 mm cuando es nuevo, que se desvanece gradualmente a medida que se desgasta la banda de rodadura, desapareciendo por completo a los 2 mm.",
+
+    "High-contrast, laser-treated design with ultra-low <br class='hidden-xs'>protrusion improves the tyre’s air drag factor and <br class='hidden-xs'>is easy to clean.": "Diseño tratado con láser de alto contraste que mejora la aerodinámica y es fácil de limpiar.",
+
+    "_COMMENT": "DIMAX® ALL SEASON",
+
+    "The Dimax All Season is a premium all season tyre, engineered to provide optimal performance in any weather condition. Our 3PMSF marking allows drivers to drive with confidence and safety in both scorching summer heat and in snow covered winter roads without needing a seasonal tyre change. Designed by Omni United in collaboration with renowned Italian design house GFG Style, led by legendary automotive designers Giorgetto and Fabrizio Giugiaro, the Dimax All Season features a unique, functional and stylish design representing a perfect synergy of design and engineering. This advanced and feature packed range is extensively tested against premium brands and provides optimal performance in all weather conditions providing drivers with confidence, safety and control. The Dimax All Season offers popular passenger car and SUV fitments and all sizes are EV(Electric Vehicle) and Plug-in hybrid vehicle compatible.": "",
+
+    "TRIPLE-EDGED PATTERN DESIGN": "DISEÑO DE PATRÓN DE TRIPLE BORDE",
+    "Sawtooth shaped centre grooves together with the step-design of the outer circumferential <br class='hidden-xs'>grooves providing outstanding mechanical grip on snow. This design enables the use of very <br class='hidden-xs'>stiff pattern blocks delivering optimal performance on wet and dry roads.": "Los surcos centrales en forma de sierra, junto con el diseño escalonado de los surcos circunferenciales exteriores, ofrecen un excelente agarre mecánico sobre nieve. Este diseño permite el uso de bloques de dibujo muy rígidos, garantizando un rendimiento óptimo tanto en carreteras mojadas como secas.",
+
+    "BLUE SILICA COMPOUND": "COMPUESTO DE SÍLICE AZUL",
+    "Advanced wet grip silica compound designed to deliver ultimate safety on wet roads while performing <br class='hidden-xs'>on dry roads. It has been fine-tuned to deliver exceptional all season performance, high durability <br class='hidden-xs'>and excellent resistance to tyre ageing.": "Compuesto avanzado con sílice optimizado para ofrecer máxima seguridad en carreteras mojadas y un excelente rendimiento en seco. Su formulación ha sido ajustada para garantizar un alto rendimiento durante todo el año, gran durabilidad y excelente resistencia al envejecimiento del neumático.",
+
+    "These are ultra-smooth and shiny channels which, in combination with optimised groove wall <br class='hidden-xs'>angles help in efficiently evacuating water and slush from the tread, reducing the risk of <br class='hidden-xs'>aquaplaning and enhancing safety.": "Canales suaves y pulidos que evacúan el agua de manera eficiente, minimizando el riesgo de aquaplaning y mejorando la seguridad",
+
+    "CONNECTED SUPPORT TECHNOLOGY": "TECNOLOGÍA DE SOPORTE CONECTADO",
+    "Innovative structural element embedded within the tyre’s tread pattern, providing full <br class='hidden-xs'>support to all the tread blocks from shoulder to shoulder ensuring tyre integrity, precise <br class='hidden-xs'>steering, and safety in extreme driving conditions.": "Elemento estructural innovador integrado en el dibujo de la banda de rodadura que proporciona soporte total a todos los bloques del neumático, de hombro a hombro, garantizando su integridad, dirección precisa y seguridad en condiciones de conducción extremas.",
+
+    "A unique safety feature that indicates remaining tread depth. When the tyre is new, this indicator is <br class='hidden-xs'>a full circle with 8-millimetres of tread remaining. As the tyre wears down, the indicator begins to <br class='hidden-xs'>fade and totally disappears at a groove depth of 2 millimetres.": "Un innovador indicador de seguridad que muestra la profundidad restante de la banda de rodadura. Un círculo completo de 8 mm cuando es nuevo, que se desvanece gradualmente a medida que se desgasta la banda de rodadura, desapareciendo por completo a los 2 mm.",
+
+    "Ultra-low protrusion, which improves <br class='hidden-xs'>the tyre’s air drag factor and is <br class='hidden-xs'>easy to clean.": "Diseño tratado con láser de alto contraste que mejora la aerodinámica y es fácil de limpiar.",
+
+
+    "_COMMENT": "DIMAX® WINTER",
+    "The Dimax Winter is a premium winter tyre, engineered to excel in harsh and demanding winter conditions, providing drivers with confidence, safety, and control. Designed by Omni United in collaboration with renowned Italian design house GFG Style, led by legendary automotive designers Giorgetto and Fabrizio Giugiaro, the Dimax Winter features a unique, functional and stylish design representing a perfect synergy of design and engineering. This advanced and feature packed range is extensively tested against premium brands and provides ultimate snow performance, outstanding safety on wet and slush, and top-of-the-class braking performance in all conditions. The Dimax Winter offers popular passenger car and SUV fitments and all sizes are EV(Electric Vehicle) and Plug-in hybrid vehicle compatible.": "El Dimax Winter es un neumático de invierno de gama premium, diseñado para ofrecer un rendimiento excepcional en condiciones invernales duras y exigentes, brindando al conductor confianza, seguridad y control. Desarrollado por Omni United en colaboración con la reconocida casa de diseño italiana GFG Style, liderada por los legendarios diseñadores automotrices Giorgetto y Fabrizio Giugiaro, el Dimax Winter presenta un diseño único, funcional y elegante que representa una perfecta sinergia entre estilo e ingeniería. Esta gama avanzada y cargada de prestaciones ha sido rigurosamente probada frente a marcas premium y ofrece un rendimiento sobresaliente en nieve, una seguridad excepcional sobre mojado y aguanieve, y un frenado de primera clase en todo tipo de condiciones. El Dimax Winter está disponible en medidas populares para turismos y SUV, y todas sus dimensiones son compatibles con vehículos eléctricos (EV) y vehículos híbridos enchufables (PHEV).",
+
+    "DOUBLE CRYSTAL 3D SIPES": "LAMINILLAS 3D DOBLE CRISTAL",
+    "Three dimensional sipes resembling crystals, precisely <br class='hidden-xs'>positioned across the tyre’s tread in order to <br class='hidden-xs'>maximise extreme grip on snow and ice, as well as <br class='hidden-xs'>provide stability on wet and dry roads": "Laminillas tridimensionales con forma de cristal, ubicadas con precisión a lo largo de la banda de rodadura para maximizar el agarre extremo sobre nieve y hielo, y proporcionar estabilidad tanto en superficies mojadas como secas.",
+
+    "INARI COMPOUND": "COMPUESTO INARI",
+    "Advanced silica compound tested and perfected in harsh winter conditions of the <br class='hidden-xs'>Northern Finnish Lapland. It has been fine-tuned to deliver exceptional winter <br class='hidden-xs'>performance, excellent wet grip, low rolling resistance, high durability and <br class='hidden-xs'>excellent resistance to tyre ageing.": "Compuesto avanzado de sílice, probado y perfeccionado en las duras condiciones invernales de Laponia finlandesa. Ha sido ajustado para ofrecer un rendimiento excepcional en invierno, excelente agarre en mojado, baja resistencia a la rodadura, alta durabilidad y gran resistencia al envejecimiento del neumático.",
+
+    "These are ultra-smooth and shiny channels which, in combination <br class='hidden-xs'>with optimised groove wall angles help in efficiently evacuating <br class='hidden-xs'>water and slush from the tread, reducing the risk of aquaplaning <br class='hidden-xs'>and enhancing safety.": "Canales suaves y pulidos que evacúan el agua de manera eficiente, minimizando el riesgo de aquaplaning y mejorando la seguridad",
+
+    "Innovative structural element embedded within the tyre’s tread <br class='hidden-xs'>pattern, providing full support to all the tread blocks from <br class='hidden-xs'>shoulder to shoulder ensuring tyre integrity, precise steering, <br class='hidden-xs'>and safety in extreme driving conditions.": "Elemento estructural innovador integrado en el dibujo de la banda de rodadura, que proporciona soporte total a todos los bloques del neumático, de hombro a hombro, garantizando su integridad, una dirección precisa y seguridad en condiciones de conducción extremas.",
+
+    "A unique safety feature that indicates remaining tread depth. When the tyre is <br class='hidden-xs'>new, this indicator is a full circle with 8-millimetres of tread remaining. As <br class='hidden-xs'>the tyre wears down, the indicator begins to fade and totally disappears at a <br class='hidden-xs'>groove depth of 2 millimetres.": "Un innovador indicador de seguridad que muestra la profundidad restante de la banda de rodadura. Un círculo completo de 8 mm cuando es nuevo, que se desvanece gradualmente a medida que se desgasta la banda de rodadura, desapareciendo por completo a los 2 mm.",
+
+    "Ultra-low protrusion, which <br class='hidden-xs'>improves the tyre’s air <br class='hidden-xs'>drag factor and <br class='hidden-xs'>is easy to clean.": "Diseño tratado con láser de alto contraste que mejora la aerodinámica y es fácil de limpiar.",
+
+
+    "_COMMENT": "Renegade® A/T Sport",
+    "The Renegade A/T Sport is a premium all-terrain range that is engineered for drivers that need exceptional off-road performance while giving a quiet, smooth on-road ride. This range offers a combination of increased off-road grip, enhanced stability and handling performance, and excellent traction. The A/T Sport utilises a special silica-based tread compound that offers outstanding cut and chip resistance along with circumferential grooves on the centre tread blocks for a quieter ride.": "El Renegade A/T Sport es una gama todo terreno de alto rendimiento, diseñada para conductores que necesitan un rendimiento excepcional fuera de carretera sin sacrificar una conducción suave y silenciosa en asfalto. Esta gama combina mayor tracción fuera de carretera, estabilidad mejorada, excelente manejo y agarre superior. El A/T Sport incorpora un compuesto especial de sílice en la banda de rodadura que ofrece una resistencia sobresaliente a cortes y desprendimientos, junto con surcos circunferenciales en los bloques centrales para una conducción más silenciosa.",
+
+    "ULTRA-SHIELD SYSTEM - ENHANCED DURABILITY AND <br class=\"hidden-xs\">PUNCTURE RESISTANCE": "SISTEMA ULTRA-SHIELD – MAYOR DURABILIDAD Y RESISTENCIA A PERFORACIONES",
+    "A unique combination of stone ejectors, serrations on the bottom tread and strong tie bars to <br class=\"hidden-xs\">increase puncture resistance and casing protection.": "Una combinación única de expulsadores de piedras, estrías en la base de la banda de rodadura y resistentes barras de unión que aumentan la resistencia a las perforaciones y protegen la carcasa.",
+
+    "GRAVEL-TRAC TECHNOLOGY - EXCEPTIONAL <br class=\"hidden-xs\">ALL-TERRAIN TRACTION": "TECNOLOGÍA GRAVEL-TRAC – TRACCIÓN TODO TERRENO EXCEPCIONAL",
+    "Optimised interlocking tread block design in combination with reverse radius on shoulder blocks<br class=\"hidden-xs\"> provides the ultimate performance on gravel roads and exceptional traction on sand and mud.": "Diseño optimizado de bloques de rodadura entrelazados en combinación con radios invertidos en los bloques de hombro que proporciona un rendimiento superior en caminos de grava y una tracción excepcional en arena y barro.",
+
+    "ENDURAMAX COMPOUND - OUTSTANDING CUT AND <br class=\"hidden-xs\">CHIP RESISTANCE": "COMPUESTO ENDURAMAX – EXCELENTE RESISTENCIA A CORTES Y DESPRENDIMIENTOS",
+    "Special Silica-based compound that provides great cut and chip resistance and <br class=\"hidden-xs\">maximum grip in all conditions.": "Compuesto especial a base de sílice que ofrece una gran resistencia a cortes y desprendimientos, y un agarre máximo en todas las condiciones.",
+
+    "SNAKE-BITE TREAD BLOCK DESIGN - INCREASED STABILITY AND <br class=\"hidden-xs\">HANDLING PERFORMANCE": "DISEÑO DE BLOQUES “SNAKE-BITE” – MAYOR ESTABILIDAD Y MANEJO",
+    "Snake head shaped tread blocks create torsional strength in all directions and protect the <br class=\"hidden-xs\">aggressive shoulder block. Wide circumferential centre block design provides gives great driving feel.": "Bloques de rodadura con forma de cabeza de serpiente que generan fuerza torsional en todas las direcciones y protegen el bloque de hombro agresivo. El diseño ancho del bloque central circunferencial proporciona una excelente sensación de conducción.",
+
+
+    "_COMMENT": "Renegade® R/T+",
+
+    "The Renegade R/T+ is a premium rugged terrain range and is designed to give exceptional off-road performance coupled with on-road comfort and sophistication. On-road, this tyre gives drivers superior handling with a quiet and smooth ride, while off-road it has the capability to go anywhere that a pure M/T tyre can. The Renegade R/T+ offers both aggressive and rugged looks with great on/off-road performance making it a combination between an all-terrain and mud-terrain tyre and offers the best of both worlds. This range features a dual sidewall design that has a skull &amp; piston design on one side and mud penetrating dagger shaped lugs on the other.": "El Renegade R/T+ es una gama premium para terrenos extremos, diseñada para ofrecer un rendimiento todoterreno excepcional junto con confort y sofisticación en carretera. En carretera, proporciona un manejo superior con una conducción suave y silenciosa; fuera de ella, tiene la capacidad de enfrentarse a cualquier terreno, como lo haría un neumático M/T puro. El Renegade R/T+ combina una apariencia agresiva y robusta con un gran rendimiento dentro y fuera del asfalto, posicionándose entre un neumático todo terreno y uno para barro, ofreciendo lo mejor de ambos mundos. Esta gama presenta un diseño de flanco dual: en un lado un diseño de calavera con pistones, y en el otro, tacos en forma de daga diseñados para penetrar el barro.",
+
+    "EXCEPTIONAL ALL-TERRAIN TRACTION": "TRACCIÓN TODO TERRENO EXCEPCIONAL",
+    "Optimised tread block sizes and shapes with multiple <br class='hidden-xs'>lateral grooves and angled sipes ensure superb <br class='hidden-xs'>traction on all terrains.": "El tamaño y la forma optimizados de los bloques de la banda de rodadura, junto con múltiples ranuras laterales y laminillas anguladas, garantizan una tracción sobresaliente en todo tipo de terrenos.",
+
+    "INCREASED STABILITY AND <br class='hidden-xs'>RESISTANCE TO PUNCTURES": "MAYOR ESTABILIDAD Y RESISTENCIA A PERFORACIONES",
+    "Robust 3-ply construction reduces the riskof punctures and  <br class='hidden-xs'>gives sure-footed handling on all surfaces.": "La estructura robusta de 3 capas reduce el riesgo de perforaciones y proporciona un manejo seguro en todo tipo de superficies.",
+
+    "ENHANCED STABILITY, HANDLING AND  <br class='hidden-xs'>EVEN TREADWEAR": "MAYOR ESTABILIDAD, MANEJO Y DESGASTE UNIFORME",
+    "Wide centre tread blocks help balance the weight distribution <br class='hidden-xs'>and ensure the tread wears evenly.": "Los bloques anchos en el centro de la banda de rodadura ayudan a equilibrar la distribución del peso y aseguran un desgaste uniforme del neumático.",
+
+    "DUAL SIDEWALL DESIGN - SKULL & PISTON EDITION": "DISEÑO DE FLANCO DUAL – EDICIÓN SKULL & PISTON",
+    "Featuring an outlaw side with a skull & piston <br class='hidden-xs'>design on one side and mud penetrating dagger <br class='hidden-xs'>shaped lugs on the other.": "Incluye un lado rebelde con un diseño de calavera y pistones, y en el otro lado, tacos en forma de daga diseñados para penetrar el barro.",
+
+    "_COMMENT": "Renegade® X",
+    "The Renegade-X is the top-of-the-line extreme terrain tyre range from Radar Tyres. This innovative \"stealth\" inspired tyre is born out of the partnership between Radar Tyres and leading Italian automotive design house GFG Style. This feature-packed range is designed and engineered for drivers that need extreme off-road performance on mud, rocks, gravel and sand while offering durability and an aggressive aesthetic that enthusiasts crave.": "El Renegade-X es la gama de neumáticos para terrenos extremos más avanzada de Radar Tyres. Este innovador neumático, inspirado en el concepto 'stealth', nace de la colaboración entre Radar Tyres y la prestigiosa casa de diseño automotriz italiana GFG Style. Esta gama repleta de prestaciones ha sido diseñada y desarrollada para conductores que exigen un rendimiento extremo fuera de carretera en barro, rocas, grava y arena, ofreciendo al mismo tiempo durabilidad y una estética agresiva que apasiona a los entusiastas del off-road.",
+
+    "EXTREME OFF-ROAD TRACTION": "TRACCIÓN EXTREMA FUERA DE CARRETERA",
+    "High void-to-lug ratio, deep side blocks and a specially formulated <br>Rock-Crawl tread compound provide exceptional traction and grip on <br>rocks, gravel, mud and soft soil. Mud-rescue shoulder provides <br>additional traction that helps pull the vehicle out of mud.": "La alta relación vacío-taco, los bloques profundos en los laterales y un compuesto de banda de rodadura Rock-Crawl especialmente formulado proporcionan una tracción y agarre excepcionales sobre rocas, grava, barro y terrenos blandos. El hombro de rescate en barro proporciona tracción adicional que ayuda a sacar el vehículo del lodo.",
+
+    "ENHANCED DURABILITY": "DURABILIDAD MEJORADA",
+    "A unique combination of stone ejectors and <br>serrations on the bottom tread add an <br>additional layer of reinforcement to increase <br>puncture resistance.": "Una combinación única de expulsadores de piedras y estrías en la base de la banda de rodadura añade una capa adicional de refuerzo para aumentar la resistencia a perforaciones.",
+
+    "TOUGHER SIDEWALLS": "FLANCOS MÁS RESISTENTES",
+    "High turn-up 3-ply sidewall construction combined with <br>aggressive “stealth” shaped sidewall lugs provide biting edges <br>for additional grip and traction, and provide protection from <br>external sidewall damage.": "La construcción elevada de flanco con 3 capas, combinada con tacos laterales de diseño agresivo en forma de “stealth”, ofrece bordes mordientes para mejorar el agarre y la tracción, además de proporcionar protección contra daños externos en los flancos.",
+
+    "LONG TREAD LIFE": "",
+    "Specially formulated tread compound <br>combined with tie bars provide lateral<br> stability, promote even wear and <br>increases longevity.": "",
+
+    "ON-ROAD COMFORT": "",
+    "Optimised tread pattern design <br>reduces noise for a quieter <br>and more comfortable on-road <br>ride.": "",
+
+    "_COMMENT": "DIMAX® TOURING",
+    "The Dimax Touring is a premium touring tyre designed for exceptional safety, comfort, fuel efficiency, and performance. It delivers a quiet and comfortable ride while ensuring excellent wet grip, precise handling, and enhanced stability for a safer driving experience. With low rolling resistance, the Dimax Touring helps reduce fuel consumption, making it an ideal choice for passenger cars, hybrids and electric vehicles. All sizes feature the EVC marking, making them suited for Electric Vehicles (EVs) and Plug-in Hybrid Vehicles (PHEVs).": "El Dimax Touring es un neumático de turismo de gama premium diseñado para ofrecer seguridad excepcional, confort, eficiencia de combustible y rendimiento. Proporciona una conducción silenciosa y cómoda, al tiempo que garantiza un excelente agarre en mojado, manejo preciso y mayor estabilidad para una experiencia de conducción más segura. Gracias a su baja resistencia a la rodadura, el Dimax Touring contribuye a reducir el consumo de combustible, lo que lo convierte en la opción ideal para turismos, vehículos híbridos y eléctricos. Todas sus medidas incluyen el marcaje EVC en el flanco, que identifica el neumático como compatible con vehículos eléctricos (EV) y vehículos híbridos enchufables (PHEV).",
+
+    "These are ultra-smooth and shiny channels which, in <br class=\"hidden-xs\">combination with optimised groove wall angles help in <br class=\"hidden-xs\">efficiently evacuating water from the tread, reducing the <br class=\"hidden-xs\">risk of aquaplaning and enhancing safety.": "Canales suaves y pulidos que evacúan el agua de manera eficiente, minimizando el riesgo de aquaplaning y mejorando la seguridad.",
+
+    "SERENITY RIDE DESIGN": "DISEÑO SERENITY RIDE",
+    "Optimised tread pitch sequencing for a silent <br class=\"hidden-xs\">ride. Tyre construction designed to absorb bumps <br class=\"hidden-xs\">and vibrations to give a smooth and comfortable <br class=\"hidden-xs\">driving feel.": "Secuencia optimizada del paso de la banda de rodadura para una conducción silenciosa. La estructura del neumático está diseñada para absorber baches y vibraciones, proporcionando una sensación de conducción suave y cómoda.",
+
+    "TRIPLE SPORT ACTION DESIGN": "DISEÑO TRIPLE SPORT ACTION",
+    "Stiff outside shoulder for ultimate cornering properties.<br class=\"hidden-xs\"> Robust centre rib for steering precision, and siping to <br class=\"hidden-xs\">reduce heat build-up, resulting in higher mileage and <br class=\"hidden-xs\">lower rolling resistance.": "Hombro exterior rígido que optimiza el agarre en curvas. Nervadura central robusta para mayor precisión de dirección y laminillas que reducen la acumulación de calor, lo que se traduce en mayor kilometraje y menor resistencia a la rodadura.",
+
+    "WETRESPONSE COMPOUNDING": "COMPUESTO DE ADHERENCIA EN MOJADO",
+    "High silica tread compound with a modern <br class=\"hidden-xs\">elastomer base designed for exceptional wet <br class=\"hidden-xs\">performance and safety in a wide <br class=\"hidden-xs\">temperature range.": "Compuesto de banda de rodadura con alto contenido de sílice y base de elastómero moderno, diseñado para ofrecer un rendimiento sobresaliente en mojado y mayor seguridad en un amplio rango de temperaturas.",
+
+    "CIRCLE OF TREADLIFE®": "CÍRCULO DE VIDA DE LA BANDA DE RODADURA",
+    "A unique safety feature that indicates remaining <br class=\"hidden-xs\">tread depth. It starts with a full circle indicating <br class=\"hidden-xs\">100% tread depth and totally disappears at 1.6mm <br class=\"hidden-xs\">remaining tread depth.": "Innovador indicador de seguridad que muestra la profundidad restante de la banda de rodadura. Comienza con un círculo completo (100 % de la profundidad) y desaparece por completo cuando la profundidad restante alcanza los 1,6 mm.",
+
+
+    "_COMMENT": "Dimax® R8+",
+    "The Dimax R8+ is a high performance tyre range that has been designed for passenger cars and SUVs. This range has been specifically designed to give high-performance on vehicles that demand the best tyres and offers the ultimate blend of excellent wet and dry grip, sporty handling performance and comfort. This range incorporates most of the run-flat sizes for vehicles in this segment as well as select EV Compatible sizes. The EV Compatible sizes as compared to the non-EV sizes feature a special low rolling resistance compound that enhances the range of Electric Vehicles. This compound also provides stiffness to the tyres that results in a more stable ride for the heavy and powerful electric vehicles. Additionally, the EVC sizes also offer enhanced wet grip, providing a more safe and assured ride.": "El Dimax R8+ es una gama de neumáticos de alto rendimiento diseñada para turismos y SUV. Esta gama ha sido desarrollada específicamente para ofrecer un alto desempeño en vehículos que exigen lo mejor, combinando un excelente agarre en seco y mojado, conducción deportiva y confort. Esta gama incluye la mayoría de las medidas run-flat para vehículos de este segmento, así como medidas compatibles con vehículos eléctricos (EV). En comparación con las versiones estándar, las medidas EVC incorporan un compuesto especial de baja resistencia a la rodadura que mejora la autonomía de los vehículos eléctricos. Este compuesto también aporta rigidez a los neumáticos, lo que se traduce en una conducción más estable para vehículos eléctricos pesados y potentes. Además, las versiones EVC ofrecen un mayor agarre en mojado, brindando una conducción más segura y confiable.",
+
+    "PRECISE HANDLING AT HIGH SPEEDS": "MANEJO PRECISO A ALTAS VELOCIDADES",
+    "Asymmetric tread design with advanced silica formulated <br class=\"hidden-xs\">tread compound technology.": "Diseño de banda de rodadura asimétrico con tecnología de compuesto de sílice avanzada.",
+
+    "EXCEPTIONAL WET GRIP": "AGARRE EXCEPCIONAL EN MOJADO",
+    "A combination of an all-new tread compound with four wide longitudinal<br class='hidden-xs'> grooves provide exceptional wet grip and aquaplaning resistance.": "Una combinación de un nuevo compuesto de la banda de rodadura con cuatro amplios surcos longitudinales ofrece un agarre excepcional en mojado y resistencia al aquaplaning.",
+
+    "QUIET AND COMFORTABLE RIDE": "CONDUCCIÓN SILENCIOSA Y CÓMODA",
+    "Optimised tread pitch sequence for a<br class=\"hidden-xs\"> quieter ride.": "Secuencia optimizada de pasos en la banda de rodadura para una conducción más silenciosa.",
+
+    "_COMMENT": "DIMAX® R8",
+    "The Dimax R8 is a high performance tyre range and has been specifically designed for high-performance passenger cars and SUVs. It offers the ideal blend of excellent wet and dry grip with precise handling and comfort. This range incorporates most of the run-flat sizes for vehicles in this segment as well as select EV Compatible sizes. The EV Compatible sizes as compared to the non-EV sizes feature a special low rolling resistance compound that enhances the range of Electric Vehicles. This compound also provides stiffness to the tyres that results in a more stable ride for the heavy and powerful electric vehicles. Additionally, the EVC sizes also offer enhanced wet grip, providing a more safe and assured ride.": "El Dimax R8 es una gama de neumáticos de alto rendimiento diseñada específicamente para turismos de altas prestaciones y SUV. Ofrece la combinación ideal de excelente agarre en seco y mojado con una conducción precisa y cómoda. Esta gama incluye la mayoría de los tamaños run-flat para vehículos de este segmento, así como tamaños seleccionados compatibles con vehículos eléctricos. En comparación con los tamaños no compatibles con vehículos eléctricos, los tamaños EVC presentan un compuesto especial de baja resistencia a la rodadura que mejora la autonomía de los vehículos eléctricos. Este compuesto también proporciona rigidez a los neumáticos, lo que se traduce en una conducción más estable para vehículos eléctricos pesados y potentes. Además, los tamaños EVC ofrecen un mejor agarre en mojado, proporcionando una conducción más segura y confiable.",
+
+    "SAFETY ON WET CONDITIONS": "SEGURIDAD EN CONDICIONES HÚMEDAS",
+    "Four wide longitudinal grooves that provide efficient water <br class=\"hidden-xs\">clearance and  aquaplaning resistance.": "Cuatro canales longitudinales anchos que proporcionan una eficiente evacuación del agua y resistencia al aquaplaning.",
+
+
+    "_COMMENT": "RPX 800+",
+    "The RPX 800+ is a high performance tyre range and has been designed primarily for modern CUVs and SUVs. This range offers drivers good control on both dry and wet roads, ensuring a comfortable driving experience. It combines real-world performance with outstanding good looks. This range incorporates the popular run-flat sizes in this segment.": "El RPX 800+ es una gama de neumáticos de alto rendimiento diseñada principalmente para los CUV y SUV modernos. Esta gama ofrece a los conductores un buen control tanto en carreteras secas como mojadas, asegurando una experiencia de conducción confortable. Combina el rendimiento real con una estética sobresaliente. Esta gama incluye los populares tamaños Run-Flat en este segmento.",
+
+    "GOOD GRIP, HANDLING AND MILEAGE": "BUENA ADHERENCIA, MANEJO Y DURABILIDAD",
+    "High performance tread compound combined with an innovative asymmetric<br class=\"hidden-xs\"> pattern design, grips the road well, offers low rolling <br class=\"hidden-xs\">resistance and wears evenly.": "Compuesto de banda de rodadura de alto rendimiento combinado con un innovador diseño asimétrico del dibujo, ofrece buena adherencia al asfalto, baja resistencia a la rodadura y un desgaste uniforme.",
+
+    "DRIVING CONFIDENCE AT HIGH SPEEDS": "CONDUCCIÓN SEGURA A ALTAS VELOCIDADES",
+    "Optimised construction that gives a torsionally<br class=\"hidden-xs\"> stiffer ride, allowing for precise, <br class=\"hidden-xs\">confident manoeuvres.": "Construcción optimizada que proporciona una mayor rigidez torsional, permitiendo maniobras precisas y seguras.",
+
+    "QUIET AND COMFORTABLE DRIVING EXPERIENCE": "EXPERIENCIA DE CONDUCCIÓN SILENCIOSA Y CÓMODA",
+    "Optimised tread pitch sequence coupled with a radially<br class=\"hidden-xs\"> compliant construction, optimises driver<br class=\"hidden-xs\"> comfort and experience.": "Secuencia de paso de la banda optimizada junto con una construcción radialmente flexible que maximiza la comodidad y experiencia del conductor.",
+
+
+    "_COMMENT": "RPX 800",
+    "The RPX 800 is a high performance tyre range and has been designed for compact and mid-size cars. This range offers drivers good control on both dry and wet roads, ensuring a comfortable driving experience. It combines real-world performance with outstanding good looks. This range incorporates most of the run-flat sizes for vehicles in this segment as well as select EV Compatible sizes. The EV Compatible sizes as compared to the non-EV sizes feature a special low rolling resistance compound that enhances the range of electric vehicles. This compound also provides stiffness to the tyres that results in a more stable ride for the heavy and powerful electric vehicles. Additionally, the EVC sizes also offer enhanced wet grip, providing a more safe and assured ride.": "El RPX 800 es una gama de neumáticos de alto rendimiento diseñada para coches compactos y medianos. Esta gama ofrece a los conductores un buen control tanto en carreteras secas como mojadas, garantizando una experiencia de conducción cómoda. Combina rendimiento real con una estética sobresaliente. Esta gama incluye la mayoría de los tamaños Run-Flat para vehículos de este segmento, así como algunas medidas compatibles con vehículos eléctricos (EV). Las medidas EV compatibles, en comparación con las no-EV, cuentan con un compuesto especial de baja resistencia a la rodadura que mejora la autonomía de los vehículos eléctricos. Este compuesto también proporciona rigidez a los neumáticos, lo que se traduce en una conducción más estable para los vehículos eléctricos pesados y potentes. Además, las medidas EVC también ofrecen un mejor agarre en mojado, brindando una conducción más segura y confiable.",
+
+    "GOOD GRIP AND HIGH MILEAGE": "BUENA ADHERENCIA Y ALTO KILOMETRAJE",
+    "High performance tread compound along with an optimised contact <br class=\"hidden-xs\">patch gives good grip and even wear.": "El compuesto de banda de rodadura de alto rendimiento junto con una huella de contacto optimizada proporciona buena adherencia y desgaste uniforme.",
+
+    "Solid outer shoulder along with an optimised construction<br class=\"hidden-xs\"> ensures precise handling at high speeds.": "Hombro exterior sólido junto con una construcción optimizada que garantiza un manejo preciso a altas velocidades.",
+
+    "QUIET DRIVING EXPERIENCE": "EXPERIENCIA DE CONDUCCIÓN SILENCIOSA",
+    "Optimised tread pitch sequence and asymmetric tread pattern <br class=\"hidden-xs\">allows for a quiet and comfortable ride.": "Secuencia de pasos optimizada y diseño de banda de rodadura asimétrico que permiten una conducción silenciosa y confortable.",
+
+
+    "_COMMENT": "Rivera® Pro 2",
+    "The Rivera Pro 2 is a high performance tyre range that has been designed for compact and mid-size cars. This range offers a combination of modern looks, good handling, durability and a quiet and comfortable ride.": "",
+
+    "GOOD STEERING RESPONSE": "BUENA RESPUESTA DE DIRECCIÓN",
+    "Tread pattern gives confidence in cornering <br class=\"hidden-xs\">and handling.": "El diseño de la banda de rodadura aporta confianza en curvas y maniobrabilidad.",
+
+    "GOOD BALANCE OF GRIP AND MILEAGE": "BUEN EQUILIBRIO ENTRE AGARRE Y DURABILIDAD",
+    "Specially formulated tread compound gives a good combination of <br class=\"hidden-xs\">grip and longevity.": "El compuesto de banda de rodadura especialmente formulado ofrece una buena combinación de agarre y duración.",
+
+    "Optimised tread pitch sequence ensures <br class=\"hidden-xs\">a quiet ride.": "La secuencia optimizada del paso de la banda de rodadura garantiza una conducción silenciosa.",
+
+
+    "_COMMENT": "Dimax® ECO",
+    "The Dimax Eco is the revolutionary new low rolling resistance high performance tyre from Radar Tyres. This tyre has been rated the best possible EU Tyre label grade “A” for Rolling Resistance which translates to high Fuel Efficiency and reduction of CO2 emissions; “B” grade for wet grip which provides enhanced wet grip and shorter braking distance and it has a significantly lower noise level of 69dB ). This tyre is designed to fit high performance electric, hybrid and latest generation internal combustion vehicles.": "",
+
+    "High fuel efficiency<br class='hidden-xs'>": "ALTA EFICIENCIA DE COMBUSTIBLE",
+    "Unique low-hysteresis tread compound that reduces energy loss and results<br class='hidden-xs'> in a lower rolling resistance which in turn leads to the vehicle delivering higher <br class='hidden-xs'>fuel efficiency and reduction in CO2 emissions.": "Compuesto de banda de rodadura de baja histéresis que reduce la pérdida de energía y disminuye la resistencia a la rodadura, lo que permite al vehículo ofrecer una mayor eficiencia de combustible y una reducción de las emisiones de CO₂.",
+
+    "Enhanced wet grip, good aquaplaning resistance and <br class='hidden-xs'>shorter braking distance": "AGARRE MEJORADO EN MOJADO, BUENA RESISTENCIA AL AQUAPLANING Y DISTANCIA DE FRENADO REDUCIDA",
+    "Specially formulated tread compound along with the 3 wide<br class='hidden-xs'> circumferential grooves offers shorter braking distance and enhanced <br class='hidden-xs'>grip in wet conditions.": "Compuesto de banda de rodadura especialmente formulado que, junto con los 3 canales circunferenciales anchos, ofrece una distancia de frenado más corta y un mayor agarre en condiciones de mojado.",
+
+    "Good handling<br class='hidden-xs'>": "BUENA MANEJABILIDAD",
+    "Optimised and light weight construction which<br class='hidden-xs'> provides good handling.<br class='hidden-xs'>": "Construcción optimizada y ligera que proporciona una buena manejabilidad.",
+
+    "_COMMENT": "RADAR SPARE TYRE",
+    "The Radar Spare tyre is designed to help drivers regain temporary mobility in the event of a puncture, blowout or any emergency. This space-saver tyre is designed for temporary use only and can help you get off the highway or reach the nearest tyre shop. Featuring a smaller physical size with a narrower tread and light weight construction this tyre can be driven at a maximum speed of 80 km/h at 60 psi cold inflation pressure.": "El neumático de repuesto Radar está diseñado para ayudar a los conductores a recuperar la movilidad temporal en caso de pinchazo, reventón o cualquier emergencia. Este neumático compacto está destinado únicamente a un uso temporal y puede ayudarte a salir de la carretera o llegar al taller más cercano. Con un tamaño físico más pequeño, una banda de rodadura más estrecha y una construcción ligera, este neumático puede conducirse a una velocidad máxima de 80 km/h con una presión de inflado en frío de 60 psi.",
+
+    "PROVIDES SAFETY": "GARANTIZA SEGURIDAD",
+    "In the event of a puncture, blowout or any emergency it helps <br class=\"hidden-xs\">drivers regain temporary mobility.": "En caso de pinchazo, reventón o cualquier emergencia, ayuda a los conductores a recuperar la movilidad temporal.",
+
+    "LIGHT WEIGHT & SAVES SPACE": "LIGERO Y AHORRA ESPACIO",
+    "Smaller physical size, narrower tread and light weight <br class=\"hidden-xs\">construction.": "Tamaño físico más reducido, banda de rodadura más estrecha y construcción ligera.",
+
+    "_COMMENT": "DIMAX® 4 SEASON",
+    "The Dimax 4 Season is an innovative all-season tyre range designed for drivers living in urban areas, who need a versatile mobility solution all year round. It offers exceptional grip in winter as well as in summer conditions. All sizes have the Three Peak Mountain Snowflake symbol (3PMSF) and are officially approved for winter use.": "Dimax 4 Season es una innovadora gama de neumáticos todo tiempo diseñada para conductores que viven en zonas urbanas y que necesitan una solución de movilidad versátil durante todo el año. Ofrece un agarre excepcional tanto en condiciones invernales como estivales. Todas las medidas cuentan con el símbolo del copo de nieve con montaña de tres picos (3PMSF) y están oficialmente homologadas para su uso en invierno.",
+
+    "SAFETY IN EVERY WEATHER CONDITION": "SEGURIDAD EN TODAS LAS CONDICIONES CLIMÁTICAS",
+    "Dual compound technology that keeps the tyre flexible in both hot summer<br class=\"hidden-xs\"> weather and cold winter temperatures.": "Tecnología de doble compuesto que mantiene el neumático flexible tanto en el calor del verano como en las bajas temperaturas del invierno.",
+
+    "UNIQUE TREAD PATTERN FOR PERFORMANCE": "DISEÑO ÚNICO DE LA BANDA DE RODADURA PARA MAYOR RENDIMIENTO",
+    "Asymmetric tread pattern with four circumferential grooves provides aquaplaning resistance <br class=\"hidden-xs\">on wet roads and high density sipes provide exceptional grip on wet, slush and snow.": "El diseño asimétrico de la banda de rodadura con cuatro canales circunferenciales ofrece resistencia al aquaplaning en carreteras mojadas, mientras que las laminillas de alta densidad proporcionan un agarre excepcional en superficies húmedas, con aguanieve y nieve.",
+
+    "QUIET RIDE": "CONDUCCIÓN SILENCIOSA",
+    "Optimised casing profile and pitch sequence ensure <br class=\"hidden-xs\">a quieter ride": "El perfil optimizado de la carcasa y la secuencia de paso aseguran una conducción más silenciosa.",
+
+
+    "_COMMENT": "Dimax® Winter Sport",
+    "The Dimax Winter Sport is the Alpine winter tyre range designed for modern high-end premium vehicles. This range has been designed to achieve maximum safety, control and performance in all winter weather conditions.": "Dimax Winter Sport es la gama de neumáticos de invierno alpinos diseñada para vehículos modernos de alta gama. Esta gama ha sido concebida para ofrecer el máximo nivel de seguridad, control y rendimiento en todas las condiciones invernales.",
+
+    "SAFETY IN ALL WINTER CONDITIONS": "SEGURIDAD EN TODAS LAS CONDICIONES INVERNALES",
+    "Advanced Silica filled winter tread compound that keeps the tyre flexible<br class=\"hidden-xs\"> even in freezing conditions allowing the tread to grip better <br class=\"hidden-xs\">in wet, slush and snow.": "Compuesto de banda de rodadura de invierno con sílice avanzada que mantiene el neumático flexible incluso en condiciones de congelación, lo que permite un mejor agarre en mojado, aguanieve y nieve.",
+
+    "CONTROL AND DRIVING PRECISION": "CONTROL Y PRECISIÓN DE CONDUCCIÓN",
+    "A combination of high density sipes and lateral grooves provides efficient<br class=\"hidden-xs\"> water clearance and hydroplaning resistance in cold<br class=\"hidden-xs\"> weather conditions.": "Una combinación de laminillas de alta densidad y surcos laterales proporciona una evacuación eficiente del agua y resistencia al aquaplaning en condiciones climáticas frías.",
+
+    "MAXIMUM DRIVING COMFORT": "MÁXIMO CONFORT DE CONDUCCIÓN",
+    "Optimised casing profile and computer optimised <br class=\"hidden-xs\">pitch sequence ensures a quiet and <br class=\"hidden-xs\">comfortable ride.": "El perfil optimizado de la carcasa y la secuencia de pasos optimizada por ordenador garantizan una conducción silenciosa y cómoda.",
+
+    "_COMMENT": "Dimax® Alpine",
+    "The Dimax Alpine has been designed and developed to meet the needs of the European winter driver. This range offers safety and excellent performance in Alpine winter conditions. The sizes fit popular passenger cars and SUVs.": "El Dimax Alpine ha sido diseñado y desarrollado para satisfacer las necesidades del conductor europeo en invierno. Esta gama ofrece seguridad y un excelente rendimiento en condiciones alpinas invernales. Las medidas se ajustan a turismos y SUV populares.",
+
+    "EXCELLENT STEERING AND HANDLING PERFORMANCE<br class='hidden-xs'> IN WET, SLUSH AND SNOW": "EXCELENTE DIRECCIÓN Y MANIOBRABILIDAD EN MOJADO, NIEVE Y AGUANIEVE",
+    "High density of zig-zag sipes help increase the grip on snow and slush which provides excellent<br class='hidden-xs'>  steeringand handling performance. Optimised tread compound with advanced synthetic polymers <br class='hidden-xs'>and silica ensure that the rubber stays grippy in wet and cold weather conditions.": "Densidad elevada de laminillas en zigzag que mejora el agarre sobre nieve y aguanieve, ofreciendo un excelente rendimiento en maniobrabilidad y conducción. El compuesto optimizado de la banda de rodadura, con polímeros sintéticos avanzados y sílice, asegura que el caucho mantenga su adherencia en condiciones húmedas y frías.",
+
+    "PREVENTS SLUSH-PLANING AND <br class='hidden-xs'>AQUA-PLANING": "EVITA EL DESLIZAMIENTO EN AGUANIEVE Y LA ACUAPLANEACIÓN",
+    "Directional tread design offers improved self-cleaning action on wet and<br class='hidden-xs'> slushy roads, as well as optimising gripping edges on<br class='hidden-xs'> snowy roads.": "El diseño direccional de la banda de rodadura ofrece una acción autolimpiante mejorada en carreteras mojadas y con aguanieve, así como bordes de agarre optimizados en carreteras nevadas.",
+
+    "SHORTER BRAKING <br class='hidden-xs'>DISTANCE": "DISTANCIA DE FRENADO MÁS CORTA",
+    "Optimsed pattern design featuring more gripping edges providing <br class='hidden-xs'>increased grip on snow and ice for a shorter <br class='hidden-xs'>braking distance.": "Diseño optimizado de la banda de rodadura con más bordes de agarre que proporcionan mayor tracción sobre nieve y hielo para reducir la distancia de frenado.",
+
+    "_COMMENT": "DIMAX® ICE",
+    "The Dimax Ice is specifically designed for those who drive in extreme winter Nordic conditions and features a unique super soft compound that stays grippy even in extremely cold temperatures. This stud-less range provides increased safety, control and enhanced traction on ice and hard packed snow making it the ideal choice for extreme winter use.": "Dimax Ice está diseñado específicamente para quienes conducen en condiciones invernales nórdicas extremas y cuenta con un compuesto súper blando único que mantiene su agarre incluso en temperaturas extremadamente bajas. Esta gama sin clavos ofrece mayor seguridad, control y tracción mejorada sobre hielo y nieve compacta, lo que la convierte en la opción ideal para un uso invernal extremo.",
+
+    "SAFETY AND CONTROL IN ALL WINTER CONDITIONS": "SEGURIDAD Y CONTROL EN TODAS LAS CONDICIONES INVERNALES",
+    "Special super soft compound that remains flexible even in extremely cold temperatures<br class=\"hidden-xs\"> combined with a high density of zig-zag sipes allowing for better traction and braking safety.": "Compuesto súper blando especial que permanece flexible incluso en temperaturas extremadamente frías, combinado con una alta densidad de laminillas en zigzag que permite una mejor tracción y seguridad en la frenada.",
+
+    "ENHANCED GRIP ON ICE": "AGARRE MEJORADO EN HIELO",
+    "A high density of zig-zag sipes provide more biting edges for <br class=\"hidden-xs\">increased mechanical grip on ice.": "Alta densidad de laminillas en zigzag que proporciona más bordes de agarre para un mayor agarre mecánico sobre hielo.",
+
+    "EXTRA GRIP ON HARD-PACKED SNOW": "AGARRE EXTRA EN NIEVE COMPACTADA",
+    "Directional self-cleaning tread design coupled with thousands of additional <br class=\"hidden-xs\">gripping edges provides exceptional grip on hard-packed snow": "El diseño direccional de la banda de rodadura con función autolimpiante, combinado con miles de bordes de agarre adicionales, proporciona un agarre excepcional sobre nieve compactada.",
+
+    "_COMMENT": "DIMAX® ICE LOCK",
+    "The Dimax Ice Lock is the new generation of studded tyres that are specifically designed to increase performance and provide safety and control in harsh winter Nordic conditions. This range features a unique super soft tread compound that has been formulated to stay soft and grippy in harsh Nordic weather conditions. These tyres also feature special factory fitted Tikka Spike studs that offer increased mechanical grip and enhanced braking on ice and hard packed snow.": "El Dimax Ice Lock es la nueva generación de neumáticos con clavos diseñados específicamente para mejorar el rendimiento y ofrecer seguridad y control en condiciones invernales severas del norte de Europa. Esta gama cuenta con un exclusivo compuesto de banda de rodadura súper blando, formulado para mantenerse suave y adherente en climas nórdicos extremos. Estos neumáticos también incorporan clavos Tikka Spike instalados de fábrica que proporcionan un mayor agarre mecánico y mejor frenado sobre hielo y nieve compactada.",
+
+    "Special super soft compound that remains flexible even in extreme Nordic temperatures<br class=\"hidden-xs\"> combined with high density of zig-zag sipes allows for better traction and braking safety.": "Compuesto especial súper blando que permanece flexible incluso en temperaturas nórdicas extremas, combinado con una alta densidad de laminillas en zigzag que permite una mejor tracción y seguridad en el frenado.",
+
+    "High density of zig-zag sipes provide more biting edges for<br class=\"hidden-xs\"> increased mechanical grip on ice.": "Alta densidad de laminillas en zigzag que proporcionan más bordes de agarre para un mayor agarre mecánico sobre hielo.",
+
+    "Directional self-cleaning tread design coupled with sipes and studs <br class=\"hidden-xs\">provides exceptional grip on hard-packed snow.": "El diseño direccional autolimpiante de la banda de rodadura, combinado con laminillas y clavos, proporciona un agarre excepcional en nieve compactada.",
+
+    "ENHANCED TRACTION AND GRIP ON HARD PACKED ICE": "MAYOR TRACCIÓN Y AGARRE EN HIELO COMPACTADO",
+    "Factory fitted with high-end Tikka Spike studs enhance traction,<br class=\"hidden-xs\"> grip and braking on hard packed ice and snow.": "Equipado de fábrica con clavos Tikka Spike de alta gama que mejoran la tracción, el agarre y el frenado sobre hielo y nieve compactada.",
+
+    "_COMMENT": "RENEGADE® A/T5",
+    "The Radar Renegade A/T5 is an exceptional all-terrain tyre range that is designed for people who like to venture off-road but need an assured ride on-road as well. This range offers increased stability and resistance to punctures. It also features the innovative and unique stone-ejector-technology that prevents stones from drilling and lodging in the tread. Most sizes have the Three Peak Mountain Snowflake symbol (3PMSF) and are approved for use in snow.": "El Radar Renegade A/T5 es una excepcional gama de neumáticos todo terreno diseñada para personas que disfrutan de aventuras fuera de carretera pero que también necesitan una conducción segura sobre el asfalto. Esta gama ofrece mayor estabilidad y resistencia a los pinchazos. También incorpora una innovadora tecnología expulsa-piedras que impide que las piedras se claven o se queden alojadas en la banda de rodadura. La mayoría de los tamaños cuentan con el símbolo del copo de nieve con montaña de tres picos (3PMSF), lo que los hace aptos para su uso en nieve.",
+
+    "ENHANCED STABILITY, HANDLING AND EVEN TREADWEAR": "ESTABILIDAD, MANEJO Y DESGASTE UNIFORME MEJORADOS",
+    "Wide centre tread blocks help balance the <br class='hidden-xs'>weight distribution and ensure the tread <br class='hidden-xs'>wears evenly.": "Los bloques centrales anchos de la banda de rodadura ayudan a equilibrar la distribución del peso y aseguran un desgaste uniforme del neumático.",
+
+    "Optimised tread block sizes and shapes with <br class='hidden-xs'>multiple lateral grooves and angled sipes ensure <br class='hidden-xs'>superb traction on all terrains.": "Tamaños y formas optimizados de los bloques de la banda de rodadura con múltiples surcos laterales y laminillas anguladas garantizan una tracción sobresaliente en todo tipo de terrenos.",
+
+    "INCREASED STABILITY AND RESISTANCE TO PUNCTURES": "MAYOR ESTABILIDAD Y RESISTENCIA A LOS PINCHAZOS",
+    "Robust 3-ply construction reduces the risk of <br class='hidden-xs'>punctures and gives sure-footed handling on <br class='hidden-xs'>all surfaces.": "La robusta construcción de 3 capas reduce el riesgo de pinchazos y proporciona un manejo seguro sobre todo tipo de superficies.",
+
+    "Unique stone-ejector-technology that prevents <br class='hidden-xs'>stones from drilling and lodging in the tread <br class='hidden-xs'>and causing damage to the casing.": "Tecnología única de expulsión de piedras que evita que se perforen y queden incrustadas en la banda de rodadura, previniendo así daños en la carcasa.",
+
+    "_COMMENT": "Renegade® R7 M/T",
+    "The Renegade R7 M/T is a mud terrain tyre that has been designed specifically for extreme off-road applications. This range is designed to fit 4x4s and is suitable for vehicles with lift-kits. It features a reinforced 3-ply casing for high durability and state-of-the-art stone-ejector-technology which prevents stone retention and subsequent tyre damage. An ideal choice for drivers who want no compromise with off-road traction and handling.": "El Renegade R7 M/T es un neumático para terreno barroso diseñado específicamente para aplicaciones todoterreno extremas. Esta gama está pensada para vehículos 4x4 y es ideal para automóviles con kits de elevación. Cuenta con una carcasa reforzada de 3 capas que brinda alta durabilidad, junto con tecnología avanzada de expulsión de piedras que evita la retención de piedras y el daño posterior del neumático. Una elección ideal para conductores que no quieren comprometer la tracción y el control fuera de carretera.",
+
+    "OUTSTANDING TRACTION IN <br class='hidden-xs'>ALL CONDITIONS": "TRACCIÓN EXCEPCIONAL EN TODAS LAS CONDICIONES",
+    "Aggressive pattern featuring a high void <br class='hidden-xs'>ratio and open shoulder design.": "Diseño de patrón agresivo con una alta proporción de vacío y hombros abiertos.",
+
+    "Unique stone-ejector-technology prevents stones <br class='hidden-xs'>from drilling and lodging in the tread and <br class='hidden-xs'>causing damage to the casing.": "La exclusiva tecnología expulsora de piedras evita que las piedras se incrusten y perforen la banda de rodadura, causando daños a la carcasa.",
+
+    "SUPERIOR OVERALL <br class='hidden-xs'>RESISTANCE TO DAMAGE": "RESISTENCIA GENERAL SUPERIOR A DAÑOS",
+    "Reinforced 3-ply <br class='hidden-xs'>casing construction.": "Construcción de carcasa reforzada con 3 capas.",
+
+    "ENHANCED TREAD LIFE AND BRAKING <br class='hidden-xs'>ON ALL SURFACES": "VIDA ÚTIL DE LA BANDA DE RODADURA Y FRENADO MEJORADOS EN TODAS LAS SUPERFICIES",   
+    "Special tread compound and <br class='hidden-xs'>wide footprint.": "Compuesto de banda de rodadura especial y huella ancha.",
+
+    "_COMMENT": "Argonite® RV-4",
+    "The Argonite RV-4 is a state-of-the-art, high-mileage van tyre. This range has been designed for medium to large light commercial vehicles up to 3.5 tonnes. It offers excellent mileage, stability, high load carrying capability, aquaplaning resistance and low noise emission. This range features robust sidewall protectors that have been designed to cope with kerbing damage and protect the carcass. Available in speed ratings up to H (210km/h), this range offers a good combination of value and performance.": "El Argonite RV-4 es un neumático de última generación para furgonetas, diseñado para ofrecer un alto kilometraje. Esta gama está pensada para vehículos comerciales ligeros de tamaño medio a grande de hasta 3,5 toneladas. Ofrece un excelente rendimiento en kilometraje, estabilidad, gran capacidad de carga, resistencia al aquaplaning y baja emisión de ruido. Esta gama incorpora protectores de flanco robustos diseñados para resistir daños por roces en bordillos y proteger la carcasa. Disponible en índices de velocidad de hasta H (210 km/h), esta gama ofrece una excelente combinación de valor y rendimiento.",
+
+    "HIGHER LOAD CARRYING CAPACITY AND <br class='hidden-xs'>DURABILITY": "MAYOR CAPACIDAD DE CARGA Y DURABILIDAD",
+    "Strong casing manufactured with high-density <br class='hidden-xs'>polyester plies.": "Carcasa robusta fabricada con capas de poliéster de alta densidad.",
+
+    "GOOD MILEAGE AND HIGH FUEL <br class='hidden-xs'>EFFICIENCY": "BUEN RENDIMIENTO Y ALTA EFICIENCIA DE COMBUSTIBLE",
+    "Specially formulated tread compound that wears evenly <br class='hidden-xs'>and provides lower rolling resistance.": "Compuesto de la banda de rodadura especialmente formulado que se desgasta de manera uniforme y proporciona una menor resistencia al rodamiento.",
+
+    "INCREASED WET TRACTION AND <br class='hidden-xs'>BRAKING": "MAYOR TRACCIÓN Y FRENADO EN MOJADO",
+    "Lateral grooves that provide efficient water evacuation <br class='hidden-xs'>and aquaplaning resistance.": "Surcos laterales que proporcionan una evacuación eficiente del agua y resistencia al aquaplaning.",
+
+    "_COMMENT": "Argonite® RV-4T",
+    "The Argonite RV-4T is a modern range of trailer tyres that is perfect for non-driven wheels such as those of low-loaders, caravans, livestock and delivery trailers. This range has been specifically designed, developed and tested for trailers and every size carries the FRT (Free Rolling Tyre) designation. Most sizes are dual load rated as well.": "El Argonite RV-4T es una gama moderna de neumáticos para remolques, perfecta para ruedas no motrices como las de plataformas bajas, caravanas, transporte de ganado y remolques de reparto. Esta gama ha sido específicamente diseñada, desarrollada y probada para remolques, y cada medida lleva la designación FRT (Free Rolling Tyre – Neumático de Rodadura Libre). La mayoría de las medidas también tienen doble índice de carga.",
+
+    "EXCELLENT LOAD CARRYING CAPACITY ON SINGLE,<br class='hidden-xs'> DOUBLE AND MULTIPLE AXLE TRAILERS": "EXCELENTE CAPACIDAD DE CARGA EN REMOLQUES DE UN EJE, DOBLE EJE Y EJE MÚLTIPLE",
+    "Reinforced construction and optimised inflated shape ensure<br class=\"hidden-xs\"> loads are carried evenly across the footprint.": "Construcción reforzada y forma inflada optimizada garantizan que la carga se distribuya uniformemente sobre la huella.",
+
+    "GREAT DIRECTIONAL STABILITY AND <br class='hidden-xs'>AQUAPLANING RESISTANCE": "EXCELENTE ESTABILIDAD DIRECCIONAL Y RESISTENCIA AL ACUAPLANEO",
+    "Sinusoidal pattern with wide circumferential grooves and lateral open shoulder<br class=\"hidden-xs\"> grooves gives directional stability and efficient water clearance.": "El diseño sinusoidal con amplias ranuras circunferenciales y ranuras laterales abiertas en los hombros proporciona estabilidad direccional y una evacuación eficiente del agua.",
+
+    "INCREASED PROTECTION AGAINST<br class='hidden-xs'> DAMAGE AND KERBING": "MAYOR PROTECCIÓN CONTRA DAÑOS Y ROZADURAS",
+    "Optimised sidewall protector design extends the life of the tyre by protecting <br class=\"hidden-xs\">the casing from kerbing and other sidewall damages": "El diseño optimizado del protector de flancos prolonga la vida útil del neumático al proteger la carcasa de rozaduras con el bordillo y otros daños en los laterales.",
+
+    "_COMMENT": "RLT-71",
+    "The RLT-71 is a premium light commercial tyre. This range is specifically designed for small to medium vans and light commercial vehicles. It offers good wet and dry performance, mileage and safety with high load carrying capacity which makes it the ideal choice for this application.": "",
+
+    "GOOD MILEAGE AND <br class='hidden-xs'>HIGH FUEL EFFICIENCY": "ALTO KILOMETRAJE Y MAYOR EFICIENCIA DE COMBUSTIBLE",
+    "Specially formulated tread compound that wears evenly and <br class='hidden-xs'>provides lower rolling resistance.": "Compuesto de banda de rodadura especialmente formulado que se desgasta de manera uniforme y ofrece menor resistencia al rodamiento.",
+
+    "_COMMENT": "Argonite®4 Season RV-4S",
+    "The Argonite 4 Season <sup>RV-4S</sup> is an All-Weather van tyre designed for year-round use. Developed and engineered for light commercial vehicles, this tyre is the ideal choice for drivers seeking excellent handling, high mileage, high load carrying capability, low rolling resistance and great performance in all weather conditions. All sizes have the Three Peak Mountain Snowflake symbol (3PMSF) and are officially approved for winter use. Available in a variety of fitments for small, medium and large vans.": "El Argonite 4 Season <sup>RV-4S</sup> es un neumático para furgonetas de uso en todas las estaciones diseñado para ofrecer rendimiento durante todo el año. Desarrollado y diseñado para vehículos comerciales ligeros, es la elección ideal para conductores que buscan un manejo excelente, alto kilometraje, gran capacidad de carga, baja resistencia a la rodadura y un gran rendimiento en todas las condiciones climáticas. Todos los tamaños cuentan con el símbolo del copo de nieve de montaña de tres picos (3PMSF) y están oficialmente aprobados para su uso en invierno. Disponible en una variedad de medidas para furgonetas pequeñas, medianas y grandes.",
+
+    "SAFETY IN ALL WEATHER CONDITIONS": "SEGURIDAD EN TODAS LAS CONDICIONES CLIMÁTICAS",
+    "Symmetric tread pattern with three circumferential <br class=\"hidden-xs\">grooves provides aquaplaning resistance on wet roads <br class=\"hidden-xs\">and high-density sipes provide exceptional grip on wet, <br class=\"hidden-xs\">slush and snow.": "El diseño simétrico de la banda de rodadura con tres surcos circunferenciales proporciona resistencia al aquaplaning en carreteras mojadas, mientras que las laminillas de alta densidad ofrecen un agarre excepcional en superficies mojadas, con aguanieve y nieve.",
+
+    "OPTIMAL TRACTION IN ALL SEASONS": "TRACCIÓN ÓPTIMA EN TODAS LAS ESTACIONES",
+    "Unique dual compound technology that <br class=\"hidden-xs\">keeps the tyre flexible in both hot <br class=\"hidden-xs\">summer weather and cold winter <br class=\"hidden-xs\">temperatures.": "Tecnología exclusiva de doble compuesto que mantiene el neumático flexible tanto en climas calurosos de verano como en temperaturas frías de invierno.",
+
+    "REINFORCED FOR ROBUSTNESS": "REFORZADO PARA MAYOR ROBUSTEZ",
+    "Reinforced construction using the latest <br class=\"hidden-xs\">materials and techniques provides <br class=\"hidden-xs\">stability and high load- carrying <br class=\"hidden-xs\">capability.": "La construcción reforzada con los materiales y técnicas más avanzadas proporciona estabilidad y una alta capacidad de carga.",
+
+    "_COMMENT": "Argonite® Alpine",
+    "The Argonite Alpine is a winter specific tyre designed for light commercial applications. This range provides drivers improved performance in all winter conditions and optimises stability, high load carrying capability and durability.": "El Argonite Alpine es un neumático de invierno diseñado específicamente para aplicaciones comerciales ligeras. Esta gama ofrece a los conductores un mejor rendimiento en todas las condiciones invernales y optimiza la estabilidad, la capacidad de carga y la durabilidad.",
+
+    "High density of zig-zag sipes help increase the grip on snow and slush <br class=\"hidden-xs\">which provides excellent steering and handling performance. Optimised <br class=\"hidden-xs\">tread compound with advanced synthetic polymers and silica ensure that <br class=\"hidden-xs\">the rubber stays grippy in wet and cold weather conditions.": "La alta densidad de laminillas en zigzag ayuda a aumentar el agarre sobre nieve y aguanieve, lo que proporciona una excelente dirección y maniobrabilidad. El compuesto optimizado con polímeros sintéticos avanzados y sílice asegura que el caucho se mantenga adherente en condiciones de humedad y frío.",
+    
+    "TOTAL CONTROL AND STABLE HANDLING": "CONTROL TOTAL Y MANEJO ESTABLE",
+    "Optimsed pattern and construction <br class=\"hidden-xs\">results in a contact patch that has <br class=\"hidden-xs\">been optimised to ensure predictable <br class=\"hidden-xs\">cornering and handling.": "El diseño y la construcción optimizados dan como resultado una huella de contacto que ha sido perfeccionada para garantizar un comportamiento predecible en curvas y un manejo seguro.",
+
+    "HIGH LOAD CARRYING CAPABILITY": "ALTA CAPACIDAD DE CARGA",
+    "Reinforced casing and robust steel <br class=\"hidden-xs\">belts ensure that the vehicle <br class=\"hidden-xs\">remains stable whilst under heavy <br class=\"hidden-xs\">and light loads.": "La carcasa reforzada y los cinturones de acero robustos garantizan que el vehículo permanezca estable tanto con cargas pesadas como ligeras.",
+
+    "_COMMENT": "DIMAX® CLASSIC",
+    "The Dimax Classic is a touring tyre specially designed and developed for classic cars. This range offers a combination of classic looks yet state-of-the-art pattern technology and the latest in materials sophistication that ensures the tyre delivers exceptional handling, durability and comfort, while completely complimenting and adding to the overall aesthetic of your classic/vintage vehicle. Available in either a retro white sidewall or a sophisticated black sidewall finish.": "El Dimax Classic es un neumático de turismo diseñado y desarrollado especialmente para autos clásicos. Esta gama ofrece una combinación de estética retro con tecnología de diseño de última generación y materiales sofisticados que garantizan un manejo excepcional, durabilidad y confort. Todo esto mientras complementa y realza el estilo general de tu vehículo clásico o vintage. Disponible con un elegante flanco blanco retro o con un acabado negro sofisticado.",
+
+    "HIGH MILEAGE": "ALTO KILOMETRAJE",
+    "Specially formulated tread compound.": "Compuesto de banda de rodadura especialmente formulado.",
+
+    "DELIVERS SHORTER BRAKING DISTANCE": "DISTANCIA DE FRENADO MÁS CORTA",
+    "Touring tread pattern.": "Diseño de banda de rodadura para turismo.",
+
+    "CLASSIC AESTHETICS FOR CLASSIC/VINTAGE VEHICLES": "ESTÉTICA CLÁSICA PARA VEHÍCULOS CLÁSICOS O VINTAGE",
+    "Vintage tread and sidewall design available in either a black or retro white sidewall finish.": "Diseño vintage de banda de rodadura y flanco disponible en acabado negro o retro de flanco blanco.",
+
+    "_COMMENT": "Renegade® Classic",
+    "The Renegade Classic a Classic range that is designed for classic/vintage 4x4 vehicles. This tyre features the latest in design, development, materials and manufacturing techniques combined with the look that classic/vintage 4x4 vehicles need. The Renegade Classic has been designed to complete the look of your beloved project, whilst giving you the assurance of a quiet, comfortable ride and exceptional handling and grip.": "El Renegade Classic es una gama de neumáticos diseñada para vehículos 4x4 clásicos/vintage. Este neumático incorpora lo último en diseño, desarrollo, materiales y técnicas de fabricación, combinado con la estética que requieren los vehículos 4x4 clásicos y vintage. El Renegade Classic ha sido creado para complementar el estilo de tu proyecto más querido, ofreciéndote al mismo tiempo un viaje silencioso y cómodo, con un manejo y agarre excepcionales.",
+
+    "EXCEPTIONAL HANDLING AND GRIP":"MANEJO Y AGARRE EXCEPCIONALES",
+    "Latest tread compound and construction <br class='hidden-xs'>technology.": "Compuesto de banda de rodadura y tecnología de construcción de última generación.",
+
+    "Modern take on the classic/vintage 4x4 tread design with optimised tread <br class='hidden-xs'>pitch technology, to give an authentic feel to your classic 4x4.": "Interpretación moderna del diseño de la banda de rodadura clásica/vintage para 4x4 con tecnología optimizada de paso de banda, que ofrece una sensación auténtica a tu 4x4 clásico.",
+
+    "PROVIDES A SOPHISTICATED LOOK FOR YOUR <br class='hidden-xs'>CLASSIC/ANTIQUE/VINTAGE 4X4": "OFRECE UNA ESTÉTICA SOFISTICADA PARA TU 4X4 CLÁSICO/ANTIGUO/VINTAGE",
+    "Vintage tread and sidewall design.": "Diseño vintage de la banda de rodadura y el flanco.",
+
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": "",
+    "_COMMENT": ""
 
 }

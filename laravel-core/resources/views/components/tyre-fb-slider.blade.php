@@ -7,8 +7,8 @@
         <!-- Slides -->
         @foreach ($slides as $slide)
             <div class="swiper-slide center tyre--fb-slider--slide" >
-                <div class="h5 uppercase body-font t600 dark-80">{!! htmlspecialchars_decode($slide->title) !!}</div>
-                <p class="center dark-80">{!! htmlspecialchars_decode($slide->description) !!}</p>
+                <div class="h5 uppercase body-font t600 dark-80">{!! __(htmlspecialchars_decode($slide->title)) !!}</div>
+                <p class="center dark-80">{!! __(htmlspecialchars_decode($slide->description)) !!}</p>
                 <img class="lozad center" src="{{asset('storage/features/'.$slide->image)}}" alt="Radar">
             </div>
         @endforeach
