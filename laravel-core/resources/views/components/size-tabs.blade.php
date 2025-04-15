@@ -35,7 +35,17 @@
     </div>
     <div class="col-lg-12">
         <div class="tyre--legends">
-            {!! preg_replace_array('/:url[a-z_-]+/', [route('pages.eu-labeling')], __(htmlspecialchars_decode($legend))) !!}
+            @php 
+            
+            $legend = htmlspecialchars_decode($legend ?? '');
+            $translated = preg_replace_callback('/:([a-zA-Z0-9_-]+)/', function ($matches) {
+                return __($matches[1]); // JSON key translation
+            }, $legend);
+            
+            $translated = preg_replace_array('/url[a-z_-]+/', [safeRoute('pages.eu-labeling')],$translated);
+            
+            @endphp
+            {!! $translated !!}
         </div>
     </div>
 </div>

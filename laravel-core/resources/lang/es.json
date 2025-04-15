@@ -377,6 +377,34 @@
     "_COMMENT": "",
 
 
+    "_COMMENT": "LEGENDS COMMONS PLACEHOLDERS",
+    "li": "Índice de Carga",
+    "sr": "Código de Velocidad",
+    "lr": "Capacidad de Carga",
+    "evc": "Compatible con Vehículos Eléctricos",
+    "ms": "Barro y Nieve",
+    "wet": "Agarre en Mojado",
+    "resistance": "Resistencia a la Rodadura",
+    "noise": "Ruido Externo",
+    "noise_class": "Clase de Ruido",
+    "more": "Aprende más sobre las etiquetas de neumáticos de la UE",
+    "here": "aquí",
+    "speed_label": "Código de Velocidad:",
+    "load_label": "Capacidad de Carga:",
+    "extra": "Carga Extra",
+    "rft": "Run-Flat",
+    "sl":"Carga Estándar",
+    "3pmsf":"Símbolo de los Tres Picos con Copo de Nieve",
+    "sizes_02": "Tamaños disponibles en Dimax Ice Lock (DI.IL.02)",
+    "sizes_04": "Tamaños disponibles en Dimax Ice Lock (DI.IL.04)",
+    "sw": "Flanco",
+    "owl": "Letras Blancas en Contorno",
+    "por": "Uso Profesional Off-Road",
+    "wsw": "Flanco Blanco",
+    "wswn": "Flanco Blanco Estrecho",
+    
+
+
     "_COMMENT": "Dimax® Sport",
     "The Dimax Sport is a premium ultra high performance tyre engineered to deliver uncompromising safety, performance and control. Designed by Omni United in collaboration with renowned Italian design house GFG Style, led by legendary automotive designers Giorgetto and Fabrizio Giugiaro, the Dimax Sport features a unique, functional and stylish design representing a perfect synergy of design and engineering. This advanced and feature packed range is extensively tested against premium brands and offers drivers excellent wet grip, handling, low rolling resistance and a quiet ride. The Dimax Sport offers popular passenger car and SUV fitments and all sizes carry the EVC marking on the sidewall identifying the tyre as compatible with both Electric Vehicles(EV) and Plug-in hybrid vehicles.": "El Dimax Sport es un neumático ultra alto rendimiento de gama premium, diseñado para ofrecer seguridad, prestaciones y control sin concesiones. Creado por Omni United en colaboración con la reconocida casa de diseño italiana GFG Style, liderada por los legendarios diseñadores automotrices Giorgetto y Fabrizio Giugiaro, el Dimax Sport presenta un diseño único, funcional y elegante que representa una sinergia perfecta entre estilo e ingeniería. Esta gama avanzada y rica en prestaciones ha sido sometida a rigurosas pruebas comparativas frente a marcas premium, ofreciendo una excelente adherencia en mojado, maniobrabilidad, baja resistencia a la rodadura y una conducción silenciosa. El Dimax Sport está disponible en medidas populares para turismos y SUV, y todas sus dimensiones llevan el marcaje EVC en el flanco, que identifica el neumático como compatible con vehículos eléctricos (EV) y vehículos híbridos enchufables.",
 
@@ -397,6 +425,7 @@
 
     "SMOOTH VELVET SIDEWALL": "FLANCO CON ASPECTO DE TERCIOPELO",
     "High-contrast, laser-treated design with ultra-low <br class='hidden-xs'>protrusion improves the tyre’s air drag factor <br class='hidden-xs'>and is easy to clean.": "Diseño tratado con láser de alto <br class='hidden-xs'>contraste que mejora la aerodinámica <br class='hidden-xs'>y es fácil de limpiar.",
+    
 
     "_COMMENT": "Dimax® Sprint",
     "The Dimax Sprint is a premium high performance tyre engineered to deliver all round safety, comfort and mileage. Designed by Omni United in collaboration with renowned Italian design house GFG Style, led by legendary automotive designers Giorgetto and Fabrizio Giugiaro, the Dimax Sprint features a unique, functional and stylish design representing a perfect synergy of design and engineering. This advanced and feature packed range is extensively tested against premium brands and provides drivers ultimate handling and grip in wet and dry conditions, low rolling resistance and a quiet ride. The Dimax Sprint offers popular passenger car and SUV fitments and all sizes carry the EVC marking on the sidewall identifying the tyre as compatible with both Electric Vehicles(EV) and Plug-in hybrid vehicles.": "El Dimax Sprint es un neumático de alto rendimiento de gama premium, diseñado para ofrecer seguridad, confort y durabilidad en todo momento. Desarrollado por Omni United en colaboración con la prestigiosa casa de diseño italiana GFG Style, liderada por los legendarios diseñadores automotrices Giorgetto y Fabrizio Giugiaro, el Dimax Sprint presenta un diseño único, funcional y elegante que representa una perfecta sinergia entre ingeniería y estilo. Esta gama avanzada, rica en prestaciones, ha sido sometida a rigurosas pruebas comparativas frente a marcas premium y proporciona al conductor un manejo y agarre excepcionales en condiciones tanto secas como mojadas, además de baja resistencia a la rodadura y una conducción silenciosa. El Dimax Sprint está disponible en medidas populares para turismos y SUV, y todas sus dimensiones llevan el marcaje EVC en el flanco, lo que identifica el neumático como compatible con vehículos eléctricos (EV) y vehículos híbridos enchufables.",

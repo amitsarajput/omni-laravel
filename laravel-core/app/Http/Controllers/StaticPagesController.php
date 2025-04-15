@@ -50,7 +50,7 @@ class StaticPagesController extends Controller
             $this->data['page']='contact';
         }
         if ($request_path === 'warranty') {
-            $this->data['page'] = $country=='apac'?'warranty-radar-apac':'warranty-radar-eu';
+            $this->data['page'] = $region=='apac'?'warranty-radar-apac':'warranty-radar-eu';
         }
         if ($request_path === 'premium-collection') {
             $this->data['page'] = $request_path;
@@ -74,7 +74,7 @@ class StaticPagesController extends Controller
             $this->data['page'] = 'responsibility-social';
         }
         if ($request_path === 'new-european-tyre-labeling') {
-            if ($country=='eu') {
+            if ($region=='eu') {
                 $this->data['page'] = $request_path;
             }else{
                 abort(404);  
