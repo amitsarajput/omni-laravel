@@ -72,3 +72,36 @@ if (!function_exists('extractCountryFromUrl')) {
             : null;
     }
 }
+if (!function_exists('localized_asset')) {
+    /**
+     * Generate a URL for an asset with a country code inserted before the file extension,
+     * based on session('omni_data.country'). If country is null, returns the original path.
+     *
+     * Example:
+     *  - Input:  'images/hero.jpg'
+     *  - Output: 'images/hero-es.jpg' (if country = 'es')
+     *            'images/hero.jpg'   (if country is null)
+     *
+     * @param  string  $path  Relative path to the asset (e.g., 'images/hero.jpg')
+     * @return string  Fully-qualified URL to the (localized) asset
+     */
+    function localized_asset($path)
+    {
+        $omni = session('omni_data');
+        $country = $omni['country'] ?? null;
+
+        $extension = pathinfo($path, PATHINFO_EXTENSION);
+        $filename = basename($path, '.' . $extension);
+        $dirname = dirname($path);
+
+        if ($country) {
+            $localizedPath = "$dirname/{$filename}-{$country}.{$extension}";
+        } else {
+            $localizedPath = $path;
+        }
+
+        return asset($localizedPath);
+    }
+}
+
+

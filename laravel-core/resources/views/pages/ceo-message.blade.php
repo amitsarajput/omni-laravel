@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/ceo-message--banner.webp') }}" container="true" page-title="" class="page-title--left el-height-60 uppercase" />
+    <x-page-title image-url="{{ localized_asset('images/ceo-message--banner.webp') }}" container="true" page-title="" class="page-title--left el-height-60 uppercase" />
     
     <!-- Content
     ============================================= -->

@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-sm-6">
                     <div class="footer-socials">
-                        <div class="title">FOLLOW US:</div>
+                        <div class="title">{{__('FOLLOW US')}}:</div>
                         <div class="icons">
                             <a target="_blank" href="https://www.youtube.com/@Radartires"><i class="omniicon-youtube-play"></i></a>
                             <!-- <a target="_blank" href="https://www.linkedin.com/company/omni-united/"><i class="omniicon-linkedin"></i></a> -->
@@ -78,13 +78,13 @@
 
                 <div class="grid">
                     <div class="col-auto">
-                        Copyright {{ date("Y") }}. All Rights Reserved with Omni United (S) Pte. Ltd.
+                        Copyright {{ date("Y") }}. {{__('All Rights Reserved with Omni United (S) Pte. Ltd.')}}
                     </div>
 
                     <div class="col-auto tright">
-                        <a href="{{safeRoute('pages.privacy-policy')}}">Privacy Policy</a>
+                        <a href="{{safeRoute('pages.privacy-policy')}}">{{__('Privacy Policy')}}</a>
                         <div class="seperator">•</div>
-                        @cookieconsentbutton(action: 'reset', label: 'Manage cookies', attributes: ['id' => 'reset-button', 'class' => ''])
+                        @cookieconsentbutton(action: 'reset', label: __('Manage cookies'), attributes: ['id' => 'reset-button', 'class' => ''])
                         <!--
                         <ul class="copyrights-menu">
                             <li><a href="https://www.omni-united.com/#">Disclaimer</a>  |  </li>

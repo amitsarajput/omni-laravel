@@ -9,7 +9,7 @@
         <div class="container" >
             <div class="grid ">
                 <div class="col-md-12"><h3 class="no-top-margin dark-100">RADAR RED PARTNER​</h3>                                   
-                    <p>{{__("The Radar RED (Radar Elite Dealer) Partner, is a community of trusted Radar Tyres dealers dedicated to delivering premium quality products and exceptional customer service. Our RED Partners are carefully selected for their commitment to excellence, product availability, and product knowledge, ensuring you receive the best possible tyre solutions for your needs.")}}​</p>
+                    <p>{{__("The Radar RED (Radar Elite Dealer) Partner, is a community of trusted Radar Tyres dealers dedicated to delivering premium quality products and exceptional customer service. Our RED Partners are carefully selected for their commitment to excellence, product availability, and product knowledge, ensuring you receive the best possible tyre solutions for your needs.​")}}​</p>
                 </div>
             </div>
             

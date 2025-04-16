@@ -12,6 +12,7 @@
     "READ MORE":"LEER MÁS",
 
     "_comment": "Footer menu items",
+    "FOLLOW US":"SÍGUENOS",
     "TYRES":"NEUMÁTICOS" ,
     "WHY RADAR":"POR QUÉ RADAR",
     "DEALER LOCATOR":"DÓNDE COMPRAR" ,
@@ -21,6 +22,9 @@
     "OMNI UNITED":"OMNI UNITED" ,
     "OMNISYNC LOGIN":"INICIO DE SESIÓN OMNISYNC",
     "CONTACT US":"CONTÁCTANOS",
+    "All Rights Reserved with Omni United (S) Pte. Ltd.":"Todos los derechos reservados por Omni United (S) Pte. Ltd.",
+    "Privacy Policy":"Política de Privacidad",
+    "Manage cookies":"Gestionar cookies",
 
     "_comment": "DEALER LOCATOR STRINGS",
     "DEALER LOCATOR": "DÓNDE COMPRAR",
@@ -37,14 +41,31 @@
     "OR":"O",
 
     "_comment": "RADAR RED PARTNER PAGE",
-    "The Radar RED (Radar Elite Dealer) Partner, is a community of trusted Radar Tyres dealers dedicated to delivering premium quality products and exceptional customer service. Our RED Partners are carefully selected for their commitment to excellence, product availability, and product knowledge, ensuring you receive the best possible tyre solutions for your needs.": "Radar RED (Radar Elite Dealer) Partner es una comunidad de distribuidores de confianza de Radar Tyres, dedicada a ofrecer productos de primera calidad y un servicio al cliente excepcional. Nuestros RED Partners son seleccionados cuidadosamente por su compromiso con la excelencia, la disponibilidad de productos y el conocimiento técnico, garantizando que reciba la mejor solución posible para sus necesidades de neumáticos.",
+    "The Radar RED (Radar Elite Dealer) Partner, is a community of trusted Radar Tyres dealers dedicated to delivering premium quality products and exceptional customer service. Our RED Partners are carefully selected for their commitment to excellence, product availability, and product knowledge, ensuring you receive the best possible tyre solutions for your needs.​": "Radar RED (Radar Elite Dealer) Partner es una comunidad de distribuidores de confianza de Radar Tyres, dedicada a ofrecer productos de primera calidad y un servicio al cliente excepcional. Nuestros RED Partners son seleccionados cuidadosamente por su compromiso con la excelencia, la disponibilidad de productos y el conocimiento técnico, garantizando que reciba la mejor solución posible para sus necesidades de neumáticos.",
     "Why Choose a Radar RED Partner?":"¿POR QUÉ ELEGIR UN RADAR RED PARTNER?",
     "When you buy from a Radar RED Partner, you can enjoy:": "Al comprar a través de un Radar RED Partner, puede disfrutar de:",
     "Elite Service: Benefit from personalised guidance and expert advice to find the perfect tyre for your vehicle.": "Servicio Élite: Benefíciese de asesoramiento personalizado y orientación experta para encontrar el neumático ideal para su vehículo.",
     "Access to Premium Products: Get the latest and most innovative Radar Tyres, designed for performance and durability.": "Acceso a Productos Premium: Obtenga lo último e innovador de Radar Tyres, diseñados para ofrecer rendimiento y durabilidad.",
-    "Exclusive Customer Benefits: In certain markets, RED Partners may offer additional perks such as an additional road hazard replacement warranty, 30-day satisfaction promise, and mileage warranties. ": "Beneficios Exclusivos para el Cliente: En ciertos mercados, los RED Partners pueden ofrecer ventajas adicionales como garantía por daños en carretera, promesa de satisfacción de 30 días y garantías de kilometraje.",
+    "Exclusive Customer Benefits: In certain markets, RED Partners may offer additional perks such as an additional road hazard replacement warranty, 30-day satisfaction promise, and mileage warranties.": "Beneficios Exclusivos para el Cliente: En ciertos mercados, los RED Partners pueden ofrecer ventajas adicionales como garantía por daños en carretera, promesa de satisfacción de 30 días y garantías de kilometraje.",
     "Dedicated After-Sales Support: Seamless assistance for warranties, replacements, and tyre care.": "Soporte Postventa Dedicado: Asistencia fluida para garantías, reemplazos y mantenimiento de neumáticos.",
     "With a Radar RED Partner, you’re not just buying tyres—you’re investing in superior quality, trusted expertise, and unmatched customer care.": "Con un Radar RED Partner, no solo está comprando neumáticos, está invirtiendo en calidad superior, experiencia confiable y una atención al cliente inigualable.",
+
+
+    "_comment": "Social Responsibility PAGE",
+    "Social Responsibility": "Responsabilidad Social",
+    "We cannot transform the world alone, but we want to demonstrate that if a company like ours can invest the time, effort and resources necessary to make a difference, then anyone can. ": "No podemos transformar el mundo solos, pero queremos demostrar que si una empresa como la nuestra puede invertir el tiempo, esfuerzo y recursos necesarios para hacer una diferencia, entonces cualquiera puede.",
+    "G.S.Sareen, President and CEO, Omni United": "G.S.Sareen, Presidente y CEO, Omni United",
+    "Giving Back to the Society": "Devolviendo a la Sociedad",
+    "We have always believed in giving back, both to the environment and to the society. This is one of the pillars that our company has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011. Together we launched “Mobilising Hope”, a corporate alliance program that supports BCRF’s mission to prevent and cure breast cancer by advancing the world's most promising research. Our support to the BCRF has not just been monetary but also heavily aimed at bringing awareness of their work into the forefront of our industry and society in general. Through this programme we continue to fund and support thousands of hours of critical life-saving research.": "Siempre hemos creído en devolver, tanto al medio ambiente como a la sociedad. Este es uno de los pilares sobre los que se ha construido nuestra empresa. Fueron estas creencias las que nos llevaron a asociarnos con la Fundación de Investigación del Cáncer de Mama (BCRF) en 2011. Juntos lanzamos \"Movilizando Esperanza\", un programa de alianza corporativa que apoya la misión de la BCRF de prevenir y curar el cáncer de mama mediante el avance de la investigación más prometedora del mundo. Nuestro apoyo a la BCRF no ha sido solo monetario, sino que también se ha centrado en llevar la conciencia sobre su trabajo al primer plano de nuestra industria y de la sociedad en general. A través de este programa, continuamos financiando y apoyando miles de horas de investigación crítica que salvan vidas.",
+    "Over the years we have undertaken numerous initiatives to spread awareness for this cause. Some of these include launching a limited edition pink sidewall tyre that was sold through a major tyre distributor in the US, supporting BCRF in all major trade exhibitions and tyre fairs globally and encouraging our dealers with in-store promotion and awareness materials. We have also received tremendous support from our past racing teams as they have always displayed the BCRF logo on their race vehicles and our previous brand ambassador LPGA Golfer, Jodi Ewart Shadoff who helped us in bringing more awareness about this cause. ": "A lo largo de los años, hemos emprendido numerosas iniciativas para crear conciencia sobre esta causa. Algunas de estas incluyen el lanzamiento de un neumático de edición limitada con pared lateral rosa que se vendió a través de un importante distribuidor de neumáticos en EE. UU., apoyar a BCRF en todas las principales exposiciones comerciales y ferias de neumáticos a nivel mundial y alentar a nuestros distribuidores con materiales de promoción y concienciación en la tienda. También hemos recibido un apoyo tremendo de nuestros equipos de carreras anteriores, ya que siempre han mostrado el logo de BCRF en sus vehículos de carrera y nuestra anterior embajadora de marca, la golfista de la LPGA, Jodi Ewart Shadoff, quien nos ayudó a generar más conciencia sobre esta causa.",
+    "In 2024, Radar Tyres is donating a minimum of $50,000 to the Breast Cancer Research Foundation® regardless of sales. For more information about our programme please visit": "En 2024, Radar Tyres está donando un mínimo de $50,000 a la Fundación de Investigación del Cáncer de Mama® sin importar las ventas. Para más información sobre nuestro programa, por favor visita",
+    "For more information about BCRF, please visit": "Para más información sobre BCRF, por favor visita",
+    "FUND RAISING PROGRAMME PARTNERING WITH UK BASED EDEN TYRES & SERVICING": "PROGRAMA DE RECAUDACIÓN DE FONDOS ASOCIÁNDOSE CON EDEN TYRES & SERVICING, CON SEDE EN EL REINO UNIDO",
+    "For the fifth consecutive year, Radar Tyres has tied up with its UK based tyre distributor, Eden Tyres & Servicing to raise funds for the BCRF. For every Radar Tyre sold at Eden Tyre outlets in the UK in 2024, both companies will collectively donate £2 to BCRF. Through this programme, the company aims to raise £20,000 this year for the BCRF.": "Por quinto año consecutivo, Radar Tyres se ha asociado con su distribuidor de neumáticos con sede en el Reino Unido, Eden Tyres & Servicing, para recaudar fondos para BCRF. Por cada neumático Radar vendido en los puntos de venta de Eden Tyre en el Reino Unido en 2024, ambas empresas donarán colectivamente £2 a BCRF. A través de este programa, la empresa tiene como objetivo recaudar £20,000 este año para BCRF.",
+    "Our Sustainability and Giving Back Philosophy": "Nuestra Filosofía de Sostenibilidad y Devolución a la Comunidad",
+    "donated to <br> BCRF to date": "donado a <br> BCRF hasta la fecha",
+    "hours of  <br> research funded": "horas de <br> investigación financiada",
+    
 
     "_comment": "CONTACT US PAGE",
     "CONTACT US": "CONTACTO",
@@ -60,6 +81,66 @@
     "SINGAPORE (HQ)": "SINGAPUR (OFICINA CENTRAL)",
     "Business Hrs:": "Horario de atención:",
     "Monday – Friday": "De lunes a viernes",
+    
+
+    "_comment": "NEW EU TYRE LABELLING PAGE",
+    "NEW EU TYRE LABELLING": "NUEVO ETIQUETADO DE NEUMÁTICOS DE LA UE",
+    "As the EU heads towards its goal of becoming CO2 neutral by 2050 it is trying to cut emissions across various sectors including the transport sector. The new EU tyre labelling regulation aims to help achieve this goal by reducing CO2 levels as it provides the consumers information to identify and purchase more fuel efficient tyres.": "A medida que la UE avanza hacia su objetivo de ser neutra en CO2 para 2050, está tratando de reducir las emisiones en varios sectores, incluido el sector del transporte. La nueva regulación de etiquetado de neumáticos de la UE tiene como objetivo ayudar a lograr este objetivo al reducir los niveles de CO2, ya que proporciona a los consumidores información para identificar y comprar neumáticos más eficientes en combustible.",
+    "The new EU labelling Regulation (EU) 2020/740 comes into effect from 1st May 2021 and replaces the previous Regulation (EC) No 1222/2009, which has been in effect from 2012. This labelling scheme allows consumers to make an informed purchase decision on the various performance paraments of the tyres such as rolling resistance which translates into fuel efficiency, wet grip and noise. Additionally, the new labelling also introduces pictograms that indicate if the tyre is suitable for use in severe snow conditions(3PMSF) and its grip in icy conditions (the later applies to C1 tyres only).": "La nueva Regulación de Etiquetado de la UE (UE) 2020/740 entra en vigor el 1 de mayo de 2021 y reemplaza la anterior Regulación (CE) No 1222/2009, que ha estado en vigor desde 2012. Este esquema de etiquetado permite a los consumidores tomar decisiones de compra informadas sobre los diversos parámetros de rendimiento de los neumáticos, como la resistencia a la rodadura, que se traduce en eficiencia de combustible, agarre en mojado y ruido. Además, el nuevo etiquetado también introduce pictogramas que indican si el neumático es adecuado para su uso en condiciones de nieve severa (3PMSF) y su agarre en condiciones de hielo (este último se aplica solo a neumáticos C1).",
+    "For additional information please visit the": "Para obtener información adicional, visite el",
+    "official European Commission website": "sitio web oficial de la Comisión Europea",
+    "The New EU Tyre Label": "La Nueva Etiqueta de Neumáticos de la UE",
+    "The new regulation covers C1(Car &amp; SUV), C2(Van &amp; Light Trucks) and C3(Bus &amp; Truck) tyres": "La nueva regulación cubre neumáticos C1 (automóviles y SUV), C2 (furgonetas y camiones ligeros) y C3 (autobuses y camiones).",
+    "A tyre type identification number has been added to the label": "Se ha añadido un número de identificación del tipo de neumático a la etiqueta.",
+    "A unique QR code for each article has been added that links the to the EPREL (European Product Registry for Energy Labelling)": "Se ha añadido un código QR único para cada artículo que lo vincula al EPREL (Registro Europeo de Productos para Etiquetado Energético).",
+    "Noise Classes A, B and C replace the previous sound waves": "Las Clases de Ruido A, B y C reemplazan las ondas sonoras anteriores.",
+    "There are options for including pictograms for severe snow conditions (3PMSF) 3 Peak Mountain Snowflake or Alpine symbol. C1 Tyres suitable for ice conditions(Friction) can also be represented with an ice grip pictogram.": "Existen opciones para incluir pictogramas para condiciones de nieve severa (3PMSF) 3 Peak Mountain Snowflake o símbolo alpino. Los neumáticos C1 adecuados para condiciones de hielo (fricción) también pueden estar representados con un pictograma de agarre en hielo.",
+    "Rolling Resistance label classes have been reclassified – The earlier E class has now been moved to D class, F &amp; G class have now been grouped under E class.": "Las clases de etiquetas de resistencia a la rodadura han sido reclasificadas: la anterior clase E ahora se ha movido a la clase D, y las clases F y G ahora se han agrupado bajo la clase E.",
+    "Wet Grip labels classes have been reclassified - The earlier E class has now been moved to D class, and the earlier F class has now been made E class.": "Las clases de etiquetas de agarre en mojado han sido reclasificadas: la anterior clase E ahora se ha movido a la clase D, y la anterior clase F ahora se ha convertido en clase E.",
+    "How to read the New EU tyre label": "Cómo leer la nueva etiqueta de neumáticos de la UE",
+    "The tyre label features different fields and pictograms.": "La etiqueta del neumático presenta diferentes campos y pictogramas.",
+    "Energy Label – This is the new label title.": "Etiqueta de energía: este es el nuevo título de la etiqueta.",
+    "QR Code – This links to the EPREL database. Consumers can scan this and get all the EU label information in a tabular form.": "Código QR: esto enlaza con la base de datos EPREL. Los consumidores pueden escanear esto y obtener toda la información de la etiqueta de la UE en forma tabular.",
+    "Supplier name - Trade Name or Trade Mark of the supplier": "Nombre del proveedor: nombre comercial o marca registrada del proveedor.",
+    "Tyre type identifier – This is a unique article number that identifies the product": "Identificador del tipo de neumático: este es un número de artículo único que identifica el producto.",
+    "Tyre Size – this shows the tyre size designation, load-capacity index and speed category symbol": "Tamaño del neumático: esto muestra la designación del tamaño del neumático, el índice de capacidad de carga y el símbolo de categoría de velocidad.",
+    "Tyre Class – This identifies the class of the tyre i.e. C1(Car &amp; SUV), C2(Van &amp; Light Truck) or C3(Truck and Bus).": "Clase de neumático: esto identifica la clase del neumático, es decir, C1 (automóvil y SUV), C2 (furgoneta y camión ligero) o C3 (camión y autobús).",
+    "Fuel Efficiency pictogram – depending on the tyre’s rolling resistance its fuel efficiency is graded from A all the way down to E. With A denoting the best fuel efficiency.": "Pictograma de eficiencia de combustible: dependiendo de la resistencia a la rodadura del neumático, su eficiencia de combustible se clasifica desde A hasta E, siendo A la mejor eficiencia de combustible.",
+    "Wet Grip pictogram – This pictogram shows how well the tyre will perform in wet conditions. With performance graded from A down to E, with A signifying the shortest braking distance on wet roads.": "Pictograma de agarre en mojado – Este pictograma muestra qué tan bien se desempeñará el neumático en condiciones de humedad. Con un rendimiento clasificado de A a E, siendo A el que indica la distancia de frenado más corta en carreteras mojadas.",
+    "External rolling noise pictogram – This measures the noise levels in dB(decibels), followed by a noise class which replaces the existing sound bars. The noise class is graded from A down to C.": "Pictograma de ruido externo de rodadura – Esto mide los niveles de ruido en dB (decibelios), seguido de una clase de ruido que reemplaza las barras de sonido existentes. La clase de ruido está clasificada de A a C.",
+    "Snow grip pictogram (3PMSF) – This pictogram is mainly shown on winter and all weather tyres. It shows that the tyre is suited for performance in severe snow conditions. This is also known as the 3PMSF (3 Peak Mountain Snow Flake) or the Alpine Symbol.": "Pictograma de agarre en nieve (3PMSF) – Este pictograma se muestra principalmente en neumáticos de invierno y de todas las condiciones. Indica que el neumático es adecuado para un rendimiento en condiciones de nieve severa. Esto también se conoce como 3PMSF (3 Peak Mountain Snow Flake) o el Símbolo Alpino.",
+    "Ice grip pictogram – This is shown on winter tires that have outstanding ice performance which has been confirmed by a defined ice grip test. These tyres are designed for extremely severe climate conditions such as those in the Nordics where roads are covered with ice or hard compact snow. Such tyres should not be used in less severe climate conditions.": "Pictograma de agarre en hielo – Este se muestra en neumáticos de invierno que tienen un rendimiento excepcional en hielo, lo cual ha sido confirmado por una prueba de agarre en hielo definida. Estos neumáticos están diseñados para condiciones climáticas extremadamente severas, como las de los países nórdicos, donde las carreteras están cubiertas de hielo o nieve compacta dura. Tales neumáticos no deben usarse en condiciones climáticas menos severas.",
+    "Regulation Serial number – This regulation’s serial number is: 2020/740": "Número de serie de regulación – El número de serie de esta regulación es: 2020/740",
+    "This Regulation does not apply to:": "Esta regulación no se aplica a:",
+    "Tyres classified as POR or Professional Off‐road tyres.": "Neumáticos clasificados como POR o neumáticos profesionales para todo terreno.",
+    "Tyres designed to be fitted only on vehicles registered for the first time before 1 October 1990.": "Neumáticos diseñados para ser montados solo en vehículos registrados por primera vez antes del 1 de octubre de 1990.",
+    "Tyres designed as “Temporary use spare tyres” and marked “Temporary use only”.": "Neumáticos diseñados como “neumáticos de repuesto de uso temporal” y marcados como “uso temporal únicamente”.",
+    "Tyres whose speed rating is less than 80 km/h.": "Neumáticos cuya clasificación de velocidad es inferior a 80 km/h.",
+    "Tyres whose nominal rim diameter does not exceed 10” (or ≤ 254 mm) or is more than 25” (or ≥ 635 mm).": "Neumáticos cuyo diámetro nominal de la llanta no exceda de 10” (o ≤ 254 mm) o sea superior a 25” (o ≥ 635 mm).",
+    "Tyres designed to be fitted/fitted with additional devices to improve traction properties, such as studdable/studded tyres.": "Neumáticos diseñados para ser montados/montados con dispositivos adicionales para mejorar las propiedades de tracción, como neumáticos con clavos/neumáticos clavados.",
+    "Tyres designed only to be fitted on vehicles intended exclusively for racing.": "Neumáticos diseñados únicamente para ser montados en vehículos destinados exclusivamente a carreras.",
+    "Second‐hand tyres, unless such tyres are imported from a third country.": "Neumáticos de segunda mano, a menos que tales neumáticos sean importados de un tercer país.",
+    
+
+    "_comment": "WARRANTY PAGE",
+    "LIMITED WARRANTY - EUROPE": "GARANTÍA LIMITADA - EUROPA",
+    "Workmanship and Materials Limited Warranty": "Garantía limitada por mano de obra y materiales",
+    "Road Hazard Warranty<sup>1</sup>": "Garantía contra riesgos de carretera<sup>1</sup>",
+    "<sup>1</sup> These warranties are offered on selected ranges. Please refer to the Buyers Warranty Guide for the most updated list of eligible ranges.": "",
+    "WARRANTY INFORMATION": "<sup>1</sup> Estas garantías se ofrecen en gamas seleccionadas. Consulte la Guía de Garantía para Compradores para obtener la lista más actualizada de gamas elegibles.",
+    "WARRANTY INFORMATION":"INFORMACIÓN DE GARANTÍA",
+    " EUROPE (Non-Baltic region) Limited Warranty Booklet": "Folleto de Garantía Limitada – EUROPA (región no báltica)",
+    "Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025": "neumáticos de reemplazo para turismos y camiones ligeros comprados del 1 de enero al 31 de diciembre de 2025",
+    "BALTIC REGION  Limited Warranty Booklet": "Folleto de Garantía Limitada – REGIÓN BÁLTICA",
+    "Buyers Warranty Guide": "Guía de Garantía para Compradores",
+    "Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024": "neumáticos de reemplazo para turismos y camiones ligeros comprados del 1 de enero al 31 de diciembre de 2024",
+    "Limited Warranty Booklet": "Folleto de Garantía Limitada",
+    " Claim Form": "Formulario de Reclamación",
+    "Passenger and Light Truck replacement tyres purchased after  1<sup>st</sup> January, 2024": "neumáticos de reemplazo para turismos y camiones ligeros comprados después del 1 de enero de 2024",
+
+
+
+
     
     "_COMMENT": "RADARTYRES MAIN PAGE",
     "EVERYONE SHOULD HAVE THE RIGHT<br> TO ACCESS PREMIUM TYRES AT<br> AFFORDABLE PRICES": "TODO EL MUNDO DEBERÍA TENER DERECHO<br> A ACCEDER A NEUMÁTICOS DE CALIDAD<br> PRECIOS ASEQUIBLES",
@@ -208,7 +289,8 @@
     "The partnership between Radar Tyres and GFG Style is just beginning. “This collaboration is about more than just designing tyres,” Giugiaro concludes. “It’s about shaping the future—where performance, beauty, and accessibility go hand in hand.”": "La asociación entre Radar Tyres y GFG Style no ha hecho más que empezar. «Esta colaboración va más allá del diseño de neumáticos», concluye Giugiaro. «Se trata de dar forma al futuro, donde el rendimiento, la belleza y la accesibilidad van de la mano».",
     "With Fabrizio Giugiaro leading the design vision, Radar Tyres is setting a new standard in the industry, proving that great design isn’t just for the elite—it’s for everyone.": "Con Fabrizio Giugiaro al frente de la visión del diseño, Radar Tyres está estableciendo un nuevo estándar en la industria, demostrando que el gran diseño no es sólo para la élite, es para todos.",
 
-
+    
+    
 
     "_COMMENT": "privacy-policy",
     "Privacy and Cookie Policy": "POLÍTICA DE PRIVACIDAD Y COOKIES",

@@ -15,7 +15,7 @@
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
                     <a href="{{ safeRoute('pages.premium-collection') }}">
-                        <img src="{{asset('images/tyre-grid/premium-col.webp')}}" alt="Premium Collection">
+                        <img src="{{localized_asset('images/tyre-grid/premium-col.webp')}}" alt="Premium Collection">
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-12">
