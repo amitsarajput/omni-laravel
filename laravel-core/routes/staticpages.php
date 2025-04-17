@@ -41,6 +41,7 @@ Route::geo(function(){
 	Route::get('/testing', [StaticPagesController::class,'index'])->name('testing');
 	Route::get('/privacy-policy', [StaticPagesController::class,'index'])->name('privacy-policy');
 	Route::get('/red-partner', [StaticPagesController::class,'index'])->name('red-partner');
+	Route::get('/red', [StaticPagesController::class,'index'])->name('red');
 	Route::get('/new-european-tyre-labeling', [StaticPagesController::class,'index'])->name('eu-labeling');
 	Route::get('/social-responsibility', [StaticPagesController::class,'index'])->name('responsibility-social');
 
