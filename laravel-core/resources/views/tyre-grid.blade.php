@@ -134,7 +134,7 @@
                 <div class="grid">
                     <div class="col-12">
                         <div class="center">
-                            <h2 class="uppercase center dark-100 mb-2">{{__('OUR COMMITMENT TO THE ENVIRONMENT AND COMMUNITY')}}</h2>
+                            <h2 class="uppercase center dark-100 mb-2">{{__('OUR COMMITMENT TO THE COMMUNITY')}}</h2>
                         </div>
                     </div>
                 </div>
