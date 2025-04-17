@@ -1,7 +1,7 @@
 <x-guest-layout>
 <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/Warranty-Banner--radar-eu.webp') }}" container="true" page-title="" class="page-title--left el-height-60 uppercase" />
+    <x-page-title image-url="{{ localized_asset('images/Warranty-Banner--radar-eu.webp') }}" container="true" page-title="" class="page-title--left el-height-60 uppercase" />
     
 	
 

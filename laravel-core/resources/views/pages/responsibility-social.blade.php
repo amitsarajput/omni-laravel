@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/social-responsibility--banner.webp') }}" container="true" page-title="" class="page-title--center el-height-70 uppercase mb-0" />
+    <x-page-title image-url="{{ localized_asset('images/social-responsibility--banner.webp') }}" container="true" page-title="" class="page-title--center el-height-70 uppercase mb-0" />
     
     <!-- Content
     ============================================= -->
@@ -62,7 +62,7 @@
         <div class="container mt-5">
             <div class="grid align-center">
                 <div class="col-md-6 col-sm-12 col-bleed">
-                    <img src="{{asset('images/BCRF_Donating-Banner-2024.webp')}}" alt="Social Responsibility">
+                    <img src="{{localized_asset('images/BCRF_Donating-Banner-2024.webp')}}" alt="Social Responsibility">
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
