@@ -43,7 +43,7 @@ class FormsController extends Controller
 
             $omni_data=$this->set_session_region_country($to_url,$omni_data);
             //adjust url according to the refferer.
-            //$to_url=$this->refer($request, strtolower($omni_data['slugs'][$omni_data['preffered_location']]), $to_url);
+            $to_url=$this->refer($request, strtolower($omni_data['slugs'][$omni_data['preffered_location']]), $to_url);
             //dd($to_url);
             
             //Set language session and omni session data
@@ -96,18 +96,17 @@ class FormsController extends Controller
     }
 
     public function refer(Request $request,$old, $new){
-        dd($old);
         $referrer = $request->headers->get('referer');
         if ($referrer) {
             $referrerHost = parse_url($referrer, PHP_URL_HOST);
-            //$referrerPath = parse_url($referrer, PHP_URL_PATH) ?? '/';
+            $referrerPath = parse_url($referrer, PHP_URL_PATH) ?? '/';
             $currentHost = $request->getHost();
             if ($referrerHost === $currentHost) {
                 // Only replace if the part exists
                 if (str_contains($referrer, $old)) {
                     $updatedUrl = str_replace($old, $new, $referrer);
                 } else {
-                    $updatedUrl = $referrer.'/'.$new;
+                    $updatedUrl = $referrerPath=='/'? $referrer.'/'.$new:$referrer ;
                 }
             } 
         }

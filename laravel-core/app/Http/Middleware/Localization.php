@@ -18,14 +18,13 @@ class Localization
     public function handle(Request $request, Closure $next): Response
     {
         // Extract region and country from the first and second URL segments
-        //$region = $this->extractRegion($request);
-        //$country = $this->extractCountry($request);
-        $region = extractRegionFromUrl();
-        $country = extractCountryFromUrl();
+        $region = extractRegionFromUrl()?? Session::get('omni_data.region');
+        $country = extractCountryFromUrl()??Session::get('omni_data.country');        
         
-
-        // If region is present, attempt to set the locale accordingly
-        if ($region !== null) {
+        //if country is present, set the locale for the country other wise set to region
+        if ($country !== null) {
+            $this->setLocaleFromSessionData($region, $country);
+        }else{
             $this->setLocaleFromSessionData($region, $country);
         }
 
