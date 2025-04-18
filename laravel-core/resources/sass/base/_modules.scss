@@ -68,10 +68,9 @@
 	background-color: #f7f7f7;
 	&.no-padding{padding: 0;}
 	&.top-padding{padding: $section-spacing 0 0; }
-	&.bg-white{
-		background-color: $white;
-	}
-	&.bg-gray{background-color: $secondary-light-90;}
+	&.bg-white{ background-color: $white; }
+	&.bg-gray{ background-color: $secondary-light-90; }
+	&.bg-black{ background-color: $dark-100; }
 	@include el-spacing()
 }
 /*Heading Block Module*/

@@ -2,12 +2,12 @@
     
     <!-- Content
     ============================================= -->
-    <section id="content" class="bg-image" style="background-image: url({{ localized_asset('images/landing-pages/red/red-landing-bg.webp') }});">
+    <section id="content" class="bg-image" style="background-image: url({{ asset('images/landing-pages/red/red-landing-bg.webp') }});">
         <div class="container">
             <div class="grid">
                 <div class="col-md-12 center">
                     <div class="pa-2" style="background-color: #00000061;">
-                        <img class="" src="{{localized_asset('images/landing-pages/red/radar-red-logo.webp')}}" alt="" width="250">
+                        <img class="" src="{{asset('images/landing-pages/red/radar-red-logo.webp')}}" alt="" width="250">
                         <h2 class="white my-1">{{__('JOIN THE RADAR RED PROGRAM')}}</h2>                                   
                         <h3 class="white my-1">{{__("MORE BENEFITS. MORE SUPPORT. MORE GROWTH.")}}</h3>
                         <a href="#" class="knopf red sharp uppercase hover-black-80 heading-font ls-2 my-1" >{{__('WATCH RED INTRODUCTION VIDEO')}}</a>
@@ -47,14 +47,18 @@
                 </div>
             </div>
             
-            <div class="grid ">
-                <div class="col-md-12 center">
-                    <h2 class="no-top-margin uppercase white">{{__("REAL PEOPLE. REAL GROWTH.")}}</h2>
-                    <p class="white center">{{__("We grow together. Radar RED program is about people and partnership, not just products.")}}</p>
-                    <p class="white center">[YOUTUBE VIDEO]</p>
+        </div>
+        <div class="section bg-black">
+            <div class="container">
+                <div class="grid ">
+                    <div class="col-md-12 center">
+                        <h2 class="no-top-margin uppercase white">{{__("REAL PEOPLE. REAL GROWTH.")}}</h2>
+                        <p class="white center">{{__("We grow together. Radar RED program is about people and partnership, not just products.")}}</p>
+                        <p class="white center">[YOUTUBE VIDEO]</p>
+                    </div>
                 </div>
             </div>
-
         </div>
+
     </section><!-- #content end -->
 </x-guest-layout>
