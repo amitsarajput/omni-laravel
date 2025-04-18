@@ -68,7 +68,7 @@ class StaticPagesController extends Controller
             $this->data['page'] = $request_path;
         }
         if ($request_path === 'red') {
-            $this->data['page'] = 'red';
+            $this->data['page'] = $request_path;
         }
         if ($request_path === 'environmental-responsibility') {
             $this->data['page'] = 'responsibility-environmental';

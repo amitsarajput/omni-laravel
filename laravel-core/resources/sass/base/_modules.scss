@@ -1042,6 +1042,7 @@ ol.breadcrumb {
 	padding: 30px;
 	background: #f2f2f2;
 	font-family: $heading-font;
+	&.bg-transparent{background: transparent;}
 	h4{margin: 0 0 15px;}
 	.error{
 		font-family: $body-font;

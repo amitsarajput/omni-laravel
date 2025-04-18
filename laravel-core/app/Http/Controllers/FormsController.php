@@ -201,6 +201,57 @@ class FormsController extends Controller
         return back()->with('status','Sorry! Please try again later');
 
     }
+
+    public function form_landing_red(Request $request) {
+        $validatedData =$request->validate([
+            'g-recaptcha-response' => 'required',
+            'name' => ['string','required'],
+            'company' => ['string','required'],
+            'email' => ['email','required'],
+            'company_website' => ['string','required'],
+            'phone' => ['string','required'],
+            'city' => ['string','required'],
+            'message' => ['string','required'],
+            'url_current' => ['string','required', 'url:http,https'],
+        ]);
+        $recaptcha = app('recaptcha');
+        if (!$recaptcha->verify($request->input('g-recaptcha-response'))) {
+            return back()->withErrors(['captcha' => 'Captcha verification failed.']);
+        }
+        if ($request->mobile !== null) {
+            return back()->with('status','Email Not sent.');
+        }
+        $form_data=[
+            'name' => $request->name,
+            'company' => $request->company,
+            'email' => $request->email,
+            'company_website' => $request->company_website,
+            'phone' => $request->phone,
+            'city' => $request->city,
+            'message' => $request->message,
+            'url_current' => $request->url_current,
+        ];
+        $form = Forms::create([
+            'type' => 'landing-form--red',
+            'form_data' => json_encode($form_data)
+        ]);
+
+        $to=['amit@lopamudracreative.com'];
+        //$to=['manavsuri@omni-united.com'];
+        //$to=['info@radartires.com'];
+        try {
+            Mail::to($to)->send(new GenricMail($form_data));
+            return back()->with('status','Message sent successfully.');
+        } catch (\Exception $e) {
+            return back()->with('status','Sorry! Please try again later');
+        }
+        
+        //Mail::to($to)->send(new GenricMail($form_data));
+
+
+        return back()->with('status','Sorry! Please try again later');
+
+    }
     /**
      * Display a listing of the resource.
      */
