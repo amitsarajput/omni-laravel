@@ -53,7 +53,7 @@
                 <div class="grid ">
                     <div class="col-md-12 center">
                         <h2 class="no-top-margin uppercase white">{{__("REAL PEOPLE. REAL GROWTH.")}}</h2>
-                        <p class="white center">{{__("We grow together. Radar RED program is about people and partnership, not just products.")}}</p>
+                        <p class="white center mb-3">{{__("We grow together. Radar RED program is about people and partnership, not just products.")}}</p>
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/haekaIqITu8?si=_wjrpq5RpY8jxKk3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </div>
                 </div>
