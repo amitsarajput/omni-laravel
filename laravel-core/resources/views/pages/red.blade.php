@@ -41,7 +41,7 @@
                 <div class="col-md-12 center">
                     <div class="pa-2" style="background-color: #00000061;">                                 
                         <h3 class="white">{{__("READY TO ROLL WITH RADAR?")}}</h3>
-                        <p class="white center">Fill in the form and we will contact you personally.</p>
+                        <p class="white center">{{__("Fill in the form and we will contact you personally.")}}</p>
                         <x-red-landing-form class="bg-transparent " />
                     </div>
                 </div>
