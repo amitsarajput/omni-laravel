@@ -7,7 +7,7 @@
             <th>L.R.</th>
             @if (!empty($extraCols))
                 @foreach ($extraCols as $key=>$val)
-                <th>{{ $val }}</th>
+                <th>{{ __($val) }}</th>
                 @endforeach
             @endif
         </tr>

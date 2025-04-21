@@ -2,12 +2,12 @@
     <table class="table tyre-sizes">
     <thead>
         <tr>
-            <th>SIZE</th>
+            <th>{{__('SIZE')}}</th>
             <th>L.I./S.r.</th>
             <th >L.R.</th>
             @if (!empty($extraCols))
                 @foreach ($extraCols as $key=>$val)
-                <th>{{ $val }}</th>
+                <th>{{ __($val) }}</th>
                 @endforeach
             @endif
         </tr>

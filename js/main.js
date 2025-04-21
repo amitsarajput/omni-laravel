@@ -248,22 +248,33 @@ jQuery(window).on('scroll', function(){
     var euLabel=function(){
         var STRS={
             EU_TOGGLE_BUTTON:".eulabeldetails-toggle-button",
-            SHOW_TEXT:"Show EU labels",
-            HIDE_TEXT:"Hide EU labels",
+            EU_TOGGLE_BUTTON_SHOW:".eulabeldetails-toggle-button .show",
+            EU_TOGGLE_BUTTON_HIDE:".eulabeldetails-toggle-button .hide",
+            SHOW_TEXT:"",
+            HIDE_TEXT:"",
         };
         var eu_button =$(STRS.EU_TOGGLE_BUTTON);
-
+        var show_text_el=$(STRS.EU_TOGGLE_BUTTON_SHOW);
+        var hide_text_el=$(STRS.EU_TOGGLE_BUTTON_HIDE);
+         hide_text_el.hide(); 
+         
             if (eu_button.length > 0) {
                 eu_button.on('click',function(){
-                    var tr,buttons;
+                    var tr,buttons,show_text_el,hide_text_el;
                     tr=$(this).parents('tr');
                     buttons=tr.find(STRS.EU_TOGGLE_BUTTON);
+                    show_text_el=tr.find(STRS.EU_TOGGLE_BUTTON_SHOW);
+                    hide_text_el=tr.find(STRS.EU_TOGGLE_BUTTON_HIDE);
                     if(tr.hasClass('active')){
                         tr.removeClass('active');
-                        buttons.text(STRS.SHOW_TEXT);
+                        show_text_el.show();
+                        hide_text_el.hide();
+                        //buttons.text(STRS.SHOW_TEXT);
                     }else{
                         tr.addClass('active');
-                        buttons.text(STRS.HIDE_TEXT);
+                        hide_text_el.show();
+                        show_text_el.hide();
+                        //buttons.text(STRS.HIDE_TEXT);
                     }
                     //tr.toggleClass('border-bottom-transparent');
                     tr.next().toggleClass('show');

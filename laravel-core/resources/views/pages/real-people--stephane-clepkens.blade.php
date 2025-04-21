@@ -10,7 +10,7 @@
             <div class="grid">
                 <div class="col-md-12 col-bleed-y  mb-4">
                     <h3 class="no-top-margin dark-100 uppercase">{{ __("Behind the wheel: Stéphane Clepkens’ journey to redefining tyre performance") }}</h3>
-                    <p>{{ __("When it comes to tyres, few individuals can match the expertise and passion of Stéphane Clepkens, Test Manager at Radar Tyres. With a career spanning nearly 25 years in the automotive industry, Stéphane brings a unique perspective to the intricate art of tyre testing and development.") }}</p>
+                    <p>{!! __("When it comes to tyres, few individuals can match the expertise and passion of Stéphane Clepkens, Test Manager at Radar Tyres. With a career spanning nearly 25 years in the automotive industry, Stéphane brings a unique perspective to the intricate art of tyre testing and development.") !!}</p>
                 </div>
             </div>
             
@@ -23,9 +23,9 @@
                 <div class="col-md-6 col-sm-12 mb-4">
                     <div class="ma-xxs-2 mx-lg-3">
                         <h3 class="dark-100  no-top-margin uppercase">{{ __("A career forged on the track") }}</h3>
-                        <p>{{ __("Stéphane began his journey in 2000 as a test driver for Continental Tyres, focusing on Original Equipment (OE) tyres for BMW. Over the next three years, he honed his skills in precision testing, learning the nuances of chassis and tyre dynamics. In 2003, Stéphane took a bold leap into freelancing, collaborating with leading tyre brands such as Dunlop, Yokohama, Hankook, and Bridgestone.") }}</p>
-                        <p>{{ __("A key highlight of Stéphane’s career has been his expertise on the legendary Nürburgring Nordschleife in Germany. For over a decade, he spent up to 15 weeks annually mastering the world’s most demanding racetrack, where he not only tested tyres but also trained future test drivers.") }}</p>
-                        <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/WiIYifeGdIY" target="_blank">{{ __("WATCH VIDEO") }}</a>
+                        <p>{!! __("Stéphane began his journey in 2000 as a test driver for Continental Tyres, focusing on Original Equipment (OE) tyres for BMW. Over the next three years, he honed his skills in precision testing, learning the nuances of chassis and tyre dynamics. In 2003, Stéphane took a bold leap into freelancing, collaborating with leading tyre brands such as Dunlop, Yokohama, Hankook, and Bridgestone.") !!}</p>
+                        <p>{!! __("A key highlight of Stéphane’s career has been his expertise on the legendary Nürburgring Nordschleife in Germany. For over a decade, he spent up to 15 weeks annually mastering the world’s most demanding racetrack, where he not only tested tyres but also trained future test drivers.") !!}</p>
+                        <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/WiIYifeGdIY" target="_blank">{!! __("WATCH VIDEO") !!}</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
                 </div>
