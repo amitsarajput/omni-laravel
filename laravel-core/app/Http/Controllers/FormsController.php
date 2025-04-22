@@ -238,7 +238,8 @@ class FormsController extends Controller
 
         $form_data['subject']='Radar Red Enquery from '.$form_data['name'];
 
-        $to=['amit@lopamudracreative.com'];
+        //$to=['amit@lopamudracreative.com'];
+        $to=['carlosortigosa@omni-united.com'];
         //$to=['manavsuri@omni-united.com'];
         //$to=['info@radartires.com'];
         try {
