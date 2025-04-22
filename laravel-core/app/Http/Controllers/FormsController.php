@@ -53,24 +53,24 @@ class FormsController extends Controller
             session(['locale' => $locale]);
             session(['omni_data' => $omni_data]);  
             
-            // $fakeRequest = Request::create($to_url, 'GET');
-            // try {
-                //     // Dispatch the fake request
-                //     $response = app()->handle($fakeRequest);
-                
-                //     // If status is 200, it's good to redirect
-                //     if ($response->getStatusCode() === 200) {
-                    //         return redirect($to_url);
-                    //     }
-                    // } catch (NotFoundHttpException $e) {
-                        //     // If the controller calls abort(404), it will throw here
-                        // } catch (\Exception $e) {
-                            //     // Catch other possible exceptions
-                            // }
-                            //dd(session('omni_data'));
+            $fakeRequest = Request::create($to_url, 'GET');
+            try {
+                // Dispatch the fake request
+                $response = app()->handle($fakeRequest);
+            
+                // If status is 200, it's good to redirect
+                if ($response->getStatusCode() === 200) {
+                        return redirect($to_url);
+                    }
+            } catch (NotFoundHttpException $e) {
+                    // If the controller calls abort(404), it will throw here
+            } catch (\Exception $e) {
+                    // Catch other possible exceptions
+            }
+                           // dd(session('omni_data'));
             //dd($request->location,$omni_data);
-            return redirect($to_url);
-            //return redirect()->route('home');
+            //return redirect($to_url);
+            return redirect()->route('home');
             
     }
 
@@ -104,7 +104,11 @@ class FormsController extends Controller
             if ($referrerHost === $currentHost) {
                 // Only replace if the part exists
                 if (str_contains($referrer, $old)) {
-                    $updatedUrl = str_replace($old, $new, $referrer);
+                    if (session(['omni_data.country'])!==null){
+                        $updatedUrl = preg_replace('/' . preg_quote($old, '/') . '/', $new, $referrer, 1);
+                    }else {
+                        $updatedUrl = str_replace($old, $new, $referrer);
+                    }
                 } else {
                     $updatedUrl = $referrerPath=='/'? $referrer.'/'.$new:$referrer ;
                 }
