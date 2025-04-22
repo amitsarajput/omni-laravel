@@ -10,7 +10,7 @@
                         <img class="" src="{{asset('images/landing-pages/red/radar-red-logo.webp')}}" alt="" width="250">
                         <h2 class="white my-1">{{__('JOIN THE RADAR RED PROGRAM')}}</h2>                                   
                         <h3 class="white my-1">{{__("MORE BENEFITS. MORE SUPPORT. MORE GROWTH.")}}</h3>
-                        <a href="#" class="knopf red sharp uppercase hover-black-80 heading-font ls-2 my-1" >{{__('WATCH RED INTRODUCTION VIDEO')}}</a>
+                        <a target="_blank" href="https://youtu.be/haekaIqITu8" class="knopf red sharp uppercase hover-black-80 heading-font ls-2 my-1" >{{__('WATCH RED INTRODUCTION VIDEO')}}</a>
                     </div>
                 </div>
             </div>

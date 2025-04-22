@@ -57,20 +57,82 @@ class TyreController extends Controller
         $country=$brand->countries()->firstWhere('country_id',$country);
         dd($country->pivot->kram);
     }
-    public function tyre_grid($region=null, ?string $country=null, $brand=null )
+    public function tyre_grid($region = null, ?string $country = null, $brand = null)
     {
+        $omni_data = session('omni_data');
         
-        //dd('region- '.$region, 'country- '.$country, 'brand- '.$brand);
-        //session()->invalidate();
+        // Validate country availability
+        if (!in_array($country, $omni_data['available_locations'] ?? [])) {
+            $country = null;
+        }
+        
+        // Set variables with fallback to session data
+        $region_str = $region ?? $omni_data['region'] ?? null;
+        $country_str = $country ?? $omni_data['country'] ?? null;
+        $brand_str = $brand ?? $omni_data['brand'] ?? null;
+        
+        // If region or brand is missing, abort with 404
+        if (!$region_str || !$brand_str) {
+            abort(404, 'Region or Brand not specified.');
+        }
+        
+        // Set updated session values
+        $omni_data['region'] = $region_str;
+        $omni_data['country'] = $country_str;
+        $omni_data['preffered_location'] = $country_str ?? $region_str;
+        //$omni_data['brand'] = $brand_str;
+        session(['omni_data' => $omni_data]);
+        
+        $brand_country = strtolower($brand_str . '-' . $country_str);
+        
+        // Load region
+        $region_model = Region::with('search_tags')->where('slug', $region_str)->first();
+        if (!$region_model) {
+            abort(404, 'Region not found.');
+        }
+        
+        // Load country if provided
+        $country_model = null;
+        if (!empty($country_str)) {
+            $country_model = Country::with('brands')->where('slug', $country_str)->first();
+        }
+        
+        // Load brand
+        $brand_model = Brand::where('slug', $brand_str)->first();
+        if (!$brand_model) {
+            abort(404, 'Brand not found.');
+        }
+        
+        // Get search tags from region
+        $search_tags = $region_model->search_tags;
+        
+        // Get all seasons
+        $seasons = Season::all();
+        
+        // Get tyres for region and brand
+        $tyres = Tyre::with(['region', 'brand', 'search_tag', 'icons', 'tyre_categories', 'season'])
+        ->where([
+            'region_id' => $region_model->id,
+            'brand_id' => $brand_model->id,
+            'publish' => 1,
+            ])
+            ->orderBy('order', 'asc')
+            ->get();
+            
+            return view('tyre-grid', compact('tyres', 'search_tags', 'brand_country', 'seasons'));
+        }
+
+
+    public function tyre_grid_old($region=null, ?string $country=null, $brand='radar')
+    {
         $omni_data=session('omni_data');
-        
         if (!in_array($country,$omni_data['available_locations'])) {
             $country=null;
         }
         //Set variables//
         $region_str= ($region!==null) ? $region : $omni_data['region'];
         $country_str= ($country!==null) ? $country : $omni_data['country'];
-        $brand_str= ($brand!==null) ? $brand : $omni_data['brand'];
+        $brand_str=$omni_data['brand'];
         
         
         //Set session data//
