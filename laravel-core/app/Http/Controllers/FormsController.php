@@ -236,6 +236,8 @@ class FormsController extends Controller
             'form_data' => json_encode($form_data)
         ]);
 
+        $form_data['subject']='Radar Red Enquery from '.$form_data['name'];
+
         $to=['amit@lopamudracreative.com'];
         //$to=['manavsuri@omni-united.com'];
         //$to=['info@radartires.com'];
@@ -243,7 +245,7 @@ class FormsController extends Controller
             Mail::to($to)->send(new GenricMail($form_data));
             return back()->with('status','Message sent successfully.');
         } catch (\Exception $e) {
-            return back()->with('status','Sorry! Please try again later');
+            return back()->with('status','Sorry! Please try again later.');
         }
         
         //Mail::to($to)->send(new GenricMail($form_data));
