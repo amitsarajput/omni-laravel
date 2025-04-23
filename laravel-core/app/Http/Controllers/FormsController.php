@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Forms;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 use Mail;
 use App\Mail\GenricMail;
@@ -43,8 +44,7 @@ class FormsController extends Controller
 
             $omni_data=$this->set_session_region_country($to_url,$omni_data);
             //adjust url according to the refferer.
-            $to_url=$this->refer($request, strtolower($omni_data['slugs'][$omni_data['preffered_location']]), $to_url);
-            //dd($to_url);
+            $to_url=$this->refer($request, $omni_data['region'], $omni_data['country']);
             
             //Set language session and omni session data
             $locale=$omni_data['available_locales'][$new_loc];
@@ -95,26 +95,100 @@ class FormsController extends Controller
         return $omni_data;
     }
 
-    public function refer(Request $request,$old, $new){
+    public function refer(Request $request, string $newRegion, ?string $newCountry = null){
+
+        $referrer = $request->headers->get('referer');
+        if (!$referrer) {
+            return url('/'); // fallback
+        }
+        if ($referrer) {
+            $referrerHost = parse_url($referrer, PHP_URL_HOST);
+            $referrerPath = parse_url($referrer, PHP_URL_PATH) ?? '/';
+            $currentHost = $request->getHost();
+            if ( $referrerHost === $currentHost ) {
+
+                    $parsed = parse_url($referrer);
+                    $path = trim($parsed['path'], '/');
+                    $segments = explode('/', $path);
+
+                    // Extract existing region & country
+                    $oldRegion = $segments[0] ?? null;
+                    $oldCountry = isset($segments[1]) && strlen($segments[1]) === 2 ? $segments[1] : null;
+
+                    // Remove the old region and country from segments
+                    array_shift($segments); // remove old region
+                    if ($oldCountry) {
+                        array_shift($segments); // remove old country
+                    }
+                    
+                    // Detect if it's a brand-related route
+                    $fakeRequest = Request::create($referrer);
+                    $matchedRoute = Route::getRoutes()->match($fakeRequest);
+                    $routeName = optional($matchedRoute)->getName();
+
+                    $isBrandRoute = $routeName && (
+                        str_starts_with($routeName, 'tyre.')
+                    );
+                    
+                    // ✅ Check and update last segment only if both conditions match
+                    if ($isBrandRoute && !empty($segments)) {
+                        $last = end($segments);
+                        if (str_starts_with($last, $oldRegion . '-')) {
+                            array_pop($segments); // remove last
+                            $segments[] = preg_replace(
+                                '/^' . preg_quote($oldRegion, '/') . '(-)/',
+                                $newRegion . '$1',
+                                $last
+                            );
+                        }
+                    }
+
+                    // Build new path
+                    $newSegments = [$newRegion];
+                    if ($newCountry) {
+                        $newSegments[] = $newCountry;
+                    }
+                    $newSegments = array_merge($newSegments, $segments);
+
+                    $newPath = implode('/', $newSegments);
+
+                    // Rebuild URL
+                    $scheme = $parsed['scheme'] ?? 'https';
+                    $host = $parsed['host'] ?? $request->getHost();
+                    $port = isset($parsed['port']) ? ':' . $parsed['port'] : '';
+                    $query = isset($parsed['query']) ? '?' . $parsed['query'] : '';
+                
+                    $updatedUrl = "{$scheme}://{$host}{$port}/{$newPath}{$query}";
+            } 
+        }
+        return $updatedUrl;
+    }
+
+    public function refer_old(Request $request,$old, $new, $region, $country=null){
+        $old_sets=explode('/', $old);
+        $old_region=$old_sets[0];
+        $old_country=$old_sets[1]??null;
+
         $referrer = $request->headers->get('referer');
         if ($referrer) {
             $referrerHost = parse_url($referrer, PHP_URL_HOST);
             $referrerPath = parse_url($referrer, PHP_URL_PATH) ?? '/';
             $currentHost = $request->getHost();
-            if ($referrerHost === $currentHost) {
+            if ( $referrerHost === $currentHost ) {
                 // Only replace if the part exists
                 if (str_contains($referrer, $old)) {
-                    if (session(['omni_data.country'])!==null){
-                        $updatedUrl = preg_replace('/' . preg_quote($old, '/') . '/', $new, $referrer, 1);
-                    }else {
-                        $updatedUrl = str_replace($old, $new, $referrer);
+                    $updatedUrl = str_replace($old_region, $region, $referrer);
+                    if ($old_country) {
+                        $updatedUrl =str_replace($old_country, $country, $referrer);
+                    }
+                    if ($country) {
+                        $updatedUrl =str_replace($old_country, $country, $referrer);
                     }
                 } else {
-                    $updatedUrl = $referrerPath=='/'? $referrer.'/'.$new:$referrer ;
+                    $updatedUrl = $referrerPath=='/' ? $referrer.'/'.$new : $referrer ;
                 }
             } 
         }
-        //dd($updatedUrl);
         return $updatedUrl;
     }
 
