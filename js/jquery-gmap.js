@@ -303,7 +303,7 @@ function makeSidebar(markers=null) {
                 address=address.replace(/,,/g, ",");
             var direction = 'https://www.google.com/maps/dir/Current+Location/'+  address;
             var featuredclass=markers[i].myfeatured!=0?'featured':'';
-            var redpartner=markers[i].myfeatured!=0?"<a class='redpartner-unit' href='"+redpartneruri+"'>{{__('Red partner')}}</a>":"";
+            var redpartner=markers[i].myfeatured!=0?"<a class='redpartner-unit' href='"+redpartneruri+"'>Red partner</a>":"";
             html += "<div class='main-add "+featuredclass+"'>";
             html +="<div class='main-add--row'><div class='distance'>"+distance+"</div> "+redpartner+"</div>";
             html += "<h5 class='color' >"+markers[i].myname+"</h5>";

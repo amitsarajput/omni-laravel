@@ -7,6 +7,13 @@
     $grouped_sizes= $sizes->groupBy('size');
     $navs=$grouped_sizes->keys()->unique();
 @endphp
+@if($sizes->isEmpty())
+    <div class="grid">
+        <div class="col-lg-12">
+            <p class="center">Coming Soon</p>
+        </div>
+    </div>
+@else
 <div class="grid">
     <div class="col-lg-12">
         <div id="tabs">
@@ -49,3 +56,4 @@
         </div>
     </div>
 </div>
+@endif
