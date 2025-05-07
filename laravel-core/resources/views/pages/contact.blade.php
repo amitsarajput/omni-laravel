@@ -27,12 +27,12 @@
 									'phone'=>"T: +65 6423 1431 <br>F: +65 6423 0938" ,
 									'workingHours'=>__('Business Hrs:')." 0900 – 1800 (UTC+8)<br> ".__('Monday – Friday')
 									],
-									[
+									/*[
 									'title'=> __('UNITED STATES'),
 									'address'=>"<b>Omnisource United, Inc</b> <br>3750 S. Watson Rd., <br>Suite 100, <br>Arlington, TX 76014" ,
 									'phone'=>" T: 800-725-1482 " ,
 									'workingHours'=>__('Business Hrs:')." 0900 – 1800 (UTC−6 / UTC−5 DST)<br> ".__('Monday – Friday')
-									],
+									],*/
 									[
 									'title'=> __('UNITED ARAB EMIRATES'),
 									'address'=>"<b>Omni MEA Tyres Trading DMCC</b> <br>1705, Mazaya Business Avenue BB2, <br>JLTE-PH2-BB2, <br>Jumeirah Lakes Towers" ,
