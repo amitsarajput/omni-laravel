@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Forms;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\XlsxController;
 
 use Mail;
 use App\Mail\GenricMail;
@@ -13,6 +14,8 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class FormsController extends Controller
 {
+    
+
     public function lb_state_update(Request $request){
         $this->validate($request, [
             'formdata' => 'required'
@@ -339,6 +342,19 @@ class FormsController extends Controller
     public function index()
     {
         //
+        $old_file='no-file.xlsx';
+        $forms=Forms::all();
+        $formsMapped=$forms->map(function (Forms $form) {
+            $form_data=json_decode($form->form_data,true);
+            $form_data['created_at']=$form->created_at->format('d-m-Y');
+            return $form_data;
+        });
+        $headerkeys=$formsMapped->flatMap(function ($form) {
+            return array_keys($form);
+        })->unique()->values()->toArray();
+        //Export old data to file
+        $old_file=XlsxController::createfile($formsMapped, $headerkeys,'forms','forms');
+        return view('admin.form.index' ,compact('forms','old_file'));
     }
 
     /**

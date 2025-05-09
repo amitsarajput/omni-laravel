@@ -159,6 +159,15 @@
             </a>
           </li>
           
+          <li class="nav-item">
+            <a href="{{ route('admin.forms.index') }}" class="nav-link {{request()->routeIs('admin.forms.*')?'active':''}}">
+              <i class="nav-icon fas fa-file-export text-warning"></i>
+              <p>
+                Forms
+              </p>
+            </a>
+          </li>
+          
           
           <li class="nav-item">
           </li>
