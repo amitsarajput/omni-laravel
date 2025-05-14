@@ -199,6 +199,7 @@ class FormsController extends Controller
         $validatedData =$request->validate([
             'g-recaptcha-response' => 'required',
             'name' => ['string','required'],
+            'phone' => ['string','nullable'],
             'email' => ['email','required'],
             'country' => ['string','required'],
             'message' => ['string','required', 'max:500'],
@@ -208,7 +209,7 @@ class FormsController extends Controller
         if (!$recaptcha->verify($request->input('g-recaptcha-response'))) {
             return back()->withErrors(['captcha' => 'Captcha verification failed.']);
         }
-        if ($request->phone !== null) {
+        if ($request->mobile !== null) {
             return back()->with('status','Email Not sent.');
         }
         $form_data=[

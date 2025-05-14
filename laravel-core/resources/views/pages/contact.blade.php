@@ -15,7 +15,11 @@
 							<p>
 								{{__("If you are interested in distributing Radar Tyres, looking for a dealer near you or have any other query you can contact us via the below form or you can write to us at")}} <span style="white-space:nowrap;"><a class="blue" href="mailto:info@omni-united.com">info@omni-united.com</a></span> {{__("and we will get back to you as soon as we can.")}}
 							</p>
-							<x-ContactusForm class="mt-2" />
+							@if(session('omni_data.country')=='es')
+								<x-ContactusFormEs class="mt-2" />
+							@else
+								<x-ContactusForm class="mt-2" />
+							@endif
 						</div>
 						<div class="col-md-4">
 							@php 
@@ -60,7 +64,7 @@
 							@endforeach
 							
 							@if($caddressGrid)
-								<div class="grid">
+							</div>
 							@endif
 						</div>
 
