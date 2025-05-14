@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ localized_asset('images/red-partner-banner.webp') }}" container="true" page-title="" class="page-title--left el-height-70 uppercase" />
+    <x-page-title image-url="{{ asset('images/banner--red-partner.webp') }}" container="true" page-title="" class="page-title--left el-height-70 uppercase" />
     
     <!-- Content
     ============================================= -->
