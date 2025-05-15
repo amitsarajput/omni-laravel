@@ -214,6 +214,7 @@ class FormsController extends Controller
         }
         $form_data=[
             'name' =>  $request->name,
+            'phone' => $request->phone??null,
             'email' => strtolower($request->email),
             'country' => strtolower($request->country),
             'message' => strtolower($request->message),
