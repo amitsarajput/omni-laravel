@@ -77,7 +77,7 @@
     "NAME*": "NOMBRE*",
     "PHONE*": "TELÉFONO*",
     "EMAIL*": "CORREO ELECTRÓNICO*",
-    "COUNTRY*": "DIRECCIÓN*",
+    "COUNTRY*": "CIUDAD/PAÍS*",
     "MESSAGE": "MENSAJE",
     "Send": "Enviar",
     "*Required field": "*Campo obligatorio",
