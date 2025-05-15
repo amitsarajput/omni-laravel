@@ -18,10 +18,10 @@
                 {{ Form::text('name', '', ['class'=>'sm-form-control required','placeholder'=>__('NAME*')]) }}
             </div>
             <div class="col-3">
-                {{ Form::email('phone', '', ['class'=>'sm-form-control required email','placeholder'=>__('PHONE*')]) }}
+                {{ Form::email('email', '', ['class'=>'sm-form-control required email','placeholder'=>__('EMAIL*')]) }}
             </div>
             <div class="col-3">
-                {{ Form::email('email', '', ['class'=>'sm-form-control required email','placeholder'=>__('EMAIL*')]) }}
+                {{ Form::email('phone', '', ['class'=>'sm-form-control required email','placeholder'=>__('PHONE*')]) }}
             </div>
 
             <div class="col-3">
