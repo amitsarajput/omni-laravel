@@ -18,8 +18,8 @@ class RegionController extends Controller
 
     public function index()
     {
-        $region=Region::all();
-        return view('admin.region.index' ,compact('region'));
+        $rgn=Region::all();
+        return view('admin.region.index' ,compact('rgn'));
     }
 
     /**
