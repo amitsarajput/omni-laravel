@@ -19,8 +19,11 @@
 					<div class="col-md-12 col-bleed-y ">
 						<h3 class="dark-100">{!!__('LIMITED WARRANTY - EUROPE')!!}</h3>
 						<ul class="text-md bullet-inside ">
-							<li class="mb-xxs-1">{!!__('Workmanship and Materials Limited Warranty')!!}</li>
-							<li>{!!__('Road Hazard Warranty<sup>1</sup>')!!}</li>
+							<li class="">{!!__('Workmanship and Materials Limited Warranty')!!}</li>
+							<li>{!!__('Road Hazard Protection<sup>1</sup>')!!}</li>
+							@if(session('omni_data.country')==null)
+								<li>{!!__('30-Day Satisfaction Promise')!!}</li>
+							@endif
 						</ul>
 						<p class="text-sm">{!!__('<sup>1</sup> These warranties are offered on selected ranges. Please refer to the Buyers Warranty Guide for the most updated list of eligible ranges.')!!}</p>
 					</div>
@@ -35,11 +38,11 @@
 						<ul class="text-md no-bullets li-icons">
 							<!-- EU Region -->
 							@if(session('omni_data.country')==null)
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/EUROPE-Non-Baltic-region-Limited-Warranty-Booklet.pdf') }}"><x-icon-download-ico /> {!!__('EUROPE (Non-Baltic region) Limited Warranty Booklet')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
+								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/EUROPE-Non-Baltic-region-Limited-Warranty-Booklet-eu.pdf') }}"><x-icon-download-ico /> {!!__('EUROPE (Non-Baltic region) Limited Warranty Booklet')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
 
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/BALTIC-REGION-Limited-Warranty-Book.pdf') }}"><x-icon-download-ico /> {!!__('BALTIC REGION  Limited Warranty Booklet')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
+								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/BALTIC-REGION-Limited-Warranty-Book-eu.pdf') }}"><x-icon-download-ico /> {!!__('BALTIC REGION  Limited Warranty Booklet')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
 
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Quick_Reference_Guide_A5--radar-eu.pdf') }}"><x-icon-download-ico /> {!!__('Buyers Warranty Guide')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024')!!}</li>
+								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Buyers_Warranty_Guide-eu.pdf') }}"><x-icon-download-ico /> {!!__('Buyers Warranty Guide')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024')!!}</li>
 
 								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Limited_Warranty_Booklet--radar-eu.pdf') }}"><x-icon-download-ico /> {!!__('Limited Warranty Booklet')!!}</a> - {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024')!!}</li>
 
