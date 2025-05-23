@@ -6,7 +6,7 @@
 			<div class="section bg-white">
 				<div class="container">
 					<div class="heading-block center">
-					<h2>{{_("Contact US")}}</h2>
+					<h2>{{__("Contact us")}}</h2>
 					</div>
 				</div>
 				<div class="container">

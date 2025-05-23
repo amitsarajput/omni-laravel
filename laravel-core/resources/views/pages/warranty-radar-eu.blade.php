@@ -37,8 +37,8 @@
 						<h3 class=" dark-100">{!!__('WARRANTY INFORMATION')!!}</h3>
 						<ul class="text-md no-bullets li-icons">
 							<!-- EU Region -->
-							@if(session('omni_data.country')==null)
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/EUROPE-Non-Baltic-region-Limited-Warranty-Booklet-eu.pdf') }}"><x-icon-download-ico /> {!!__('EUROPE (Non-Baltic region) Limited Warranty Booklet')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
+							@if(session('omni_data.country')==null || (session('omni_data.country')!=null && session('omni_data.country')!='es'))
+								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/EUROPE-Non-Baltic-region-Limited-Warranty-Booklet-eu.pdf') }}"><x-icon-download-ico />ye {!!__('EUROPE (Non-Baltic region) Limited Warranty Booklet')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
 
 								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/BALTIC-REGION-Limited-Warranty-Book-eu.pdf') }}"><x-icon-download-ico /> {!!__('BALTIC REGION  Limited Warranty Booklet')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
 
@@ -48,7 +48,7 @@
 
 								<li><a href="{{ asset('storage/colletrals/Claim_Form - CL01_RA-EU_Tyres--radar-eu.pdf') }}"><x-icon-download-ico /> {!!__('Claim Form')!!}</a> - {!!__('Passenger and Light Truck replacement tyres purchased after  1<sup>st</sup> January, 2024')!!}</li>	
 
-							<!-- ES Country -->
+								<!-- ES Country -->
 							@elseif(session('omni_data.country')=='es')
 								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar-Tyres-Warranty-ES-2025.pdf') }}"><x-icon-download-ico /> {!!__('EUROPE (Non-Baltic region) Limited Warranty Booklet')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>								
 

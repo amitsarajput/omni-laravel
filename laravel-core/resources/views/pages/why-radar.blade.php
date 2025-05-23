@@ -32,10 +32,11 @@
                 </div>
 
                 
-                <div class="col-md-6">
+                <!-- <div class="col-md-6">
                     <h4 class="dark-100 uppercase">{{__('Commitment to Sustainability')}}</h4>
                     <p>{{__('We are proud to be a pioneer in sustainability, being the first tyre brand to manufacture carbon-neutral tyres. By choosing Radar Tyres, you are not only investing in quality product but also in a brand that is committed to reducing its environmental impact through sustainable practices.')}}</p>
-                </div>
+                </div> -->
+                
                 <div class="col-md-6">
                     <h4 class="dark-100 uppercase">{{__('Social Responsibility')}}</h4>
                     <p>{{__('Giving back has always been in our DNA. Since 2011, we have supported the Breast Cancer Research Foundation (BCRF), raising awareness and funding critical life-saving research. When you choose Radar Tyres, you help contribute to this important cause.')}}</p>

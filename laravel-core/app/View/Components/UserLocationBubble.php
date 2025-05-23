@@ -55,7 +55,6 @@ class UserLocationBubble extends Component
      */
     public function render(): View|Closure|string
     {
-        
         return view('components.user-location-bubble', ['location'=>$this->omnidata['preffered_location'], 'all_locations'=>$this->omnidata['available_locations']]);
     }
 }
