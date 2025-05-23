@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 <!-- Tyre Images -->
-                <div class="col-lg-6">
+                <div class="col-lg-6" >
                     @php
                         $product_images=json_decode($tyre->product_images);
                     @endphp
