@@ -23,7 +23,7 @@
 
                     {{__('Warm regards,')}}<br><br>
 
-                    <img src="{{ asset('images/sig.webp') }}" alt="" width="300"><br><br>
+                    <img src="{{ asset('images/sig.webp') }}" alt="" width="200"><br><br>
 
                     <b>G S Sareen</b><br>
                     {{__('President & CEO')}}<br>
