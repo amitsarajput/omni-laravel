@@ -27,7 +27,6 @@ class Localization
         }else{
             $this->setLocaleFromSessionData($region, $country);
         }
-
         return $next($request);
     }
     

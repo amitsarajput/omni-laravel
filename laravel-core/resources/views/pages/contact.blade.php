@@ -6,14 +6,14 @@
 			<div class="section bg-white">
 				<div class="container">
 					<div class="heading-block center">
-					<h2>{{__("Contact us")}}</h2>
+					<h2>{{__("contactPage__title")}}</h2>
 					</div>
 				</div>
 				<div class="container">
 					<div class="grid">
 						<div class="col-md-8">
 							<p>
-								{{__("If you are interested in distributing Radar Tyres, looking for a dealer near you or have any other query you can contact us via the below form or you can write to us at")}} <span style="white-space:nowrap;"><a class="blue" href="mailto:info@omni-united.com">info@omni-united.com</a></span> {{__("and we will get back to you as soon as we can.")}}
+								{{__("contactPage__formSuppText_part1")}} <span style="white-space:nowrap;"><a class="blue" href="mailto:info@omni-united.com">info@omni-united.com</a></span> {{__("contactPage__formSuppText_part2")}}
 							</p>
 							@if(session('omni_data.country')=='es')
 								<x-ContactusFormEs class="mt-2" />
@@ -26,21 +26,21 @@
 								$caddressGrid=True;
 								$caddress=[
 									[
-									'title'=>__("SINGAPORE (HQ)"), 
+									'title'=>__("contactPage__addTitle_singapore"), 
 									'address'=>"<b>Omni United (S) Pte Ltd</b><br>2 Central Boulevard, <br>#08-04A West Tower, <br>IOI Central Boulevard, <br>Singapore 018916" ,
 									'phone'=>"T: +65 6423 1431 <br>F: +65 6423 0938" ,
-									'workingHours'=>__('Business Hrs:')." 0900 – 1800 (UTC+8)<br> ".__('Monday – Friday'),
+									'workingHours'=>__('contactPage__addText_hrs')." 0900 – 1800 (UTC+8)<br> ".__('contactPage__addText_days'),
 									'region'=>['apac','eu']
 									],
 									[
-									'title'=> __('UNITED ARAB EMIRATES'),
+									'title'=> __('contactPage__addTitle_uae'),
 									'address'=>"<b>Omni MEA Tyres Trading DMCC</b> <br>1705, Mazaya Business Avenue BB2, <br>JLTE-PH2-BB2, <br>Jumeirah Lakes Towers" ,
 									'phone'=>" T: +971 4 457 1666" ,
-									'workingHours'=>__('Business Hrs:')." 0900 – 1800 (UTC+4)<br> ".__('Monday – Friday'),
+									'workingHours'=>__('contactPage__addText_hrs')." 0900 – 1800 (UTC+4)<br> ".__('contactPage__addText_days'),
 									'region'=>['apac']
 									],
 									[
-									'title'=> __('ITALY'),
+									'title'=> __('contactPage__addTitle_italy'),
 									'address'=>"<b>Omni United (Italy) S.r.l.</b> <br>Via Durini, 18, <br>Milano (MI) 20122, <br>Italy",
 									'phone'=>null ,
 									'workingHours'=>null,

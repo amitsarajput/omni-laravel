@@ -10,9 +10,9 @@
             <div class="container">
                 <div class="grid">
                     <div class="col-md-12 col-bleed-y">
-                        <h2 class="no-top-margin pink uppercase center ">{{__('Social Responsibility')}}</h2>
-                        <p class="text-lead center"><em> {{__('“We cannot transform the world alone, but we want to demonstrate that if a company like ours can invest the time, effort and resources necessary to make a difference, then anyone can.”')}} </em></p>
-                        <p class="center dark-50">{{__('G.S.Sareen, President and CEO, Omni United')}}</p>
+                        <h2 class="no-top-margin pink uppercase center ">{{__('socialRespPage__secSocialRespSocial')}}</h2>
+                        <p class="text-lead center"><em> {{__('socialRespPage__secSocialResp_text')}} </em></p>
+                        <p class="center dark-50">{{__('socialRespPage__ceo')}}</p>
                     </div>
                 </div>
             </div>
@@ -21,10 +21,10 @@
         <div class="container">
             <div class="grid">
                 <div class="col-md-12 col-bleed-y">
-                    <h3 class="no-top-margin dark-100 uppercase">{{__('Giving Back to the Society')}}</h3>
-                    <p>{{__('We have always believed in giving back, both to the environment and to the society. This is one of the pillars that our company has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011. Together we launched “Mobilising Hope”, a corporate alliance program that supports BCRF’s mission to prevent and cure breast cancer by advancing the world\'s most promising research. Our support to the BCRF has not just been monetary but also heavily aimed at bringing awareness of their work into the forefront of our industry and society in general. Through this programme we continue to fund and support thousands of hours of critical life-saving research.')}}</p>
-                    <p>{{__('Over the years we have undertaken numerous initiatives to spread awareness for this cause. Some of these include launching a limited edition pink sidewall tyre that was sold through a major tyre distributor in the US, supporting BCRF in all major trade exhibitions and tyre fairs globally and encouraging our dealers with in-store promotion and awareness materials. We have also received tremendous support from our past racing teams as they have always displayed the BCRF logo on their race vehicles and our previous brand ambassador LPGA Golfer, Jodi Ewart Shadoff who helped us in bringing more awareness about this cause.')}}</p>
-                    <p>{!!__('In 2024, Radar Tyres is donating a minimum of $50,000 to the Breast Cancer Research Foundation<sup>®</sup> regardless of sales. For more information about our programme please visit')!!} <a class="blue" target="_blank" href="https://www.bcrf.org/shop-pink/travel-entertainment/radar-tires-radar-tyres-and-eden-tyres/">https://www.bcrf.org/shop-pink/travel-entertainment/radar-tires-radar-tyres-and-eden-tyres/</a>. {{__('For more information about BCRF, please visit')}} <a class="blue" target="_blank" href="https://www.bcrf.org/">www.bcrf.org</a>.</p>
+                    <h3 class="no-top-margin dark-100 uppercase">{{__('socialRespPage__secGivingBack')}}</h3>
+                    <p>{{__('socialRespPage__secGivingBack_Para1')}}</p>
+                    <p>{{__('socialRespPage__secGivingBack_Para2')}}</p>
+                    <p>{!!__('socialRespPage__secGivingBack_Para3_1')!!} <a class="blue" target="_blank" href="https://www.bcrf.org/shop-pink/travel-entertainment/radar-tires-radar-tyres-and-eden-tyres/">https://www.bcrf.org/shop-pink/travel-entertainment/radar-tires-radar-tyres-and-eden-tyres/</a>. {{__('socialRespPage__secGivingBack_Para3_2')}} <a class="blue" target="_blank" href="https://www.bcrf.org/">www.bcrf.org</a>.</p>
                 </div>
             </div>
         </div>        
@@ -36,7 +36,7 @@
                             us$ <span class="counter">1,387,750</span>
                         </div>
                         <div class="number-text--text">
-                            {!!__('donated to <br> BCRF to date')!!}
+                            {!!__('socialRespPage__bcrfTotalDonated')!!}
                         </div>
                     </div>
                 </div>
@@ -47,7 +47,7 @@
                              <span class="counter">27,755</span>
                         </div>
                         <div class="number-text--text">
-                            {!!__('hours of  <br> research funded')!!}
+                            {!!__('socialRespPage__researchHoursFunded')!!}
                         </div>
                     </div>
                 </div>
@@ -66,8 +66,8 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
-                        <h5 class="dark-100 mt-0 uppercase">{{__('FUND RAISING PROGRAMME PARTNERING WITH UK BASED EDEN TYRES & SERVICING')}}</h5>
-                        <p>{{__('For the fifth consecutive year, Radar Tyres has tied up with its UK based tyre distributor, Eden Tyres & Servicing to raise funds for the BCRF. For every Radar Tyre sold at Eden Tyre outlets in the UK in 2024, both companies will collectively donate £2 to BCRF. Through this programme, the company aims to raise £20,000 this year for the BCRF.')}}</p>
+                        <h5 class="dark-100 mt-0 uppercase">{{__('socialRespPage__secFundraisingHeading')}}</h5>
+                        <p>{{__('socialRespPage__secFundraisingHeading_text')}}</p>
                     </div>
                 </div>
             </div>
@@ -80,7 +80,7 @@
         <div class="container">
             <div class="grid">
                 <div class="col-md-10 offset-md-1">
-                    <h3 class="mt-0 mb-3 dark-100 uppercase center">{{__('Our Sustainability and Giving Back Philosophy')}} </h3>
+                    <h3 class="mt-0 mb-3 dark-100 uppercase center">{{__('socialRespPage__secSustainabilityPhilosophyHeading')}} </h3>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/51noIoC99xc?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div>
             </div>

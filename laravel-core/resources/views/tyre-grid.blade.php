@@ -7,7 +7,7 @@
     <!-- Implement Slider From Brand Database -->
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/banner--tyre-grid.webp') }}" container="true" page-title="EVERYONE SHOULD HAVE THE RIGHT<br> TO ACCESS PREMIUM TYRES AT<br> AFFORDABLE PRICES" button="true" button-text="READ MORE ABOUT RADAR TYRES" button-Link="{{ safeRoute('pages.about-us') }}" class="page-title--left el-height-60 uppercase mb-0" />
+    <x-page-title image-url="{{ asset('images/banner--tyre-grid.webp') }}" container="true" page-title="{!!__('mainPage__mainHeading')!!}" button="true" button-text="{!!__('mainPage__mainHeading_cta')!!}" button-Link="{{ safeRoute('pages.about-us') }}" class="page-title--left el-height-60 uppercase mb-0" />
     
     <!-- Content -->
     <section id="content">
@@ -21,7 +21,7 @@
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h5>{{ __("WHY RADAR") }}</h5>
-                        <h2 class="dark-100  no-top-margin">{{__('HIGH PERFORMANCE AND SAFETY, BUT WITHOUT THE HEFTY PRICE TAG')}}</h2>
+                        <h2 class="dark-100  no-top-margin">{{__('mainPage__whyRadarHeading')}}</h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.why-radar') }}">{{__('READ MORE')}}</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
@@ -30,18 +30,18 @@
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12 order-md-2 bg-image" style="background-image:url({{asset('images/tyre-grid/wet-braking.webp')}})">
                     <div class="mx-xxs-2 mx-lg-7 py-xxs-5 py-sm-7 py-lg-9 py-7">
-                        <h5>{{__('TESTING')}}</h5>
+                        <h5>{{__('mainPage__testTitle')}}</h5>
                         <h2 class="white no-top-margin">
-                            {{__('EXTENSIVELY TESTED AGAINST PREMIUM BRANDS')}}
+                            {{__('mainPage__testHeading')}}
                         </h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.testing') }}">{{__('READ MORE')}}</a>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 mx-lg-7">
-                        <h5>{{__('MESSAGE FROM CEO')}}</h5>
+                        <h5>{{__('mainPage__ceoTitle')}}</h5>
                         <h2 class="dark-100 no-top-margin">
-                        {{__('OUR MISSION IS TO OFFER PREMIUM HIGH-QUALITY TYRES THAT ARE AFFORDABLE FOR ALL')}}
+                        {{__('mainPage__ceoHeading')}}
                         </h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{safeRoute('pages.ceo-message')}}">{{__('READ MORE')}}</a>
                     </div>
@@ -55,8 +55,8 @@
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
-                        <h5>{{ __("REAL PEOPLE. REAL PERFORMANCE.") }}</h5>
-                        <h2 class="dark-100  no-top-margin">{{ __("MEET THE EXPERTS DRIVING RADAR TYRES TO THE NEXT LEVEL") }}</h2>
+                        <h5>{{ __("mainPage__realPeopleTitle") }}</h5>
+                        <h2 class="dark-100  no-top-margin">{{ __("mainPage__realPeopleHeading") }}</h2>
                         <a  class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.real-people') }}">{{__('READ MORE')}}</a>
                     </div>
                 </div>
@@ -134,7 +134,7 @@
                 <div class="grid">
                     <div class="col-12">
                         <div class="center">
-                            <h2 class="uppercase center dark-100 mb-2">{{__('OUR COMMITMENT TO THE COMMUNITY')}}</h2>
+                            <h2 class="uppercase center dark-100 mb-2">{{__('mainPage__respSectionHeading')}}</h2>
                         </div>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
                     <div class="col-md-6 col-sm-12">
                         <div class="ma-xxs-0 ma-xs-0 ma-sm-0 ml-md-2">
                             <h5 class="dark-100 mt-0 uppercase">{{__('SOCIAL RESPONSIBILITY')}}</h5>
-                            <p>{{__('We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.')}}</p>
+                            <p>{{__('mainPage__respText')}}</p>
                             <a class="knopf red heading-font sharp ls-1" href="{{ safeRoute('pages.responsibility-social') }}">{{__('READ MORE')}}</a>
                         </div>
                     </div>

@@ -7,9 +7,9 @@
         <div class="grid">
     @endif
         <div class="page-title-wrapper">
-            <h2>{!! __($pageTitle) !!}</h2> 
+            <h2>{!! $pageTitle !!}</h2> 
             @if ($pageSubTitle)
-                <p >{{$pageSubTitle}}</p>
+                <p >{!! $pageSubTitle !!}</p>
             @endif
             @if ($button)
                 <a class="knopf red heading-font sharp ls-1 mt-1" href="{{ $buttonLink }}">{{ __($buttonText) }}</a>
