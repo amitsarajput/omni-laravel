@@ -1,7 +1,16 @@
 <x-guest-layout>
+    
+    @push('styles') 
+        <style>@media screen and (max-width:767px){
+            #page-title{
+                    height: 150px!important;
+            } 
+        }</style>
+    @endpush
+
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ localized_asset('images/ceo-message--banner.webp') }}" container="true" page-title="" class="page-title--left el-height-60 uppercase" />
+    <x-page-title image-url="{{ localized_asset('images/ceo-message--banner.webp') }}" container="true" page-title="" class="page-title--left el-height-60  uppercase" />
     
     <!-- Content
     ============================================= -->
