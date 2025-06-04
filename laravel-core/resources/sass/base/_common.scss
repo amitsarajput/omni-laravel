@@ -60,7 +60,18 @@ hr {
 
 ul{
 	li{
-		
+		&.bullet{
+			list-style: disc;
+			padding-left: 0;
+		}
+		&.no-bullet{
+			list-style: none;
+			padding-left: 0;
+		}
+		&.bullet-inside{
+			list-style-position: inside;
+			padding-left: 0;
+		}
 	}
 	&.disc{
 		list-style-type: disc;

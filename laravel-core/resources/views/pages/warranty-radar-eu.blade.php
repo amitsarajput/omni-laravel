@@ -11,13 +11,13 @@
 		<div class="section bg-white pt-0">
 			<div class="container">
 				<div class="grid ">
-					<div class="col-md-12 col-bleed-y center"><h2>{{__('LIMITED WARRANTY - EUROPE')}}</h2></div>
+					<div class="col-md-12 col-bleed-y center"><h2>{{__('RADAR PROTECT PROGRAM - EUROPE')}}</h2></div>
 				</div>
 			</div>
 			<div class="container">
 				<div class="grid">
 					<div class="col-md-12 col-bleed-y ">
-						<h3 class="dark-100">{!!__('LIMITED WARRANTY - EUROPE')!!}</h3>
+						<h3 class="dark-100">{!!__('RADAR PROTECT PROGRAM - EUROPE')!!}</h3>
 						<ul class="text-md bullet-inside ">
 							<li class="">{!!__('Workmanship and Materials Limited Warranty')!!}</li>
 							<li>{!!__('Road Hazard Protection<sup>1</sup>')!!}</li>
@@ -25,7 +25,7 @@
 								<li>{!!__('30-Day Satisfaction Promise')!!}<sup>1</sup></li>
 							@endif
 						</ul>
-						<p class="text-sm">{!!__('<sup>1</sup> These warranties are offered on selected ranges. Please refer to the Buyers Warranty Guide for the most updated list of eligible ranges.')!!}</p>
+						<p class="text-sm">{!!__('<sup>1</sup> These warranties are offered on selected ranges. Please refer to the Radar Protect Program Buyers Guide for the most updated list of eligible ranges.')!!}</p>
 					</div>
 				</div>
 			</div>
@@ -34,32 +34,32 @@
 			<div class="container">
 				<div class="grid">
 					<div class="col-md-12 col-bleed-y ">
-						<h3 class=" dark-100">{!!__('WARRANTY INFORMATION')!!}</h3>
+						<h3 class=" dark-100">{!!__('RADAR PROTECT PROGRAM – EUROPE INFORMATION')!!}</h3>
 						<ul class="text-md no-bullets li-icons">
 							<!-- EU Region -->
 							@if(session('omni_data.country')==null || (session('omni_data.country')!=null && session('omni_data.country')!='es'))
-								<li class="mb-1"><h4 class="mb-2">2025</h4>
-									<b>Europe (except Baltic countries)</b>
+								<li class="mb-1"><h4 class="mb-1">2025</h4>
+									<b class="uppercase">Europe (except Baltic countries)</b>
 								</li>
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar Protect Program Buyers Guide - Europe (except Baltic countries)--EU-2025.pdf') }}"><x-icon-download-ico />{!!__('Radar Protect Program Buyers Guide - Europe (except Baltic countries)')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
+								<li class="mb-xxs-1 bullet ml-2"><a href="{{ asset('storage/colletrals/Radar Protect Program Buyers Guide - Europe (except Baltic countries)--EU-2025.pdf') }}"><x-icon-download-ico />{!!__('Radar Protect Program Buyers Guide - Europe (except Baltic countries)')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
 
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar Protect Program Terms & Conditions - Europe (except Baltic countries)--EU-2025.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Terms & Conditions - Europe (except Baltic countries)')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
+								<li class="mb-xxs-1 bullet ml-2"><a href="{{ asset('storage/colletrals/Radar Protect Program Terms & Conditions - Europe (except Baltic countries)--EU-2025.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Terms & Conditions - Europe (except Baltic countries)')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
 
-								<li class="mt-2 mb-1"><b>Baltic countries only</b></li>
+								<li class="mt-1 mb-1"><b class="uppercase">Baltic countries only</b></li>
 
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar Protect Program Buyers Guide - Baltic countries only--EU-2025.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Buyers Guide - Baltic countries only')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
+								<li class="mb-xxs-1 bullet ml-2"><a href="{{ asset('storage/colletrals/Radar Protect Program Buyers Guide - Baltic countries only--EU-2025.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Buyers Guide - Baltic countries only')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
 
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar Protect Program Terms & Conditions - Baltic countries only--EU-2025.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Terms & Conditions - Baltic countries only')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
+								<li class="mb-xxs-1 bullet ml-2"><a href="{{ asset('storage/colletrals/Radar Protect Program Terms & Conditions - Baltic countries only--EU-2025.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Terms & Conditions - Baltic countries only')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2025')!!}</li>
 
 								<li class="mt-3 mb-1 red"><h4 class="mb-0">2024</h4></li>
 
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Buyers_Warranty_Guide-eu.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Buyers Guide - Europe')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024')!!}</li>
+								<li class="mb-xxs-1 bullet ml-2"><a href="{{ asset('storage/colletrals/Buyers_Warranty_Guide-eu.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Buyers Guide - Europe')!!}</a> – {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024')!!}</li>
 
-								<li class="mb-xxs-1"><a href="{{ asset('storage/colletrals/Radar_Tyres_Limited_Warranty_Booklet--radar-eu.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Terms & Conditions - Europe')!!}</a> - {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024')!!}</li>
+								<li class="mb-xxs-1 bullet ml-2"><a href="{{ asset('storage/colletrals/Radar_Tyres_Limited_Warranty_Booklet--radar-eu.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Terms & Conditions - Europe')!!}</a> - {!!__('Passenger and Light Truck replacement tyres purchased from 1<sup>st</sup> January to 31<sup>st</sup> December, 2024')!!}</li>
 
-								<li class="mt-3 mb-1 red"><h4 class="mb-0">CLAIM FORM 2024 AND 2025</h4></li>
+								<li class="mt-3 mb-1 red"><h4 class="mb-0">CLAIM FORM</h4></li>
 
-								<li><a href="{{ asset('storage/colletrals/Claim_Form - CL01_RA-EU_Tyres--radar-eu.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Claim Form')!!}</a> - {!!__('Passenger and light truck replacement tyres purchased after 1<sup>st</sup> January, 2024')!!}</li>	
+								<li class="mb-xxs-1 bullet ml-2"><a href="{{ asset('storage/colletrals/Claim_Form - CL01_RA-EU_Tyres--radar-eu.pdf') }}"><x-icon-download-ico /> {!!__('Radar Protect Program Claim Form')!!}</a> - {!!__('Passenger and light truck replacement tyres purchased after 1<sup>st</sup> January, 2024')!!}</li>	
 
 								<!-- ES Country -->
 							@elseif(session('omni_data.country')=='es')
