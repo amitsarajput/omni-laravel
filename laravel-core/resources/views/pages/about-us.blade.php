@@ -1,7 +1,7 @@
 <x-guest-layout>
     <!-- Page Title
     ============================================= -->
-    <x-page-title image-url="{{ asset('images/banner--about-us.webp') }}" container="true" page-title="<span class='red'>THEY SAY PREMIUM TYRES ARE EXPENSIVE.</span><br><span class='black'>WE SAY, NOT WHEN YOU ROLL WITH US.</span>" class="page-title--center el-height-70 uppercase" />
+    <x-page-title image-url="{{ asset('images/banner--about-us.webp') }}" container="true" page-title="{!!__('aboutPage__title')!!}" class="page-title--center el-height-70 uppercase" />
     
     <!-- Content
     ============================================= -->

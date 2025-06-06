@@ -8,27 +8,27 @@
     <section id="content" class="pb-5">
         <div class="container" >
             <div class="grid ">
-                <div class="col-md-12"><h3 class="no-top-margin dark-100">{{__("RADAR RED PARTNER")}}</h3>                                   
-                    <p>{{__("The Radar RED (Radar Elite Dealer) Partner, is a community of trusted Radar Tyres dealers dedicated to delivering premium quality products and exceptional customer service. Our RED Partners are carefully selected for their commitment to excellence, product availability, and product knowledge, ensuring you receive the best possible tyre solutions for your needs.​")}}​</p>
+                <div class="col-md-12"><h3 class="no-top-margin dark-100">{{__("redPartnerPage_mainTitle")}}</h3>                                   
+                    <p>{{__("redPartnerPage_overview")}}​</p>
                 </div>
             </div>
             
             <div class="grid ">
                 
                 <div class="col-md-12">
-                    <h4 class="no-top-margin dark-100 uppercase">{{__("Why Choose a Radar RED Partner?")}}</h4>
-                    <p>{{__("When you buy from a Radar RED Partner, you can enjoy:")}}</p>
+                    <h4 class="no-top-margin dark-100 uppercase">{{__("redPartnerPage_whyChoose")}}</h4>
+                    <p>{{__("redPartnerPage_whenBuy")}}</p>
                     <ul>
-                        <li>{{__("Elite Service: Benefit from personalised guidance and expert advice to find the perfect tyre for your vehicle.")}}</li>
-                        <li>{{__("Access to Premium Products: Get the latest and most innovative Radar Tyres, designed for performance and durability.")}}</li>
-                        <li>{{__("Exclusive Customer Benefits: In certain markets, RED Partners may offer additional perks such as an additional road hazard replacement warranty, 30-day satisfaction promise, and mileage warranties.")}} </li>
-                        <li>{{__("Dedicated After-Sales Support: Seamless assistance for warranties, replacements, and tyre care.")}}</li>
+                        <li>{{__("redPartnerPage_whenBuyBenefitsEliteService")}}</li>
+                        <li>{{__("redPartnerPage_whenBuyBenefitsPremiumProducts")}}</li>
+                        <li>{{__("redPartnerPage_whenBuyBenefitsExclusiveBenefits")}}</li>
+                        <li>{{__("redPartnerPage_whenBuyBenefitsAfterSalesSupport")}}</li>                        
                     </ul>
                 </div>
             </div>
             <div class="grid">
                 <div class="col-md-12">
-                    <p class="dark-100 t700">{{__("With a Radar RED Partner, you’re not just buying tyres—you’re investing in superior quality, trusted expertise, and unmatched customer care.")}}</p>
+                    <p class="dark-100 t700">{{__("redPartnerPage_commitment")}}</p>
                 </div>
             </div>
 

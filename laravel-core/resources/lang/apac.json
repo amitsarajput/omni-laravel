@@ -61,6 +61,7 @@
     "EUROPE": "",
     "SPAIN": "",
     "FRANCE": "",
+    "ITALY": "ITALY",
     "ASIA, MIDDLE EAST AND AFRICA": "",
     "READ MORE": "",
     "WATCH VIDEO": "",
@@ -133,7 +134,7 @@
     "mainPage__realPeopleTitle": "REAL PEOPLE. REAL PERFORMANCE.",
     "mainPage__realPeopleHeading": "MEET THE EXPERTS DRIVING RADAR TYRES TO THE NEXT LEVEL",
     "mainPage__respSectionHeading": "OUR COMMITMENT TO THE COMMUNITY",
-    "mainPage__respText": "We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world’s most promising research.",
+    "mainPage__respText": "We have always believed in giving back and this is one of the pillars that Radar Tyres has been built on. It was these beliefs that led us to partner with the Breast Cancer Research Foundation (BCRF) in 2011, the leading and highest-rated breast cancer organisation in the US. We have been supporting BCRF in their mission to prevent and cure breast cancer by advancing the world's most promising research.",
 
 
     "_COMMENT": "RADAR ABOUT US",
@@ -202,7 +203,138 @@
     "socialRespPage__secFundraisingHeading_text": "For the fifth consecutive year, Radar Tyres has tied up with its UK based tyre distributor, Eden Tyres & Servicing to raise funds for the BCRF. For every Radar Tyre sold at Eden Tyre outlets in the UK in 2024, both companies will collectively donate £2 to BCRF. Through this programme, the company aims to raise £20,000 this year for the BCRF.",
     "socialRespPage__secSustainabilityPhilosophyHeading": "Our Sustainability and Giving Back Philosophy",
     "socialRespPage__bcrfTotalDonated": "donated to <br> BCRF to date",
-    "socialRespPage__researchHoursFunded": "hours of <br> research funded"
+    "socialRespPage__researchHoursFunded": "hours of <br> research funded",
+    
+    
+    "_comment": "RADAR RED PARTNER PAGE",
+    "redPartnerPage_mainTitle": "RADAR RED PARTNER",
+    "redPartnerPage_overview": "The Radar RED (Radar Elite Dealer) Partner, is a community of trusted Radar Tyres dealers dedicated to delivering premium quality products and exceptional customer service. Our RED Partners are carefully selected for their commitment to excellence, product availability, and product knowledge, ensuring you receive the best possible tyre solutions for your needs.",
+    "redPartnerPage_whyChoose":"Why Choose a Radar RED Partner?",
+    "redPartnerPage_whenBuy": "When you buy from a Radar RED Partner/, you can enjoy",
+        "redPartnerPage_whenBuyBenefitsEliteService":"Elite Service: Benefit from personalised guidance and expert advice to find the perfect tyre for your vehicle.",
+        "redPartnerPage_whenBuyBenefitsPremiumProducts": "Access to Premium Products: Get the latest and most innovative Radar Tyres, designed for performance and durability.",
+        "redPartnerPage_whenBuyBenefitsExclusiveBenefits": "Exclusive Customer Benefits: In certain markets, RED Partners may offer additional perks such as an additional road hazard replacement warranty, 30-day satisfaction promise, and mileage warranties.",
+        "redPartnerPage_whenBuyBenefitsAfterSalesSupport": "Dedicated After-Sales Support: Seamless assistance for warranties, replacements, and tyre care.",
+    
+    "redPartnerPage_commitment": "With a Radar RED Partner, you’re not just buying tyres—you’re investing in superior quality, trusted expertise, and unmatched customer care.",
+
+
+    "_COMMENT": "PREMIUM COLLECTION PAGE",
+    "premiumCollPage_intro": "THE RADAR PREMIUM COLLECTION IS TESTED AGAINST LEADING ESTABLISHED BRANDS, OFFERING THE SAME PERFORMANCE BUT WITHOUT THE HEFTY PRICE TAG.",
+    "premiumCollPage_overview": "The Radar Premium Collection is our latest range of products which have been rigorously tested against leading established brands, offering the same performance but without the hefty price tag. We believe that safety, performance, and durability should be accessible to all customers without the high costs often associated with premium brands. With Radar, you get the same premium performance as the leading established brands but at more affordable prices.",
+    "premiumCollPage_testingFacilities": "Radar Tyres are tested at world-class facilities worldwide, including UTAC, ATP, Applus+, Idiada, Smithers and other independent testing locations around the world to ensure that they offer the same level of performance and safety as leading established premium brands.",
+    "premiumCollPage_designInnovation": "The Radar Premium collection is designed in collaboration with the legendary Italian design house, GFG Style, which is one of the most renowned automotive designers in the world. Coupled with our extensive expertise in engineering and manufacturing, we bring to market unique products with the optimal balance of design and engineering.",
+
+
+
+    "_COMMENT": "ceo-message",
+    "ceoMsgPage_greeting": "Dear friend,",
+    "ceoMsgPage_intro": "I am thrilled to share our approach, passion and vision that drive Radar Tyres. We believe in creating a brand that stands for quality and innovation while making premium products accessible to everyone.",
+    "ceoMsgPage_mission": "Our mission is to offer premium, high-quality tyres that are affordable for all, bridging the gap between superior performance and cost-effectiveness. We aim to be the game changer in the tyre industry. Our long-term goals include expanding our market coverage, continuously improving our products and maintaining the highest standards of sustainability and responsibility.",
+    "ceoMsgPage_commitment": "We will continue to drive forward, breaking new ground and setting new standards in the tyre industry.",
+    "ceoMsgPage_closing": "Warm regards,",
+    "ceoMsgPage_signature": "President & CEO",
+
+
+
+    "_COMMENT": "testing",    
+    "testingPage_intro": "RADAR TYRES ARE RIGOROUSLY TESTED AGAINST ESTABLISHED PREMIUM BRANDS, OFFERING THE SAME PERFORMANCE BUT WITHOUT THE HEFTY PRICE TAG",
+    "testingPage_details": "Our products are engineered without compromise and rigorously tested against leading established brands to ensure that drivers get optimal performance and safety they can count on all year round. Our products undergo a comprehensive testing regime, across world-class testing facilities in the world like UTAC, ATP, Applus+, Idiada and Smithers and other independent testing agencies. The highly experienced and skilled drivers push our tyres to their limits in their uncompromising tests on snow, ice, wet and dry asphalt in both outdoor tracks and indoor test facilities. This helps our R&D team to develop products that provide similar performance and safety aspects as any premium tyre manufacturer.",
+    "testingPage_cta": "Click below to download the recent test results.",
+    "testingPage_download": "Download",
+    
+    
+    "_COMMENT": "real-people-group",
+    "realPeoplePage_intro": "REAL PEOPLE, REAL PERFORMANCE<br>– THE EXPERTS BEHIND RADAR TYRES",
+    "realPeoplePage_passion": "At Radar Tyres, we believe that premium performance isn't just about technology—it’s about the passion and expertise of the people who push the limits of innovation, safety, and design.",
+    "realPeoplePage_commitment": "Our commitment to making premium, high-quality tyres accessible to all is driven by these world-class professionals who ensure every tyre meets the highest standards.",
+    "realPeoplePage_rdHeading": "CUTTING-EDGE R&D",
+    "realPeoplePage_rdDescription": "Olli Seppälä, Head of R&D, leads the charge in engineering tyres that combine state-of-the-art materials and advanced manufacturing techniques. His vision is to deliver premium quality through a world-class global manufacturing network—without the premium price.",
+    "realPeoplePage_testingHeading": "TESTING EXCELLENCE",
+    "realPeoplePage_testingDescription": "Test driver Stéphane Clepkens pushes every Radar tyre to the limit, rejecting anything that doesn’t outperform expectations. His mission? To ensure Radar Tyres rival and even surpass premium brands in real-world performance.",
+    "realPeoplePage_designHeading": "ICONIC DESIGN",
+    "realPeoplePage_designDescription": "Fabrizio Giugiaro, the visionary designer behind some of the world’s most iconic automotive creations and the founder of GFG Style. Now, he brings his expertise to Radar Tyres, redefining what tyre design means in terms of aesthetics, performance, and accessibility.",
+    "realPeoplePage_closing": "With their passion and expertise, Radar Tyres is redefining what it means to drive on premium tyres —delivering world-class quality, safety, and style at a price that’s within reach. Because real performance starts with real people.",
+
+
+
+
+    "_COMMENT": "olli-seppala",
+    "olliSeppalaPage__pgTitle": "REAL PEOPLE, REAL PERFORMANCE<br>– THE EXPERTS BEHIND RADAR TYRES",
+    "olliSeppalaPage__intro": "DEVELOPING THE FUTURE OF PERFORMANCE: RADAR TYRES AND THE SCIENCE OF INNOVATION",
+    "olliSeppalaPage__meetOlli": "Meet Olli Seppälä, the head of global R&D at Radar Tyres and a trailblazer in the tyre industry. With over 20 years of experience in tyre development, Olli’s expertise spans from heavy-duty products to passenger car tyres, with a focus on delivering exceptional performance and keeping tyres affordable for all.",
+    "olliSeppalaPage__careerExpertise": "A CAREER BUILT ON EXPERTISE",
+    "olliSeppalaPage__careerJourney": "Olli’s journey in tyre innovation began at Nokian Tyres, where he spent nearly two decades honing his skills in product development and leading R&D teams. In 2022, he joined Radar Tyres, bringing a wealth of experience and a passion for pushing boundaries. “The tyre industry has evolved tremendously in the past 20 years,” Olli explains. “Performance demands, sustainability requirements, and legislative standards have all become more stringent, making innovation more critical than ever.”",
+    "olliSeppalaPage__modernTyres": "THE COMPLEXITY OF MODERN TYRES",
+    "olliSeppalaPage__tyreDescription": "A modern tyre is far more than just a rubber ring. “Each tyre comprises about 20 components,” Olli notes. “Every element impacts the others, requiring meticulous balancing to achieve optimal performance.” One key area is tread compounds, where advancements in silica technology have significantly enhanced wet grip and rolling resistance, albeit with new challenges to overcome. ",
+    "olliSeppalaPage__magicTriangle": "THE MAGIC TRIANGLE OF TYRE DEVELOPMENT",
+    "olliSeppalaPage__magicTriangleDetails": "Tyre development is a fine art, requiring a careful balance of wet grip, rolling resistance, and mileage — often referred to as the “Magic Triangle.” As Olli explains, “Improving one aspect often comes at the expense of the others. Our mission is to expand this triangle, achieving outstanding performance across all metrics.” Through their expertise, Olli and his team have excelled in delivering exceptional results in every area.",
+    "olliSeppalaPage__businessModel": "A UNIQUE BUSINESS MODEL",
+    "olliSeppalaPage__businessApproach": "Radar Tyres operates without its own manufacturing facilities, a strategic choice that Olli sees as a game-changer. “We can select the best production locations for each product, ensuring top performance and cost-effectiveness,” he explains. “This agility allows us to innovate faster and more efficiently than traditional tyre makers.",
+    "olliSeppalaPage__innovationApproach": "INNOVATION BEYOND THE TYRE: A GLOBAL APPROACH",
+    "olliSeppalaPage__globalInnovation": "For Olli, innovation isn’t limited to tread patterns or compounds. “It’s about rethinking the entire process, from business models to supply chains,” he explains. This philosophy extends to Radar Tyres’ rigorous global testing process. “We conduct tests worldwide, from winter conditions in Finland to dry tracks in Spain and field testing in the U.S. and Asia,” Olli shares. “This ensures our tyres meet the specific needs of diverse markets while maintaining top-tier performance.”",
+    "olliSeppalaPage__premiumPerformance": "DEMOCRATIZING PREMIUM PERFORMANCE",
+    "olliSeppalaPage__performanceGoal": "Olli’s mission is clear: to make premium-level tyre performance accessible to all. “Safety is our top priority, and it’s vital that consumers can rely on their tyres in critical moments,” he says. “Our goal is to deliver tyres that compete with premium brands while remaining affordable, ensuring safety and performance for every driver.”",
+    "olliSeppalaPage__futureVision": "LOOKING TO THE FUTURE",
+    "olliSeppalaPage__futurePlans": "As the automotive industry shifts towards electrification, Radar Tyres is already adapting. “Electric vehicles bring unique challenges, such as reduced noise and higher torque requirements,” Olli says. “We’re designing tyres that not only meet these demands but also enhance the overall driving experience.”",
+    "olliSeppalaPage__excellenceVision": "A VISION OF EXCELLENCE",
+    "olliSeppalaPage__excellenceQuote": "“We’re here to redefine what’s possible in the tyre industry,” Olli concludes. “By combining top-tier performance with affordability, we’re democratizing premium tyres and ensuring that safety and quality are within everyone’s reach.”",
+
+    
+
+
+    "_COMMENT": "stephane-clepkens",
+    "stephaneClepkensPage__pgTitle": "REAL PEOPLE, REAL PERFORMANCE<br>– THE EXPERTS BEHIND RADAR TYRES",
+    "stephaneClepkensPage__intro": "Behind the wheel: Stéphane Clepkens’ journey to redefining tyre performance",
+    "stephaneClepkensPage__background": "When it comes to tyres, few individuals can match the expertise and passion of Stéphane Clepkens, Test Manager at Radar Tyres. With a career spanning nearly 25 years in the automotive industry, Stéphane brings a unique perspective to the intricate art of tyre testing and development.",
+    "stephaneClepkensPage__careerStart": "A career forged on the track",
+    "stephaneClepkensPage__experience": "Stéphane began his journey in 2000 as a test driver for Continental Tyres, focusing on Original Equipment (OE) tyres for BMW. Over the next three years, he honed his skills in precision testing, learning the nuances of chassis and tyre dynamics. In 2003, Stéphane took a bold leap into freelancing, collaborating with leading tyre brands such as Dunlop, Yokohama, Hankook, and Bridgestone.",
+    "stephaneClepkensPage__nurburgringExpertise": "A key highlight of Stéphane’s career has been his expertise on the legendary Nürburgring Nordschleife in Germany. For over a decade, he spent up to 15 weeks annually mastering the world’s most demanding racetrack, where he not only tested tyres but also trained future test drivers.",
+    "stephaneClepkensPage__radarJoining": "Joining Radar Tyres: a new chapter",
+    "stephaneClepkensPage__radarDecision": "Stéphane’s decision to join Radar Tyres was driven by the company’s progressive approach. “Radar Tyres impressed me with their flat, horizontal management structure and the freedom they offer to innovate,” Stéphane shares. “Their mission to deliver premium-level performance at accessible prices aligns perfectly with my vision of democratising tyre safety and quality.”",
+    "stephaneClepkensPage__testingPhilosophy": "A unique philosophy on tyre testing",
+    "stephaneClepkensPage__realWorldTesting": "For Stéphane, real-world testing is at the heart of tyre development. “Tyres are complex and highly technical products,” he explains. “Their performance can only be truly understood under real driving conditions, where we transform subjective customer feedback into objective targets for research and development.”",
+    "stephaneClepkensPage__redefiningPremium": "Redefining premium",
+    "stephaneClepkensPage__premiumCommitment": "Stéphane’s mission at Radar Tyres is clear: to elevate the brand to premium status while ensuring that its products remain affordable for all. “Every market is different, and in Europe, I know what customers and carmakers expect from their tyres,” he says. “Reaching premium standards requires targeting the same benchmarks as the established leaders, but we’re committed to achieving this without compromising on cost-effectiveness.”",
+    "stephaneClepkensPage__safetyFocus": "Making safety accessible",
+    "stephaneClepkensPage__safetyMission": "Stéphane’s passion extends beyond performance metrics to the broader impact of his work. “Tyres are the only points of contact between a car and the road,” he notes. “Democratising premium tyre performance means providing young drivers, retirees, and everyone in between with access to safe, reliable products.”",
+    "stephaneClepkensPage__futureVision": "Looking ahead",
+    "stephaneClepkensPage__continuedLearning": "Despite his extensive experience, Stéphane continues to find joy and discovery in his work. “Every day, I learn something new,” he says. “When we develop a truly brilliant product, it’s a rewarding experience that reminds me why I’m passionate about what I do.”",
+    "stephaneClepkensPage__radarChoice": "Why choose Radar Tyres?",
+    "stephaneClepkensPage__radarCommitment": "Radar Tyres isn’t just about making great tyres – it’s about making great tyres accessible to everyone. With experts like Stéphane Clepkens leading the charge, we’re breaking barriers in the industry by creating tyres that deliver safety, reliability, and performance without compromise. Whether you’re navigating winter roads, enjoying a spirited drive, or simply commuting to work, Radar Tyres is here to keep you grounded – literally and figuratively.",
+
+
+
+    "_COMMENT": "fabrizio-giugiaro",
+    "fabrizioGiugiaro__pgTitle": "REAL PEOPLE, REAL PERFORMANCE<br>– THE EXPERTS BEHIND RADAR TYRES",
+    "fabrizioGiugiaro__intro": "Shaping the future of tyre design: Fabrizio Giugiaro and Radar Tyres",
+    "fabrizioGiugiaro__meetFabrizio": "Meet Fabrizio Giugiaro, the visionary designer behind some of the world’s most iconic automotive creations and the founder of GFG Style. Now, he brings his expertise to Radar Tyres, redefining what tyre design means in terms of aesthetics, performance, and accessibility.",
+    "fabrizioGiugiaro__designPerformance": "Design meets performance",
+    "fabrizioGiugiaro__collaboration": "For over two years, GFG Style has collaborated with Radar Tyres to create innovative tyre designs across all categories—from high-performance sports tyres to rugged off-road models and eco-friendly solutions. “Great design is not just about appearance; it must bring value and technology together,” Giugiaro explains. “The best results come from blending creativity with technical precision.”",
+    "fabrizioGiugiaro__designPhilosophy": "At Radar Tyres, this philosophy is embedded in every product. The design process is not just about style—it is about ensuring the tyre enhances both function and performance without driving up costs.",
+    "fabrizioGiugiaro__functionInnovation": "Inspired by function, driven by innovation",
+    "fabrizioGiugiaro__designProcess": "When creating a new tyre design, inspiration comes from various sources, but at the core, performance dictates form. “First, we look at the technical requirements—what the tyre needs to achieve,” Giugiaro says. “Then, we integrate shapes and structures that enhance both aesthetics and function. Nature sometimes plays a role, but ultimately, it is about a perfect balance between engineering and creativity.”",
+    "fabrizioGiugiaro__detailFocus": "This meticulous attention to detail ensures that Radar Tyres are not only visually striking but also aerodynamically optimized, offering both efficiency and grip in demanding conditions.",
+    "fabrizioGiugiaro__luxuryAccessibility": "Luxury without the price tag",
+    "fabrizioGiugiaro__designMission": "Radar Tyres has a bold mission: to make premium tyre design accessible to all. Giugiaro believes that high-end aesthetics should not be reserved for the few but should be part of everyday driving experiences. “By refining the shapes and surface details, we create tyres that express luxury and performance without unnecessary cost,” he explains. “True innovation is about making great design available to everyone.”",
+    "fabrizioGiugiaro__globalDesign": "A universal language of design",
+    "fabrizioGiugiaro__marketUnderstanding": "With decades of global automotive design experience, Giugiaro understands how to craft a style that resonates across different markets. “A tyre must be recognizable, distinctive, and appealing to all kinds of drivers,” he says. “The goal is to create a design language that is both unique and universally understood.”",
+    "fabrizioGiugiaro__visualIdentity": "The result? Radar Tyres stand out with a strong visual identity—defined by sharp details, elegant proportions, and an unmistakable presence on the road.",
+    "fabrizioGiugiaro__identityCrafting": "The art and science of tyre identity",
+    "fabrizioGiugiaro__stylingLanguage": "One of Giugiaro’s proudest achievements is the introduction of a consistent styling language across all Radar Tyres. “We wanted to ensure that every Radar tyre carries a recognizable design DNA,” he explains. “It’s about more than just a tread pattern—it’s about shaping an identity that communicates performance and sophistication.”",
+    "fabrizioGiugiaro__inspiredSeries": "Among his favorite creations is the Renegade X -series, inspired by aeronautical design. “That was a breakthrough,” he notes. “It set the foundation for how we approach the rest of the Radar lineup, combining aerodynamics with bold aesthetics.”",
+    "fabrizioGiugiaro__futureTyreDesign": "The future of tyre design",
+    "fabrizioGiugiaro__advancingVehicles": "As automotive design evolves, so must tyres. “Vehicles are becoming more advanced, and tyres need to keep up,” Giugiaro says. “Design is not just about beauty; it’s about integrating the tyre seamlessly into the vehicle’s overall identity.”",
+    "fabrizioGiugiaro__futureVision": "Looking ahead, he sees tyre design playing an even bigger role in defining a car’s character. “Tyres will not just be functional components; they will be key visual and performance elements that enhance the entire driving experience.”",
+    "fabrizioGiugiaro__designDemocratisation": "Democratising premium design",
+    "fabrizioGiugiaro__designAccessibility": "Radar Tyres and GFG Style share a common mission: to make premium design accessible. “The challenge is to create something that is not just artistic, but also durable, smart, and universally desirable,” Giugiaro says. “We’ve developed a language that is sophisticated yet inclusive—something that every driver can appreciate.”",
+    "fabrizioGiugiaro__industryLegacy": "A legacy in the making",
+    "fabrizioGiugiaro__partnershipVision": "The partnership between Radar Tyres and GFG Style is just beginning. “This collaboration is about more than just designing tyres,” Giugiaro concludes. “It’s about shaping the future—where performance, beauty, and accessibility go hand in hand.”",
+    "fabrizioGiugiaro__industryImpact": "With Fabrizio Giugiaro leading the design vision, Radar Tyres is setting a new standard in the industry, proving that great design isn’t just for the elite—it’s for everyone."
+
+
+    
+
 
     
 

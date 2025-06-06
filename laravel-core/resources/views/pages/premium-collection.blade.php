@@ -17,16 +17,16 @@
         <div class="container">
             <div class="grid">
                 <div class="col-md-12">
-                    <h3 class="no-top-margin dark-100">{{__('THE RADAR PREMIUM COLLECTION IS TESTED AGAINST LEADING ESTABLISHED BRANDS, OFFERING THE SAME PERFORMANCE BUT WITHOUT THE HEFTY PRICE TAG.')}}</h3>                    
+                    <h3 class="no-top-margin dark-100">{{__('premiumCollPage_intro')}}</h3>                    
                 </div>
                 <div class="col-md-12">
-                    <p>{{__('The Radar Premium Collection is our latest range of products which have been rigorously tested against leading established brands, offering the same performance but without the hefty price tag. We believe that safety, performance, and durability should be accessible to all customers without the high costs often associated with premium brands. With Radar, you get the same premium performance as the leading established brands but at more affordable prices.')}}</p>
+                    <p>{{__('premiumCollPage_overview')}}</p>
                 </div>
                 <div class="col-md-12">
-                    <p>{{__('Radar Tyres are tested at world-class facilities worldwide, including UTAC, ATP, Applus+, Idiada, Smithers and other independent testing locations around the world to ensure that they offer the same level of performance and safety as leading established premium brands.')}}</p>
+                    <p>{{__('premiumCollPage_testingFacilities')}}</p>
                 </div>
                 <div class="col-md-12">
-                    <p>{{__('The Radar Premium collection is designed in collaboration with the legendary Italian design house, GFG Style, which is one of the most renowned automotive designers in the world. Coupled with our extensive expertise in engineering and manufacturing, we bring to market unique products with the optimal balance of design and engineering.')}}</p>
+                    <p>{{__('premiumCollPage_designInnovation')}}</p>
 
                 </div>
             </div>

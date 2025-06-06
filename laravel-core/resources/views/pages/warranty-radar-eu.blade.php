@@ -33,7 +33,7 @@
 		<div class="section bg-gray">
 			<div class="container">
 				<div class="grid">
-					<div class="col-md-12 col-bleed-y ">
+					<div class="col-md-12 col-bleed-y">
 						<h3 class=" dark-100">{!!__('RADAR PROTECT PROGRAM – EUROPE INFORMATION')!!}</h3>
 						<ul class="text-md no-bullets li-icons">
 							<!-- EU Region -->
