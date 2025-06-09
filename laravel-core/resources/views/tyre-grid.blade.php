@@ -170,9 +170,9 @@
     <!-- Swiper JS -->
     <script src="{{asset('js/swiper/swiper-bundle.js')}}"></script>
     <script src="{{asset('js/jquery-ui.js')}}"></script>
-    @if(session('omni_data.country')=='apac')
+    @if(session('omni_data.region')=='apac')
     <script async src="https://js.testfreaks.com/onpage/radartyres-apac/head.js"></script>
-    @elseif(session('omni_data.country')=='eu')
+    @elseif(session('omni_data.region')=='eu')
     <script async src="https://js.testfreaks.com/onpage/radartyres-eu/head.js"></script>
     @endif
     

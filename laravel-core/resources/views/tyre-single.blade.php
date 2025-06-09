@@ -107,9 +107,9 @@
     @push('scripts') 
     <!-- Swiper JS -->
     <script src="{{url('js/swiper/swiper-bundle.js')}}"></script>
-    @if(session('omni_data.country')=='apac')
+    @if(session('omni_data.region')=='apac')
     <script async src="https://js.testfreaks.com/onpage/radartyres-apac/head.js"></script>
-    @elseif(session('omni_data.country')=='eu')
+    @elseif(session('omni_data.region')=='eu')
     <script async src="https://js.testfreaks.com/onpage/radartyres-eu/head.js"></script>
     @endif
     <script src="{{asset('js/testfreaks.js')}}"></script>
