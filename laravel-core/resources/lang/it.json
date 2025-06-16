@@ -44,7 +44,7 @@
     "MUD TERRAIN": "TERRENO FANGOSO",
     "VAN": "TRASPORTO LEGGERO",
     "TRAILER": "RIMORCHIO",
-    "ALL WEATHER": "PER ALL SEASON",
+    "ALL WEATHER": "ALL SEASON",
     "POR": "",
     "SEASON": "STAGIONE",
     "ALL SEASON": "ALL SEASON",
@@ -111,7 +111,7 @@
     "Manage cookies": "Gestione dei cookie",
     "You are currently viewing the :language website. If you wish to change the region, please select it from the drop-down list and press continue.": "Si sta visualizzando il sito web :language. Se si desidera cambiare la regione, selezionarla dall'elenco a discesa e premere continua.",
     "Social Responsibility": "Responsabilità Sociale",
-    "SOCIAL RESPONSIBILITY": "Responsabilità Sociale",
+    "SOCIAL RESPONSIBILITY": "RESPONSABILITÀ SOCIALE",
 
 
 
@@ -172,7 +172,7 @@
     "contactPage__formButton_send": "INVIO",
     "contactPage__formText_reqText": "*campo obbligatorio",
     "contactPage__addTitle_singapore": "SINGAPORE (HQ)",
-    "contactPage__addTitle_italy": "",
+    "contactPage__addTitle_italy": "ITALIA",
     "contactPage__addTitle_uae": "",
     "contactPage__addText_hrs": "Orario di lavoro:",
     "contactPage__addText_days": "Lunedì - Venerdì",
@@ -240,15 +240,15 @@
     "_COMMENT": "RADARTYRES MAIN PAGE",
     "mainPage__mainHeading": "TUTTI DOVREBBERO AVERE IL DIRITTO<br>DI ACCEDERE A PNEUMATICI DI QUALITÀ SUPERIORE A<br>PREZZI ACCESSIBILI",
     "mainPage__mainHeading_cta": "PER SAPERNE DI PIÙ SUGLI PNEUMATICI RADAR",
-    "mainPage__whyRadarHeading": "PRESTAZIONI E SICUREZZA ELEVATE, MA SENZA UN PREZZO ELEVATO",
+    "mainPage__whyRadarHeading": "PRESTAZIONI E SICUREZZA ELEVATE, MA SENZA UN PREZZO ECCESSIVO",
     "mainPage__ceoTitle": "MESSAGGIO DELL'AMMINISTRATORE DELEGATO",
     "mainPage__ceoHeading": "LA NOSTRA MISSIONE È QUELLA DI OFFRIRE PNEUMATICI DI ALTA QUALITÀ ALLA PORTATA DI TUTTI",
     "mainPage__testTitle": "COLLAUDATI",
     "mainPage__testHeading": "TESTATI A FONDO CONTRO I MARCHI PREMIUM",
     "mainPage__realPeopleTitle": "PERSONE REALI. PRESTAZIONI REALI.",
     "mainPage__realPeopleHeading": "INCONTRIAMO GLI ESPERTI CHE PORTANO GLI PNEUMATICI RADAR AL LIVELLO SUCCESSIVO",
-    "mainPage__respSectionHeading": "NOTRE ENGAGEMENT ENVERS LA COMMUNAUTÉ",
-    "mainPage__respText": "Nous avons toujours cru en l'importance de redonner, et c'est l'un des piliers sur lesquels Radar Tyres a été construit. Ce sont ces convictions qui nous ont conduits à nous associer à la Breast Cancer Research Foundation (BCRF) en 2011, la principale et la mieux notée organisation de lutte contre le cancer du sein aux États-Unis. Nous soutenons BCRF dans sa mission de prévenir et de guérir le cancer du sein en faisant progresser les recherches les plus prometteuses au monde.",
+    "mainPage__respSectionHeading": "IL NOSTRO IMPEGNO PER LA COMUNITÀ",
+    "mainPage__respText": "Abbiamo sempre creduto nell'importanza di restituire e questo è uno dei pilastri su cui si basa Radar Tyres. Sono state queste convinzioni a portarci a collaborare con la Breast Cancer Research Foundation (BCRF) nel 2011, l'organizzazione per la ricerca sul cancro al seno più importante e meglio valutata negli Stati Uniti. Abbiamo supportato BCRF nella loro missione di prevenire e curare il cancro al seno promuovendo le ricerche più promettenti a livello mondiale.",
 
 
 
@@ -269,8 +269,8 @@
 
 
     "_COMMENT": "PREMIUM COLLECTION PAGE",
-    "premiumCollPage_intro": "LA COLLEZIONE RADAR PREMIUM È STATA TESTATA RISPETTO AI MARCHI BLASONATI PIÙ RICONOSCIUTI, OFFRENDO LE STESSE PRESTAZIONI MA SENZA IL PREZZO ELEVATO.",
-    "premiumCollPage_overview": "La Radar Premium Collection è la nostra ultima gamma di prodotti che sono stati rigorosamente testati rispetto ai marchi blasonati più riconosciuti, offrendo le stesse prestazioni ma senza il prezzo elevato. Riteniamo che la sicurezza, le prestazioni e la durata debbano essere accessibili a tutti i clienti senza i costi elevati spesso associati ai marchi premium. Con Radar si ottengono le stesse prestazioni premium dei marchi blasonati più riconosciuti, ma a prezzi più accessibili.",
+    "premiumCollPage_intro": "LA RADAR PREMIUM COLLECTION È STATA TESTATA RISPETTO AI MARCHI BLASONATI PIÙ RICONOSCIUTI, OFFRENDO LE STESSE PRESTAZIONI MA SENZA IL PREZZO ELEVATO.",
+    "premiumCollPage_overview": "La Radar Premium Collection è la nostra ultima gamma di prodotti che sono stati rigorosamente testati rispetto ai marchi più blasonati, offrendo le stesse prestazioni ma senza il loro prezzo elevato. Riteniamo che la sicurezza, le prestazioni e la durata debbano essere accessibili a tutti i clienti senza i costi elevati spesso associati ai marchi premium. Con Radar si ottengono le stesse prestazioni premium dei marchi blasonati più riconosciuti, ma a prezzi più accessibili.",
     "premiumCollPage_testingFacilities": "I pneumatici Radar sono testati in strutture di livello mondiale, tra cui UTAC, ATP, Applus+, Idiada, Smithers e altre sedi di test indipendenti in tutto il mondo, per garantire che offrano lo stesso livello di prestazioni e sicurezza dei principali marchi premium affermati.",
     "premiumCollPage_designInnovation": "La collezione Radar Premium è stata progettata in collaborazione con la leggendaria casa di design italiana GFG Style, uno dei designer automobilistici più rinomati al mondo. Grazie alla nostra vasta esperienza nel campo dell'ingegneria e della produzione, portiamo sul mercato prodotti unici con un equilibrio ottimale tra design e ingegneria.",
     
@@ -339,7 +339,7 @@
     "olliSeppalaPage__magicTriangleDetails": "Lo sviluppo degli pneumatici è un'arte raffinata che richiede un attento equilibrio tra aderenza sul bagnato, resistenza al rotolamento e resa chilometrica, spesso definito “triangolo magico”. Come spiega Olli, “il miglioramento di un aspetto spesso va a scapito degli altri. La nostra missione è espandere questo triangolo, ottenendo prestazioni eccezionali in tutte le metriche”. Grazie alla loro esperienza, Olli e il suo team sono riusciti a ottenere risultati eccezionali in ogni settore.",
     "olliSeppalaPage__businessModel": "UN MODELLO AZIENDALE UNICO",
     "olliSeppalaPage__businessApproach": "Radar Tyres opera senza strutture produttive proprie, una scelta strategica che Olli considera una svolta. “Possiamo selezionare i migliori siti di produzione per ogni prodotto, assicurando le massime prestazioni e l'efficienza dei costi”, spiega Olli. “Questa agilità ci permette di innovare in modo più rapido ed efficiente rispetto ai produttori di pneumatici tradizionali”. ",
-    "olliSeppalaPage__innovationApproach": "INNOVAZIONE OLTRE lo pneumatico: UN APPROCCIO GLOBALE",
+    "olliSeppalaPage__innovationApproach": "INNOVAZIONE OLTRE LO PNEUMATICO: UN APPROCCIO GLOBALE",
     "olliSeppalaPage__globalInnovation": "Per Olli, l'innovazione non si limita ai disegni del battistrada o alle mescole. “Si tratta di ripensare l'intero processo, dai modelli di business alle catene di fornitura”, spiega. Questa filosofia si estende al rigoroso processo di test globale di Radar Tyres. “Conduciamo test in tutto il mondo, dalle condizioni invernali in Finlandia alle piste asciutte in Spagna, fino ai test sul campo negli Stati Uniti e in Asia”, spiega Olli. “Questo garantisce che i nostri pneumatici soddisfino le esigenze specifiche dei diversi mercati, mantenendo prestazioni di alto livello”. ",
     "olliSeppalaPage__premiumPerformance": "DEMOCRATIZZARE LE PRESTAZIONI PREMIUM",
     "olliSeppalaPage__performanceGoal": "La missione di Olli è chiara: rendere accessibili a tutti le prestazioni degli pneumatici di alto livello. “La sicurezza è la nostra priorità assoluta ed è fondamentale che i consumatori possano fare affidamento sui loro pneumatici nei momenti critici”, afferma. “Il nostro obiettivo è quello di offrire pneumatici in grado di competere con i marchi premium pur rimanendo accessibili, garantendo sicurezza e prestazioni a tutti gli automobilisti”. ",

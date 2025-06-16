@@ -32,7 +32,6 @@
                     <div class="ma-xxs-2 mx-lg-3">
                         <h3 class="dark-100  no-top-margin uppercase">{{ __("stephaneClepkensPage__careerStart") }}</h3>
                         <p>{!! __("stephaneClepkensPage__experience") !!}</p>
-                        <p>{!! __("stephaneClepkensPage__experience") !!}</p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/WiIYifeGdIY" target="_blank">{!! __("WATCH VIDEO") !!}</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
