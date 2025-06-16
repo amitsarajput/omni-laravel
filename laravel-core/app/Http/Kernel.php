@@ -26,8 +26,6 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\SetDefaultLocaleForUrls::class,
         \App\Http\Middleware\Localization::class, // <--- Lacalize
         \App\Http\Middleware\NormalizeDoubleSlashes::class,
-        
-        
     ];
 
     /**
