@@ -15,7 +15,7 @@ class MailController extends Controller
             'vala'=>'kumar'
         ];
         try{
-            Mail::to(['mini.p@diginet.sg'])->send(new GenricMail($mailData));
+            Mail::to(['amit@lopamudracreative.com'])->send(new GenricMail($mailData));
             // ,'Sayeed@omni-united.com ','amit@lopamudracreative.com'
         }
         catch(\Exception $e){
