@@ -6,6 +6,7 @@ $location_locale=[
 	'eu'=>'European',
 	'it'=>'europeo',
 	'es'=>'Spanish',
+	'pt'=>'europeo',
 	'fr'=>'French',
 	'apac'=>'Asian',
 	'mea'=>'Middle East and Africa',
