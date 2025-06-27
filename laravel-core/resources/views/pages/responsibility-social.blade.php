@@ -23,7 +23,7 @@
                 <div class="col-md-12 col-bleed-y">
                     <h3 class="no-top-margin dark-100 uppercase">{{__('socialRespPage__secGivingBack')}}</h3>
                     <p>{{__('socialRespPage__secGivingBack_Para1')}}</p>
-                    <p>{{__('socialRespPage__secGivingBack_Para2')}}</p>
+                    <p>{{__('socialRespPage__secGivingBack_Para2')}}</p> 
                     <p>{!!__('socialRespPage__secGivingBack_Para3_1')!!}  <a class="blue" target="_blank" href="https://www.bcrf.org/">www.bcrf.org</a>.</p>
                 </div>
             </div>
