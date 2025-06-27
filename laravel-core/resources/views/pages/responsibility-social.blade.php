@@ -54,7 +54,7 @@
             </div>
         </div> 
 
-        <div class="container">
+        <!-- <div class="container">
             <hr class="mt-5 mb-5">
         </div>   
 
@@ -71,7 +71,7 @@
                     </div>
                 </div>
             </div>
-        </div> 
+        </div>  -->
           
         <div class="container">
             <hr class="mt-5 mb-5">
