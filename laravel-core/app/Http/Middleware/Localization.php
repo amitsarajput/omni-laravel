@@ -22,7 +22,7 @@ class Localization
         $country = extractCountryFromUrl()??Session::get('omni_data.country');   
         
         //check for redirect first
-        $this->omni_redirect($region,$country);      
+        //$this->omni_redirect($region,$country);      
         
         //if country is present, set the locale for the country other wise set to region
         if ($country !== null) {
