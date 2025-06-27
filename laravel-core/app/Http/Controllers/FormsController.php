@@ -81,7 +81,6 @@ class FormsController extends Controller
         return match ($to_url) {
             'us' => redirect()->to('https://www.omni-united.com/radar-us')->send(),
             'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
-            'mea', 'row' => redirect()->to('https://www.omni-united.com/radar')->send(),
             default => false,
         };
     }

@@ -44,7 +44,6 @@ class Localization
         return match ($to_url) {
             'us' => redirect()->to('https://radartires.com/us')->send(),
             'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
-            'mea', 'row' => redirect()->to('https://www.omni-united.com/radar')->send(),
             default => false,
         };
     }
