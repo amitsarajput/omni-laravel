@@ -14,8 +14,9 @@
             @if($tyre->premium_tyre)
                 <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">{{__('PREMIUM COLLECTION')}}</a>
             @endif
-            <div class="image {{ $tyre->country->code==='EU'?'carbon-n':''}}">
-                <a href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">
+            <div class="image {{ $tyre->region->code=='eu'?'car-n':''}}">
+                <a href="{{safeRoute('tyre.single',['brand' => $tyre->brand->slug, 'tyre' => $tyre->slug])}}">
+                    
                     <img 
                         data-src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
                         src="{{asset('storage/tire_images/'.$tyre->catalogue_image)}}" 
@@ -23,7 +24,7 @@
                 </a>
             </div>
             <!-- Read more button -->
-            <a class="tyre--readmore" href="{{url($tyre->country->slug.'/'.$tyre->brand->slug.'/'.$tyre->slug)}}">{{__('READ MORE')}}  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
+            <a class="tyre--readmore" href="{{safeRoute('tyre.single',['brand' => $tyre->brand->slug, 'tyre' => $tyre->slug])}}">{{__('READ MORE')}}  <x-icon-tyre-line-2 /><x-icon-right-angle-arrow class="arrow"/></a>
         </div>
     @endforeach
 </div>
