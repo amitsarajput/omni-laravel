@@ -32,7 +32,7 @@ class Localization
         }
         return $next($request);
     }
-    
+     
 
     /**
      * We will check if the redirection is needed or not. 
