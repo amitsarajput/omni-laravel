@@ -42,7 +42,7 @@ class Localization
     public function omni_redirect($region,$country){
         $to_url=$country!==null ? $region.'/'.$country : $region;        
         return match ($to_url) {
-            'us' => redirect()->to('https://radartires.com/us')->send(),
+            'us' => redirect()->to('https://radartires.com/us/')->send(),
             'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
             default => false,
         };
