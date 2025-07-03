@@ -230,7 +230,7 @@ jQuery(window).on('scroll', function(){
             $('.location-bubble .button').on('click', function(){
                 //$('.location-bubble .button');
             });
-            $('.location-bubble.location-bubble--closed select').on('change', function(){
+            $('.location-bubble select').on('change', function(){
                 //$('.location-bubble--form').submit();
                 $(this).closest('form').submit();
             });            
