@@ -49,7 +49,7 @@
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
-                    <a href="{{ safeRoute('pages.premium-collection') }}">
+                    <a href="{{ safeRoute('pages.real-people') }}"">
                         <img src="{{asset('images/tyre-grid/group-t.webp')}}" alt="">
                     </a>
                 </div>
