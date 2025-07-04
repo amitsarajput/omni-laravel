@@ -17,8 +17,8 @@
         <div class="container">
             <div class="grid">
                 <div class="col-md-12 col-bleed-y  mb-4">
-                    <h3 class="no-top-margin dark-100 uppercase">{{ __("fabrizioGiugiaro__gfgRadarcollabHeading") }}</h3>
-                    <p>{{ __("fabrizioGiugiaro__gfgRadarcollabText") }}</p>
+                    <h3 class="no-top-margin dark-100 uppercase">{!! __("fabrizioGiugiaro__gfgRadarcollabHeading") !!}</h3>
+                    <p>{!! __("fabrizioGiugiaro__gfgRadarcollabText") !!}</p>
                 </div>
 
                 <div class="col-md-12 col-bleed-y  mb-4">
