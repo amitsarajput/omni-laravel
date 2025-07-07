@@ -43,7 +43,7 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
-Route::middleware(['auth', 'verified'])->get('/session/invalidate', function () {
+Route::get('/session/invalidate', function () {
     return session()->invalidate();
 });
 
@@ -54,8 +54,8 @@ Route::middleware('auth')->group(function () {
 });
 
 
-Route::get('/session/{key}/get',[AjaxHandlerController::class, 'get_session_data'])->name('session.get');
-Route::post('/session/{key}/set',[AjaxHandlerController::class, 'set_session_data'])->name('session.set');
+//Route::get('/session/{key}/get',[AjaxHandlerController::class, 'get_session_data'])->name('session.get');
+//Route::post('/session/{key}/set',[AjaxHandlerController::class, 'set_session_data'])->name('session.set');
 
 Route::post('/location/update',[FormsController::class, 'location_form'])->name('location.update');
 Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])->name('location.bubblestate.update');
@@ -68,41 +68,21 @@ Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])-
 // });
 
 require __DIR__.'/auth.php';
-require __DIR__.'/admin.php';
+//require __DIR__.'/admin.php';
 require __DIR__.'/staticpages.php';
 
 require __DIR__.'/landingpages.php';
 require __DIR__.'/form_routes.php';
 
 //Normal Routes
-Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
-//Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
-//Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
+//Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
 
-
-//Locale routes
-// Route::prefix('{region:slug}')->where(['region'=>'[a-zA-Z]{2,4}'])->group(function () {
+// Route::geo(function () {
 //     Route::get('/search', [SearchController::class, 'index'])->name('search');
 //     Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
 //     Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
 //     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
-    
 // });
-
-
-// Route::prefix('{region:slug}/{country:slug?}')->where(['region'=>'[a-zA-Z]{2,4}','country'=>'[a-zA-Z]{2}'])->group(function(){
-//     Route::get('/search', [SearchController::class, 'index'])->name('search');
-//     Route::get('/', [TyreController::class, 'tyre_grid'])->name('home');
-//     Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
-//     Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');    
-// });
-
-Route::geo(function () {
-    Route::get('/search', [SearchController::class, 'index'])->name('search');
-    Route::get('/',[TyreController::class, 'tyre_grid'])->name('home');
-    Route::get('/{brand:slug}', [TyreController::class, 'tyre_grid'])->where(['brand'=>'[a-zA-Z\-]{3,}'])->name('tyre.grid');
-    Route::get('/{brand:slug}/{tyre:slug}', [TyreController::class, 'tyre_single'])->where(['brand'=>'[a-zA-Z\-]{3,}','tyre'=>'[a-zA-Z0-9\-]{3,}'])->name('tyre.single');
-});
 
 
 
