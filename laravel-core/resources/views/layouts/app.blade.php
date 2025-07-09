@@ -42,13 +42,13 @@
         <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__wobble" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
         </div>
-
-        <x-admin.common.top-nav  />
-        <x-admin.common.side-nav  />
+        
+        <x-ProductManager::admin.common.top-nav  />
+        <x-ProductManager::admin.common.side-nav  />
         
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            <x-admin.common.page-header  />
+            <x-ProductManager::admin.common.page-header  />
             
             <!-- Main content -->
             <section class="content">
@@ -95,7 +95,7 @@
         </aside>
         <!-- /.control-sidebar -->
 
-        <x-admin.common.footer  />
+        <x-ProductManager::admin.common.footer  />
 
     </div>
     <!-- ./wrapper -->

@@ -39,7 +39,7 @@ use App\Http\Controllers\SearchController;
 //Route::get('/mail',[MailController::class, 'genric_mail']);
 
 Route::get('/dashboard', function () {
-    return view('admin.index');
+    return view('ProductManager::admin.index');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 
