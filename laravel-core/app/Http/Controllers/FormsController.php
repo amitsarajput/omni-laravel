@@ -321,9 +321,9 @@ class FormsController extends Controller
         $form_data['subject']='Radar Red Enquery from '.$form_data['name'];
 
         //$to=['amit@lopamudracreative.com'];
-        $to=['carlosortigosa@omni-united.com'];
+        //$to=['carlosortigosa@omni-united.com']; from this
         //$to=['manavsuri@omni-united.com'];
-        //$to=['info@radartires.com'];
+        $to=['info@radartires.com']; //to this
         try {
             Mail::to($to)->send(new GenricMail($form_data));
             return back()->with('status','Message sent successfully.');
