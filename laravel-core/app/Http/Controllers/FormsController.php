@@ -14,7 +14,6 @@ use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 
 class FormsController extends Controller
 {
-    
 
     public function lb_state_update(Request $request){
         $this->validate($request, [
@@ -77,12 +76,19 @@ class FormsController extends Controller
             
     }
 
-    public function omni_redirect($to_url){
-        return match ($to_url) {
-            'us' => redirect()->to('https://radartires.com/us/')->send(),
-            'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
-            default => false,
-        };
+    public function omni_redirect($to_url){        
+        $redirects=session('omni_data.all_redirects');
+        if ( array_key_exists($to_url, $redirects)) {
+            return redirect()->to($redirects[$to_url])->send();
+        }
+        return false;
+
+        // return match ($to_url) {
+        //     'us' => redirect()->to('https://radartires.com/us/')->send(),
+        //     'ca' => redirect()->to('https://www.omni-united.com/radar-ca')->send(),
+        //     default => false,
+        // };
+
     }
 
     public function set_session_region_country($to_url,$omni_data){

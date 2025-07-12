@@ -29,6 +29,7 @@ class Kernel extends HttpKernel
         // \App\Http\Middleware\NormalizeDoubleSlashes::class,
         
         \ProductManager\Http\Middleware\SetSessionData::class,
+        \ProductManager\Http\Middleware\RedirectCountryFromUrl::class,
         \ProductManager\Http\Middleware\SetDefaultLocaleForUrls::class,
         \ProductManager\Http\Middleware\Localization::class, // <--- Lacalize        
         \ProductManager\Http\Middleware\NormalizeDoubleSlashes::class,
@@ -54,6 +55,14 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\ThrottleRequests::class.':api',
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
         ],
+
+        // 'geo.others' => [
+        //     \ProductManager\Http\Middleware\SetSessionData::class,
+        //     \ProductManager\Http\Middleware\RedirectCountryFromUrl::class,
+        //     \ProductManager\Http\Middleware\SetDefaultLocaleForUrls::class,
+        //     \ProductManager\Http\Middleware\Localization::class, // <--- Lacalize        
+        //     \ProductManager\Http\Middleware\NormalizeDoubleSlashes::class,
+        // ]
     ];
 
     /**

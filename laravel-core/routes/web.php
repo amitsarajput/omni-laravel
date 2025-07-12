@@ -57,9 +57,6 @@ Route::middleware('auth')->group(function () {
 //Route::get('/session/{key}/get',[AjaxHandlerController::class, 'get_session_data'])->name('session.get');
 //Route::post('/session/{key}/set',[AjaxHandlerController::class, 'set_session_data'])->name('session.set');
 
-Route::post('/location/update',[FormsController::class, 'location_form'])->name('location.update');
-Route::post('/bubble-state/update',[FormsController::class, 'lb_state_update'])->name('location.bubblestate.update');
-
 
 // Route::get('language/{locale}', function (string $locale) {
 //     app()->setLocale($locale);
