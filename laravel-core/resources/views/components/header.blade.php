@@ -33,7 +33,8 @@
             </div>
             <div id="top-search">
                 <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
-                <form action="{{safeRoute('search')}}" method="GET">
+                <form action="{{safeRoute('search')}}" method="post">
+                    @csrf()
                     <input type="text" name="query" class="form-control" value="" placeholder="Type &amp; Hit Enter.." />
                 </form>
             </div><!-- #top-search end -->

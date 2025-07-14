@@ -28,28 +28,28 @@
             
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
-                    <a href="{{ route('pages.olli-seppala') }}">
+                    <a href="{{ safeRoute('pages.olli-seppala') }}">
                         <img src="{{asset('images/Olli.webp')}}" alt="">
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("realPeoplePage_rdHeading") }}</h3>
-                        <p>{{ __("realPeoplePage_rdDescription") }}<br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.olli-seppala') }}">{{ __("READ MORE") }}</a></p>
+                        <p>{{ __("realPeoplePage_rdDescription") }}<br><a class="knopf link red heading-font sharp ls-1" href="{{ safeRoute('pages.olli-seppala') }}">{{ __("READ MORE") }}</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/LVP-xecALQk" target="_blank">{{__('WATCH VIDEO')}}</a>
                     </div>
                 </div>
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12 order-md-2" >
-                    <a href="{{ route('pages.stephane-clepkens') }}">
+                    <a href="{{ safeRoute('pages.stephane-clepkens') }}">
                         <img src="{{asset('images/Stephane.webp')}}" alt="">
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("realPeoplePage_testingHeading") }}</h3>
-                        <p>{{ __("realPeoplePage_testingDescription") }} <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.stephane-clepkens') }}">{{ __("READ MORE") }}</a></p>
+                        <p>{{ __("realPeoplePage_testingDescription") }} <br><a class="knopf link red heading-font sharp ls-1" href="{{ safeRoute('pages.stephane-clepkens') }}">{{ __("READ MORE") }}</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/WiIYifeGdIY" target="_blank">{{__('WATCH VIDEO')}}</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>
@@ -57,14 +57,14 @@
             </div>
             <div class="grid grid-bleed align-center">
                 <div class="col-md-6 col-sm-12">
-                    <a href="{{ route('pages.fabrizio-giugiaro') }}">
+                    <a href="{{ safeRoute('pages.fabrizio-giugiaro') }}">
                         <img src="{{asset('images/Fabrizio.webp')}}" alt="">
                     </a>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="ma-xxs-2 ma-xs-2 ma-sm-2 ma-md-2 mx-lg-7">
                         <h3 class="dark-100  no-top-margin">{{ __("realPeoplePage_designHeading") }}</h3>
-                        <p>{{ __("realPeoplePage_designDescription") }} <br><a class="knopf link red heading-font sharp ls-1" href="{{ route('pages.fabrizio-giugiaro') }}">{{ __("READ MORE") }}</a></p>
+                        <p>{{ __("realPeoplePage_designDescription") }} <br><a class="knopf link red heading-font sharp ls-1" href="{{ safeRoute('pages.fabrizio-giugiaro') }}">{{ __("READ MORE") }}</a></p>
                         <a class="knopf red heading-font sharp ls-1" href="https://youtu.be/oGc5hAfOeIA" target="_blank">{{__('WATCH VIDEO')}}</a>
                         <!-- <h5 class="black">DIMAX SPORT | DIMAX SPRINT | DIMAX ALL SEASON | DIMAX WINTER</h5> -->
                     </div>

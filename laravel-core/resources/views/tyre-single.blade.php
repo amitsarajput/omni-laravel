@@ -32,7 +32,7 @@
                 <!-- Premium tyre badge -->
                  @if($tyre->premium_tyre)
                 <div class="col-lg-12 col-bleed-y">
-                    <a href="{{route('pages.premium-collection')}}" class="premium-tyre--badge">{{__('PREMIUM COLLECTION')}}</a>
+                    <a href="{{safeRoute('pages.premium-collection')}}" class="premium-tyre--badge">{{__('PREMIUM COLLECTION')}}</a>
                 </div>
                 @endif
                 <!-- Tyre Details -->

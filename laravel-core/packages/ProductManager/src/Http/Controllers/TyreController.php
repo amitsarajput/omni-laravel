@@ -242,7 +242,7 @@ class TyreController extends Controller
         //dd($request);
         $request->validate([
             'region' => ['required', 'integer'],
-            'country' => ['required', 'integer'],
+            'country' => ['nullable', 'integer'],
             'brand' => ['required', 'integer'],
             'searchtag' => ['required', 'integer'],
             'season' => ['required', 'integer'],
@@ -259,7 +259,7 @@ class TyreController extends Controller
         ]);
         $createtyrearray =[
                 'region_id' => $request->region,
-                'country_id' => $request->country,
+                'country_id' => 0,//$request->country,
                 'brand_id' => $request->brand,
                 'search_tag_id' => $request->searchtag,
                 'season_id' => $request->season,
@@ -351,7 +351,7 @@ class TyreController extends Controller
         //dd($request);
         $request->validate([
             'region' => ['required', 'integer'],
-            'country' => ['required', 'integer'],
+            'country' => ['nullable', 'integer'],
             'brand' => ['required', 'integer'],
             'searchtag' => ['required', 'integer'],
             'season' => ['required', 'integer'],
@@ -368,7 +368,7 @@ class TyreController extends Controller
         ]);
         $tyreupdataarray=[
             'region_id' => $request->region,
-            'country_id' => $request->country,
+            'country_id' => 0,//$request->country,
             'brand_id' => $request->brand,
             'search_tag_id' => $request->searchtag,
             'season_id' => $request->season,
