@@ -13,3 +13,6 @@ sym.php
 xlsx/
 .cpanel.yml
 .env
+/storage
+storage
+
