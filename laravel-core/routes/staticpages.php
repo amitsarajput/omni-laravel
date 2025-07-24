@@ -54,8 +54,9 @@ Route::geo(function(){
 
 
 //Routes without country. Removed
-Route::name('pages.')->group(function(){
+Route::name('newsletter.')->prefix('newsletter')->group(function(){
 	// Route::get('/environmental-responsibility', [StaticPagesController::class,'index'])->name('responsibility-environment');
 	//Route::get('/social-responsibility', [StaticPagesController::class,'index'])->name('responsibility-social');
+	Route::get('q2-2025', [StaticPagesController::class,'newsletter'])->name('q2-2025');
 });
 
