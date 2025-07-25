@@ -2,6 +2,7 @@
 npm-debug.log
 yarn-error.log
 /laravel-core/.env
+laravel-core/.env
 /laravel-core/vite.config.js
 /laravel-core/bootstrap/app.php
 /.fleet
